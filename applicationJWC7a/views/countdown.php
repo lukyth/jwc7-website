@@ -24,7 +24,7 @@
 <script>
 
 // Used
-countdown("2015-02-08 00:00");
+countdown("2015-02-14 00:00");
 
 
 
@@ -34,7 +34,7 @@ function countdown(timeEnd) {
 
 	// set the date we're counting down to
 	var target_date = new Date(timeEnd).getTime();
-	
+
 	// variables for time units
 	var days, hours, minutes, seconds;
 
@@ -58,17 +58,17 @@ function countdown(timeEnd) {
 
 		days = parseInt(seconds_left / 86400);
 		seconds_left = seconds_left % 86400;
-		 
+
 		hours = parseInt(seconds_left / 3600);
 		seconds_left = seconds_left % 3600;
-		  
+
 		minutes = parseInt(seconds_left / 60);
 		seconds = parseInt(seconds_left % 60);
 
-		countdown_day.innerHTML 	= days + " Day"; 
-		countdown_hour.innerHTML 	= hours + " Hour"; 
-		countdown_min.innerHTML 	= minutes + " Min"; 
-		countdown_sec.innerHTML 	= seconds + " Seconds"; 
+		countdown_day.innerHTML 	= days + " Day";
+		countdown_hour.innerHTML 	= hours + " Hour";
+		countdown_min.innerHTML 	= minutes + " Min";
+		countdown_sec.innerHTML 	= seconds + " Seconds";
 	}
 }
 
