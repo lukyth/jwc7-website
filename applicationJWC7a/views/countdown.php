@@ -11,7 +11,10 @@
 <body>
 
 <div class="container">
-	<p id="countdown"></p>
+	<p id="countdown_day"></p>
+	<p id="countdown_hour"></p>
+	<p id="countdown_min"></p>
+	<p id="countdown_sec"></p>
 </div>
 
 
@@ -36,7 +39,10 @@ function countdown(timeEnd) {
 	var days, hours, minutes, seconds;
 
 	// get tag element
-	var countdown = document.getElementById("countdown");
+	var countdown_day 	= document.getElementById("countdown_day"),
+		countdown_hour 	= document.getElementById("countdown_hour"),
+		countdown_min 	= document.getElementById("countdown_min"),
+		countdown_sec 	= document.getElementById("countdown_sec");
 
 	calculate_countdown();
 	setInterval(function () {
@@ -59,7 +65,10 @@ function countdown(timeEnd) {
 		minutes = parseInt(seconds_left / 60);
 		seconds = parseInt(seconds_left % 60);
 
-		countdown.innerHTML = days + "d, " + hours + "h, " + minutes + "m, " + seconds + "s"; 
+		countdown_day.innerHTML 	= days + " Day"; 
+		countdown_hour.innerHTML 	= hours + " Hour"; 
+		countdown_min.innerHTML 	= minutes + " Min"; 
+		countdown_sec.innerHTML 	= seconds + " Seconds"; 
 	}
 }
 
