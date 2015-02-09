@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="<?php echo base_url()."assets/" ?>css/jwc7.css">
   <link rel="stylesheet" href="<?php echo base_url()."assets/" ?>fonts/wdb_bangna.css">
   <script src="<?php echo base_url()."assets/" ?>js/jquery-1.11.1.min.js"></script>
-  <script src="<?php echo base_url()."assets/" ?>js/jquery.downCount.js"></script>
   <link rel="icon" type="image/png" href="<?php echo base_url()."assets/" ?>img/favicon.png">
 </head>
 <body>
@@ -23,22 +22,22 @@
       <div class="col-sm-12">
         <ul class="countdown">
           <li>
-            <span class="days">00</span>
+            <span id="countdown_day" class="days">00</span>
             <p class="days_ref">days</p>
           </li>
             <li class="seperator">.</li>
           <li>
-            <span class="hours">00</span>
+            <span id="countdown_hour" class="hours">00</span>
             <p class="hours_ref">hours</p>
           </li>
           <li class="seperator">:</li>
           <li>
-            <span class="minutes">00</span>
+            <span id="countdown_min" class="minutes">00</span>
             <p class="minutes_ref">minutes</p>
           </li>
             <li class="seperator">:</li>
           <li>
-            <span class="seconds">00</span>
+            <span id="countdown_sec" class="seconds">00</span>
             <p class="seconds_ref">seconds</p>
           </li>
         </ul>
@@ -77,13 +76,50 @@
   </div>
 
   <script class="source">
-    $('.countdown').downCount({
-      date: '02/14/2015 23:59:59',
-      offset: +7
-    },
-      function () {
-      alert('WOOT WOOT, done!');
-    });
+
+    // Used
+    countdown("2015-02-14 00:00");
+
+    // NOT REQUIRE JQUERY
+    function countdown(timeEnd) {
+
+      // set the date we're counting down to
+      var target_date = new Date(timeEnd).getTime();
+
+      // variables for time units
+      var days, hours, minutes, seconds;
+
+      // get tag element
+      var countdown_day   = document.getElementById("countdown_day"),
+        countdown_hour  = document.getElementById("countdown_hour"),
+        countdown_min   = document.getElementById("countdown_min"),
+        countdown_sec   = document.getElementById("countdown_sec");
+
+      calculate_countdown();
+      setInterval(function () {
+          calculate_countdown();
+      }, 1000);
+
+      function calculate_countdown() {
+        // find the amount of "seconds" between now and target
+        var current_date = new Date().getTime();
+        var seconds_left = (target_date - current_date) / 1000;
+
+        days = parseInt(seconds_left / 86400);
+        seconds_left = seconds_left % 86400;
+
+        hours = parseInt(seconds_left / 3600);
+        seconds_left = seconds_left % 3600;
+
+        minutes = parseInt(seconds_left / 60);
+        seconds = parseInt(seconds_left % 60);
+
+        countdown_day.innerHTML   = ("0" + days).slice(-2);
+        countdown_hour.innerHTML  = ("0" + hours).slice(-2);
+        countdown_min.innerHTML   = ("0" + minutes).slice(-2);
+        countdown_sec.innerHTML   = ("0" + seconds).slice(-2);
+      }
+    }
   </script>
 </body>
 </html>
