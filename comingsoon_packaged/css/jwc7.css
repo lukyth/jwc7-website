@@ -2,23 +2,29 @@
 	transition:all 0.15s;
 }
 body{
-	background-color: #ddd;
-	background-image: url('../img/bg5.png');
+	background-color: #eee;
+	background-image: url('../img/bg6.png');
 	background-position: center top;
 	background-repeat: repeat;
 	background-size: cover;
+	overflow-x:hidden;
 }
 h1,h2,h3,h4,h5,h6{
 	font-family: 'wdb_bangnaregular';
 	/*font-weight: bold;*/
 }
-.btn-primary{background-color: #118d83;}
+.btn-primary ,.btn-primary:link, .btn-primary:active, .btn-primary:visited{background-color: #118d83;}
 .btn-primary:hover{background-color: #084a44;}
 
 .txt-center{text-align: center;}
-#subscribe{
+#subscribeform{
 	max-width:500px;
-	margin:0 auto;
+}
+#subscribe{
+	margin:0 -15px;
+	background-image: url('../img/gw.png');
+	background-size: 10% 100%;
+	padding-bottom:50px;
 }
 .img-center{margin:0 auto;}
 
@@ -59,8 +65,14 @@ a.shadowlink:hover{
 .form-control:active{
 	border:#118d83 1px solid;
 }
+@media (min-width:1024px){
+	body{background-size: 1400px;}
+}
+@media (min-width:480px) and (max-width:1023px){
+	body{background-size: 1100px}
+}
 @media (max-width:479px){
-	body{background-size: cover;}
+	body{background-size: 800px}
 }
 
 
