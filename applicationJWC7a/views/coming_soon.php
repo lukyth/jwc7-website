@@ -52,19 +52,25 @@
 
     <div class="row" id="subscribe">
       <div class="col-sm-12">
-        <div class="input-group img-center" id="subscribeform">
+        <div class="img-center" id="subscribeform">
           <form action="<?php echo site_url('/coming_soon'); ?>" method="post">
-            <input name="email" type="text" value="" class="form-control" placeholder="e-mail address">
-            <span class="input-group-btn">
-              <button class="btn btn-default btn-primary" type="submit">ติดตามข่าวจาก JWC7</button>
-            </span>
+              <span class="input-group">
+                <input name="email" type="text" value="" class="form-control" placeholder="e-mail address">
+                <span class="input-group-btn">
+                  <button class="btn btn-group-addon btn-default btn-primary" type="submit">ติดตามข่าวจาก JWC7</button>
+                </span>
+              </span>
           </form>
           <?php
             echo validation_errors();
             if(isset($result)) echo $result;
           ?>
         </div>
+      </div>
+    </div>
 
+    <div class="row" id="follow">
+      <div class="col-sm-12">
         <h3>Follow <b>jwcth</b> on<span class="hidden-xs">&nbsp;</span>
         <br class="visible-xs">
           <a href="http://www.facebook.com/jwcth" class="shadowlink" title="JWC on Facebook" target="_blank"><img src="<?php echo base_url()."assets/" ?>img/social/fb.svg" alt="fb"></a>&nbsp;

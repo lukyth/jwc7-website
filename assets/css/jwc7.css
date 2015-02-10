@@ -1,5 +1,10 @@
 *{
 	transition:all 0.15s;
+	font-family: 'wdb_bangnaregular';
+}
+html {
+	width:100%;
+	height:100%;
 }
 body{
 	background-color: #eee;
@@ -7,11 +12,9 @@ body{
 	background-position: center top;
 	background-repeat: repeat;
 	background-size: cover;
+	width: 100%;
+	height: 100%;
 	overflow-x:hidden;
-}
-h1,h2,h3,h4,h5,h6{
-	font-family: 'wdb_bangnaregular';
-	/*font-weight: bold;*/
 }
 .btn-primary ,.btn-primary:link, .btn-primary:active, .btn-primary:visited{background-color: #118d83;}
 .btn-primary:hover{background-color: #084a44;}
@@ -22,8 +25,6 @@ h1,h2,h3,h4,h5,h6{
 }
 #subscribe{
 	margin:0 -15px;
-	background-image: url('../img/gw.png');
-	background-size: 10% 100%;
 	padding-bottom:50px;
 }
 .img-center{margin:0 auto;}
@@ -39,6 +40,15 @@ h1,h2,h3,h4,h5,h6{
 		margin-top:-55px;
 	}
 }*/
+
+#follow {
+	background-image: url('../img/gw.png');
+	width:100%;
+	position:fixed;
+	bottom:0px;
+}
+#follow > div { margin-bottom:5px; }
+
 #soon{margin-bottom:50px;}
 a.shadowlink{
 	transition:all 0.15s;
@@ -70,9 +80,6 @@ a.shadowlink:hover{
 }
 @media (min-width:480px) and (max-width:1023px){
 	body{background-size: 1100px}
-}
-@media (max-width:479px){
-	body{background-size: 800px}
 }
 
 
