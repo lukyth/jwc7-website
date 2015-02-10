@@ -24,7 +24,8 @@
 <script>
 
 // Used
-countdown("2015-02-14 00:00");
+countdown("February 15, 2015 00:00");
+
 
 
 
@@ -44,6 +45,7 @@ function countdown(timeEnd) {
 		countdown_min 	= document.getElementById("countdown_min"),
 		countdown_sec 	= document.getElementById("countdown_sec");
 
+	
 	calculate_countdown();
 	setInterval(function () {
 	    calculate_countdown();
