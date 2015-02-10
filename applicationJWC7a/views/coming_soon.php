@@ -18,35 +18,36 @@
       </div>
     </div>
 
+
+
     <div class="row">
       <div class="col-sm-12">
         <ul class="countdown">
           <li>
             <span id="countdown_day" class="days">00</span>
-            <p class="days_ref">days</p>
+            <p class="days_ref">วัน</p>
           </li>
             <li class="seperator">.</li>
           <li>
             <span id="countdown_hour" class="hours">00</span>
-            <p class="hours_ref">hours</p>
+            <p class="hours_ref">ชั่วโมง</p>
           </li>
           <li class="seperator">:</li>
           <li>
             <span id="countdown_min" class="minutes">00</span>
-            <p class="minutes_ref">minutes</p>
+            <p class="minutes_ref">นาที</p>
           </li>
             <li class="seperator">:</li>
           <li>
             <span id="countdown_sec" class="seconds">00</span>
-            <p class="seconds_ref">seconds</p>
+            <p class="seconds_ref">วินาที</p>
           </li>
         </ul>
       </div>
     </div>
-
     <div class="row" id="soon">
       <div class="col-sm-12">
-        <h3>เร็วๆ นี้</h3>
+        <h3>ตื่นตาพร้อมกัน ทั่วสยามนคร</h3>
       </div>
     </div>
 
@@ -71,7 +72,7 @@
 
     <div class="row" id="follow">
       <div class="col-sm-12">
-        <h3>Follow <b>jwcth</b> on<span class="hidden-xs">&nbsp;</span>
+        <h3>Follow <b>JWCTH</b> on<span class="hidden-xs">&nbsp;</span>
         <br class="visible-xs">
           <a href="http://www.facebook.com/jwcth" class="shadowlink" title="JWC on Facebook" target="_blank"><img src="<?php echo base_url()."assets/" ?>img/social/fb.svg" alt="fb"></a>&nbsp;
           <a href="http://www.twitter.com/jwcth" class="shadowlink" title="JWC on Twitter" target="_blank"><img src="<?php echo base_url()."assets/" ?>img/social/tw.svg" alt="tw"></a>&nbsp;
@@ -84,7 +85,7 @@
   <script class="source">
 
     // Used
-    countdown("2015-02-14 00:00");
+    countdown("February 14, 2015 00:00");
 
     // NOT REQUIRE JQUERY
     function countdown(timeEnd) {
