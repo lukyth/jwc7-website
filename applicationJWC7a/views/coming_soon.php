@@ -17,7 +17,6 @@
         <img src="<?php echo base_url()."assets/" ?>img/logo.svg" alt="logo" class="img-responsive img-center" id="logo">
       </div>
     </div>
-    <!-- <div class="bg"></div> -->
 
     <div class="row">
       <div class="col-sm-12">

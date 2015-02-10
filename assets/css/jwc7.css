@@ -4,14 +4,8 @@
 }
 html {
 	width:100%;
-	/*height:100%;*/
 }
 body{
-	background-color: #eee;
-	/*background-image: url('../img/bg7.png');*/
-	background-position: center top;
-	background-repeat: repeat;
-	background-size: cover;
 	width: 100%;
 	height: 100%;
 	overflow-x:hidden;
@@ -24,7 +18,6 @@ body{
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
-	/*height: 100%;*/
 	width: 100%;
 	min-height: 100vh;
 }
@@ -53,15 +46,7 @@ body{
 #subscribe .form-control {
 	line-height: 2em;
 }
-/*@media (min-width:480px){
-	#social{
-		margin-top:-55px;
-	}
-}*/
 
-#follow {
-	/*background-image: url('../img/gw.png');*/
-}
 #follow > div { margin-bottom:5px; }
 
 #soon{margin-bottom:50px;}
@@ -73,8 +58,6 @@ a.shadowlink{
 a.shadowlink:hover{
 	box-shadow: 0px 2px 10px rgba(0,0,0,0.4);
 	background-color: rgba(0,0,0,0.4);
-	/*margin-bottom:5px;
-	margin-top:-5px;*/
 }
 .container-fluid:first-of-type .row:first-of-type{
 	padding-top:120px;
@@ -90,18 +73,10 @@ a.shadowlink:hover{
 .form-control:active{
 	border:#118d83 1px solid;
 }
-@media (min-width:1024px){
-	/*body{background-size: 1400px;}*/
-}
-@media (min-width:480px) and (max-width:1023px){
-	/*body{background-size: 1100px}*/
-}
-
 
 ul.countdown {
 	font-family: 'wdb_bangnaregular';
 	list-style: none;
-	/*margin: 75px 0;*/
 	margin:80px 0 -15px;
 	padding: 0;
 	display: block;
