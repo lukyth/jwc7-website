@@ -11,12 +11,13 @@
   <link rel="icon" type="image/png" href="<?php echo base_url()."assets/" ?>img/favicon.png">
 </head>
 <body>
-  <div class="container-fluid txt-center">
+  <div class="container-fluid txt-center bg">
     <div class="row">
       <div class="col-sm-12">
         <img src="<?php echo base_url()."assets/" ?>img/logo.svg" alt="logo" class="img-responsive img-center" id="logo">
       </div>
     </div>
+    <!-- <div class="bg"></div> -->
 
     <div class="row">
       <div class="col-sm-12">
