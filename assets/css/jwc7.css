@@ -21,9 +21,6 @@ body{
 	width: 100%;
 	min-height: 100vh;
 }
-#logo {
-	max-width: 460px;
-}
 .btn-primary ,.btn-primary:link, .btn-primary:active, .btn-primary:visited{background-color: #118d83;}
 .btn-primary:hover{background-color: #084a44;}
 
