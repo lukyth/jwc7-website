@@ -45,63 +45,82 @@
 	<div id="header-page">
 		<div class="cover-img" src="<?= base_url() ?>assets/img/main/city.png" alt="">
 			<div class="row">
-				<div class="col-xs-12">
-					<img class="img-center" style="margin-top:150px;" src="<?= base_url() ?>assets/img/main/logo.png" />
+				<div class="col-xs-8 col-xs-offset-2">
+					<img class="img-center img-responsive" style="margin-top:150px;" src="<?= base_url() ?>assets/img/main/logo.png" />
+					<div class="row">
+						<div class="col-md-3 col-xs-6"><img src="<?= base_url() ?>assets/img/main/spon1.jpg" class="img-center img-responsive"></div>
+						<div class="col-md-3 col-xs-6"><img src="<?= base_url() ?>assets/img/main/spon2.jpg" class="img-center img-responsive"></div>
+						<div class="col-md-3 col-xs-6"><img src="<?= base_url() ?>assets/img/main/spon3.jpg" class="img-center img-responsive"></div>
+						<div class="col-md-3 col-xs-6"><img src="<?= base_url() ?>assets/img/main/spon4.jpg" class="img-center img-responsive"></div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<div class="container-fuild" style="overflow:hidden;">
+
 		<div id="detail-page" class="page">
-			<div class="row">
-				<div class="col-xs-12">
-					<h1 class="title text-center">รายละเอียด</h1>
-					<p class="text-center">
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
+			<img src="<?= base_url() ?>assets/img/main/rivertop.png" style="width:100%;"></div>
+			<div class="row img-rivercenter">
+				<div class="col-xs-10 col-xs-offset-1">
+					<img src="<?= base_url() ?>assets/img/main/detailheader.png" class="img-responsive img-detailheader img-center" />
+					<div class="img-center img-detailtext text-center">
+						<h1>อะไรคือ JWC7</h1>
+						<img class="img-center" src="<?= base_url() ?>assets/img/main/hr_1.png" />
 						<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-						XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX<br>
-					</p>
+						<p style="font-size:22px; white-space:nowrap;">
+						ค่ายสร้างเว็บที่จะพาน้องๆ ม.ปลาย<br>
+						มาเรียนรู้เทคนิคการสร้างสรรค์อย่างบรรเจิด<br>
+						สัมผัสประสบการณ์พิเศษผ่านกิจกรรมสนุกๆ<br>
+						และ Workshop จากสาขาต่างๆ<br>
+						พร้อมทั้งการนำเสนอผลงานกับกูรูใจดี<br>
+						แห่งวงการเว็บไทยมากมาย<br>
+						</p>
+					</div>
 				</div>
 			</div>
+			<img src="<?= base_url() ?>assets/img/main/riverbottom.png" style="width:100%;"></div>
 		</div>
+
 		<div id="category-page" class="page">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<h1 class="title text-center">สาขา</h1>
 					<div class="row">
 						<div class="col-md-4 text-center">
-							<div class="img-center" style="width:400px; height:500px; background:#111; border-radius:10px;"></div>
+							<img src="<?= base_url() ?>assets/img/main/pic_cat_design.png" class="img-center img-responsive" />
+							<div style="color:#732777; margin:7px; font-size:25px;">Web Design</div>
+							<p class="text-center description">
+								เนรมิตหน้าเว็บ โชว์สเต็ปดีไซน์ ไฉไลสไตล์เว็บสเตอร์สู่การเป็นเว็บ Design อย่างแท้จริง
+							</p>
+							<div class="count-box" style="background:#732777;">777</div>
 						</div>
 						<div class="col-md-4 text-center">
-							<div class="img-center" style="width:400px; height:500px; background:#111; border-radius:10px;"></div>
+							<img src="<?= base_url() ?>assets/img/main/pic_cat_content.png" class="img-center img-responsive" />
+							<div style="color:#07908C; margin:7px; font-size:25px;">Web Content</div>
+							<p class="text-center description">
+								สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Contenให้เฉือดเฉือนประโยคเด็ด Content ชนะใจ
+							</p>
+							<div class="count-box" style="background:#07908C;">777</div>
 						</div>
 						<div class="col-md-4 text-center">
-							<div class="img-center" style="width:400px; height:500px; background:#111; border-radius:10px;"></div>
+							<img src="<?= base_url() ?>assets/img/main/pic_cat_marketing.png" class="img-center img-responsive" />
+							<div style="color:#E64C24; margin:7px; font-size:25px;">Web Marketing</div>
+							<p class="text-center description">
+								เรียนรู้ศาสตร์การตลาดยุทธศาสตร์ การสร้างชื่อให้เว็บเลื่องลือระบือไกล
+							</p>
+							<div class="count-box" style="background:#E64C24;">777</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="category-page" class="page">
+
+		<div id="sponser-page" class="page">
+			<div class="img-sponserhead" style="width:100%;"></div>
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
-					<h1 class="title text-center">ผู้สนับสนุน</h1>
 					<div class="row">
 						<div class="col-md-3 text-center">
 						</div>
@@ -149,14 +168,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="timeline-page" class="page">
-			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
-					<h1 class="title text-center">Time line</h1>
-					<img class="img-center" style="margin-top:40px;" src="<?= base_url() ?>assets/img/main/timeline.jpg" alt="" />
-				</div>
-			</div>
-		</div>
+		
 		<div id="qa-page" class="page">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
@@ -184,6 +196,16 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="timeline-page" class="page">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<h1 class="title text-center">Time line</h1>
+					<img class="img-center" style="margin-top:40px;" src="<?= base_url() ?>assets/img/main/timeline.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+
 		<div id="picture-page" class="page">
 			<div class="row">
 				<div class="col-md-12">
