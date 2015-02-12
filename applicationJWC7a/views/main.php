@@ -213,9 +213,11 @@
 
 		<div id="picture-page" class="page">
 			<div class="row">
-				<div class="col-md-12">
-					<h1 class="title text-center">ภาพจากปีเก่า</h1>
+				<div class="col-xs-10 col-xs-offset-1">
+					<h1 class="big-text text-center">ภาพจากปีเก่า</h1>
+					<img class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
 					<div class="row">
+						<!--
 						<div class="col-xs-2 text-center" style="font-size:70px; font-weight:bold; height:630px;">
 							<div style="display:table; width:100%; height:100%;">
 								<div style="display:table-cell; vertical-align:middle; float:none;">
@@ -223,68 +225,66 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-xs-8">
+						//-->
+						<div class="table-picture col-md-8 col-md-offset-2 col-xs-12">
 							<div class="row">
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-md-2">
-									<div class="img-center" style="width:200px; height:200px; background:#222; margin:5px;"></div>
+								<div class="col-lg-2 col-md-3 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
 							</div>
 						</div>
+						<!--
 						<div class="col-xs-2 text-center" style="font-size:70px; font-weight:bold; height:630px;">
 							<div style="display:table; width:100%; height:100%;">
 								<div style="display:table-cell; vertical-align:middle; float:none;">
@@ -292,6 +292,7 @@
 								</div>
 							</div>
 						</div>
+						//-->
 					</div>
 				</div>
 			</div>

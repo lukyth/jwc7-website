@@ -173,6 +173,15 @@ body {
 	color: #000;
 }
 
+#picture-page .table-picture img {
+	margin-bottom: 10px;
+}
+
+#picture-page .col-md-2,#picture-page .col-md-3,#picture-page .col-md-6 {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
 .img-detailheader {
 	margin-top: 50px;
 	margin-bottom: 50px;
