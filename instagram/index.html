@@ -15,7 +15,7 @@
 
     new Instagram({
     	clientId: API_KEY, // client id
-    	tagsName: 'jwcth' // tag name
+    	tagName: 'jwcth' // tag name
     })
     .feed(function(data){
     	// return json data
@@ -23,13 +23,14 @@
 			var image_standard = data[i].images.standard_resolution.url; // 600 x 600
 			var low_resolution = data[i].images.low_resolution.url; // 300 x 300
 			var thumbnail = data[i].images.thumbnail.url; // 150 x 150
+            var message = data[i].caption.text; // message
 			$("div#jwcth").append('<img src="'+ thumbnail +'">');
 		}
     });
 
     new Instagram({
         clientId: API_KEY,
-        tagsName: 'jwc7'
+        tagName: 'jwc7'
     })
     .feed(function(data){
         for(var i=0; i<data.length; i++) {
@@ -40,7 +41,7 @@
 
     new Instagram({
     	clientId: API_KEY,
-    	tagsName: 'jwc6'
+    	tagName: 'jwc6'
     })
     .feed(function(data){
     	for(var i=0; i<data.length; i++) {
@@ -51,7 +52,7 @@
 
     new Instagram({
     	clientId: API_KEY,
-    	tagsName: 'jwc5'
+    	tagName: 'jwc5'
     })
     .feed(function(data){
     	for(var i=0; i<data.length; i++) {
