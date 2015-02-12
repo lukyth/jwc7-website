@@ -216,82 +216,70 @@
 					<h1 class="big-text text-center">ภาพจากปีเก่า</h1>
 					<img class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
 					<div class="row">
-						<!--
-						<div class="col-xs-2 text-center" style="font-size:70px; font-weight:bold; height:630px;">
-							<div style="display:table; width:100%; height:100%;">
-								<div style="display:table-cell; vertical-align:middle; float:none;">
-									&lt;
-								</div>
-							</div>
-						</div>
-						//-->
 						<div class="table-picture col-xs-12">
 							<div class="row">
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-3 col-md-4 col-xs-6">
+								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
 							</div>
-						</div>
-						<!--
-						<div class="col-xs-2 text-center" style="font-size:70px; font-weight:bold; height:630px;">
-							<div style="display:table; width:100%; height:100%;">
-								<div style="display:table-cell; vertical-align:middle; float:none;">
-									&gt;
-								</div>
+							<div class="social text-center">
+								<a href="http://www.facebook.com/jwcth" class="shadowlink" title="JWC on Facebook" target="_blank"><img src="<?php echo base_url()."assets/" ?>img/social/fb.svg" alt="fb"></a>
+								<a href="http://www.twitter.com/jwcth" class="shadowlink" title="JWC on Twitter" target="_blank"><img src="<?php echo base_url()."assets/" ?>img/social/tw.svg" alt="tw"></a>
+								<a href="http://www.instagram.com/jwcth" class="shadowlink" title="JWC on Instagram" target="_blank"><img src="<?php echo base_url()."assets/" ?>img/social/ig.svg" alt="ig"></a>
+								<a href="https://www.youtube.com/channel/UCvoljJxOdeqTlguPsh9nHVg" class="shadowlink" title="YWC YouTube Channel" target="_blank"><img src="<?php echo base_url()."assets/" ?>img/social/yt.svg" alt="yt"></a></h3>
 							</div>
 						</div>
-						//-->
 					</div>
 				</div>
 			</div>
