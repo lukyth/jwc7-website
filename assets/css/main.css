@@ -8,6 +8,16 @@ body {
 	font-family: 'wdb_bangnaregular';
 }
 
+.CSPraJad { font-family: 'CSPraJad'; }
+
+.title-text { font-size:40px; }
+.normal-text { font-size:30px; }
+
+@media screen and (max-width:768px) {
+	.title-text { font-size:30px; }
+	.normal-text { font-size:20px; }
+}
+
 .img-center {
 	margin-left:auto;
 	margin-right:auto;
@@ -141,4 +151,11 @@ body {
 	height: 200px;
 	margin: 0px;
 	margin-bottom:50px;
+}
+
+.img-platapainbg {
+	background: url(../img/main/platapainbg.png);
+	background-position: center;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
 }

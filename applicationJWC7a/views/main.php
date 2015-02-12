@@ -8,6 +8,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>css/default_global.css"/>
 	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>fonts/CSPraJad.css" />
 	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>fonts/wdb_bangna.css" />
 	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>css/main.css" />
 
@@ -65,19 +66,21 @@
 			<img src="<?= base_url() ?>assets/img/main/rivertop.png" style="width:100%;"></div>
 			<div class="row img-rivercenter">
 				<div class="col-xs-10 col-xs-offset-1">
-					<img src="<?= base_url() ?>assets/img/main/detailheader.png" class="img-responsive img-detailheader img-center" />
-					<div class="img-center img-detailtext text-center">
-						<h1>อะไรคือ JWC7</h1>
-						<img class="img-center" src="<?= base_url() ?>assets/img/main/hr_1.png" />
-						<br>
-						<p style="font-size:22px; white-space:nowrap;">
-						ค่ายสร้างเว็บที่จะพาน้องๆ ม.ปลาย<br>
-						มาเรียนรู้เทคนิคการสร้างสรรค์อย่างบรรเจิด<br>
-						สัมผัสประสบการณ์พิเศษผ่านกิจกรรมสนุกๆ<br>
-						และ Workshop จากสาขาต่างๆ<br>
-						พร้อมทั้งการนำเสนอผลงานกับกูรูใจดี<br>
-						แห่งวงการเว็บไทยมากมาย<br>
-						</p>
+					<div class="img-platapainbg">
+						<img src="<?= base_url() ?>assets/img/main/detailheader.png" class="img-responsive img-detailheader img-center" />
+						<div class="img-center img-detailtext text-center">
+							<h1 class="title-text">อะไรคือ JWC7</h1>
+							<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
+							<br>
+							<p class="normal-text" style="line-height:2; margin-bottom:30px;">
+							ค่ายสร้างเว็บที่จะพาน้องๆ ม.ปลาย<br>
+							มาเรียนรู้เทคนิคการสร้างสรรค์อย่างบรรเจิด<br>
+							สัมผัสประสบการณ์พิเศษผ่านกิจกรรมสนุกๆ<br>
+							และ Workshop จากสาขาต่างๆ<br>
+							พร้อมทั้งการนำเสนอผลงานกับกูรูใจดี<br>
+							แห่งวงการเว็บไทยมากมาย<br>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
