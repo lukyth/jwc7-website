@@ -9,13 +9,13 @@ function Instagram ( client_info ) {
 	var results = [];
 
 	this.clientId = '';
-	this.tagName = new Array();
+	this.tagName = '';
 	this.ended = false;
 
 	this.init = function () {
 		if( typeof client_info.clientId != 'undefined' && typeof client_info.tagName != 'undefined' ) {
 			this.clientId = client_info.clientId;
-			this.tagName = client_info.tagName.split(',');
+			this.tagName = client_info.tagName;
 			this.getResult(); // call getResult()
 		}
 	}
