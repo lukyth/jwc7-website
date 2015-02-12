@@ -5,7 +5,7 @@
 <script src="instagram.ywc.js"></script>
 
 <!-- script demo -->
-<script>
+/<script>
 new Instagram({
 	clientId: 'API_KEY', // client id
 	tagName: 'jwcth' // tag name
@@ -15,4 +15,4 @@ new Instagram({
 	console.log(data);
 }
 });
-</script>
+/</script>
