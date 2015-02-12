@@ -8,6 +8,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>css/default_global.css"/>
 	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>fonts/wdb_bangna.css" />
 	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>css/main.css" />
 
 </head>
