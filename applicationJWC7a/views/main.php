@@ -3,6 +3,7 @@
 <head>
 
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>JWC#7</title>
 
 	<!-- CSS -->
@@ -15,6 +16,7 @@
 </head>
 	
 <body>
+	
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -60,9 +62,9 @@
 		</div>
 	</div>
 
-	<div class="container-fuild" style="overflow:hidden;">
+	<div style="overflow:hidden;">
 
-		<div id="detail-page" class="page">
+		<div id="about-page" class="page">
 			<img src="<?= base_url() ?>assets/img/main/rivertop.png" style="width:100%;"></div>
 			<div class="row img-rivercenter">
 				<div class="col-xs-10 col-xs-offset-1">
@@ -72,13 +74,8 @@
 							<h1 class="title-text">อะไรคือ JWC7</h1>
 							<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
 							<br>
-							<p class="normal-text" style="line-height:2; margin-bottom:30px;">
-							ค่ายสร้างเว็บที่จะพาน้องๆ ม.ปลาย<br>
-							มาเรียนรู้เทคนิคการสร้างสรรค์อย่างบรรเจิด<br>
-							สัมผัสประสบการณ์พิเศษผ่านกิจกรรมสนุกๆ<br>
-							และ Workshop จากสาขาต่างๆ<br>
-							พร้อมทั้งการนำเสนอผลงานกับกูรูใจดี<br>
-							แห่งวงการเว็บไทยมากมาย<br>
+							<p class="normal-text desciption" style="line-height:2; margin-bottom:30px;">
+							ค่ายสร้างเว็บที่จะพาน้องๆ ม.ปลาย มาเรียนรู้เทคนิคการสร้างสรรค์อย่างบรรเจิด สัมผัสประสบการณ์พิเศษผ่านกิจกรรมสนุกๆ และ Workshop จากสาขาต่างๆ พร้อมทั้งการนำเสนอผลงานกับกูรูใจดี แห่งวงการเว็บไทยมากมาย
 							</p>
 						</div>
 					</div>
@@ -89,32 +86,36 @@
 
 		<div id="category-page" class="page">
 			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
-					<h1 class="title text-center">สาขา</h1>
+				<div class="col-xs-10 col-xs-offset-1">
+					<h1 class="text-center big-text">สาขา</h1>
+					<img class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
 					<div class="row">
 						<div class="col-md-4 text-center">
 							<img src="<?= base_url() ?>assets/img/main/pic_cat_design.png" class="img-center img-responsive" />
-							<div style="color:#732777; margin:7px; font-size:25px;">Web Design</div>
+							<div class="cat-text" style="color:#732777;">Web Design</div>
 							<p class="text-center description">
 								เนรมิตหน้าเว็บ โชว์สเต็ปดีไซน์ ไฉไลสไตล์เว็บสเตอร์สู่การเป็นเว็บ Design อย่างแท้จริง
 							</p>
-							<div class="count-box" style="background:#732777;">777</div>
+							<div class="count-box" style="background:#732777;">123</div>
+							<img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" />
 						</div>
 						<div class="col-md-4 text-center">
 							<img src="<?= base_url() ?>assets/img/main/pic_cat_content.png" class="img-center img-responsive" />
-							<div style="color:#07908C; margin:7px; font-size:25px;">Web Content</div>
+							<div class="cat-text" style="color:#07908C;">Web Content</div>
 							<p class="text-center description">
 								สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Contenให้เฉือดเฉือนประโยคเด็ด Content ชนะใจ
 							</p>
-							<div class="count-box" style="background:#07908C;">777</div>
+							<div class="count-box" style="background:#07908C;">456</div>
+							<img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" />
 						</div>
 						<div class="col-md-4 text-center">
 							<img src="<?= base_url() ?>assets/img/main/pic_cat_marketing.png" class="img-center img-responsive" />
-							<div style="color:#E64C24; margin:7px; font-size:25px;">Web Marketing</div>
+							<div class="cat-text" style="color:#E64C24;">Web Marketing</div>
 							<p class="text-center description">
 								เรียนรู้ศาสตร์การตลาดยุทธศาสตร์ การสร้างชื่อให้เว็บเลื่องลือระบือไกล
 							</p>
-							<div class="count-box" style="background:#E64C24;">777</div>
+							<div class="count-box" style="background:#E64C24;">789</div>
+							<img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" />
 						</div>
 					</div>
 				</div>

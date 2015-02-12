@@ -6,14 +6,17 @@ html,body {
 body {
 	color: #fff;
 	font-family: 'wdb_bangnaregular';
+	overflow-x: hidden;
 }
 
 .CSPraJad { font-family: 'CSPraJad'; }
 
+.big-text { font-size:70px; }
 .title-text { font-size:40px; }
 .normal-text { font-size:30px; }
 
 @media screen and (max-width:768px) {
+	.big-text { font-size:60px; }
 	.title-text { font-size:30px; }
 	.normal-text { font-size:20px; }
 }
@@ -52,10 +55,14 @@ body {
 	width:100%;
 	display:block;
 }
+@media screen and (max-width:991px) {
+	.page {
+		padding: 20px 0px;
+	}	
+}
 
 .page .title {
-	margin-bottom: 75px;
-	font-weight: bold;
+	margin-bottom: 40px;
 }
 
 #sponser-page,#timeline-page,#qa-page {
@@ -79,30 +86,74 @@ body {
 	display:block;
 }
 
-#detail-page {
+#about-page {
 	padding: 0px;
-	background: url(../img/main/river.png);
-	background-size: cover;
-	background-position:top bottom;
-	
+}
+
+#about-page .desciption {
+	max-width:500px;
 }
 
 #category-page {
-	padding-top: 50px;
+	padding-top: 0px;
 	color: #000;
 }
 
 #category-page .description {
-	min-height: 200px;
+	min-height: 180px;
+	font-size: 30px;
+	font-family: 'CSPraJad';
+	max-width: 450px;
+	margin: auto;
+	text-align: center;
+	margin-top: 5px;
 }
+
 
 #category-page .count-box {
 	display: inline-block;
-	padding: 10px 30px;
-	font-size: 25px;
+	padding: 5px 60px;
+	font-size: 55px;
 	margin: 10px 0px;
 	border-radius: 5px;
 	color: #fff;
+}
+
+#category-page .cat-text {
+	font-size: 35px;
+	margin-top:20px;
+}
+
+#category-page .register {
+	cursor:pointer;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	width: 170px;
+}
+
+@media screen and (max-width:1199px) {
+	#category-page .description {
+		min-height: 240px;
+	}
+	#category-page .count-box {
+		font-size: 45px;
+	}
+}
+
+@media screen and (max-width:991px) {
+	#category-page .description {
+		min-height: 0px;
+		margin-bottom: 20px;
+	}
+	#category-page .description {
+		font-size: 20px;
+	}
+	#category-page .count-box {
+		font-size: 35px;
+	}
+	#category-page .register {
+		width: 120px;
+	}
 }
 
 #sponser-page {
