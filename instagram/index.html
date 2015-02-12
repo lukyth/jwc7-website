@@ -9,22 +9,13 @@
 
 <script type="text/javascript">
     /**
-     *	full demo
+     *  Instagram API
      */
-    new Instagram({
-    	clientId: 'ebe395a4f35f4c53a331bcc4b8e64201',
-    	tagsName: 'jwcth'
-    })
-    .feed(function(data){
-    	for(var i=0; i<data.length; i++) {
-			var thumbnail = data[i].images.thumbnail.url; // 150 x 150
-			$("div#jwcth").append('<img src="'+ thumbnail +'">');
-		}
-    });
+    var API_KEY = "ebe395a4f35f4c53a331bcc4b8e64201";
 
     new Instagram({
-    	clientId: 'ebe395a4f35f4c53a331bcc4b8e64201', // client id
-    	tagsName: 'jwc7' // tag name
+    	clientId: API_KEY, // client id
+    	tagsName: 'jwcth' // tag name
     })
     .feed(function(data){
     	// return json data
@@ -32,12 +23,23 @@
 			var image_standard = data[i].images.standard_resolution.url; // 600 x 600
 			var low_resolution = data[i].images.low_resolution.url; // 300 x 300
 			var thumbnail = data[i].images.thumbnail.url; // 150 x 150
-			$("div#jwc7").append('<img src="'+ thumbnail +'">');
+			$("div#jwcth").append('<img src="'+ thumbnail +'">');
 		}
-    }); ////
+    });
 
     new Instagram({
-    	clientId: 'ebe395a4f35f4c53a331bcc4b8e64201',
+        clientId: API_KEY,
+        tagsName: 'jwc7'
+    })
+    .feed(function(data){
+        for(var i=0; i<data.length; i++) {
+            var thumbnail = data[i].images.thumbnail.url;
+            $("div#jwc7").append('<img src="'+ thumbnail +'">');
+        }
+    });
+
+    new Instagram({
+    	clientId: API_KEY,
     	tagsName: 'jwc6'
     })
     .feed(function(data){
@@ -48,12 +50,12 @@
     });
 
     new Instagram({
-    	clientId: 'ebe395a4f35f4c53a331bcc4b8e64201',
+    	clientId: API_KEY,
     	tagsName: 'jwc5'
     })
     .feed(function(data){
     	for(var i=0; i<data.length; i++) {
-			var thumbnail = data[i].images.thumbnail.url; // 150 x 150
+			var thumbnail = data[i].images.thumbnail.url;
 			$("div#jwc5").append('<img src="'+ thumbnail +'">');
 		}
     });
