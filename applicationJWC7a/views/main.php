@@ -2,9 +2,23 @@
 <html>
 <head>
 
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=0.85">
-	<title>JWC#7</title>
+	<title>Junior Webmaster Camp #7</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="มาจะกล่าวบทไป.. ฤกษ์งามยามดีนี้ไซร้ จักนำมาให้ชมอีกคำรบหนึ่ง ขอป่าวประกาศลั่น! ค่ายปั้นนักพัฒนาเว็บระดับมัธยม กำลังทำการลงเสาเอก ก่อกำแพงเมือง ให้ปวงประชาจักได้สัมผัสถึงความยิ่งใหญ่ มินานเพียงชั่วเคี้ยวหมากแหลกแล้วไซร้ อันกาลใกล้จักใกล้ได้เชยชม !!">
+  <meta name="keywords" content="webmaster,ค่ายไอที,ค่ายคอม,jwc,jwc7,jwc#7,junior webmaster camp,ค่ายทำเว็บ,ค่ายเว็บ">
+  <meta property="og:title" content="Junior Webmaster Camp #7">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="<?= base_url()?>">
+  <meta property="og:image" content="<?= base_url()?>assets/img/fb-og.jpg">
+  <meta property="og:image" content="<?= base_url()?>assets/img/fb-og-large.jpg">
+  <meta property="og:image" content="<?= base_url()?>assets/img/fb-og-large-2.jpg">
+  <meta property="og:image" content="<?= base_url()?>assets/img/fb-og-large-3.jpg">
+  <meta property="og:image" content="<?= base_url()?>assets/img/fb-og-large-4.jpg">
+  <meta property="og:site_name" content="Junior Webmaster Camp #7">
+  <meta property="og:description" content="มาจะกล่าวบทไป.. ฤกษ์งามยามดีนี้ไซร้ จักนำมาให้ชมอีกคำรบหนึ่ง ขอป่าวประกาศลั่น! ค่ายปั้นนักพัฒนาเว็บระดับมัธยม กำลังทำการลงเสาเอก ก่อกำแพงเมือง ให้ปวงประชาจักได้สัมผัสถึงความยิ่งใหญ่ มินานเพียงชั่วเคี้ยวหมากแหลกแล้วไซร้ อันกาลใกล้จักใกล้ได้เชยชม !!">
+  <link rel="icon" type="image/png" href="<?php echo base_url()."assets/" ?>img/favicon.png">
 
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>css/default_global.css"/>
@@ -14,15 +28,15 @@
 	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>css/main.css" />
 
 </head>
-	
+
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-	
+
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-content">
-				<span class="sr-only">Toggle navigation</span> 
+				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -177,7 +191,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="qa-page" class="page">
 			<div class="container">
 				<div class="row">
