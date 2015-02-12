@@ -5,7 +5,7 @@
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="instagram.ywc.js"></script>
 
-<!-- script demo -->
+<!-- demo -->
 <script>
 new Instagram({
 	clientId: 'API_KEY', // client id
