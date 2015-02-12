@@ -64,72 +64,71 @@
 		</div>
 	</div>
 
-	<div style="overflow:hidden;">
-
-		<div id="about-page" class="page">
-			<img src="<?= base_url() ?>assets/img/main/rivertop.png" style="width:100%;"></div>
-			<div class="img-rivercenter">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-10 col-xs-offset-1">
-							<div class="img-platapainbg">
-								<img src="<?= base_url() ?>assets/img/main/detailheader.png" class="img-responsive img-detailheader img-center" />
-								<div class="img-center img-detailtext text-center">
-									<h1 class="title-text">อะไรคือ JWC7</h1>
-									<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
-									<br>
-									<p class="normal-text desciption" style="line-height:2; margin-bottom:30px;">
-									ค่ายสร้างเว็บที่จะพาน้องๆ ม.ปลาย มาเรียนรู้เทคนิคการสร้างสรรค์อย่างบรรเจิด สัมผัสประสบการณ์พิเศษผ่านกิจกรรมสนุกๆ และ Workshop จากสาขาต่างๆ พร้อมทั้งการนำเสนอผลงานกับกูรูใจดี แห่งวงการเว็บไทยมากมาย
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<img src="<?= base_url() ?>assets/img/main/riverbottom.png" style="width:100%;"></div>
-		</div>
-
-		<div id="category-page" class="page">
+	<div id="about-page" class="page">
+		<img src="<?= base_url() ?>assets/img/main/rivertop.png" style="width:100%;"></div>
+		<div class="img-rivercenter">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-10 col-xs-offset-1">
-						<h1 class="text-center big-text">สาขา</h1>
-						<img class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
-						<div class="row">
-							<div class="col-md-4 text-center">
-								<img src="<?= base_url() ?>assets/img/main/pic_cat_design.png" class="img-center img-responsive" />
-								<div class="cat-text" style="color:#732777;">Web Design</div>
-								<p class="text-center description">
-									เนรมิตหน้าเว็บ โชว์สเต็ปดีไซน์ ไฉไลสไตล์เว็บสเตอร์สู่การเป็นเว็บ Design อย่างแท้จริง
+						<div class="img-platapainbg">
+							<img src="<?= base_url() ?>assets/img/main/detailheader.png" class="img-responsive img-detailheader img-center" />
+							<div class="img-center img-detailtext text-center">
+								<h1 class="title-text">อะไรคือ JWC7</h1>
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
+								<br>
+								<p class="normal-text desciption" style="line-height:2; margin-bottom:30px;">
+								ค่ายสร้างเว็บที่จะพาน้องๆ ม.ปลาย มาเรียนรู้เทคนิคการสร้างสรรค์อย่างบรรเจิด สัมผัสประสบการณ์พิเศษผ่านกิจกรรมสนุกๆ และ Workshop จากสาขาต่างๆ พร้อมทั้งการนำเสนอผลงานกับกูรูใจดี แห่งวงการเว็บไทยมากมาย
 								</p>
-								<div class="count-box" style="background:#732777;">123</div>
-								<img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" />
-							</div>
-							<div class="col-md-4 text-center">
-								<img src="<?= base_url() ?>assets/img/main/pic_cat_content.png" class="img-center img-responsive" />
-								<div class="cat-text" style="color:#07908C;">Web Content</div>
-								<p class="text-center description">
-									สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Contenให้เฉือดเฉือนประโยคเด็ด Content ชนะใจ
-								</p>
-								<div class="count-box" style="background:#07908C;">456</div>
-								<img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" />
-							</div>
-							<div class="col-md-4 text-center">
-								<img src="<?= base_url() ?>assets/img/main/pic_cat_marketing.png" class="img-center img-responsive" />
-								<div class="cat-text" style="color:#E64C24;">Web Marketing</div>
-								<p class="text-center description">
-									เรียนรู้ศาสตร์การตลาดยุทธศาสตร์ การสร้างชื่อให้เว็บเลื่องลือระบือไกล
-								</p>
-								<div class="count-box" style="background:#E64C24;">789</div>
-								<img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" />
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<img src="<?= base_url() ?>assets/img/main/riverbottom.png" style="width:100%;"></div>
+	</div>
 
+	<div id="category-page" class="page">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-10 col-xs-offset-1">
+					<h1 class="text-center big-text">สาขา</h1>
+					<img class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
+					<div class="row">
+						<div class="col-md-4 text-center">
+							<img src="<?= base_url() ?>assets/img/main/pic_cat_design.png" class="img-center img-responsive" />
+							<div class="cat-text" style="color:#732777;">Web Design</div>
+							<p class="text-center description">
+								เนรมิตหน้าเว็บ โชว์สเต็ปดีไซน์ ไฉไลสไตล์เว็บสเตอร์สู่การเป็นเว็บ Design อย่างแท้จริง
+							</p>
+							<div class="count-box" style="background:#732777;">123</div>
+							<img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" />
+						</div>
+						<div class="col-md-4 text-center">
+							<img src="<?= base_url() ?>assets/img/main/pic_cat_content.png" class="img-center img-responsive" />
+							<div class="cat-text" style="color:#07908C;">Web Content</div>
+							<p class="text-center description">
+								สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Contenให้เฉือดเฉือนประโยคเด็ด Content ชนะใจ
+							</p>
+							<div class="count-box" style="background:#07908C;">456</div>
+							<img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" />
+						</div>
+						<div class="col-md-4 text-center">
+							<img src="<?= base_url() ?>assets/img/main/pic_cat_marketing.png" class="img-center img-responsive" />
+							<div class="cat-text" style="color:#E64C24;">Web Marketing</div>
+							<p class="text-center description">
+								เรียนรู้ศาสตร์การตลาดยุทธศาสตร์ การสร้างชื่อให้เว็บเลื่องลือระบือไกล
+							</p>
+							<div class="count-box" style="background:#E64C24;">789</div>
+							<img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="bg-gradient">
 		<div id="sponsor-page" class="page">
 			<div class="img-sponsorhead" style="width:100%;">
 				<h1 class="text-center big-text">ผู้สนับสนุน</h1>
@@ -139,48 +138,42 @@
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
 						<div class="row">
-							<div class="col-md-3 text-center">
+							<div class="col-md-1 text-center">
 							</div>
-							<div class="col-md-3 text-center">
-								<div class="img-center" style="width:240px; height:180px; background:#111; border-radius:10px;"></div>
+							<div class="col-md-5 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_large.png" />
 							</div>
-							<div class="col-md-3 text-center">
-								<div class="img-center" style="width:240px; height:180px; background:#111; border-radius:10px;"></div>
-							</div>
-							<div class="col-md-3 text-center">
+							<div class="col-md-5 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_large.png" />
 							</div>
 						</div>
 						<div class="row" style="margin-top:50px;">
-							<div class="col-md-2"></div>
-							<div class="col-md-2 text-center">
-								<div class="img-center" style="width:200px; height:150px; background:#111; border-radius:10px;"></div>
+							<div class="col-md-3 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-2 text-center">
-								<div class="img-center" style="width:200px; height:150px; background:#111; border-radius:10px;"></div>
+							<div class="col-md-3 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-2 text-center">
-								<div class="img-center" style="width:200px; height:150px; background:#111; border-radius:10px;"></div>
+							<div class="col-md-3 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-2 text-center">
-								<div class="img-center" style="width:200px; height:150px; background:#111; border-radius:10px;"></div>
+							<div class="col-md-3 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-2"></div>
 						</div>
 						<div class="row" style="margin-top:50px;">
-							<div class="col-md-4"></div>
-							<div class="col-md-1 text-center">
-								<div class="img-center" style="width:80px; height:60px; background:#111; border-radius:10px;"></div>
+							<div class="col-md-3 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-1 text-center">
-								<div class="img-center" style="width:80px; height:60px; background:#111; border-radius:10px;"></div>
+							<div class="col-md-3 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-1 text-center">
-								<div class="img-center" style="width:80px; height:60px; background:#111; border-radius:10px;"></div>
+							<div class="col-md-3 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-1 text-center">
-								<div class="img-center" style="width:80px; height:60px; background:#111; border-radius:10px;"></div>
+							<div class="col-md-3 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-4"></div>
 						</div>
 					</div>
 				</div>
@@ -231,91 +224,91 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<div id="picture-page" class="page">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-10 col-xs-offset-1">
-						<h1 class="big-text text-center">ภาพจากปีเก่า</h1>
-						<img class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
-						<div class="row">
-							<!--
-							<div class="col-xs-2 text-center" style="font-size:70px; font-weight:bold; height:630px;">
-								<div style="display:table; width:100%; height:100%;">
-									<div style="display:table-cell; vertical-align:middle; float:none;">
-										&lt;
-									</div>
+	<div id="picture-page" class="page">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-10 col-xs-offset-1">
+					<h1 class="big-text text-center">ภาพจากปีเก่า</h1>
+					<img class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
+					<div class="row">
+						<!--
+						<div class="col-xs-2 text-center" style="font-size:70px; font-weight:bold; height:630px;">
+							<div style="display:table; width:100%; height:100%;">
+								<div style="display:table-cell; vertical-align:middle; float:none;">
+									&lt;
 								</div>
 							</div>
-							//-->
-							<div class="table-picture col-xs-12">
-								<div class="row">
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-									<div class="col-lg-3 col-md-4 col-xs-6">
-										<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
-									</div>
-								</div>
-							</div>
-							<!--
-							<div class="col-xs-2 text-center" style="font-size:70px; font-weight:bold; height:630px;">
-								<div style="display:table; width:100%; height:100%;">
-									<div style="display:table-cell; vertical-align:middle; float:none;">
-										&gt;
-									</div>
-								</div>
-							</div>
-							//-->
 						</div>
+						//-->
+						<div class="table-picture col-xs-12">
+							<div class="row">
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+								<div class="col-lg-3 col-md-4 col-xs-6">
+									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+								</div>
+							</div>
+						</div>
+						<!--
+						<div class="col-xs-2 text-center" style="font-size:70px; font-weight:bold; height:630px;">
+							<div style="display:table; width:100%; height:100%;">
+								<div style="display:table-cell; vertical-align:middle; float:none;">
+									&gt;
+								</div>
+							</div>
+						</div>
+						//-->
 					</div>
 				</div>
 			</div>

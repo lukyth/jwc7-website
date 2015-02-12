@@ -26,6 +26,17 @@ body {
 	display:block;
 }
 
+.bg-gradient {
+	background: #5f2c83; /* Old browsers */
+	background: -moz-linear-gradient(top, #5f2c83 15%, #782a7e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(15%,#5f2c83), color-stop(100%,#782a7e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #5f2c83 15%,#782a7e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #5f2c83 15%,#782a7e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #5f2c83 15%,#782a7e 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #5f2c83 15%,#782a7e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f2c83', endColorstr='#782a7e',GradientType=0 ); /* IE6-9 */
+}
+
 .navbar {
 	background-color: #111;
 	color: #FFF;
@@ -92,10 +103,6 @@ body {
 	.page .title {
 		margin-bottom: 10px;
 	}	
-}
-
-#sponsor-page,#timeline-page,#qa-page {
-	background-color: #78297D;
 }
 
 #header-page .cover-img {
@@ -210,6 +217,9 @@ body {
 #sponsor-page {
 	padding-top: 0px;
 }
+#sponsor-page .big-text {
+	text-shadow: 3px 3px 0px rgba(0,0,0,0.3);
+}
 
 #timeline-page {
 	background-image: url(../img/main/timeline_bottom.png);
@@ -283,7 +293,9 @@ body {
 	background-size: 100% auto;
 	margin: 0px;
 	margin-bottom:50px;
+	box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
 }
+
 
 .img-platapainbg {
 	background: url(../img/main/platapainbg.png);
