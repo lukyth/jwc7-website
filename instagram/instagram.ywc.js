@@ -2,26 +2,26 @@
  *	Class Instagram v1.0
  *	apichai_kub@hotmail.com Chai
  *	
- *  parameters client_info {clientId: 'CLIENT_ID', tagsName: 'TAG_NAME'}
+ *  parameters client_info {clientId: 'CLIENT_ID', tagName: 'TAG_NAME'}
  */
 function Instagram ( client_info ) {
 	var self = this;
 	var results = [];
 
 	this.clientId = '';
-	this.tagsName = new Array();
+	this.tagName = new Array();
 	this.ended = false;
 
 	this.init = function () {
-		if( typeof client_info.clientId != 'undefined' && typeof client_info.tagsName != 'undefined' ) {
+		if( typeof client_info.clientId != 'undefined' && typeof client_info.tagName != 'undefined' ) {
 			this.clientId = client_info.clientId;
-			this.tagsName = client_info.tagsName.split(',');
+			this.tagName = client_info.tagName.split(',');
 			this.getResult(); // call getResult()
 		}
 	}
 	this.getResult = function () {
 		// feach data
-		var url = 'https://api.instagram.com/v1/tags/'+ this.tagsName +'/media/recent?client_id='+ this.clientId;
+		var url = 'https://api.instagram.com/v1/tags/'+ this.tagName +'/media/recent?client_id='+ this.clientId;
 		feach(url);
 
 	    function feach( url ) {
