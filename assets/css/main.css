@@ -75,7 +75,7 @@ body {
 	background-color: #111;
 	border: none;
 }
-@media screen and (max-width:768px) {
+/*@media screen and (max-width:768px) {
 	.navbar {
 		height:50px;
 	}
@@ -83,7 +83,7 @@ body {
 		margin-top:7px;
 	}
 
-}
+}*/
 
 .page {
 	padding: 70px 0px;
@@ -263,6 +263,11 @@ body {
 
 #qa-page {
 	padding-bottom: 0px;
+}
+
+#qa-page .folded-container {
+	margin-bottom:30px;
+	overflow: hidden;
 }
 
 .img-detailheader {

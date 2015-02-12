@@ -3,7 +3,7 @@
 <head>
 
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=0.85">
 	<title>JWC#7</title>
 
 	<!-- CSS -->
@@ -140,38 +140,36 @@
 						<div class="row">
 							<div class="col-md-1 text-center">
 							</div>
-							<div class="col-md-5 text-center">
+							<div class="col-md-5 col-xs-6 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_large.png" />
 							</div>
-							<div class="col-md-5 text-center">
+							<div class="col-md-5 col-xs-6 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_large.png" />
 							</div>
-						</div>
-						<div class="row" style="margin-top:50px;">
-							<div class="col-md-3 text-center">
+							<div class="col-md-1 text-center">
+							</div>
+							<div class="col-md-3 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-3 text-center">
+							<div class="col-md-3 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-3 text-center">
+							<div class="col-md-3 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-3 text-center">
+							<div class="col-md-3 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-						</div>
-						<div class="row" style="margin-top:50px;">
-							<div class="col-md-3 text-center">
+							<div class="col-md-3 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-3 text-center">
+							<div class="col-md-3 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-3 text-center">
+							<div class="col-md-3 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-3 text-center">
+							<div class="col-md-3 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
 						</div>
@@ -185,25 +183,10 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 						<h1 class="text-center big-text">ถาม - ตอบ</h1>
-						<img style="padding-bottom:20px;" class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
-						<div class="row">
-							<div class="col-md-7">
-								<div class="img-center" style="width:100%; height:100px; background:#111; border-radius:10px;"></div>
-							</div>
-						</div>
-						<div class="row" style="margin-top:30px;">
-							<div class="col-md-offset-5 col-md-7">
-								<div class="img-center" style="width:100%; height:100px; background:#111; border-radius:10px;"></div>
-							</div>
-						</div>
-						<div class="row" style="margin-top:30px;">
-							<div class="col-md-7">
-								<div class="img-center" style="width:100%; height:100px; background:#111; border-radius:10px;"></div>
-							</div>
-						</div>
-						<div class="row" style="margin-top:30px;">
-							<div class="col-md-offset-5 col-md-7">
-								<div class="img-center" style="width:100%; height:100px; background:#111; border-radius:10px;"></div>
+						<img class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
+						<div class="folded-container">
+							<div class="folded">
+								<img onclick="Fold.up()" class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/faq.png" />
 							</div>
 						</div>
 					</div>
@@ -318,6 +301,7 @@
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.easing.min.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?= base_url() ?>assets/js/oridomi.min.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/main.js"></script>
 </body>
 </html>
