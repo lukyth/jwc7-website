@@ -6,7 +6,6 @@ html,body {
 body {
 	color: #fff;
 	font-family: 'wdb_bangnaregular';
-	overflow-x: hidden;
 }
 
 .CSPraJad { font-family: 'CSPraJad'; }
@@ -16,9 +15,9 @@ body {
 .normal-text { font-size:30px; }
 
 @media screen and (max-width:768px) {
-	.big-text { font-size:60px; }
-	.title-text { font-size:30px; }
-	.normal-text { font-size:20px; }
+	.big-text { font-size:40px; }
+	.title-text { font-size:25px; }
+	.normal-text { font-size:18px; }
 }
 
 .img-center {
@@ -28,7 +27,7 @@ body {
 }
 
 .navbar {
-	background-color: rgba(0,0,0,0.6);
+	background-color: #111;
 	color: #FFF;
 	border:none;
 	float:none;
@@ -40,7 +39,18 @@ body {
 	text-decoration: none;
 	color: #FFF;
 	margin-top:10px;
-	font-size:20px;
+	font-size:18px;
+	display:block;
+}
+.navbar .nav > li > a:focus {
+	color: #FFF;
+}
+.navbar .nav > li > a:hover {
+	background: #FFF;
+	color: #111;
+}
+.navbar .navbar-header button {
+	margin-top:15px;
 }
 
 .navbar-nav {
@@ -50,8 +60,22 @@ body {
 	display:inline-block;
 }
 
+.navbar .navbar-collapse {
+	background-color: #111;
+	border: none;
+}
+@media screen and (max-width:768px) {
+	.navbar {
+		height:50px;
+	}
+	.navbar .navbar-header button {
+		margin-top:7px;
+	}
+
+}
+
 .page {
-	padding: 100px 0px;
+	padding: 70px 0px;
 	width:100%;
 	display:block;
 }
@@ -64,8 +88,13 @@ body {
 .page .title {
 	margin-bottom: 40px;
 }
+@media screen and (max-width:768px) {
+	.page .title {
+		margin-bottom: 10px;
+	}	
+}
 
-#sponser-page,#timeline-page,#qa-page {
+#sponsor-page,#timeline-page,#qa-page {
 	background-color: #78297D;
 }
 
@@ -84,6 +113,15 @@ body {
 	width: 100%;
 	height: 100%;
 	display:block;
+}
+
+#header-page .logo-img {
+	margin-top:100px;
+}
+@media screen and (max-width:768px) {
+	#header-page .logo-img {
+		margin-top:60px;
+	}	
 }
 
 #about-page {
@@ -131,10 +169,13 @@ body {
 	width: 170px;
 }
 
-@media screen and (max-width:1199px) {
+@media screen and (min-width:991px) {
 	#category-page .description {
 		min-height: 240px;
 	}
+}
+
+@media screen and (max-width:1199px) {
 	#category-page .count-box {
 		font-size: 45px;
 	}
@@ -155,15 +196,34 @@ body {
 		width: 120px;
 	}
 }
+@media screen and (max-width:768px) {
+	#category-page .count-box {
+		font-size: 35px;
+		margin:0px 0px;
+		padding: 5px 40px;
+	}
+	#category-page .register {
+		width: 100px;
+	}	
+}
 
-#sponser-page {
+#sponsor-page {
 	padding-top: 0px;
 }
 
 #timeline-page {
-	background-image: url(../img/main/timeline.png);
+	background-image: url(../img/main/timeline_bottom.png);
 	background-size: 100% auto;
 	background-position:top center;
+}
+
+#timeline-page .timeline-img {
+	margin:150px auto;
+}
+@media screen and (max-width:768px) {
+	#timeline-page .timeline-img {
+		margin:20px auto;
+	}	
 }
 
 #picture-page {
@@ -177,9 +237,22 @@ body {
 	margin-bottom: 10px;
 }
 
-#picture-page .col-md-2,#picture-page .col-md-3,#picture-page .col-md-6 {
+#picture-page .col-md-4,#picture-page .col-md-3,#picture-page .col-md-6 {
 	padding-left: 5px;
 	padding-right: 5px;
+}
+
+#category-page .big-text, #sponsor-page .big-text {
+	padding-top:70px;
+}
+@media screen and ( max-width: 768px ) {
+	#category-page .big-text, #sponsor-page .big-text {
+		padding-top:30px;
+	}
+}
+
+#qa-page {
+	padding-bottom: 0px;
 }
 
 .img-detailheader {
@@ -204,11 +277,10 @@ body {
 	margin-bottom: 50px;
 }
 
-.img-sponserhead {
-	background: url(../img/main/sponserhead.png);
+.img-sponsorhead {
+	background: url(../img/main/sponsorhead.png);
 	background-position: center;
 	background-size: 100% auto;
-	height: 200px;
 	margin: 0px;
 	margin-bottom:50px;
 }
