@@ -33,7 +33,7 @@ class Register extends CI_Controller {
     $this->load->helper(array('form','html'));
     $this->load->model('Register_Model','register');
     $codeToken=$this->input->get('code', TRUE);
-    $data=array();
+    $data=array('type' =>$type);
 
     $user_id =$this->facebook->getUser();
     if($user_id) {
@@ -54,7 +54,7 @@ class Register extends CI_Controller {
 
       // No user, print a link for the user to login
       $data['login_url'] = $this->facebook->getLoginUrl();
-      $this->load->view('register/index'.$type,$data);
+      $this->load->view('register/index',$data);
 
     }
 
