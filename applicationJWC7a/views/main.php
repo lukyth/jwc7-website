@@ -128,8 +128,8 @@
 							<p class="text-center description">
 								เนรมิตหน้าเว็บ โชว์สเต็ปดีไซน์ ไฉไลสไตล์เว็บสเตอร์สู่การเป็นเว็บ Design อย่างแท้จริง
 							</p>
-							<div class="count-box" style="background:#732777;">123</div>
-							<img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" />
+							<div class="count-box" style="background:#732777;"><? echo $amount_d; ?></div>
+							<a href="register/index/2" target="_blank"><img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" /></a>
 						</div>
 						<div class="col-md-4 text-center">
 							<img src="<?= base_url() ?>assets/img/main/pic_cat_content.png" class="head img-center img-responsive" />
@@ -137,8 +137,8 @@
 							<p class="text-center description">
 								สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Contenให้เฉือดเฉือนประโยคเด็ด Content ชนะใจ
 							</p>
-							<div class="count-box" style="background:#07908C;">456</div>
-							<img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" />
+							<div class="count-box" style="background:#07908C;"><? echo $amount_c; ?></div>
+							<a href="register/index/1" target="_blank"><img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" /></a>
 						</div>
 						<div class="col-md-4 text-center">
 							<img src="<?= base_url() ?>assets/img/main/pic_cat_marketing.png" class="head img-center img-responsive" />
@@ -146,8 +146,8 @@
 							<p class="text-center description">
 								เรียนรู้ศาสตร์การตลาดยุทธศาสตร์ การสร้างชื่อให้เว็บเลื่องลือระบือไกล
 							</p>
-							<div class="count-box" style="background:#E64C24;">789</div>
-							<img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" />
+							<div class="count-box" style="background:#E64C24;"><? echo $amount_m; ?></div>
+							<a href="register/index/3" target="_blank"><img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" /></a>
 						</div>
 					</div>
 				</div>
