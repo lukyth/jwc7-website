@@ -261,6 +261,11 @@
 							<textarea id="inputQ2" class="form-control" rows="7" name="inputQ2"></textarea>
 						</div>
 
+						<div class="row form-field txt-left">
+							<label for="name">3. หากเปรียบเพื่อนร่วมทีมของน้องเป็นอวัยวะในร่างกาย เมื่ออวัยวะบางส่วนคือเนื้อร้าย น้องจะจัดการอย่างไร เพราะเหตุใด (ไม่มีผลต่อคะแนน)</label>
+							<textarea id="inputQ3" class="form-control" rows="7" name="inputQ3"></textarea>
+						</div>
+
 						<br>
 						<div class="txt-center">
 							<div class="btn btn-primary btn-lg" id="prev3">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
@@ -276,13 +281,13 @@
 						<h2>คำถามประจำสาขา</h2>
 						<hr>
 						<div class="row form-field txt-left">
-							<label for="name">1. หากน้องถูกจ้างให้เค้าไปเป็นตำแหน่ง ดูแลการขาย ในสภาวะการเงินของบริษัทย่ำแย่ น้องคิดว่า จะช่วยดึงดูดลูกค้า และชนะคู่แข่งได้โดยวิธีใดบ้าง (สามารถเลือกประเภทธุรกิจเองได้)</label>
-							<textarea id="inputQ3" class="form-control" rows="7" name="inputQ3"></textarea>
+							<label for="name">1. Design มีความสำคัญกับเว็บไซต์อย่างไร รวมถึงการออกแบบเว็บไซต์ที่ดีและไม่ดีมีลักษณะอย่างไร?</label>
+							<textarea id="inputQ4" class="form-control" rows="7" name="inputQ4"></textarea>
 						</div>
 
 						<div class="row form-field txt-left">
-							<label for="name">2. หากมีโครงการจากรัฐ ต้องการสนับสนุนให้สินค้าไทย ส่งออกนอก จะทำอย่างไร ที่จะตีตลาด ให้ทั่วโลก รู้จักความเป็นไทย น้องคิดว่า มีสิ่งใดเป็นจุดขาย อย่างแท้จริง และจะโปรโมทให้ชาวต่างชาติรู้ ด้วยวิธีไหนบ้าง</label>
-							<textarea id="inputQ4" class="form-control" rows="7" name="inputQ4"></textarea>
+							<label for="name">2. หากน้องได้ออกแบบเว็บไซต์เพื่อคนไทย น้องจะออกแบบอย่างไรเพื่อให้เข้าถึงคนไทยอย่างแท้จริง พร้อมอธิบายเหตุผล</label>
+							<textarea id="inputQ5" class="form-control" rows="7" name="inputQ5"></textarea>
 						</div>
 
 						<br>

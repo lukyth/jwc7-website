@@ -200,6 +200,7 @@ class Register extends CI_Controller {
               'q2'=>$this->input->post('inputQ2'),
               'q3'=>$this->input->post('inputQ3'),
               'q4'=>$this->input->post('inputQ4'),
+              'q5'=>$this->input->post('inputQ5'),
           );
 
 
