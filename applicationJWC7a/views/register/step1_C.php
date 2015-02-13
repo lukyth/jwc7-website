@@ -29,7 +29,7 @@
 					<h1>สมัครเข้าค่าย JWC7</h1>
 					<hr>
 					<h2>Web Content</h2>
-					
+
 				</div>
 			</div>
 			<div class="row" id="form-progress">
@@ -162,7 +162,7 @@
 
 						<br>
 						<div class="txt-center">
-							<button type = 'submit' class="btn btn-primary btn-lg"id="next1">บันทึกและไปต่อ &raquo;</button>
+							<div type = 'submit' class="btn btn-primary btn-lg"id="next1">บันทึกและไปต่อ &raquo;</div>
 						</div>
 					</div>
 				</div>
@@ -240,8 +240,8 @@
 
 						<br>
 						<div class="txt-center">
-							<button class="btn btn-primary btn-lg" id="prev2">&laquo; หน้าที่แล้ว</button>&nbsp;&nbsp;
-							<button class="btn btn-primary btn-lg" id="next2">บันทึกและไปต่อ &raquo;</button>
+							<div class="btn btn-primary btn-lg" id="prev2">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
+							<div class="btn btn-primary btn-lg" id="next2">บันทึกและไปต่อ &raquo;</div>
 						</div>
 					</div>
 				</div>
@@ -264,8 +264,8 @@
 
 						<br>
 						<div class="txt-center">
-							<button class="btn btn-primary btn-lg" id="prev3">&laquo; หน้าที่แล้ว</button>&nbsp;&nbsp;
-							<button class="btn btn-primary btn-lg" id="next3">บันทึกและไปต่อ &raquo;</button>
+							<div class="btn btn-primary btn-lg" id="prev3">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
+							<div class="btn btn-primary btn-lg" id="next3">บันทึกและไปต่อ &raquo;</div>
 						</div>
 					</div>
 				</div>
@@ -288,15 +288,21 @@
 
 						<br>
 						<div class="txt-center">
-							<button class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</button>&nbsp;&nbsp;
-							<button class="btn btn-primary btn-lg" id="next4">บันทึกและไปต่อ &raquo;</button>
+							<!-- <div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
+							<div class="btn btn-primary btn-lg" id="next4">บันทึกและไปต่อ &raquo;</div> -->
+							<div class="btn btn-primary btn-lg" id="prev5">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
+							<button type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
+							<?php
+									echo validation_errors();
+									if(isset($result)) echo $result;
+							?>
 						</div>
 					</div>
 				</div>
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-				<div id="step5">
+				<!-- <div id="step5">
 					<div class="col-sm-10 col-sm-offset-1">
 						<h2>ตรวจสอบข้อมูล</h2>
 						<hr>
@@ -398,14 +404,9 @@
 					</div>
 					<br>
 					<div class="txt-center">
-						<button class="btn btn-primary btn-lg" id="prev5">&laquo; หน้าที่แล้ว</button>&nbsp;&nbsp;
-						<button type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
-						<?php
-								echo validation_errors();
-								if(isset($result)) echo $result;
-						?>
+
 					</div>
-				</div>
+				</div> -->
 
 			</div>
 			</form>
