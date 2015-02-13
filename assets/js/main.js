@@ -55,7 +55,7 @@ var Animate = (function() {
 
 	ret.moveBoat = function() {
 		$boat.css("background-position",boatx+"px 50%");
-		boatx += 4;
+		boatx += 20;
 		if( boatx > $(window).outerWidth() + 10 ) {
 			boatx = -$boat.width()*0.2 - 10;
 		}
@@ -80,7 +80,7 @@ $(function() {
 	});
 	Animate.init();
 
-	setInterval( Animate.moveBoat,1000/30 );
+	setInterval( Animate.moveBoat,1000/5 );
 
 	$('a.page-scroll').bind('click', function(event) {
 		var $anchor = $(this);

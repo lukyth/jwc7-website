@@ -98,12 +98,11 @@
 								ค่ายสร้างเว็บที่จะพาน้องๆ ม.ปลาย มาเรียนรู้เทคนิคการสร้างสรรค์อย่างบรรเจิด สัมผัสประสบการณ์พิเศษผ่านกิจกรรมสนุกๆ และ Workshop จากสาขาต่างๆ พร้อมทั้งการนำเสนอผลงานกับกูรูใจดี แห่งวงการเว็บไทยมากมาย
 								</p>
 							</div>
-							<div class="plata-2" /></div>
 							<img src="<?= base_url() ?>assets/img/main/plata_1.png" class="plata-1" />
-							</div>
 						</div>
 					</div>
 				</div>
+				<div class="plata-2"></div>
 			</div>
 		</div>
 		<img src="<?= base_url() ?>assets/img/main/riverbottom.png" style="width:100%;"></div>

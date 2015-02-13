@@ -160,7 +160,7 @@ body {
 
 #about-page .boat {
 	background: url(../img/main/boat.png);
-	background-size: 20% auto;
+	background-size: 25% auto;
 	background-position: bottom;
 	background-repeat: no-repeat;
 	position: absolute;
@@ -179,7 +179,7 @@ body {
 	}
 	#about-page .plata-2 {
 		background-size: 220px auto;
-		background-position: 400px top;
+		background-position: 550px top;
 	}
 	#about-page .boat {
 		height: 100px;
@@ -193,8 +193,9 @@ body {
 		margin-bottom: 15px;
 	}
 	#about-page .plata-2 {
+		margin-top: -100px;
 		background-size: 150px auto;
-		background-position: 200px top;
+		background-position: 90% top;
 	}
 	#about-page .boat {
 		height: 60px;
