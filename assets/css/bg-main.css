@@ -1,0 +1,20 @@
+#header-page .cover-img {
+  background: url(../img/main/city3.png);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 991px) {
+  #header-page .cover-img {
+    background: url(../img/main/city.png);
+    background-size: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 480px) {
+  #header-page .cover-img {
+    background-size: 140%;
+  }
+}

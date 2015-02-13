@@ -239,7 +239,7 @@ body {
 	}
 	#about-page .boat {
 		height: 100px;
-	}
+	}	
 }
 @media screen and (max-width:768px) {
 	#about-page .looknum {
@@ -260,7 +260,7 @@ body {
 @media screen and (max-width:480px) {
 	#about-page .looknum {
 		display: none;
-	}
+	}	
 }
 
 #about-page .big-text {
@@ -446,6 +446,7 @@ body {
 }
 
 #qa-page .head {
+	cursor: pointer;
 	background-image: url(../img/main/faq_show.png);
 	background-size: auto 60px;
 	background-position: center bottom;
@@ -453,10 +454,27 @@ body {
 }
 
 #qa-content .tail {
+	cursor: pointer;
 	background: url(../img/main/faq_hide.png);
 	background-size: auto 60px;
 	background-position: center bottom;
 	background-repeat: no-repeat;
+}
+
+#qa-content .arrow {
+	padding:0px;
+	margin:0px;
+	max-height: 50px;
+	position: relative;
+	top: -5px;
+}
+#qa-content .arrow-boy { right: -8px; }
+#qa-content .arrow-girl { left: -8px; }
+
+#qa-content .icon {
+	padding:0px;
+	margin:0px;
+	max-width: 60px;
 }
 
 #qa-content .sentence:nth-child(odd) {
@@ -465,21 +483,19 @@ body {
 
 #qa-content .sentence {
 	text-align: center;
-	font-size: 20px;
 	padding: 30px 25px;
 }
 
 #qa-page .head,#qa-content .tail {
+	cursor: pointer;
 	font-family: 'wdb_bangnaregular';
 	padding: 40px 0px 80px;
-	font-size:60px;
 }
 
 #qa-content .sentence .white {
 	background-color: #fff;
 	padding: 10px 30px;
 	border-radius: 8px;
-	max-width: 550px;
 }
 
 #qa-content .sentence .blue {
@@ -488,7 +504,43 @@ body {
 	color: #fff;
 	padding: 10px 30px;
 	border-radius: 8px;
+}
+#qa-content .sentence .white, #qa-content .sentence .blue {
+	font-size:22px;
 	max-width: 550px;
+}
+@media screen and (max-width: 1200px) {
+	#qa-content .sentence .white, #qa-content .sentence .blue {
+		max-width: 450px;
+	}
+}
+@media screen and (max-width: 640px) {
+	#qa-content .sentence .white, #qa-content .sentence .blue {
+		padding: 10px 15px;
+		font-size: 20px;
+		max-width: 300px;
+	}
+}
+@media screen and (max-width: 480px) {
+	#qa-content .sentence .white, #qa-content .sentence .blue {
+		padding: 10px;
+		font-size: 18px;
+		max-width: 180px;
+	}
+}
+
+#qa-content .sentence  {
+	display: block;
+}
+
+#qa-content .chat-box  {
+	display: block;
+}
+
+#qa-content .chat-box * {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 10px 0px;
 }
 
 .img-detailheader {

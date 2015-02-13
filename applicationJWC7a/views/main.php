@@ -209,84 +209,85 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
-
-						<div class="sentence text-center WDB_Bangna head" onclick="Fold.up()" >
+						
+						<div class="sentence text-center WDB_Bangna head big-text" onclick="Fold.up()" >
 							<div>ถาม - ตอบ</div>
 						</div>
 						<div class="folded-container">
 							<div class="folded">
 								<div id="qa-content">
 									<div class="sentence">
-										<div class="chat-box blue">
-											<div><!--img//--></div>
-											<div>ทำไมต้องมีการเก็บค่ามัดจำ ทั้งๆ ที่ฟรีไม่เสียค่าใช้จ่าย?</div>
+										<div class="chat-box text-left">
+											<div><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_boy.png"><img class="arrow arrow-boy" src="<?= base_url() ?>assets/img/main/faq_boy_arrow.png"></div>
+											<div class="blue">ทำไมต้องมีการเก็บค่ามัดจำ ทั้งๆ ที่ฟรีไม่เสียค่าใช้จ่าย?</div>
 										</div>
-										<div class="chat-box white">
-											<div>เก็บเงินค่ามัดจำเพื่อเป็นการยืนยันว่าน้องๆ จะมาค่ายจริง หลังจากเข้าค่ายเสร็จจะมีการคืนเงินมัดจำครบเต็มจำนวน</div>
-											<div><!--img//--></div>
-										</div>
-									</div>
-									<div class="sentence">
-										<div class="chat-box blue">
-											<div><!--img//--></div>
-											<div>ค่ายมีการค้างคืน หรือไม่?</div>
-										</div>
-										<div class="chat-box white">
-											<div>มีการค้างคืนที่ มหาวิทยาลัยราชภัฏจันทรเกษม 2 คืน ในวันที่ 3 และ 4 เมษายน</div>
-											<div><!--img//--></div>
+										<div class="chat-box text-right">
+											<div class="white text-center">เก็บเงินค่ามัดจำเพื่อเป็นการยืนยันว่าน้องๆ จะมาค่ายจริง หลังจากเข้าค่ายเสร็จจะมีการคืนเงินมัดจำครบเต็มจำนวน</div>
+											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
 										</div>
 									</div>
 									<div class="sentence">
-										<div class="chat-box blue">
-											<div><!--img//--></div>
-											<div>ไม่มี Facebook สมัครได้ไหม?</div>
+										<div class="chat-box text-left">
+											<div><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_boy.png"><img class="arrow arrow-boy" src="<?= base_url() ?>assets/img/main/faq_boy_arrow.png"></div>
+											<div class="blue">ค่ายมีการค้างคืน หรือไม่?</div>
 										</div>
-										<div class="chat-box white">
-											<div>ไม่สามารถสมัครได้ เพราะเราจะมีกลุ่มที่ใช้ในการติดต่อสื่อสารระหว่างก่อนค่ายและหลังค่าย และยังมีกลุ่มลับ JWC ซึ่งเป็นเอกลักษณ์สืบทอดกันมา ไม่มีค่ายไหนเหมือน หรือเป็นได้อย่างครอบครัว JWC</div>
-											<div><!--img//--></div>
-										</div>
-									</div>
-									<div class="sentence">
-										<div class="chat-box blue">
-											<div><!--img//--></div>
-											<div>ไม่ได้เรียน ม.ปลาย แต่เรียนอยู่ ปวช. หรือเทียบเท่าสมัครได้ไหม?</div>
-										</div>
-										<div class="chat-box white">
-											<div>สมัครได้ ขอเพียงมีใจรัก และความตั้งใจ ลองแสดงความตั้งใจของน้องให้พี่ๆ เห็นด้วยการตอบคำถามให้ดีที่สุด เพื่อมาเป็นส่วนหนึ่งในครอบครัว JWC</div>
-											<div><!--img//--></div>
+										<div class="chat-box text-right">
+											<div class="white text-center">มีการค้างคืนที่ มหาวิทยาลัยราชภัฏจันทรเกษม 2 คืน ในวันที่ 3 และ 4 เมษายน</div>
+											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
 										</div>
 									</div>
 									<div class="sentence">
-										<div class="chat-box blue">
-											<div><!--img//--></div>
-											<div>ไม่เคยทำเว็บ ทำเว็บไม่เป็น ไม่เก่งเรื่องคอม สมัครได้ไหม?</div>
+										<div class="chat-box text-left">
+											<div><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_boy.png"><img class="arrow arrow-boy" src="<?= base_url() ?>assets/img/main/faq_boy_arrow.png"></div>
+											<div class="blue">ไม่มี Facebook สมัครได้ไหม?</div>
 										</div>
-										<div class="chat-box white">
-											<div>ทุกคนย่อมฝึกฝนกันได้ ขอแค่มีความพยายามที่จะเรียนรู้ พัฒนาตัวเองก่อนเข้าค่าย ควรฝึกพื้นฐานมาเล็กน้อย ก็สามารถสมัครค่ายนี้ได้แล้ว</div>
-											<div><!--img//--></div>
-										</div>
-									</div>
-									<div class="sentence">
-										<div class="chat-box blue">
-											<div><!--img//--></div>
-											<div>เมื่อไรจะประกาศผล แล้วจะทราบได้อย่างไรว่าเข้ารอบ?</div>
-										</div>
-										<div class="chat-box white">
-											<div>จะมีรายชื่อผู้ที่ผ่านเข้าค่ายประกาศที่หน้าเว็บไซต์ และ น้องๆ สามารถเข้าสู่ระบบเพื่ออัพโหลดเอกสารยืนยันตนได้ หรืออีกช่องทางหนึ่งระบบจะทำการประกาศผลที่หน้า Wall Facebook ของน้องๆ เอง</div>
-											<div><!--img//--></div>
+										<div class="chat-box text-right">
+											<div class="white text-center">ไม่สามารถสมัครได้ เพราะเราจะมีกลุ่มที่ใช้ในการติดต่อสื่อสารระหว่างก่อนค่ายและหลังค่าย และยังมีกลุ่มลับ JWC ซึ่งเป็นเอกลักษณ์สืบทอดกันมา ไม่มีค่ายไหนเหมือน หรือเป็นได้อย่างครอบครัว JWC</div>
+											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
 										</div>
 									</div>
 									<div class="sentence">
-										<div class="chat-box blue">
-											<div><!--img//--></div>
-											<div>อยากช่วยโปรโมทค่าย ต้องทำอย่างไร?</div>
+										<div class="chat-box text-left">
+											<div><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_boy.png"><img class="arrow arrow-boy" src="<?= base_url() ?>assets/img/main/faq_boy_arrow.png"></div>
+											<div class="blue">ไม่ได้เรียน ม.ปลาย แต่เรียนอยู่ ปวช. หรือเทียบเท่าสมัครได้ไหม?</div>
 										</div>
-										<div class="chat-box white">
-											<div>สามารถเข้าที่หน้า Media เพื่อนำแบนเนอร์ไปโปรโมท หรือ ใช้ Hashtag #jwcth บน Social Network</div>
-											<div><!--img//--></div>
+										<div class="chat-box text-right">
+											<div class="white text-center">สมัครได้ ขอเพียงมีใจรัก และความตั้งใจ ลองแสดงความตั้งใจของน้องให้พี่ๆ เห็นด้วยการตอบคำถามให้ดีที่สุด เพื่อมาเป็นส่วนหนึ่งในครอบครัว JWC</div>
+											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
 										</div>
 									</div>
-									<div class="sentence tail" onclick="Fold.up()" >
+									<div class="sentence">
+										<div class="chat-box text-left">
+											<div><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_boy.png"><img class="arrow arrow-boy" src="<?= base_url() ?>assets/img/main/faq_boy_arrow.png"></div>
+											<div class="blue">ไม่เคยทำเว็บ ทำเว็บไม่เป็น ไม่เก่งเรื่องคอม สมัครได้ไหม?</div>
+										</div>
+										<div class="chat-box text-right">
+											<div class="white text-center">ทุกคนย่อมฝึกฝนกันได้ ขอแค่มีความพยายามที่จะเรียนรู้ พัฒนาตัวเองก่อนเข้าค่าย ควรฝึกพื้นฐานมาเล็กน้อย ก็สามารถสมัครค่ายนี้ได้แล้ว</div>
+											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
+										</div>
+									</div>
+									<div class="sentence">
+										<div class="chat-box text-left">
+											<div><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_boy.png"><img class="arrow arrow-boy" src="<?= base_url() ?>assets/img/main/faq_boy_arrow.png"></div>
+											<div class="blue">เมื่อไรจะประกาศผล แล้วจะทราบได้อย่างไรว่าเข้ารอบ?</div>
+										</div>
+										<div class="chat-box text-right">
+											<div class="white text-center">จะมีรายชื่อผู้ที่ผ่านเข้าค่ายประกาศที่หน้าเว็บไซต์ และ น้องๆ สามารถเข้าสู่ระบบเพื่ออัพโหลดเอกสารยืนยันตนได้ หรืออีกช่องทางหนึ่งระบบจะทำการประกาศผลที่หน้า Wall Facebook ของน้องๆ เอง</div>
+											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
+										</div>
+									</div>
+									<div class="sentence">
+										<div class="chat-box text-left">
+											<div><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_boy.png"><img class="arrow arrow-boy" src="<?= base_url() ?>assets/img/main/faq_boy_arrow.png"></div>
+											<div class="blue">อยากช่วยโปรโมทค่าย ต้องทำอย่างไร?</div>
+										</div>
+										<div class="chat-box text-right">
+											<div class="white text-center">สามารถเข้าที่หน้า Media เพื่อนำแบนเนอร์ไปโปรโมท หรือ ใช้ Hashtag #jwcth บน Social Network</div>
+											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
+										</div>
+									</div>
+
+									<div class="big-text sentence tail" onclick="Fold.up()" >
 										<div>ถาม - ตอบ</div>
 									</div>
 								</div>
