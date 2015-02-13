@@ -348,58 +348,58 @@
 						<div class="table-picture col-xs-12">
 							<div class="row">
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/1.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/2.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/3.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/4.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/5.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/6.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/7.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/8.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/9.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/10.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/11.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/12.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/13.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/14.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/15.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/16.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/17.jpg" class="img-center img-responsive" />
 								</div>
 								<div class="col-lg-2 col-sm-3 col-xs-4">
-									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
+									<img src="<?= base_url() ?>assets/img/main/activity/18.jpg" class="img-center img-responsive" />
 								</div>
 							</div>
 							<div class="social text-center">

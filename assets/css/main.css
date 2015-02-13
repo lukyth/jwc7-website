@@ -467,6 +467,10 @@ body {
 	margin-bottom: 10px;
 }
 
+#picture-page .table-picture .row img {
+	box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.1);
+}
+
 #picture-page .col-md-4,#picture-page .col-md-3,#picture-page .col-md-6 {
 	padding-left: 5px;
 	padding-right: 5px;
