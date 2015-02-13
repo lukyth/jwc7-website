@@ -311,8 +311,10 @@ body {
 	background-position:top center;
 }
 
-#timeline-page .timeline-img {
-	margin:150px auto;
+#timeline-page .timeline {
+	background: url(../img/main/timeline_item.png) no-repeat center center;
+	background-size: 200px;
+	height: 600px;
 }
 
 #picture-page {

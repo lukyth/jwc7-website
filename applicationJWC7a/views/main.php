@@ -26,8 +26,7 @@
 	<link rel="stylesheet" href="<?= base_url()."assets/" ?>fonts/CSPraJad.css" />
 	<link rel="stylesheet" href="<?= base_url()."assets/" ?>fonts/wdb_bangna.css" />
 	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/main.css" />
-	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/bg-main.css" />
-	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/animation.css" />
+	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/main2.css" />
 
 </head>
 
@@ -230,7 +229,31 @@
 					<div class="col-md-10 col-md-offset-1">
 						<h1 class="text-center big-text">Timeline</h1>
 						<img class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
-						<img class="img-center img-responsive timeline-img" src="<?= base_url() ?>assets/img/main/timeline_item.png" alt="" />
+					</div>
+				</div>
+				<div class="row">
+					<!-- <img class="img-center img-responsive timeline-img" src="<?= base_url() ?>assets/img/main/timeline_item.png" alt="" /> -->
+					<div class="timeline">
+						<div class="timeline-item">
+							14 ก.พ. - 14 มี.ค. 2558
+							<br>
+							รับสมัคร
+						</div>
+						<div class="timeline-item">
+							21 มี.ค. 2558
+							<br>
+							ประกาศผลผู้เข้ารอบ
+						</div>
+						<div class="timeline-item">
+							22 - 28 มี.ค. 2558
+							<br>
+							โอนเงินค่ามัดจำ
+						</div>
+						<div class="timeline-item">
+							3 - 5 เม.ย. 2558
+							<br>
+							วันค่าย JWC#7
+						</div>
 					</div>
 				</div>
 			</div>
