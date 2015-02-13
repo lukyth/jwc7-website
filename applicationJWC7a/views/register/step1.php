@@ -4,21 +4,21 @@
 	<title>Junior Webmaster Camp #7 | สมัครสมาชิก</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/jwc7register.css">
-	<link rel="stylesheet" type="text/css" href="fonts/csprajad.css">
-	<link rel="stylesheet" type="text/css" href="fonts/wdb_bangna.css">
-	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/" ?>css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/" ?><?php echo base_url()."assets/" ?>css/jwc7register.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/" ?>fonts/csprajad.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/" ?>fonts/wdb_bangna.css">
+	<script type="text/javascript" src="<?php echo base_url()."assets/" ?>js/jquery-1.11.1.min.js"></script>
 	<!--<script type="text/javascript" src="js/jwc7register.js"></script> -->
 	<script type="text/javascript" src="js/jwc7register_quick.js"></script>
-	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link rel="icon" type="image/png" href="<?php echo base_url()."assets/" ?>img/favicon.png">
 </head>
 <body>
 	<div class="row" id="head">
 		<div class="container-fluid txt-center">
 			<div class="col-sm-12">
 				<img src="img/mascot_mkt.svg">
-				<a href="http://jwc.in.th"><img src="img/logo.svg" alt="logo" id="logo"></a>
+				<a href="http://jwc.in.th"><img src="<?php echo base_url()."assets/" ?>img/logo.svg" alt="logo" id="logo"></a>
 			</div>
 		</div>
 	</div>
@@ -51,10 +51,18 @@
 						</div>
 						<div class="row form-field">
 							<div class="col-sm-3">
-								<label for="name">ชื่อ-นามสกุล*</label>
+								<label for="name">ชื่อ*</label>
 							</div>
 							<div class="col-sm-9">
-								<input type="text" id="name" class="form-control" placeholder="ชื่อ นามสกุล" required></input>
+								<input type="text" id="inputName" class="form-control" placeholder="ชื่อ นามสกุล" name="inputName" required></input>
+							</div>
+						</div>
+						<div class="row form-field">
+							<div class="col-sm-3">
+								<label for="name">นามสกุล*</label>
+							</div>
+							<div class="col-sm-9">
+								<input type="text" id="inputSurname" class="form-control" placeholder="ชื่อ นามสกุล" name="inputSurname" required></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -62,7 +70,7 @@
 								<label for="nickname">ชื่อเล่น*</label>
 							</div>
 							<div class="col-sm-9">
-								<input type="text" id="nickname" class="form-control" placeholder="ชื่อเล่น" required></input>
+								<input type="text" id="inputNickname" class="form-control" placeholder="ชื่อเล่น" name="inputNickname" required></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -70,10 +78,10 @@
 								<label for="name">เพศ*</label>
 							</div>
 							<div class="col-sm-9">
-								<select id="level" class="form-control">
+								<select id="level" class="form-control" id="inputSex" name="inputSex">
 									<option>เลือกเพศ</option>
-									<option>ชาย</option>
-									<option>หญิง</option>
+									<option value="1">ชาย</option>
+									<option value="2">หญิง</option>
 								</select>
 							</div>
 						</div>
@@ -82,7 +90,7 @@
 								<label for="name">รหัสประจำตัวประชาชน*</label>
 							</div>
 							<div class="col-sm-9">
-								<input type="text" id="name" class="form-control" placeholder="xxxxxxxxxxxxx" required></input>
+								<input type="text" id="inputNational_ID" class="form-control" placeholder="xxxxxxxxxxxxx" name="inputNational_ID" required></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -90,7 +98,7 @@
 								<label for="name">สถานศึกษา*</label>
 							</div>
 							<div class="col-sm-9">
-								<input type="text" id="name" class="form-control" placeholder="โรงเรียน....." required></input>
+								<input type="text" id="inputSchool" class="form-control" placeholder="โรงเรียน....."  name="inputSchool" required></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -98,7 +106,7 @@
 								<label for="name">ระดับการศึกษา*</label>
 							</div>
 							<div class="col-sm-9">
-								<select id="level" class="form-control">
+								<select id="level" class="form-control" id="inputGrade" name="inputGrade">
 									<option>เลือกระดับชั้น</option>
 									<option>ม.4</option>
 									<option>ม.5</option>
@@ -111,7 +119,7 @@
 								<label for="name">เบอร์โทรศัพท์*</label>
 							</div>
 							<div class="col-sm-9">
-								<input type="text" id="name" class="form-control" placeholder="08x-xxx-xxxx"></input>
+								<input type="text" id="inputPhone" class="form-control" placeholder="08x-xxx-xxxx" name="inputPhone"></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -119,7 +127,7 @@
 								<label for="name">ที่อยู่*</label>
 							</div>
 							<div class="col-sm-9">
-								<textarea id="name" class="form-control"  placeholder="ที่อยู่"></textarea>
+								<textarea id="inputAddress" class="form-control"  placeholder="ที่อยู่" name="inputAddress"></textarea>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -127,7 +135,7 @@
 								<label for="name">จังหวัด*</label>
 							</div>
 							<div class="col-sm-9">
-								<select id="level" class="form-control">
+								<select id="level" class="form-control" id="inputProvince" name="inputProvince">
 									<option>เลือกจังหวัด</option>
 									<option>กรุงเทพมหานคร</option>
 								</select>
@@ -138,18 +146,18 @@
 								<label for="name">รหัสไปรษณีย์*</label>
 							</div>
 							<div class="col-sm-9">
-								<input type="text" id="name" class="form-control" placeholder="xxxxx"></input>
+								<input type="text" id="inputPostalCode" class="form-control" placeholder="xxxxx" name="inputPostalCode"></input>
 							</div>
 						</div>
 						<div class="row form-field">
 							<div class="col-sm-3">
-								<label for="name">e-mail๕</label>
+								<label for="name">e-mail</label>
 							</div>
 							<div class="col-sm-9">
-								<input type="email" id="name" class="form-control" placeholder="jwc7@example.com"></input>
+								<input type="email" id="inputEmail" class="form-control" placeholder="jwc7@example.com" name="inputEmail"></input>
 							</div>
 						</div>
-						
+
 						<br>
 						<div class="txt-center">
 							<button class="btn btn-primary btn-lg"id="next1">บันทึกและไปต่อ &raquo;</button>
@@ -169,7 +177,7 @@
 								<label for="name">รู้จักค่ายจากที่ไหน?*</label>
 							</div>
 							<div class="col-sm-9">
-								<select class="form-control">
+								<select class="form-control" id="inputKnowFrom" name="inputKnowFrom">
 									<option>กรุณาเลือก</option>
 									<option>Facebook</option>
 									<option>Twitter</option>
@@ -180,22 +188,22 @@
 								<input type="text" id="name" class="form-control"></input>
 							</div>
 						</div>
-						
+
 						<div class="row form-field">
 							<div class="col-sm-3">
 								<label for="name">ไซส์เสื้อ*</label>
 							</div>
 							<div class="col-sm-9">
-								<input type="text" id="name" class="form-control"></input>
+								<input type="text" id="inputSizeShirt" class="form-control" name="inputSizeShirt"></input>
 							</div>
 						</div>
-						
+
 						<div class="row form-field">
 							<div class="col-sm-3">
 								<label for="name" placeholder="ประเภทอาหารพิเศษ เช่น อาหารฮาลาล มังสวิรัติ เจ ฯลฯ">ประเภทอาหาร</label>
 							</div>
 							<div class="col-sm-9">
-								<input type="text" id="name" class="form-control" placeholder="ประเภทอาหารพิเศษ เช่น อาหารฮาลาล มังสวิรัติ เจ ฯลฯ"></input>
+								<input type="text" id="inputSpecialFood" class="form-control" placeholder="ประเภทอาหารพิเศษ เช่น อาหารฮาลาล มังสวิรัติ เจ ฯลฯ" name="inputSpecialFood"></input>
 							</div>
 						</div>
 
@@ -204,30 +212,30 @@
 								<label for="name">อาหารที่แพ้</label>
 							</div>
 							<div class="col-sm-9">
-								<input type="text" id="name" class="form-control" placeholder="อาหารที่แพ้"></input>
+								<input type="text" id="inputFoodAllergy" class="form-control" placeholder="อาหารที่แพ้" name="inputFoodAllergy"></input>
 							</div>
 						</div>
-						
+
 						<div class="row form-field">
 							<div class="col-sm-3">
 								<label for="name">โรคประจำตัว</label>
 							</div>
 							<div class="col-sm-9">
-								<input type="text" id="name" class="form-control" placeholder="โรคประจำตัว"></input>
+								<input type="text" id="inputDisease" class="form-control" placeholder="โรคประจำตัว"   name="inputDisease">  </input>
 							</div>
 						</div>
-						
+
 						<div class="row form-field">
 							<div class="col-sm-3">
 								<label for="name">ยาที่แพ้</label>
 							</div>
 							<div class="col-sm-9">
-								<input type="text" id="name" class="form-control" placeholder="ยาที่แพ้"></input>
+								<input type="text" id="inputDrugAllergy" class="form-control" placeholder="ยาที่แพ้" name="inputDrugAllergy"></input>
 							</div>
 						</div>
-						
-						
-						
+
+
+
 						<br>
 						<div class="txt-center">
 							<button class="btn btn-primary btn-lg" id="prev2">&laquo; หน้าที่แล้ว</button>&nbsp;&nbsp;
@@ -244,12 +252,12 @@
 						<hr>
 						<div class="row form-field txt-left">
 							<label for="name">1. ในมุมมองของน้อง เว็บไซต์คืออะไร และเว็บไซต์ที่ดีควรมีลักษณะอย่างไร?</label>
-							<textarea id="name" class="form-control" rows="7"></textarea>
+							<textarea id="inputQ1" class="form-control" rows="7" name="inputQ1"></textarea>
 						</div>
 
 						<div class="row form-field txt-left">
 							<label for="name">2. ในปัจจุบันนี้ น้องคิดว่าเว็บไซต์มีอิทธิพลต่อคนไทยอย่างไร และเว็บไซต์ที่เหมาะสมสำหรับคนไทยควรเป็นอย่างไร?</label>
-							<textarea id="name" class="form-control" rows="7"></textarea>
+							<textarea id="inputQ2" class="form-control" rows="7" name="inputQ2"></textarea>
 						</div>
 
 						<br>
@@ -268,14 +276,14 @@
 						<hr>
 						<div class="row form-field txt-left">
 							<label for="name">1. หากน้องถูกจ้างให้เค้าไปเป็นตำแหน่ง ดูแลการขาย ในสภาวะการเงินของบริษัทย่ำแย่ น้องคิดว่า จะช่วยดึงดูดลูกค้า และชนะคู่แข่งได้โดยวิธีใดบ้าง (สามารถเลือกประเภทธุรกิจเองได้)</label>
-							<textarea id="name" class="form-control" rows="7"></textarea>
+							<textarea id="inputQ3" class="form-control" rows="7" name="inputQ3"></textarea>
 						</div>
 
 						<div class="row form-field txt-left">
 							<label for="name">2. หากมีโครงการจากรัฐ ต้องการสนับสนุนให้สินค้าไทย ส่งออกนอก จะทำอย่างไร ที่จะตีตลาด ให้ทั่วโลก รู้จักความเป็นไทย น้องคิดว่า มีสิ่งใดเป็นจุดขาย อย่างแท้จริง และจะโปรโมทให้ชาวต่างชาติรู้ ด้วยวิธีไหนบ้าง</label>
-							<textarea id="name" class="form-control" rows="7"></textarea>
+							<textarea id="inputQ4" class="form-control" rows="7" name="inputQ4"></textarea>
 						</div>
-						
+
 						<br>
 						<div class="txt-center">
 							<button class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</button>&nbsp;&nbsp;
@@ -390,8 +398,12 @@
 					<div class="txt-center">
 						<button class="btn btn-primary btn-lg" id="prev5">&laquo; หน้าที่แล้ว</button>&nbsp;&nbsp;
 						<button type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
+						<?php
+								echo validation_errors();
+								if(isset($result)) echo $result;
+						?>
 					</div>
-				</div>				
+				</div>
 
 			</div>
 			</form>

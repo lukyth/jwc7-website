@@ -25,12 +25,13 @@ class Register extends CI_Controller {
         );
 
         $this->load->library('facebook/facebook', $fb_config,'facebook');
-        $this->load->model('Register_Model','register');
+
 		}
 
   public function index()
   {
     $this->load->helper(array('form','html'));
+    $this->load->model('Register_Model','register');
     $codeToken=$this->input->get('code', TRUE);
     $data=array();
 
@@ -62,12 +63,146 @@ class Register extends CI_Controller {
   }
 
   public function step1(){
+      $this->load->helper(array('form','html'));
+      $this->load->library('form_validation');
+      $this->load->model('Register_Model','register');
+      $this->load->model('Homework_Model','homework');
       $user_id =$this->facebook->getUser();
       if(!$this->register->checkRegister($user_id)){
         redirect('register', 'refresh');
       }
+      $data=array();
 
-      
+      $this->form_validation->set_message('required', 'กรุณากรอก %s');
+      $rulesform=array(
+              array(
+                     'field'   => 'inputName',
+                     'label'   => 'Name',
+                     'rules'   => 'trim|required'
+              ),
+              array(
+                     'field'   => 'inputNickname',
+                     'label'   => 'Nickname',
+                     'rules'   => 'trim|required'
+              ),
+              array(
+                     'field'   => 'inputSex',
+                     'label'   => 'Sex',
+                     'rules'   => 'trim|required'
+              ),
+              array(
+                     'field'   => 'inputNational_ID',
+                     'label'   => 'National ID',
+                     'rules'   => 'trim|required'
+              ),
+              array(
+                     'field'   => 'inputSchool',
+                     'label'   => 'School',
+                     'rules'   => 'trim|required'
+              ),
+              array(
+                     'field'   => 'inputGrade',
+                     'label'   => 'Grade',
+                     'rules'   => 'trim|required'
+              ),
+              array(
+                     'field'   => 'inputPhone',
+                     'label'   => 'Phone',
+                     'rules'   => 'trim|required'
+              ),
+              array(
+                     'field'   => 'inputAddress',
+                     'label'   => 'Address',
+                     'rules'   => 'trim|required'
+              ),
+              array(
+                     'field'   => 'inputProvince',
+                     'label'   => 'Province',
+                     'rules'   => 'trim|required'
+              ),
+              array(
+                     'field'   => 'inputPostalCode',
+                     'label'   => 'Postal Code',
+                     'rules'   => 'trim|required'
+              ),
+              array(
+                     'field'   => 'inputEmail',
+                     'label'   => 'E-Mail',
+                     'rules'   => 'trim|required'
+              ),
+              array(
+                     'field'   => 'inputKnowFrom',
+                     'label'   => 'รู้จักค่ายจากที่ไหน',
+                     'rules'   => 'trim|required'
+              ),
+              array(
+                     'field'   => 'inputKnowFrom',
+                     'label'   => 'ไซส์เสื้อ',
+                     'rules'   => 'trim|required'
+              ),
+            array(
+                   'field'   => 'inputQ1',
+                   'label'   => 'คำถามข้อที่ 1',
+                   'rules'   => 'trim|required'
+            ),
+            array(
+                   'field'   => 'inputQ2',
+                   'label'   => 'คำถามข้อที่ 2',
+                   'rules'   => 'trim|required'
+            ),
+            array(
+                   'field'   => 'inputQ3',
+                   'label'   => 'คำถามข้อที่ 3',
+                   'rules'   => 'trim|required'
+            ),
+            array(
+                   'field'   => 'inputQ4',
+                   'label'   => 'คำถามข้อที่ 4',
+                   'rules'   => 'trim|required'
+            )
+      );
+
+      $this->form_validation->set_rules($rulesform);
+
+      if ($this->form_validation->run() == TRUE) {
+          $form_register_data=array(
+              'profilePic'=>$this->input->post('inputProfilePic'),
+              'registerType'=>$this->input->post('inputRegisterType'),
+              'name'=>$this->input->post('inputName'),
+              'surname'=>$this->input->post('inputSurname'),
+              'nickname'=>$this->input->post('inputNickname'),
+              'sex'=>$this->input->post('inputSex'),
+              'national_ID'=>$this->input->post('inputNational_ID'),
+              'school'=>$this->input->post('inputSchool'),
+              'grade'=>$this->input->post('inputGrade'),
+              'phone'=>$this->input->post('inputPhone'),
+              'address'=>$this->input->post('inputAddress'),
+              'province'=>$this->input->post('inputProvince'),
+              'postalCode'=>$this->input->post('inputPostalCode'),
+              'email'=>$this->input->post('inputEmail'),
+              'knowFrom'=>$this->input->post('inputKnowFrom'),
+              'foodAllergy'=>$this->input->post('inputFoodAllergy'),
+              'disease'=>$this->input->post('inputDisease'),
+              'drugAllergy'=>$this->input->post('inputDrugAllergy'),
+              'specialFood'=>$this->input->post('inputSpecialFood'),
+              'registerDate'=>date('Y-m-d H:i:s', time()),
+              //'parentPhone'=>$this->input->post('input'),
+              'status'=>'Homework_Submitted',
+              'sizeshirt'=>$this->input->post('inputSizeShirt'),
+          );
+          $form_homework_data=array(
+              'q1'=>$this->input->post('inputQ1'),
+              'q2'=>$this->input->post('inputQ2'),
+              'q3'=>$this->input->post('inputQ3'),
+              'q4'=>$this->input->post('inputQ4'),
+          );
+
+
+
+          $data['result']='SAVE';
+      }
+
+      $this->load->view('register/step1',$data);
 
 
 
