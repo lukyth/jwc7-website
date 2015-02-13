@@ -187,18 +187,6 @@
 							<div class="col-md-3 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-3 col-xs-4 text-center">
-								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
-							</div>
-							<div class="col-md-3 col-xs-4 text-center">
-								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
-							</div>
-							<div class="col-md-3 col-xs-4 text-center">
-								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
-							</div>
-							<div class="col-md-3 col-xs-4 text-center">
-								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
-							</div>
 						</div>
 					</div>
 				</div>

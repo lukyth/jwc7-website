@@ -46,8 +46,13 @@ body {
 	text-decoration: none;
 	color: #000;
 	margin-top:10px;
-	font-size:18px;
+	font-size:24px;
 	display:block;
+}
+@media screen and (max-width:991px) {
+	.navbar .nav > li > a {
+		font-size:20px;
+	}	
 }
 .navbar .active a {
 	background: none;
@@ -166,13 +171,13 @@ body {
 
 #header-page .logo-img {
 	margin-top: 50px;
-	width: 750px;
+	width: 550px;
 }
 
 
 #header-page .jumpto-register {
 	margin-top:70px;
-	width: 160px;
+	width: 150px;
 }
 @media screen and (max-width:1200px) {
 	#header-page .jumpto-register {
@@ -346,6 +351,11 @@ body {
 	text-align: center;
 	margin-top: 5px;
 }
+@media screen and (max-width:768px) {
+	#category-page .description {
+		max-width: 250px;
+	}	
+}
 
 #category-page .count-box {
 	display: inline-block;
@@ -371,7 +381,6 @@ body {
 @media screen and (max-width:768px) {
 	#category-page .register {
 		margin-top: 15px;
-		margin-bottom: 20px;
 	}
 	#category-page .head {
 		width: 200px;
