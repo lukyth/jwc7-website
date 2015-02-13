@@ -28,7 +28,9 @@ var Fold = (function() {
 		if( isShow ) {
 			$folded.accordion( 90, 1 );
 			if( isMobile ) {
-				$("#qa-page .folded-container").css("height",0);
+				setTimeout( function() {
+					$("#qa-page .folded-container").css("height",0);
+				},800);
 			} else {
 				$("#qa-page .folded-container").animate({
 					"height" : 0

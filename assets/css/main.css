@@ -110,6 +110,34 @@ body {
 	margin-bottom: 40px;
 }
 
+.free {
+	position : fixed;
+	left: 20px;
+	top: 20px;
+	width: 180px;
+	transition: all 0.5s;
+	z-index: 10000;
+}
+
+@media screen and ( max-width: 1200px ) {
+	.free {
+		left: 0px; top: 20px;
+		width: 150px;
+	}
+}
+@media screen and ( max-width: 768px ) {
+	.free {
+		left: 10px; top: 10px;
+		width : 100px;
+	}
+}
+@media screen and ( max-width: 640px ) {
+	.free {
+		display: none;
+	}
+}
+
+
 #header-page .cover-img {
 	height: 100%;
 	width: 100%;
@@ -141,9 +169,20 @@ body {
 	width: 750px;
 }
 
+
 #header-page .jumpto-register {
 	margin-top:70px;
 	width: 160px;
+}
+@media screen and (max-width:1200px) {
+	#header-page .jumpto-register {
+		margin-top:50px;
+		width: 14
+		0px;
+	}
+	#header-page .logo-img {
+		width: 450px;
+	}	
 }
 @media screen and (max-width:768px) {
 	#header-page .jumpto-register {
@@ -326,7 +365,7 @@ body {
 	cursor:pointer;
 	margin-top: 20px;
 	margin-bottom: 50px;
-	width: 170px;
+	width: 150px;
 }
 
 @media screen and (max-width:768px) {
