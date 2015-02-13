@@ -1,3 +1,5 @@
+var isMobile = false;
+
 var Fold = (function() {
 	var ret = {};
 	var isShow = false;
@@ -15,27 +17,34 @@ var Fold = (function() {
 			touchEnabled : false
 		});
 
-
-		console.log( h );
-
 		isShow = true;
 		ret.up();
 	}
 
 	ret.up = function() {
-		console.log( 555 );
+
+		h = $("#qa-page .folded").height();
+		
 		if( isShow ) {
-			$folded.reveal( -90,1 );
-			$("#qa-page .folded-container").animate({
-				"height" : h/10 - 5
-			});
+			$folded.accordion( 90, 1 );
+			if( isMobile ) {
+				$("#qa-page .folded-container").css("height",0);
+			} else {
+				$("#qa-page .folded-container").animate({
+					"height" : 0
+				},1200);
+			}
+			$("#qa-page .head").css("background-image",'url(../assets/img/main/faq_show.png)');
 		} else {
-			$folded.reveal( 0,1 );
-			$("#qa-page .folded-container").animate({
-				"height" : h
-			},{
-				"easing" : "linear"
-			});
+			$folded.accordion( 0,1 );
+			if( isMobile ) {
+				$("#qa-page .folded-container").css("height",h);
+			} else {
+				$("#qa-page .folded-container").animate({
+					"height" : h
+				},600);
+			}
+			$("#qa-page .head").css("background-image",'url(../assets/img/main/faq_hide.png)');
 		}
 		isShow = !isShow;
 	}
@@ -65,6 +74,11 @@ var Animate = (function() {
 })();
 
 $(function() {
+
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		isMobile = true;
+	}
+
 	$(".navbar").hide();
 
 	$(window).scroll( function() {
