@@ -28,7 +28,7 @@ class Register extends CI_Controller {
 
 		}
 
-  public function index()
+  public function index($type)
   {
     $this->load->helper(array('form','html'));
     $this->load->model('Register_Model','register');
@@ -43,7 +43,7 @@ class Register extends CI_Controller {
           $this->register->facebookID=$user_id;
           $this->register->insert();
         }
-        redirect('register/step1', 'refresh');
+        redirect('register/step1/'.$type, 'refresh');
       } catch(FacebookApiException $e) {
         $data['login_url'] = $this->facebook->getLoginUrl();
         //echo 'Please <a href="' . $login_url . '">login.</a>';
@@ -54,7 +54,7 @@ class Register extends CI_Controller {
 
       // No user, print a link for the user to login
       $data['login_url'] = $this->facebook->getLoginUrl();
-      $this->load->view('register/index',$data);
+      $this->load->view('register/index'.$type,$data);
 
     }
 
@@ -62,7 +62,7 @@ class Register extends CI_Controller {
 
   }
 
-  public function step1(){
+  public function step1($type){
       $this->load->helper(array('form','html'));
       $this->load->library('form_validation');
       $this->load->model('Register_Model','register');
@@ -71,7 +71,7 @@ class Register extends CI_Controller {
       if(!$this->register->checkRegister($user_id)){
         redirect('register', 'refresh');
       }
-      $data=array();
+      $data=array('type' => $type);
 
       $this->form_validation->set_message('required', 'กรุณากรอก %s');
       $rulesform=array(
@@ -167,7 +167,7 @@ class Register extends CI_Controller {
       if ($this->form_validation->run() == TRUE) {
           $form_register_data=array(
               'profilePic'=>$this->input->post('inputProfilePic'),
-              'registerType'=>$this->input->post('inputRegisterType'),
+              'registerType'=>$type,
               'name'=>$this->input->post('inputName'),
               'surname'=>$this->input->post('inputSurname'),
               'nickname'=>$this->input->post('inputNickname'),
@@ -200,11 +200,20 @@ class Register extends CI_Controller {
 
 
           $data['result']='SAVE';
-          $this->Register_Model->update($form_register_data,$user_id);
-          $this->Homework_Model->update( $form_homework_data,$user_id);
+          //print_r($form_register_data);
+          $this->register->update($form_register_data,$user_id);
+          $this->homework->update( $form_homework_data,$user_id);
+          redirect('register/finish', 'refresh');
       }
+      else{
+      if($type == 1)
+        $this->load->view('register/step1_C',$data);
+      else if($type == 2)
+        $this->load->view('register/step1_D',$data);
+      else if($type == 3)
+        $this->load->view('register/step1',$data);
+    }
 
-      $this->load->view('register/step1',$data);
 
 
 
@@ -212,4 +221,8 @@ class Register extends CI_Controller {
 
 
 
+  public function finish(){
+    //$data=array('type' => $type);
+    $this->load->view('register/finished',$data);
+  }
 }
