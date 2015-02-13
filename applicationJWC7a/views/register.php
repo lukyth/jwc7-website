@@ -73,7 +73,7 @@ if ($user) {
 		<br>
 
 		<h2>Section register</h2>
-		<form action="finish" method="post">
+		<form action="register/finish" method="post">
 			<input type="radio" name="section" value="content"/> Web content <br/>
 			<input type="radio" name="section" value="design"/> Web design <br/>
 			<input type="radio" name="section" value="programming"/> Web programming <br/>

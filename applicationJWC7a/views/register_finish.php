@@ -111,6 +111,7 @@ $section = $_POST['section'];
 			FB.ui({
 				method: 'feed',
 				link: 'http://www.jwc.in.th/jwc7/',
+				name: 'Junior Webmaster Camp 7',
 				description : des,
 			}, function(response){});
 		}
