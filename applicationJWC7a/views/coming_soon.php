@@ -4,6 +4,20 @@
   <title>Junior Webmaster Camp #7 – Coming Soon</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="มาจะกล่าวบทไป.. ฤกษ์งามยามดีนี้ไซร้ จักนำมาให้ชมอีกคำรบหนึ่ง ขอป่าวประกาศลั่น! ค่ายปั้นนักพัฒนาเว็บระดับมัธยม กำลังทำการลงเสาเอก ก่อกำแพงเมือง ให้ปวงประชาจักได้สัมผัสถึงความยิ่งใหญ่ มินานเพียงชั่วเคี้ยวหมากแหลกแล้วไซร้ อันกาลใกล้จักใกล้ได้เชยชม !!">
+  <meta name="keywords" content="webmaster,ค่ายไอที,ค่ายคอม,jwc,jwc7,jwc#7,junior webmaster camp,ค่ายทำเว็บ,ค่ายเว็บ">
+  <meta property="og:title" content="Junior Webmaster Camp #7 – Coming Soon">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.jwc.in.th/jwc7/">
+  <meta property="og:image" content="http://www.jwc.in.th/jwc7/assets/img/fb-og.jpg">
+  <meta property="og:image" content="http://www.jwc.in.th/jwc7/assets/img/fb-og-large.jpg">
+  <meta property="og:image" content="http://www.jwc.in.th/jwc7/assets/img/fb-og-large-2.jpg">
+  <meta property="og:image" content="http://www.jwc.in.th/jwc7/assets/img/fb-og-large-3.jpg">
+  <meta property="og:image" content="http://www.jwc.in.th/jwc7/assets/img/fb-og-large-4.jpg">
+  <meta property="og:site_name" content="Junior Webmaster Camp #7 – Coming Soon">
+  <meta property="og:description" content="มาจะกล่าวบทไป.. ฤกษ์งามยามดีนี้ไซร้ จักนำมาให้ชมอีกคำรบหนึ่ง ขอป่าวประกาศลั่น! ค่ายปั้นนักพัฒนาเว็บระดับมัธยม กำลังทำการลงเสาเอก ก่อกำแพงเมือง ให้ปวงประชาจักได้สัมผัสถึงความยิ่งใหญ่ มินานเพียงชั่วเคี้ยวหมากแหลกแล้วไซร้ อันกาลใกล้จักใกล้ได้เชยชม !!">
+
   <link rel="stylesheet" href="<?php echo base_url()."assets/" ?>css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo base_url()."assets/" ?>css/jwc7.css">
   <link rel="stylesheet" href="<?php echo base_url()."assets/" ?>fonts/wdb_bangna.css">
@@ -14,11 +28,10 @@
   <div class="container-fluid txt-center bg">
     <div class="row">
       <div class="col-sm-12">
-        <img src="<?php echo base_url()."assets/" ?>img/logo.svg" alt="logo" class="img-responsive img-center" id="logo">
+
+        <img src="<?php echo base_url()."assets/" ?>img/logo.svg" alt="logo" class="img-responsive img-center" id="logo" style="max-width: 460px;">
       </div>
     </div>
-
-
 
     <div class="row">
       <div class="col-sm-12">
@@ -45,6 +58,7 @@
         </ul>
       </div>
     </div>
+
     <div class="row" id="soon">
       <div class="col-sm-12">
         <h3>ตื่นตาพร้อมกัน ทั่วสยามนคร</h3>

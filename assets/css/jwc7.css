@@ -14,7 +14,7 @@ body{
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-image: url('../img/bg7.png');
+	background-image: url('../img/bg-coming-soon.png');
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -63,6 +63,8 @@ a.shadowlink{
 a.shadowlink:hover{
 	box-shadow: 0px 2px 10px rgba(0,0,0,0.4);
 	background-color: rgba(0,0,0,0.4);
+	-webkit-border-radius: 2em;
+	border-radius: 2em;
 }
 .container-fluid:first-of-type .row:first-of-type{
 	padding-top:120px;
