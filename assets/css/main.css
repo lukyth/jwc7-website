@@ -70,6 +70,15 @@ body {
 	border: none;
 }
 
+@media screen and ( max-width:768px ) {
+	.navbar {
+		height:50px;
+	}
+	.navbar .navbar-header button {
+		margin-top:7px;
+	}
+}
+
 .page {
 	padding: 70px 0px;
 	width:100%;
@@ -107,6 +116,79 @@ body {
 
 #about-page .desciption {
 	max-width:500px;
+}
+
+#about-page .row {
+	color: #EDEB98;
+}
+
+#about-page .looknum {
+	display:inline-block;
+	max-width: 150px;
+	width: 20%;
+	padding: 0px 30px;
+	margin-bottom: 35px;
+}
+
+#about-page .plata-1 {
+	position: absolute;
+	top: 135px;
+	left: -225px;
+	height: 300px;
+}
+
+#about-page .plata-2 {
+	position: absolute;
+	bottom: -50px;
+	right: -155px;
+	width: 250px;
+}
+
+#about-page .boat {
+	background: url(../img/main/boat.png);
+	background-size: 100% auto;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 25%;
+	height: 100px;
+	bottom: -100px;
+}
+
+@media screen and (max-width:991px) {
+	#about-page .looknum {
+		padding: 0 15px;
+		margin-bottom: 30px;
+	}
+	#about-page .plata-1 {
+		top: 185px;
+		left: -205px;
+		height: 250px;
+	}
+	#about-page .boat {
+		bottom: -60px;
+	}	
+}
+@media screen and (max-width:768px) {
+	#about-page .looknum {
+		padding: 0 10px;
+		width: 15%;
+		max-width: 75px;
+		margin-bottom: 15px;
+	}
+	#about-page .boat {
+		bottom: -45px;
+	}
+}
+@media screen and (max-width:480px) {
+	#about-page .looknum {
+		display: none;
+	}	
+}
+
+#about-page .big-text {
+	display:inline-block;
+	color: #fff;
 }
 
 #category-page {
@@ -235,13 +317,6 @@ body {
 	box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
 }
 
-.img-platapainbg {
-	background: url(../img/main/platapainbg.png);
-	background-position: center;
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-}
-
 @media screen and (max-width:1199px) {
 	#category-page .count-box {
 		font-size: 45px;
@@ -289,8 +364,8 @@ body {
 
 @media screen and (max-width:768px) {
 	.big-text { font-size:40px; }
-	.title-text { font-size:25px; }
-	.normal-text { font-size:18px; }
+	.title-text { font-size:24px; }
+	.normal-text { font-size:20px; }
 
 	.page .title {
 		margin-bottom: 10px;
