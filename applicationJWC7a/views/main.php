@@ -64,13 +64,12 @@
 		<div class="cover-img" src="<?= base_url() ?>assets/img/main/city.png" alt="">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-8 col-xs-offset-2">
+					<div class="col-xs-8 col-xs-offset-2 text-center">
 						<img class="img-center img-responsive logo-img" src="<?= base_url() ?>assets/img/main/logo.png" />
 						<div class="row">
-							<div class="col-md-3 col-xs-6"><img src="<?= base_url() ?>assets/img/main/spon1.jpg" class="img-center img-responsive"></div>
-							<div class="col-md-3 col-xs-6"><img src="<?= base_url() ?>assets/img/main/spon2.jpg" class="img-center img-responsive"></div>
-							<div class="col-md-3 col-xs-6"><img src="<?= base_url() ?>assets/img/main/spon3.jpg" class="img-center img-responsive"></div>
-							<div class="col-md-3 col-xs-6"><img src="<?= base_url() ?>assets/img/main/spon4.jpg" class="img-center img-responsive"></div>
+							<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/spon2.png" class="img-center img-responsive"></div>
+							<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/spon1.png" class="img-center img-responsive"></div>
+
 						</div>
 					</div>
 				</div>

@@ -85,8 +85,8 @@ body {
 	width: 100%;
 	overflow: hidden;
 	display: block;
-	background: url(../img/main/city.png);
-	background-size: 100% auto;
+	background: url(../img/main/city2.png);
+	background-size: cover;
 	background-position:center bottom;
 	background-repeat: no-repeat;
 }
@@ -95,10 +95,19 @@ body {
 	width: 100%;
 	height: 100%;
 	display:block;
+	margin-bottom: -1px;
 }
 
 #header-page .logo-img {
-	margin-top:100px;
+	margin-top: 20px;
+	width: 400px;
+}
+
+#header-page .sponsor-top {
+	width: 120px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 20px 40px 0;
 }
 
 #about-page {
