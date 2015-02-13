@@ -232,62 +232,63 @@
 					<div class="row">
 						<div class="table-picture col-xs-12">
 							<div class="row">
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
-								<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+								<div class="col-lg-2 col-sm-3 col-xs-4">
 									<img src="<?= base_url() ?>assets/img/main/black.png" class="img-center img-responsive" />
 								</div>
 							</div>
 							<div class="social text-center">
+								<p>Follow JWCTH on</p>
 								<a href="http://www.facebook.com/jwcth" class="shadowlink" title="JWC on Facebook" target="_blank"><img src="<?php echo base_url()."assets/" ?>img/social/fb.svg" alt="fb"></a>
 								<a href="http://www.twitter.com/jwcth" class="shadowlink" title="JWC on Twitter" target="_blank"><img src="<?php echo base_url()."assets/" ?>img/social/tw.svg" alt="tw"></a>
 								<a href="http://www.instagram.com/jwcth" class="shadowlink" title="JWC on Instagram" target="_blank"><img src="<?php echo base_url()."assets/" ?>img/social/ig.svg" alt="ig"></a>
