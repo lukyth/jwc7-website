@@ -21,11 +21,13 @@
   <link rel="icon" type="image/png" href="<?php echo base_url()."assets/" ?>img/favicon.png">
 
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>css/default_global.css"/>
-	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>css/bootstrap.min.css"/>
-	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>fonts/CSPraJad.css" />
-	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>fonts/wdb_bangna.css" />
-	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>css/main.css" />
+	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/default_global.css"/>
+	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="<?= base_url()."assets/" ?>fonts/CSPraJad.css" />
+	<link rel="stylesheet" href="<?= base_url()."assets/" ?>fonts/wdb_bangna.css" />
+	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/main.css" />
+	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/main.css" />
+	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/bg-main.css" />
 
 </head>
 
@@ -69,8 +71,8 @@
 						<div class="row">
 							<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/spon2.png" class="img-center img-responsive"></div>
 							<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/spon1.png" class="img-center img-responsive"></div>
-
 						</div>
+						<img src="<?= base_url() ?>assets/img/main/regis.png" class="jumpto-register img-center img-responsive register" />
 					</div>
 				</div>
 			</div>
