@@ -19,7 +19,10 @@ class Main extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('main');
+		$this->load->model('User_Model','user');
+    	$num = $this->user->get_amount();
+    	$data =  array('amount' => $num);
+		$this->load->view('main',$data);
 	}
 }
 
