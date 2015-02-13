@@ -208,7 +208,12 @@ class Register extends CI_Controller {
           //print_r($form_register_data);
           $this->register->update($form_register_data,$user_id);
           $this->homework->update( $form_homework_data,$user_id);
-          redirect('register/finish', 'refresh');
+          if($type == 1)
+            redirect('register/finish/c', 'refresh');
+          else if($type == 2)
+            redirect('register/finish/d', 'refresh');
+          else if($type == 3)
+            redirect('register/finish/m', 'refresh');
       }
       else{
       if($type == 1)
@@ -226,8 +231,16 @@ class Register extends CI_Controller {
 
 
 
-  public function finish(){
+  public function finish($type){
     //$data=array('type' => $type);
-    $this->load->view('register/finished');
+    if ($type == 'c') {
+      $this->load->view('register/finished_C');
+    }
+    else if ($type == 'd') {
+      $this->load->view('register/finished_D');
+    }
+    else if ($type == 'm') {
+      $this->load->view('register/finished_M');
+    }
   }
 }

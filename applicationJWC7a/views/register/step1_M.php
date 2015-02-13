@@ -4,40 +4,40 @@
 	<title>Junior Webmaster Camp #7 | สมัครสมาชิก</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/" ?>css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/" ?><?php echo base_url()."assets/" ?>css/jwc7register.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/" ?>fonts/csprajad.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/" ?>fonts/wdb_bangna.css">
-	<script type="text/javascript" src="<?php echo base_url()."assets/" ?>js/jquery-1.11.1.min.js"></script>
-	<!--<script type="text/javascript" src="js/jwc7register.js"></script> -->
-	<script type="text/javascript" src="js/jwc7register_quick.js"></script>
+	<link rel="stylesheet" href="<?php echo base_url()."assets/" ?>css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo base_url()."assets/" ?>css/jwc7register.css">
+	<link rel="stylesheet" href="<?php echo base_url()."assets/" ?>fonts/csprajad.css">
+	<link rel="stylesheet" href="<?php echo base_url()."assets/" ?>fonts/wdb_bangna.css">
+	<script src="<?php echo base_url()."assets/" ?>js/jquery-1.11.1.min.js"></script>
+	<!--<script src="js/jwc7register.js"></script> -->
+	<script src="<?php echo base_url()."assets/" ?>js/jwc7register_quick.js"></script>
 	<link rel="icon" type="image/png" href="<?php echo base_url()."assets/" ?>img/favicon.png">
 </head>
 <body>
 	<div class="row" id="head">
 		<div class="container-fluid txt-center">
 			<div class="col-sm-12">
-				<img src="img/mascot_mkt.svg">
+				<img src="<?php echo base_url()."assets/" ?>img/mascot_mkt.svg">
 				<a href="http://jwc.in.th"><img src="<?php echo base_url()."assets/" ?>img/logo.svg" alt="logo" id="logo"></a>
 			</div>
 		</div>
 	</div>
 	<div class="row" id="body">
 		<div class="container-fluid txt-center">
-			<div class="row" id="form-head">
+			<div class="row marketing" id="form-head">
 				<div class="col-sm-10 col-sm-offset-1">
 					<h1>สมัครเข้าค่าย JWC7</h1>
 					<hr>
 					<h2>Web Marketing</h2>
-					
+
 				</div>
 			</div>
 			<div class="row" id="form-progress">
 				<div class="col-sm-12">
-					<div id="goto1">1. ข้อมูลส่วนตัว</div><div id="goto2">2. ข้อมูลเกี่ยวกับค่าย</div><div id="goto3">3. คำถามคัดเลือก</div><div id="goto4">4. คำถามประจำสาขา</div><div id="goto5">5. ตรวจสอบข้อมูล</div>
+					<div id="goto1">1. ข้อมูลส่วนตัว</div><div id="goto2">2. ข้อมูลเกี่ยวกับค่าย</div><div id="goto3">3. คำถามคัดเลือก</div><div id="goto4">4. คำถามประจำสาขา</div><!-- <div id="goto5">5. ตรวจสอบข้อมูล</div> -->
 				</div>
 			</div>
-			<form role="form">
+			<?php echo form_open('register/step1/'.$type) ?>
 			<div class="row" id="regisform">
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -46,10 +46,10 @@
 					<div class="col-sm-10 col-sm-offset-1">
 						<h2>ข้อมูลส่วนตัว</h2>
 						<hr>
-						<div class="row fbprofile">
+						<!-- <div class="row fbprofile">
 							<div class="fbpic"></div>
 							<h2>Thanawit Tae Prasongpongchai</h2>
-						</div>
+						</div> -->
 						<div class="row form-field">
 							<div class="col-sm-3">
 								<label for="name">ชื่อ*</label>
@@ -161,7 +161,7 @@
 
 						<br>
 						<div class="txt-center">
-							<button class="btn btn-primary btn-lg"id="next1">บันทึกและไปต่อ &raquo;</button>
+							<div type = 'submit' class="btn btn-primary btn-lg"id="next1">บันทึกและไปต่อ &raquo;</div>
 						</div>
 					</div>
 				</div>
@@ -239,8 +239,8 @@
 
 						<br>
 						<div class="txt-center">
-							<button class="btn btn-primary btn-lg" id="prev2">&laquo; หน้าที่แล้ว</button>&nbsp;&nbsp;
-							<button class="btn btn-primary btn-lg" id="next2">บันทึกและไปต่อ &raquo;</button>
+							<div class="btn btn-primary btn-lg" id="prev2">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
+							<div class="btn btn-primary btn-lg" id="next2">บันทึกและไปต่อ &raquo;</div>
 						</div>
 					</div>
 				</div>
@@ -263,8 +263,8 @@
 
 						<br>
 						<div class="txt-center">
-							<button class="btn btn-primary btn-lg" id="prev3">&laquo; หน้าที่แล้ว</button>&nbsp;&nbsp;
-							<button class="btn btn-primary btn-lg" id="next3">บันทึกและไปต่อ &raquo;</button>
+							<div class="btn btn-primary btn-lg" id="prev3">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
+							<div class="btn btn-primary btn-lg" id="next3">บันทึกและไปต่อ &raquo;</div>
 						</div>
 					</div>
 				</div>
@@ -287,15 +287,21 @@
 
 						<br>
 						<div class="txt-center">
-							<button class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</button>&nbsp;&nbsp;
-							<button class="btn btn-primary btn-lg" id="next4">บันทึกและไปต่อ &raquo;</button>
+							<!-- <div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
+							<div class="btn btn-primary btn-lg" id="next4">บันทึกและไปต่อ &raquo;</div> -->
+							<div class="btn btn-primary btn-lg" id="prev5">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
+							<button type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
+							<?php
+									echo validation_errors();
+									if(isset($result)) echo $result;
+							?>
 						</div>
 					</div>
 				</div>
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-				<div id="step5">
+				<!-- <div id="step5">
 					<div class="col-sm-10 col-sm-offset-1">
 						<h2>ตรวจสอบข้อมูล</h2>
 						<hr>
@@ -397,14 +403,9 @@
 					</div>
 					<br>
 					<div class="txt-center">
-						<button class="btn btn-primary btn-lg" id="prev5">&laquo; หน้าที่แล้ว</button>&nbsp;&nbsp;
-						<button type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
-						<?php
-								echo validation_errors();
-								if(isset($result)) echo $result;
-						?>
+
 					</div>
-				</div>
+				</div> -->
 
 			</div>
 			</form>

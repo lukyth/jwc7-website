@@ -17,14 +17,14 @@
 	<div class="row" id="head">
 		<div class="container-fluid txt-center">
 			<div class="col-sm-12">
-				<img src="<?php echo base_url()."assets/" ?>img/mascot_mkt.svg">
+				<img src="<?php echo base_url()."assets/" ?>img/mascot_ct.svg">
 				<a href="http://jwc.in.th"><img src="<?php echo base_url()."assets/" ?>img/logo.svg" alt="logo" id="logo"></a>
 			</div>
 		</div>
 	</div>
 	<div class="row" id="body">
 		<div class="container-fluid txt-center">
-			<div class="row" id="form-head">
+			<div class="row content" id="form-head">
 				<div class="col-sm-10 col-sm-offset-1">
 					<h1>สมัครเข้าค่าย JWC7</h1>
 					<hr>
@@ -34,10 +34,9 @@
 			</div>
 			<div class="row" id="form-progress">
 				<div class="col-sm-12">
-					<div id="goto1">1. ข้อมูลส่วนตัว</div><div id="goto2">2. ข้อมูลเกี่ยวกับค่าย</div><div id="goto3">3. คำถามคัดเลือก</div><div id="goto4">4. คำถามประจำสาขา</div><div id="goto5">5. ตรวจสอบข้อมูล</div>
+					<div id="goto1">1. ข้อมูลส่วนตัว</div><div id="goto2">2. ข้อมูลเกี่ยวกับค่าย</div><div id="goto3">3. คำถามคัดเลือก</div><div id="goto4">4. คำถามประจำสาขา</div><!-- <div id="goto5">5. ตรวจสอบข้อมูล</div> -->
 				</div>
 			</div>
-			<form role="form" > </form>>
 			<?php echo form_open('register/step1/'.$type) ?>
 			<div class="row" id="regisform">
 
@@ -47,10 +46,10 @@
 					<div class="col-sm-10 col-sm-offset-1">
 						<h2>ข้อมูลส่วนตัว</h2>
 						<hr>
-						<div class="row fbprofile">
+						<!-- <div class="row fbprofile">
 							<div class="fbpic"></div>
 							<h2>Thanawit Tae Prasongpongchai</h2>
-						</div>
+						</div> -->
 						<div class="row form-field">
 							<div class="col-sm-3">
 								<label for="name">ชื่อ*</label>
