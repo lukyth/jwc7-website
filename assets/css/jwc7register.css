@@ -22,53 +22,8 @@ h1,h2,h3,h4,h5,h6{
 
 hr{border-color:#000;}
 
-.btn-design{
-	background-color:#732877;
-	border:none;
-	color:#fff;
-	box-shadow: 0 0 3px rgba(0,0,0,0.5);
-	margin: 5px 10px;
-}
-.btn-design:hover{
-	background-color:#965e99;
-	color:#fff;
-}
-
-.btn-marketing{
-	background-color:#e74c25;
-	border:none;
-	color:#fff;
-	box-shadow: 0 0 3px rgba(0,0,0,0.5);
-	margin: 5px 10px;
-}
-.btn-marketing:hover{
-	background-color:#ed795c;
-	color:#fff;
-}
-
-.btn-content{
-	background-color:#01908c;
-	border:none;
-	color:#fff;
-	box-shadow: 0 0 3px rgba(0,0,0,0.5);
-	margin: 5px 10px;
-}
-.btn-content:hover{
-	background-color:#41aca9;
-	color:#fff;
-}
-
-.btn-finished{
-	background-color:#43b809;
-	border:none;
-	color:#fff;
-	box-shadow: 0 0 3px rgba(0,0,0,0.5);
-	margin: 5px 10px;
-}
-.btn-finished:hover{
-	background-color:#72ca47;
-	color:#fff;
-}
+.btn-primary ,.btn-primary:link, .btn-primary:active, .btn-primary:visited{background-color: #118d83;}
+.btn-primary:hover{background-color: #084a44;}
 
 .container-fluid{
 	max-width:1000px;
@@ -92,17 +47,14 @@ hr{border-color:#000;}
 #head{
 	/*background-image: url('../img/register_head.svg');*/
 	/*background-color: #e74c25;*/
-	height:250px;
+	height:300px;
 	background-position: center;
-}
-#head img{
-	max-height:250px;
 }
 
 #login{
 	padding-top:50px;
 	padding-bottom:100px;
-	/*background-color: #838;*/
+	background-color: #838;
 }
 
 .step{
@@ -135,15 +87,11 @@ hr{border-color:#000;}
 }
 
 #form-head{
+	background-color:#e74c25;
 	color:#fff;
 	border-top-right-radius: 30px;
 	border-top-left-radius: 30px;
 }
-
-#form-head.design{background-color:#732877;}
-#form-head.marketing{background-color:#e74c25;}
-#form-head.content{background-color:#01908c;}
-
 #form-head h1{margin: 30px 0 5px;}
 #form-head h2{margin: 5px 0 30px;}
 #form-head hr{border-color: #fff;}
@@ -169,10 +117,7 @@ hr{border-color:#000;}
 [id^=goto]:last-of-type{border-right:none;}
 
 [id^=goto].active{
-	background-color: #edc;
-	color:#000;
-	border-top-right-radius: 7px;
-	border-top-left-radius: 7px;
+	
 }
 
 [id^=step]{
@@ -181,7 +126,7 @@ hr{border-color:#000;}
 }
 
 #loginspace{
-	padding:60px 0 100px;
+	padding:80px 0 100px;
 	background-color: #edc;
 	margin-bottom:100px;
 	border-bottom-right-radius: 30px;
@@ -202,33 +147,4 @@ hr{border-color:#000;}
 	vertical-align: middle;
 	margin-top: 30px;
 	margin-bottom: 20px;
-}
-
-@media (max-width:1023px) and (min-width:480px){
-	body{
-		padding: 0 30px;
-		background-position: 0 55px;
-		background-repeat: no-repeat;
-	}
-	#head{height:220px;}
-}
-
-@media (max-width:479px){
-	body{
-		padding: 0 15px;
-		background-position: 0 55px;
-		background-repeat: no-repeat;
-	}
-	#regisform, #loginspace{
-		padding-left:15px;
-		padding-right:15px;
-		margin-bottom:40px;
-	}
-	.container-fluid{margin:0 auto;}
-	#logo{width:200px;}
-	#head{height:200px;}
-}
-
-@media (max-width:899px){
-	[id^=goto]{padding-left:20px; padding-right:20px;}	
 }

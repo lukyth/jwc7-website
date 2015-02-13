@@ -1,70 +1,55 @@
 *{
 	transition:all 0.15s;
-	font-family: 'wdb_bangnaregular';
-}
-html {
-	width:100%;
 }
 body{
-	width: 100%;
-	height: 100%;
+	background-color: #eee;
+	background-image: url('../img/bg6.png');
+	background-position: center top;
+	background-repeat: repeat;
+	background-size: cover;
 	overflow-x:hidden;
 }
-.bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-image: url('../img/bg-coming-soon.png');
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
-	min-height: 100vh;
+h1,h2,h3,h4,h5,h6{
+	font-family: 'wdb_bangnaregular';
+	/*font-weight: bold;*/
 }
 .btn-primary ,.btn-primary:link, .btn-primary:active, .btn-primary:visited{background-color: #118d83;}
 .btn-primary:hover{background-color: #084a44;}
 
 .txt-center{text-align: center;}
 #subscribeform{
-	max-width: 500px;
+	max-width:500px;
 }
 #subscribe{
-	margin: 0 -15px;
+	margin:0 -15px;
+	background-image: url('../img/gw.png');
+	background-size: 10% 100%;
+	padding-bottom:50px;
 }
-.img-center {
-	margin: 0 auto;
-	position: relative;
-	z-index: 2;
-}
+.img-center{margin:0 auto;}
 
 #subscribe .shadowlink{
 	border-radius: 50%;
-	height: 30px;
-	width: 30px;
-	display: inline-block;
+	height:30px;
+	width:30px;
+	display:inline-block;
 }
-#follow img {
-	margin-top: -6px;
-}
-#subscribe .form-control {
-	line-height: 2em;
-}
-
-#follow > div { margin-bottom:5px; }
-
-#soon {
-	margin-bottom: 66px;
-}
+/*@media (min-width:480px){
+	#social{
+		margin-top:-55px;
+	}
+}*/
+#soon{margin-bottom:50px;}
 a.shadowlink{
-	transition: all 0.15s;
-	margin-top: 10px;
-	display: inline-block;
+	transition:all 0.15s;
+	margin-top:10px;
+	display:inline-block;
 }
 a.shadowlink:hover{
 	box-shadow: 0px 2px 10px rgba(0,0,0,0.4);
 	background-color: rgba(0,0,0,0.4);
-	-webkit-border-radius: 2em;
-	border-radius: 2em;
+	/*margin-bottom:5px;
+	margin-top:-5px;*/
 }
 .container-fluid:first-of-type .row:first-of-type{
 	padding-top:120px;
@@ -80,20 +65,28 @@ a.shadowlink:hover{
 .form-control:active{
 	border:#118d83 1px solid;
 }
+@media (min-width:1024px){
+	body{background-size: 1400px;}
+}
+@media (min-width:480px) and (max-width:1023px){
+	body{background-size: 1100px}
+}
+@media (max-width:479px){
+	body{background-size: 800px}
+}
+
 
 ul.countdown {
 	font-family: 'wdb_bangnaregular';
 	list-style: none;
-	margin:64px 0 -15px;
+	/*margin: 75px 0;*/
+	margin:80px 0 -15px;
 	padding: 0;
 	display: block;
 	text-align: center;
 }
 ul.countdown li {
 	display: inline-block;
-}
-ul.countdown li:nth-child(odd) {
-	width: 70px;
 }
 ul.countdown li span {
 	font-size: 60px;
@@ -109,9 +102,6 @@ ul.countdown li p {
 	color: #a7abb1;
 	font-size: 14px;
 }
-#follow {
-  margin-bottom: 40px;
-}
 @media (max-width:479px){
 	ul.countdown {
 		margin:60px 0 -15px;
@@ -123,8 +113,5 @@ ul.countdown li p {
 	ul.countdown li.seperator {
 		font-size: 40px;
 		line-height: 35px;
-	}
-	ul.countdown li:nth-child(odd) {
-		width: 56px;
 	}
 }

@@ -36,6 +36,7 @@ class Register extends CI_Controller {
     $data=array('type' =>$type);
 
     $user_id =$this->facebook->getUser();
+
     if($user_id) {
       try {
         if(!$this->register->checkRegister($user_id))
@@ -54,6 +55,23 @@ class Register extends CI_Controller {
 
       // No user, print a link for the user to login
       $data['login_url'] = $this->facebook->getLoginUrl();
+      switch( $type ) {
+        case 1 : {
+          $data['type'] = "Content"; 
+          $data['svg'] = "ct";
+          break;
+        }
+        case 2 : {
+          $data['type'] = "Design"; 
+          $data['svg'] = "ds";
+          break;
+        }
+        case 3 : {
+          $data['type'] = "Marketing";
+          $data['svg'] = "mkt";
+          break;
+        }
+      }
       $this->load->view('register/index',$data);
 
     }
