@@ -43,6 +43,27 @@ var Fold = (function() {
 	return ret;
 })();
 
+var Animate = (function() {
+
+	var boatx;
+	var $boat = $("#about-page .boat");
+	var ret = {};
+
+	ret.init = function() {
+		boatx = $(window).outerWidth()*0.2 + 10;
+	};
+
+	ret.moveBoat = function() {
+		$boat.css("background-position",boatx+"px 50%");
+		boatx += 4;
+		if( boatx > $(window).outerWidth() + 10 ) {
+			boatx = -$boat.width()*0.2 - 10;
+		}
+	};
+
+	return ret;
+})();
+
 $(function() {
 	$(".navbar").hide();
 
@@ -57,6 +78,9 @@ $(function() {
 	$(window).load(function () {
 		Fold.init();
 	});
+	Animate.init();
+
+	setInterval( Animate.moveBoat,1000/30 );
 
 	$('a.page-scroll').bind('click', function(event) {
 		var $anchor = $(this);

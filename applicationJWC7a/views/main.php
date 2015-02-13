@@ -78,20 +78,28 @@
 	</div>
 
 	<div id="about-page" class="page">
-		<img src="<?= base_url() ?>assets/img/main/rivertop.png" style="width:100%;"></div>
+		<div class="boat"></div>
+		<img src="<?= base_url() ?>assets/img/main/rivertop.png" style="width:100%;" />
 		<div class="img-rivercenter">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-10 col-xs-offset-1">
-						<div class="img-platapainbg">
-							<img src="<?= base_url() ?>assets/img/main/detailheader.png" class="img-responsive img-detailheader img-center" />
+						<div>
+							<div class="img-center text-center">
+								<img src="<?= base_url() ?>assets/img/main/looknam.png" class="looknum img-responsive" />
+								<h1 class="text-center big-text">รายละเอียด</h1>
+								<img src="<?= base_url() ?>assets/img/main/looknam.png" class="looknum img-responsive" />
+							</div>
 							<div class="img-center img-detailtext text-center">
 								<h1 class="title-text">อะไรคือ JWC7</h1>
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
 								<br>
-								<p class="normal-text desciption" style="line-height:2; margin-bottom:30px;">
+								<p class="img-center normal-text desciption" style="line-height:2; margin-bottom:30px;">
 								ค่ายสร้างเว็บที่จะพาน้องๆ ม.ปลาย มาเรียนรู้เทคนิคการสร้างสรรค์อย่างบรรเจิด สัมผัสประสบการณ์พิเศษผ่านกิจกรรมสนุกๆ และ Workshop จากสาขาต่างๆ พร้อมทั้งการนำเสนอผลงานกับกูรูใจดี แห่งวงการเว็บไทยมากมาย
 								</p>
+							</div>
+							<div class="plata-2" /></div>
+							<img src="<?= base_url() ?>assets/img/main/plata_1.png" class="plata-1" />
 							</div>
 						</div>
 					</div>
