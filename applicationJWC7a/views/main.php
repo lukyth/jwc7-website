@@ -48,13 +48,12 @@
 			<div class="text-center">
 				<div class="collapse navbar-collapse" id="navbar-content">
 					<ul class="nav navbar-nav">
-						<li><a class="page-scroll" href="#page-top">หน้าหลัก</a></li>
-						<li><a class="page-scroll" href="#about-page">รายละเอียด</a></li>
-						<li><a class="page-scroll" href="#category-page">สาขา</a></li>
-						<li><a class="page-scroll" href="#sponsor-page">ผู้สนับสนุน</a></li>
-						<li><a class="page-scroll" href="#qa-page">ถาม - ตอบ</a></li>
-						<li><a class="page-scroll" href="#timeline-page">Timeline</a></li>
-						<li><a class="page-scroll" href="#picture-page">ภาพจากปีเก่า</a></li>
+						<li class="home-small"><a class="page-scroll" class="page scroll" href="#page-top">หน้าหลัก</a></li>
+						<li><a class="page-scroll" href="#about-page">รายละเอียดที่สมัคร</a></li>
+						<li><a class="page-scroll" href="#category-page">สาขาที่สมัคร</a></li>
+						<li class="home-large"><a class="page-scroll" href="#page-top"><img src="<?=base_url()?>assets/img/main/logo_2.png" style="height:20px;"></a></li>
+						<li><a class="page-scroll" href="#timeline-page">กำหนดการ</a></li>
+						<li><a class="page-scroll" href="#picture-page">ติดตามข่าวสาร</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div>
@@ -77,7 +76,7 @@
 								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/spon1.png"></div>
 							</div>
 						</div>
-						<img src="<?= base_url() ?>assets/img/main/regis.png" class="jumpto-register img-center img-responsive register" />
+						<a class="page-scroll" href="#category-page"><img src="<?= base_url() ?>assets/img/main/regis.png" class="jumpto-register img-center img-responsive register" /></a>
 					</div>
 				</div>
 			</div>
