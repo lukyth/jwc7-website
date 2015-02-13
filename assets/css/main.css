@@ -123,6 +123,7 @@ body {
 }
 
 #header-page .jumpto-register {
+	margin-top:25px;
 	width: 120px;
 }
 
@@ -136,10 +137,10 @@ body {
 }
 @media screen and (max-width:768px) {
 	#header-page .sponsor-top {
-		margin: 20px 10px 0;
+		margin: 10px 10px 0;
 	}
 	#header-page .sponsor-top img {
-		max-width: 80px;
+		max-width: 70px;
 	}
 }
 
@@ -165,10 +166,6 @@ body {
 
 	#header-page .logo-img {
 		margin-top: 14%;
-	}
-
-	#header-page .sponsor-top {
-		margin: 10% 26px;
 	}
 }
 
