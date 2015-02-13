@@ -123,18 +123,12 @@ body {
 }
 
 #header-page .jumpto-register {
-<<<<<<< HEAD
-	width: 100px;
-	width: 400px;
-=======
 	width: 120px;
->>>>>>> b5bb7f699d300f3c837f0d7d2191059b4c8915ae
 }
 
 #header-page .sponsor-top {
 	display: inline-block;
 	vertical-align: middle;
-<<<<<<< HEAD
 	margin: 20px 40px 0;
 }
 #header-page .sponsor-top img {
@@ -146,9 +140,7 @@ body {
 	}
 	#header-page .sponsor-top img {
 		max-width: 80px;
-	}	
-=======
-	margin: 40px;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -178,7 +170,6 @@ body {
 	#header-page .sponsor-top {
 		margin: 10% 26px;
 	}
->>>>>>> b5bb7f699d300f3c837f0d7d2191059b4c8915ae
 }
 
 #about-page {
