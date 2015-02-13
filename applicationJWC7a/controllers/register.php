@@ -69,7 +69,7 @@ class Register extends CI_Controller {
       $this->load->model('Homework_Model','homework');
       $user_id =$this->facebook->getUser();
       if(!$this->register->checkRegister($user_id)){
-        redirect('register', 'refresh');
+        redirect('register/index/'.$type, 'refresh');
       }
       $data=array('type' => $type);
 
@@ -223,6 +223,6 @@ class Register extends CI_Controller {
 
   public function finish(){
     //$data=array('type' => $type);
-    $this->load->view('register/finished',$data);
+    $this->load->view('register/finished');
   }
 }
