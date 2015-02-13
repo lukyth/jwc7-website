@@ -98,11 +98,11 @@
 								ค่ายสร้างเว็บที่จะพาน้องๆ ม.ปลาย มาเรียนรู้เทคนิคการสร้างสรรค์อย่างบรรเจิด สัมผัสประสบการณ์พิเศษผ่านกิจกรรมสนุกๆ และ Workshop จากสาขาต่างๆ พร้อมทั้งการนำเสนอผลงานกับกูรูใจดี แห่งวงการเว็บไทยมากมาย
 								</p>
 							</div>
+							<div class="plata-2"></div>
 							<img src="<?= base_url() ?>assets/img/main/plata_1.png" class="plata-1" />
 						</div>
 					</div>
 				</div>
-				<div class="plata-2"></div>
 			</div>
 		</div>
 		<img src="<?= base_url() ?>assets/img/main/riverbottom.png" style="width:100%;"></div>
@@ -116,7 +116,7 @@
 					<img class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
 					<div class="row">
 						<div class="col-md-4 text-center">
-							<img src="<?= base_url() ?>assets/img/main/pic_cat_design.png" class="img-center img-responsive" />
+							<img src="<?= base_url() ?>assets/img/main/pic_cat_design.png" class="head img-center img-responsive" />
 							<div class="cat-text" style="color:#732777;">Web Design</div>
 							<p class="text-center description">
 								เนรมิตหน้าเว็บ โชว์สเต็ปดีไซน์ ไฉไลสไตล์เว็บสเตอร์สู่การเป็นเว็บ Design อย่างแท้จริง
@@ -125,7 +125,7 @@
 							<img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" />
 						</div>
 						<div class="col-md-4 text-center">
-							<img src="<?= base_url() ?>assets/img/main/pic_cat_content.png" class="img-center img-responsive" />
+							<img src="<?= base_url() ?>assets/img/main/pic_cat_content.png" class="head img-center img-responsive" />
 							<div class="cat-text" style="color:#07908C;">Web Content</div>
 							<p class="text-center description">
 								สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Contenให้เฉือดเฉือนประโยคเด็ด Content ชนะใจ
@@ -134,7 +134,7 @@
 							<img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" />
 						</div>
 						<div class="col-md-4 text-center">
-							<img src="<?= base_url() ?>assets/img/main/pic_cat_marketing.png" class="img-center img-responsive" />
+							<img src="<?= base_url() ?>assets/img/main/pic_cat_marketing.png" class="head img-center img-responsive" />
 							<div class="cat-text" style="color:#E64C24;">Web Marketing</div>
 							<p class="text-center description">
 								เรียนรู้ศาสตร์การตลาดยุทธศาสตร์ การสร้างชื่อให้เว็บเลื่องลือระบือไกล
