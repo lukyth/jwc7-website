@@ -200,6 +200,8 @@ class Register extends CI_Controller {
 
 
           $data['result']='SAVE';
+          $this->Register_Model->update($form_register_data,$user_id);
+          $this->Homework_Model->update( $form_homework_data,$user_id);
       }
 
       $this->load->view('register/step1',$data);
