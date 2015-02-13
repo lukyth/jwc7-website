@@ -4,20 +4,20 @@
 	<title>Junior Webmaster Camp #7 | สมัครสมาชิก</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/" ?>css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/" ?><?php echo base_url()."assets/" ?>css/jwc7register.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/" ?>fonts/csprajad.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url()."assets/" ?>fonts/wdb_bangna.css">
-	<script type="text/javascript" src="<?php echo base_url()."assets/" ?>js/jquery-1.11.1.min.js"></script>
-	<!--<script type="text/javascript" src="js/jwc7register.js"></script> -->
-	<script type="text/javascript" src="js/jwc7register_quick.js"></script>
+	<link rel="stylesheet" href="<?php echo base_url()."assets/" ?>css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo base_url()."assets/" ?>css/jwc7register.css">
+	<link rel="stylesheet" href="<?php echo base_url()."assets/" ?>fonts/csprajad.css">
+	<link rel="stylesheet" href="<?php echo base_url()."assets/" ?>fonts/wdb_bangna.css">
+	<script src="<?php echo base_url()."assets/" ?>js/jquery-1.11.1.min.js"></script>
+	<!--<script src="js/jwc7register.js"></script> -->
+	<script src="<?php echo base_url()."assets/" ?>js/jwc7register_quick.js"></script>
 	<link rel="icon" type="image/png" href="<?php echo base_url()."assets/" ?>img/favicon.png">
 </head>
 <body>
 	<div class="row" id="head">
 		<div class="container-fluid txt-center">
 			<div class="col-sm-12">
-				<img src="img/mascot_mkt.svg">
+				<img src="<?php echo base_url()."assets/" ?>img/mascot_mkt.svg">
 				<a href="http://jwc.in.th"><img src="<?php echo base_url()."assets/" ?>img/logo.svg" alt="logo" id="logo"></a>
 			</div>
 		</div>

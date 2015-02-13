@@ -54,7 +54,12 @@ class Register extends CI_Controller {
 
       // No user, print a link for the user to login
       $data['login_url'] = $this->facebook->getLoginUrl();
-      $this->load->view('register/index',$data);
+      if($type == 1)
+        $this->load->view('register/index_C',$data);
+      else if($type == 2)
+        $this->load->view('register/index_D',$data);
+      else if($type == 3)
+        $this->load->view('register/index_M',$data);
 
     }
 
@@ -211,7 +216,7 @@ class Register extends CI_Controller {
       else if($type == 2)
         $this->load->view('register/step1_D',$data);
       else if($type == 3)
-        $this->load->view('register/step1',$data);
+        $this->load->view('register/step1_M',$data);
     }
 
 
