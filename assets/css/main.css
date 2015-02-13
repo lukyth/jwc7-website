@@ -106,22 +106,35 @@ body {
 	width: 100%;
 	height: 100%;
 	display:block;
-	margin-bottom: -1px;
+}
+
+#header-page .top-corner {
+	position: absolute;
+	width: 100%;
+}
+
+#header-page .top-corner img {
+	width: 240px;
 }
 
 #header-page .logo-img {
 	margin-top: 20px;
-	width: 260px;
+	width: 320px;
 }
 
 #header-page .jumpto-register {
+<<<<<<< HEAD
 	width: 100px;
 	width: 400px;
+=======
+	width: 120px;
+>>>>>>> b5bb7f699d300f3c837f0d7d2191059b4c8915ae
 }
 
 #header-page .sponsor-top {
 	display: inline-block;
 	vertical-align: middle;
+<<<<<<< HEAD
 	margin: 20px 40px 0;
 }
 #header-page .sponsor-top img {
@@ -134,6 +147,38 @@ body {
 	#header-page .sponsor-top img {
 		max-width: 80px;
 	}	
+=======
+	margin: 40px;
+}
+
+@media screen and (max-width: 768px) {
+	#header-page .top-corner img {
+		width: 180px;
+	}
+
+	#header-page .logo-img {
+		margin-top: 60px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#header-page .top-corner img {
+	  width: 120px;
+	}
+
+	#header-page .cover-img .col-logo {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	#header-page .logo-img {
+		margin-top: 14%;
+	}
+
+	#header-page .sponsor-top {
+		margin: 10% 26px;
+	}
+>>>>>>> b5bb7f699d300f3c837f0d7d2191059b4c8915ae
 }
 
 #about-page {
@@ -177,7 +222,7 @@ body {
 #about-page .boat {
 	background: url(../img/main/boat.png);
 	background-size: 25% auto;
-	background-position: bottom;
+	background-position: 0 40%;
 	background-repeat: no-repeat;
 	position: absolute;
 	height: 210px;
@@ -473,17 +518,13 @@ body {
 	}
 }
 
-@media screen and (max-width:768px) {
-	.big-text { font-size:40px; }
-	.title-text { font-size:24px; }
-	.normal-text { font-size:20px; }
+@media screen and (max-width: 768px) {
+	.big-text { font-size: 40px; }
+	.title-text { font-size: 24px; }
+	.normal-text { font-size: 20px; }
 
 	.page .title {
 		margin-bottom: 10px;
-	}
-
-	#header-page .logo-img {
-		margin-top:60px;
 	}
 
 	#category-page .count-box {

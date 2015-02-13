@@ -1,0 +1,64 @@
+@-webkit-keyframes boatrun {
+  0% { background-position-x: -40%; }
+  100% { background-position-x: 140%; }
+}
+@-moz-keyframes boatrun {
+  0% { background-position-x: -40%; }
+  100% { background-position-x: 140%; }
+}
+@-o-keyframes boatrun {
+  0% { background-position-x: -40%; }
+  100% { background-position-x: 140%; }
+}
+@-ms-keyframes boatrun {
+  0% { background-position-x: -40%; }
+  100% { background-position-x: 140%; }
+}
+@keyframes boatrun {
+  0% { background-position-x: -40%; }
+  100% { background-position-x: 140%; }
+}
+
+@-webkit-keyframes boatmove {
+  0% { background-position-y: 36%; }
+  20% { background-position-y: 33%; }
+  50% { background-position-y: 30%; }
+  80% { background-position-y: 33%; }
+  100% { background-position-y: 36%; }
+}
+@-moz-keyframes boatmove {
+  0% { background-position-y: 36%; }
+  20% { background-position-y: 33%; }
+  50% { background-position-y: 30%; }
+  80% { background-position-y: 33%; }
+  100% { background-position-y: 36%; }
+}
+@-o-keyframes boatmove {
+  0% { background-position-y: 36%; }
+  20% { background-position-y: 33%; }
+  50% { background-position-y: 30%; }
+  80% { background-position-y: 33%; }
+  100% { background-position-y: 36%; }
+}
+@-ms-keyframes boatmove {
+  0% { background-position-y: 36%; }
+  20% { background-position-y: 33%; }
+  50% { background-position-y: 30%; }
+  80% { background-position-y: 33%; }
+  100% { background-position-y: 36%; }
+}
+@keyframes boatmove {
+  0% { background-position-y: 36%; }
+  20% { background-position-y: 33%; }
+  50% { background-position-y: 30%; }
+  80% { background-position-y: 33%; }
+  100% { background-position-y: 36%; }
+}
+
+.boat {
+  -webkit-animation: boatrun 12s linear infinite running, boatmove 2s ease-in infinite running;
+  -moz-animation-name: boatrun 12s linear infinite running, boatmove 2s ease-in infinite running;
+  -o-animation-name: boatrun 12s linear infinite running, boatmove 2s ease-in infinite running;
+  -ms-animation-name: boatrun 12s linear infinite running, boatmove 2s ease-in infinite running;
+  animation-name: boatrun 12s linear infinite running, boatmove 2s ease-in infinite running;
+}

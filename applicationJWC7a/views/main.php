@@ -26,8 +26,8 @@
 	<link rel="stylesheet" href="<?= base_url()."assets/" ?>fonts/CSPraJad.css" />
 	<link rel="stylesheet" href="<?= base_url()."assets/" ?>fonts/wdb_bangna.css" />
 	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/main.css" />
-	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/main.css" />
 	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/bg-main.css" />
+	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/animation.css" />
 
 </head>
 
@@ -63,11 +63,16 @@
 	</nav>
 
 	<div id="header-page">
+		<div class="top-corner">
+			<img class="pull-left" src="<?= base_url() ?>assets/img/main/topleft.png"/>
+			<img class="pull-right" src="<?= base_url() ?>assets/img/main/topright.png"/>
+		</div>
 		<div class="cover-img" src="<?= base_url() ?>assets/img/main/city.png" alt="">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-8 col-xs-offset-2 text-center">
+					<div class="col-xs-8 col-xs-offset-2 text-center col-logo">
 						<img class="img-center img-responsive logo-img" src="<?= base_url() ?>assets/img/main/logo.png" />
+<<<<<<< HEAD
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/spon2.png"></div>
@@ -75,7 +80,16 @@
 							</div>
 						</div>
 						<img src="<?= base_url() ?>assets/img/main/regis.png" class="jumpto-register img-center img-responsive register" />
+=======
+>>>>>>> b5bb7f699d300f3c837f0d7d2191059b4c8915ae
 					</div>
+				</div>
+				<div class="row text-center">
+					<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/spon2.png" class="img-center img-responsive"></div>
+					<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/spon1.png" class="img-center img-responsive"></div>
+				</div>
+				<div class="row">
+					<a href="<?= base_url() ?>register"><img src="<?= base_url() ?>assets/img/main/regis.png" class="jumpto-register img-center img-responsive register" /></a>
 				</div>
 			</div>
 		</div>
