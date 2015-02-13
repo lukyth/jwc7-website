@@ -50,14 +50,14 @@ var Animate = (function() {
 	var ret = {};
 
 	ret.init = function() {
-		boatx = $(window).outerWidth() + 10;
+		boatx = $(window).outerWidth()*0.2 + 10;
 	};
 
 	ret.moveBoat = function() {
-		$boat.css("left",boatx);
+		$boat.css("background-position",boatx+"px 50%");
 		boatx += 4;
 		if( boatx > $(window).outerWidth() + 10 ) {
-			boatx = -$boat.width() - 10;
+			boatx = -$boat.width()*0.2 - 10;
 		}
 	};
 
