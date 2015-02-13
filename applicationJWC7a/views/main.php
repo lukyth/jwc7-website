@@ -209,7 +209,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
-						
+
 						<div class="sentence text-center WDB_Bangna head" onclick="Fold.up()" >
 							<div>ถาม - ตอบ</div>
 						</div>
@@ -330,6 +330,7 @@
 							<br>
 							วันค่าย JWC#7
 						</div>
+						<img class="timeline-fish" src="<?= base_url() ?>assets/img/main/timeline-fish.png" alt="ปลาตะเพียนสาน">
 					</div>
 				</div>
 			</div>

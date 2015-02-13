@@ -242,7 +242,7 @@ body {
 	}
 	#about-page .boat {
 		height: 100px;
-	}	
+	}
 }
 @media screen and (max-width:768px) {
 	#about-page .looknum {
@@ -263,7 +263,7 @@ body {
 @media screen and (max-width:480px) {
 	#about-page .looknum {
 		display: none;
-	}	
+	}
 }
 
 #about-page .big-text {
@@ -332,8 +332,67 @@ body {
 
 #timeline-page .timeline {
 	background: url(../img/main/timeline_item.png) no-repeat center center;
-	background-size: 200px;
-	height: 600px;
+  background-size: 240px;
+  height: 380px;
+  width: 660px;
+  position: relative;
+  font-size: 1.6em;
+  margin: 5% auto;
+}
+
+#timeline-page .timeline-item {
+	position: absolute;
+}
+
+#timeline-page .timeline-item:nth-child(1) {
+	right: 0;
+	top: 0;
+}
+
+#timeline-page .timeline-item:nth-child(2) {
+	right: 0;
+	bottom: 0;
+}
+
+#timeline-page .timeline-item:nth-child(3) {
+	left: 0;
+	bottom: 0;
+}
+
+#timeline-page .timeline-item:nth-child(4) {
+	left: 0;
+	top: 0;
+}
+
+#timeline-page .timeline-fish {
+	display: none;
+	position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+	#timeline-page {
+		background-size: cover;
+	}
+	#timeline-page .timeline {
+		background: none;
+  	height: initial;
+  	width: initial;
+  	margin: 8% auto 5% 40%;
+  	border-left: 4px solid #fff;
+	}
+
+	#timeline-page .timeline-item {
+		position: relative;
+	  margin: 0 0 50px 60px;
+	}
+
+	#timeline-page .timeline-fish {
+		display: block;
+  	top: -22px;
+  	right: 98%;
+  	width: 160px;
+	}
+
 }
 
 #picture-page {
