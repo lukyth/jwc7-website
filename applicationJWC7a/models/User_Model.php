@@ -9,17 +9,17 @@
     }
 
     function get_amount_c(){
-        $query = $this->db->get_where('register', array('registerType' => '1'));
+        $query = $this->db->get_where('register', array('registerType' => 'Content'));
         return $query->num_rows();       
     }
 
     function get_amount_d(){
-        $query = $this->db->get_where('register', array('registerType' => '2'));
+        $query = $this->db->get_where('register', array('registerType' => 'Design'));
         return $query->num_rows();       
     }
 
     function get_amount_m(){
-        $query = $this->db->get_where('register', array('registerType' => '3'));
+        $query = $this->db->get_where('register', array('registerType' => 'Marketing'));
         return $query->num_rows();       
     }
 

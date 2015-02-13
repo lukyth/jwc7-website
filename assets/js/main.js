@@ -36,7 +36,7 @@ var Fold = (function() {
 					"height" : 0
 				},1200);
 			}
-			$("#qa-page .head").css("background-image",'url(../assets/img/main/faq_show.png)');
+			$("#qa-page .head").css("background-image",'url(assets/img/main/faq_show.png)');
 		} else {
 			$folded.accordion( 0,1 );
 			if( isMobile ) {
@@ -46,7 +46,7 @@ var Fold = (function() {
 					"height" : h
 				},600);
 			}
-			$("#qa-page .head").css("background-image",'url(../assets/img/main/faq_hide.png)');
+			$("#qa-page .head").css("background-image",'url(assets/img/main/faq_hide.png)');
 		}
 		isShow = !isShow;
 	}
