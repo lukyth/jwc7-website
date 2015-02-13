@@ -233,15 +233,38 @@ class Register extends CI_Controller {
 
 
   public function finish($type){
-    //$data=array('type' => $type);
-    if ($type == 'c') {
-      $this->load->view('register/finished_C');
+    $this->load->library(array('email'));
+    $this->load->model('Register_Model','register');
+    $user_id =$this->facebook->getUser();
+
+    if($this->register->checkRegister($user_id)){
+        $this->email->initialize();
+        $this->email->from('jwc7@ywc.in.th', 'jwc7');
+
+        $this->email->to($this->register->email);
+
+        $this->email->subject('ยืนยันการสมัครค่าย JWC7');
+        $this->email->message('ขอบคุณที่สมัครค่าย JWC7 <br><br> ขอบคุณครับ <br>ทีมงาน jwc7');
+        if($this->email->send()) {
+            $data['result']='OK';
+        }
+        else {
+            $data['result']='ERROR';
+            $data['error'] =$this->email->print_debugger();
+        }
+
+        if ($type == 'c') {
+          $this->load->view('register/finished_C',$data);
+        }
+        else if ($type == 'd') {
+          $this->load->view('register/finished_D',$data);
+        }
+        else if ($type == 'm') {
+          $this->load->view('register/finished_M',$data);
+        }
+    }else {
+      redirect('main', 'refresh');
     }
-    else if ($type == 'd') {
-      $this->load->view('register/finished_D');
-    }
-    else if ($type == 'm') {
-      $this->load->view('register/finished_M');
-    }
+
   }
 }
