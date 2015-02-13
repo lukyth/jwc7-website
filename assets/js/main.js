@@ -14,8 +14,8 @@ var Fold = (function() {
 			ripper : true,
 			touchEnabled : false
 		});
-		
-		
+
+
 		console.log( h );
 
 		isShow = true;
@@ -78,9 +78,9 @@ $(function() {
 	$(window).load(function () {
 		Fold.init();
 	});
-	Animate.init();
+	// Animate.init();
 
-	setInterval( Animate.moveBoat,1000/5 );
+	// setInterval( Animate.moveBoat,1000/5 );
 
 	$('a.page-scroll').bind('click', function(event) {
 		var $anchor = $(this);
