@@ -17,7 +17,8 @@
     function check($facebookID){
       $query = $this->db->get_where('homework', array('facebookID' => $facebookID));
       if($query->num_rows()>0){
-        $result=$query->result()[0];
+        $results=$query->result();
+        $result=$results[0];
         $this->facebookID = $facebookID;
         $this->q1 = addslashes( $result->q1 );
         $this->q2 = addslashes( $result->q2 );
