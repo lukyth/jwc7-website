@@ -55,6 +55,8 @@ $(document).ready(function(){
 	$('#goto4').click(function(){active4(); $('#step1').hide(); $('#step2').hide(); $('#step3').hide(); $('#step4').show(); $('#step5').hide();});	
 	$('#goto5').click(function(){active5(); $('#step1').hide(); $('#step2').hide(); $('#step3').hide(); $('#step4').hide(); $('#step5').show();});		
 
+	$("#error_log p:not(:first)").hide();
+
 });
 
 function active1(){

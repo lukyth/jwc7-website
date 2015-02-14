@@ -162,7 +162,7 @@
 
 							<br>
 							<div class="txt-center">
-								<div type = 'submit' class="btn btn-primary btn-lg"id="next1">บันทึกและไปต่อ &raquo;</div>
+								<div class="btn btn-primary btn-lg"id="next1">บันทึกและไปต่อ &raquo;</div>
 							</div>
 						</div>
 					</div>
@@ -196,7 +196,13 @@
 									<label for="name">ไซส์เสื้อ*</label>
 								</div>
 								<div class="col-sm-4">
-									<input type="text" placeholder="S,M,L,XL,XXL" id="inputSizeShirt" class="form-control" name="inputSizeShirt"></input>
+									<select class="form-control" id="inputKnowFrom" name="inputSizeShirt">
+										<option>S (รอบอก 34, ยาว 26)</option>
+										<option>M (รอบอก 36, ยาว 27)</option>
+										<option>L (รอบอก 38, ยาว 28)</option>
+										<option>XL (รอบอก 40, ยาว 29)</option>
+										<option>XXL (รอบอก 42, ยาว 30)</option>
+									</select>
 								</div>
 							</div>
 
@@ -205,7 +211,7 @@
 									<label for="name" >ประเภทอาหาร</label>
 								</div>
 								<div class="col-sm-9">
-									<input type="text" id="inputSpecialFood" class="form-control" placeholder="ปกิ อิสลาม อาหารฮาลาล มังสวิรัติ เจ ฯลฯ" name="inputSpecialFood"></input>
+									<input type="text" id="inputSpecialFood" class="form-control" placeholder="ปกติ อิสลาม อาหารฮาลาล มังสวิรัติ เจ ฯลฯ" name="inputSpecialFood"></input>
 								</div>
 							</div>
 
@@ -235,8 +241,15 @@
 									<input type="text" id="inputDrugAllergy" class="form-control" placeholder="ยาที่แพ้" name="inputDrugAllergy"></input>
 								</div>
 							</div>
-
-
+							<div class="row form-field">
+							<div class="col-sm-3">
+								<label for="name">เบอร์โทรศัพท์ผู้ปกครองที่ติดต่อได้*</label>
+								</div>
+								<div class="col-sm-7">
+									<input type="text" id="inputPhone" class="form-control" placeholder="08x-xxx-xxxx" name="inputParentPhone"></input>
+								</div>
+							</div>
+							
 
 							<br>
 							<div class="txt-center">
@@ -295,12 +308,15 @@
 							<div class="txt-center">
 								<!-- <div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
 								<div class="btn btn-primary btn-lg" id="next4">บันทึกและไปต่อ &raquo;</div> -->
-								<div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
+								<div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;
+								<div class="btn btn-primary btn-lg">บันทึกชั่วคราว</div>&nbsp;
 								<button type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
-								<?php
-										echo validation_errors();
-										if(isset($result)) echo $result;
-								?>
+								<div id="error_log">
+									<?php
+											echo validation_errors();
+											if(isset($result)) echo $result;
+									?>
+								</div>
 							</div>
 						</div>
 					</div>
