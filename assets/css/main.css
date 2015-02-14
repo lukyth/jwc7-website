@@ -556,20 +556,17 @@ body {
 	font-family: 'CSPraJad';
 }
 
-#qa-page .head {
+#qa-page .head, #qa-content .tail {
 	cursor: pointer;
 	background-image: url(../img/main/faq_show.png);
-	background-size: auto 60px;
+	background-size: auto 50px;
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
-
-#qa-content .tail {
-	cursor: pointer;
-	background: url(../img/main/faq_hide.png);
-	background-size: auto 60px;
-	background-position: center bottom;
-	background-repeat: no-repeat;
+@media screen and (max-width:480px) {
+	#qa-page .head, #qa-page .tail {
+		background-size: auto 40px;
+	}
 }
 
 #qa-content .arrow {
