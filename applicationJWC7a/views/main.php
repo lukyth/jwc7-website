@@ -91,10 +91,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div id="about-page" class="page">
 		<img class="boat-station" src="<?= base_url() ?>assets/img/main/new/boat_station.svg" />
+	</div>
+	<div id="about-page" class="page">
 		<div class="river">
 			<div class="boat"></div>
 			<div class="river-wave"></div>
@@ -175,7 +174,7 @@
 	</div>
 
 	<div class="bg-gradient">
-		<!-- <div id="sponsor-page" class="page">
+		<div id="sponsor-page" class="page">
 			<div class="img-sponsorhead" style="width:100%;">
 				<h1 class="text-center big-text">ผู้สนับสนุน</h1>
 				<img style="padding-bottom:20px;" class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
@@ -210,7 +209,7 @@
 					</div>
 				</div>
 			</div>
-		</div> -->
+		</div>
 
 		<div id="qa-page" class="page">
 			<div class="container">

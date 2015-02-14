@@ -71,7 +71,7 @@ html,body {
 body {
 	color: #fff;
 	font-family: 'wdb_bangnaregular';
-
+	overflow-x: hidden;
 }
 
 .WDB_Bangna { font-family: 'wdb_bangnaregular'; }
@@ -223,9 +223,12 @@ a.register-button {
 .register {
 	background: url(../img/main/new/button.svg) no-repeat center center;
 	background-size: 100% 100%;
-	padding: 20px;
+	padding: 16px;
 	color: #fff;
 	cursor: pointer;
+	position: relative;
+	z-index: 2;
+	font-size: 1.6em;
 }
 
 #header-page .cover-img {
@@ -252,7 +255,7 @@ a.register-button {
 
 #header-page .logo-img {
 	margin-top: 50px;
-	width: 550px;
+	width: 480px;
 }
 
 #header-page .town {
@@ -265,30 +268,40 @@ a.register-button {
 	width: 100vw;
 }
 
-#header-page .back-left {
+#header-page .town .back-left {
 	background: url(../img/main/new/town_back_left.svg) no-repeat left bottom;
-	background-size: auto 100%;
+	background-size: 26% auto;
 }
 
-#header-page .back-center {
+#header-page .town .back-center {
 	background: url(../img/main/new/town_back_center.svg) no-repeat center bottom;
-	background-size: auto 100%;
+	background-size: 60% auto;
 }
 
-#header-page .back-right {
+#header-page .town .back-right {
 	background: url(../img/main/new/town_back_right.svg) no-repeat right bottom;
-	background-size: auto 100%;
+	background-size: 16% auto;
 }
 
-#header-page .town-front {
+#header-page .town .town-front {
 	background: url(../img/main/new/town_front.svg) no-repeat center bottom;
 	background-size: 100%;
+	height: 108vh;
 }
 
 #header-page .jumpto-register {
-	margin-top:70px;
-	width: 150px;
+	display: inline-block;
+  width: 224px;
 }
+
+#header-page .boat-station {
+	position: absolute;
+  left: 20%;
+  bottom: -9vh;
+  width: 30%;
+  z-index: 1;
+}
+
 @media screen and (max-width:1200px) {
 	#header-page .jumpto-register {
 		margin-top:50px;
@@ -307,11 +320,12 @@ a.register-button {
 }
 
 #header-page .sponsor-top {
-	/*display: inline-block;*/
+	display: inline-block;
 	vertical-align: middle;
-	margin: 20px 40px 0;
+	margin: 40px;
 }
 #header-page .sponsor-top img {
+	width: 100%;
 	max-width: 120px;
 }
 @media screen and (max-width:768px) {
@@ -353,20 +367,13 @@ a.register-button {
 	position: relative;
 }
 
-#about-page .boat-station {
-	position: absolute;
-	left: 20%;
-	top: -86px;
-	width: 360px;
-}
-
 #about-page .river {
 	background: url(../img/main/new/river.svg) no-repeat center center;
-	background-size: 100% 100%;
-	z-index: 1;
-	width: 100%;
-	height: 120px;
-	margin-top: -22px;
+  background-size: cover;
+  z-index: 1;
+  width: 104%;
+  height: 12vw;
+  margin: 3vh -2% 0;
 }
 
 #about-page .river-wave {
@@ -413,12 +420,12 @@ a.register-button {
 
 #about-page .boat {
 	background: url(../img/main/new/boat.svg);
-	background-size: 25% auto;
+	background-size: 32% auto;
 	background-position: 0 20%;
 	background-repeat: no-repeat;
 	position: absolute;
 	height: 210px;
-	width: 100%;
+	width: 104%;
 	z-index: 3;
 }
 
