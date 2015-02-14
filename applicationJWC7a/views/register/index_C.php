@@ -21,20 +21,21 @@
 			</div>
 		</div>
 	</div>
-	<div class="row" id="body">
-		<div class="container-fluid txt-center">
-			<div class="row content" id="form-head">
-				<div class="col-xs-10 col-xs-offset-1">
-					<h1>สมัครเข้าค่าย JWC7</h1>
-					<hr>
-					<h2>Web Content</h2>
+	<div class="container-fluid txt-center">
+		<div class="row" id="body">
+			<div class="col-xs-12">
+				<div class="row content" id="form-head">
+					<div class="col-xs-10 col-xs-offset-1">
+						<h1>สมัครเข้าค่าย JWC7</h1>
+						<hr>
+						<h2>Web Content</h2>
+					</div>
+				</div>
+				<div class="row" id="loginspace">
+					<a href="<?php echo $login_url; ?>"><img src="<?php echo base_url()."assets/" ?>img/mockup/fb_login.png"></a>
+
 				</div>
 			</div>
-			<div class="row" id="loginspace">
-				<a href="<?php echo $login_url; ?>"><img src="<?php echo base_url()."assets/" ?>img/mockup/fb_login.png"></a>
-
-			</div>
-
 		</div>
 	</div>
 </body>
