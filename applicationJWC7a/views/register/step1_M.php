@@ -235,6 +235,14 @@
 								<input type="text" id="inputDrugAllergy" class="form-control" placeholder="ยาที่แพ้" name="inputDrugAllergy"></input>
 							</div>
 						</div>
+						<div class="row form-field">
+							<div class="col-sm-3">
+								<label for="name">เบอร์โทรศัพท์ผู้ปกครองที่ติดต่อได้*</label>
+							</div>
+							<div class="col-sm-7">
+								<input type="text" id="inputPhone" class="form-control" placeholder="08x-xxx-xxxx" name="inputParentPhone"></input>
+							</div>
+						</div>
 
 
 
@@ -295,12 +303,15 @@
 						<div class="txt-center">
 							<!-- <div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
 							<div class="btn btn-primary btn-lg" id="next4">บันทึกและไปต่อ &raquo;</div> -->
-							<div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
+							<div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;
+							<div class="btn btn-primary btn-lg">บันทึกชั่วคราว</div>&nbsp;
 							<button type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
-							<?php
-									echo validation_errors();
-									if(isset($result)) echo $result;
-							?>
+							<div id="error_log">
+								<?php
+										echo validation_errors();
+										if(isset($result)) echo $result;
+								?>
+							</div>
 						</div>
 					</div>
 				</div>

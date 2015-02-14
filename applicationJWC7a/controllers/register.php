@@ -67,7 +67,27 @@ class Register extends CI_Controller {
 
   }
 
-  public function step1($type){
+  public function _cleanData( $data ) {
+    foreach( $data as $sub ) {
+      $sub = addslashes( $sub );
+    }
+    if( $data["sex"] == "0" ) {
+      $data["sex"] = "";
+    }
+    if( $data["grade"] == "0" ) {
+      $data["grade"] = "";
+    }
+    if( $data["knowFrom"] == "0" ) {
+      $data["knowFrom"] = $this->input->post('inputKnowFormEtc');
+    }
+    if( $data["province"] == "0" ) {
+      $data["province"] = "";
+    }
+    return $data;
+  }
+
+  public function step1($type = "1",$status = "normal"){
+
       $this->load->helper(array('form','html'));
       $this->load->library('form_validation');
       $this->load->model('Register_Model','register');
@@ -76,58 +96,109 @@ class Register extends CI_Controller {
       if(!$this->register->checkRegister($user_id)){
         redirect('register/index/'.$type, 'refresh');
       }
-      $data=array('type' => $type);
+      $data=array(
+        'type' => $type,
+        'redirect' => ""
+      );
+
+      $form_register_data= $this->_cleanData( array(
+          'profilePic'=>$this->input->post('inputProfilePic'),
+          'registerType'=>$type,
+          'name'=>$this->input->post('inputName'),
+          'surname'=>$this->input->post('inputSurname'),
+          'nickname'=>$this->input->post('inputNickname'),
+          'sex'=>$this->input->post('inputSex'),
+          'national_ID'=>$this->input->post('inputNational_ID'),
+          'school'=>$this->input->post('inputSchool'),
+          'grade'=>$this->input->post('inputGrade'),
+          'phone'=>$this->input->post('inputPhone'),
+          'address'=>$this->input->post('inputAddress'),
+          'province'=>$this->input->post('inputProvince'),
+          'postalCode'=>$this->input->post('inputPostalCode'),
+          'email'=>$this->input->post('inputEmail'),
+          'knowFrom'=>$this->input->post('inputKnowFrom'),
+          'foodAllergy'=>$this->input->post('inputFoodAllergy'),
+          'disease'=>$this->input->post('inputDisease'),
+          'drugAllergy'=>$this->input->post('inputDrugAllergy'),
+          'specialFood'=>$this->input->post('inputSpecialFood'),
+          'parentPhone'=>$this->input->post('inputParentPhone'),
+          'registerDate'=>date('Y-m-d H:i:s', time()),
+          //'parentPhone'=>$this->input->post('input'),
+          'status'=>'InProgress',
+          'sizeshirt'=>$this->input->post('inputSizeShirt'),
+      ) );
+
+      $form_homework_data=array(
+          'q1'=>$this->input->post('inputQ1'),
+          'q2'=>$this->input->post('inputQ2'),
+          'q3'=>$this->input->post('inputQ3'),
+          'q4'=>$this->input->post('inputQ4'),
+          'q5'=>$this->input->post('inputQ5'),
+      );
+
+      if( $status == "tmp" ) {
+        
+        $this->register->update($form_register_data,$user_id);
+        $this->homework->update($form_homework_data,$user_id);
+
+        die();
+      }
 
       $this->form_validation->set_message('required', 'กรุณากรอก %s');
       $rulesform=array(
               array(
                      'field'   => 'inputName',
-                     'label'   => 'Name',
+                     'label'   => 'ชื่อ',
                      'rules'   => 'trim|required'
               ),
               array(
+                    'field' => 'inputSurName',
+                    'label' => 'นามสกุล',
+                    'rules' => 'trim|required'
+              ),
+              array(
                      'field'   => 'inputNickname',
-                     'label'   => 'Nickname',
+                     'label'   => 'ชื่อเล่น',
                      'rules'   => 'trim|required'
               ),
               array(
                      'field'   => 'inputSex',
-                     'label'   => 'Sex',
+                     'label'   => 'เพศ',
                      'rules'   => 'trim|required'
               ),
               array(
                      'field'   => 'inputNational_ID',
-                     'label'   => 'National ID',
+                     'label'   => 'เลขบัตรประชาชน',
                      'rules'   => 'trim|required'
               ),
               array(
                      'field'   => 'inputSchool',
-                     'label'   => 'School',
+                     'label'   => 'ชื่อโรงเรียน',
                      'rules'   => 'trim|required'
               ),
               array(
-                     'field'   => 'inputGrade',
-                     'label'   => 'Grade',
-                     'rules'   => 'trim|required'
+                      'field' => 'inputGrade',
+                      'label' => 'ระดับการศึกษา',
+                      'rules' => 'trim|required'
               ),
               array(
                      'field'   => 'inputPhone',
-                     'label'   => 'Phone',
+                     'label'   => 'เบอร์โทรศัพท์',
                      'rules'   => 'trim|required'
               ),
               array(
                      'field'   => 'inputAddress',
-                     'label'   => 'Address',
+                     'label'   => 'ที่อยู่บ้าน',
                      'rules'   => 'trim|required'
               ),
               array(
                      'field'   => 'inputProvince',
-                     'label'   => 'Province',
+                     'label'   => 'จังหวัด',
                      'rules'   => 'trim|required'
               ),
               array(
                      'field'   => 'inputPostalCode',
-                     'label'   => 'Postal Code',
+                     'label'   => 'รหัสไปรษณีย์',
                      'rules'   => 'trim|required'
               ),
               array(
@@ -144,6 +215,11 @@ class Register extends CI_Controller {
                      'field'   => 'inputKnowFrom',
                      'label'   => 'ไซส์เสื้อ',
                      'rules'   => 'trim|required'
+              ),
+              array (
+                      'field' => 'inputParentPhone',
+                      'label' => 'เบอร์โทรผู้ปกครอง',
+                      'rules' => 'trim|required'
               ),
             array(
                    'field'   => 'inputQ1',
@@ -170,45 +246,13 @@ class Register extends CI_Controller {
       $this->form_validation->set_rules($rulesform);
 
       if ($this->form_validation->run() == TRUE) {
-          $form_register_data=array(
-              'profilePic'=>$this->input->post('inputProfilePic'),
-              'registerType'=>$type,
-              'name'=>$this->input->post('inputName'),
-              'surname'=>$this->input->post('inputSurname'),
-              'nickname'=>$this->input->post('inputNickname'),
-              'sex'=>$this->input->post('inputSex'),
-              'national_ID'=>$this->input->post('inputNational_ID'),
-              'school'=>$this->input->post('inputSchool'),
-              'grade'=>$this->input->post('inputGrade'),
-              'phone'=>$this->input->post('inputPhone'),
-              'address'=>$this->input->post('inputAddress'),
-              'province'=>$this->input->post('inputProvince'),
-              'postalCode'=>$this->input->post('inputPostalCode'),
-              'email'=>$this->input->post('inputEmail'),
-              'knowFrom'=>$this->input->post('inputKnowFrom'),
-              'foodAllergy'=>$this->input->post('inputFoodAllergy'),
-              'disease'=>$this->input->post('inputDisease'),
-              'drugAllergy'=>$this->input->post('inputDrugAllergy'),
-              'specialFood'=>$this->input->post('inputSpecialFood'),
-              'registerDate'=>date('Y-m-d H:i:s', time()),
-              //'parentPhone'=>$this->input->post('input'),
-              'status'=>'Homework_Submitted',
-              'sizeshirt'=>$this->input->post('inputSizeShirt'),
-          );
-          $form_homework_data=array(
-              'q1'=>$this->input->post('inputQ1'),
-              'q2'=>$this->input->post('inputQ2'),
-              'q3'=>$this->input->post('inputQ3'),
-              'q4'=>$this->input->post('inputQ4'),
-              'q5'=>$this->input->post('inputQ5'),
-          );
+          $form_register_data['status'] ='Homework_Submitted';
 
-
-
+          $data['isSubmited'] = "true";
           $data['result']='SAVE';
           //print_r($form_register_data);
           $this->register->update($form_register_data,$user_id);
-          $this->homework->update( $form_homework_data,$user_id);
+          $this->homework->update($form_homework_data,$user_id);
           if($type == 1)
             redirect('register/finish/c', 'refresh');
           else if($type == 2)
@@ -217,16 +261,20 @@ class Register extends CI_Controller {
             redirect('register/finish/m', 'refresh');
       }
       else{
-      if($type == 1)
-        $this->load->view('register/step1_C',$data);
-      else if($type == 2)
-        $this->load->view('register/step1_D',$data);
-      else if($type == 3)
-        $this->load->view('register/step1_M',$data);
-    }
 
+        $data["form"] = $this->register->data($user_id);
+        $data["formhomework"] = $this->homework->data($user_id);
 
+        if( $this->input->post("issubmited") == "true" )
+          $data["redirect"] = "5";
 
+        if($type == 1)
+          $this->load->view('register/step1_C',$data);
+        else if($type == 2)
+          $this->load->view('register/step1_D',$data);
+        else if($type == 3)
+          $this->load->view('register/step1_M',$data);
+      }
 
   }
 

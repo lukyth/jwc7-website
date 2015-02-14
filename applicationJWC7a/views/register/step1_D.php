@@ -11,6 +11,56 @@
 	<script src="<?php echo base_url()."assets/" ?>js/jquery-1.11.1.min.js"></script>
 	<!--<script src="js/jwc7register.js"></script> -->
 	<script src="<?php echo base_url()."assets/" ?>js/jwc7register_quick.js"></script>
+	<script type="text/javascript">
+		$( function() {
+
+			var data = [
+				["inputName","<?= $form->name ?>"],
+				["inputSurname","<?= $form->surname ?>"],
+				["inputNickname","<?= $form->nickname ?>"],
+				["inputSex","<?= $form->sex ?>"],
+				["inputNational_ID","<?= $form->national_ID ?>"],
+				["inputSchool","<?= $form->school ?>"],
+				["inputGrade","<?= $form->grade ?>"],
+				["inputPhone","<?= $form->phone ?>"],
+				["inputAddress","<?= $form->address ?>"],
+				["inputProvince","<?= $form->province ?>"],
+				["inputPostalCode","<?= $form->postalCode ?>"],
+				["inputEmail","<?= $form->email ?>"],
+				["inputKnowFrom","<?= $form->knowFrom ?>"],
+				["inputSizeShirt","<?= $form->sizeshirt ?>"],
+				["inputSpecialFood","<?= $form->specialFood ?>"],
+				["inputFoodAllergy","<?= $form->foodAllergy ?>"],
+				["inputDisease","<?= $form->disease ?>"],
+				["inputDrugAllergy","<?= $form->drugAllergy ?>"],
+				["inputParentPhone","<?= $form->parentPhone ?>"],
+				["inputQ1","<?= $formhomework->q1 ?>"],
+				["inputQ2","<?= $formhomework->q2 ?>"],
+				["inputQ3","<?= $formhomework->q3 ?>"],
+				["inputQ4","<?= $formhomework->q4 ?>"],
+				["inputQ5","<?= $formhomework->q5 ?>"]
+			];
+
+			for( var i=0; i<data.length; i++ ) {
+				$("#"+data[i][0]).val( data[i][1] );
+			}
+
+			if( "<?= $redirect || "" ?>" != "" ) {
+				if( "<?= $redirect ?>" == "5" ) {
+					active5(); $('#step1').hide(); $('#step2').hide(); $('#step3').hide(); $('#step4').hide(); $('#step5').show();
+				} else {
+					$("#goto<?= $redirect ?>").click();
+				}
+			}
+		});
+
+		function tmp_submit() {
+			$.post( "<?= base_url('register/step1/'.$type.'/tmp') ?>", $("#mainform").serialize(), function(res) {
+				console.log( res );
+			} );
+		}
+
+	</script>
 	<link rel="icon" type="image/png" href="<?php echo base_url()."assets/" ?>img/favicon.png">
 </head>
 <body>
@@ -38,7 +88,8 @@
 					<div id="goto1">1. ข้อมูลส่วนตัว</div><div id="goto2">2. ข้อมูลเกี่ยวกับค่าย</div><div id="goto3">3. คำถามคัดเลือก</div><div id="goto4">4. คำถามประจำสาขา</div><!-- <div id="goto5">5. ตรวจสอบข้อมูล</div> -->
 				</div>
 			</div>
-			<?php echo form_open('register/step1/'.$type) ?>
+			<?php echo form_open('register/step1/'.$type,array("id"=>"mainform")) ?>
+			<input type="hidden" name="issubmited" value="true"></input>
 			<div class="row" id="regisform">
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -56,7 +107,7 @@
 								<label for="name">ชื่อ*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="text" id="inputName" class="form-control" placeholder="ชื่อ" name="inputName" required></input>
+								<input type="text" id="inputName" class="form-control" placeholder="ชื่อ" name="inputName"></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -64,7 +115,7 @@
 								<label for="name">นามสกุล*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="text" id="inputSurname" class="form-control" placeholder="นามสกุล" name="inputSurname" required></input>
+								<input type="text" id="inputSurname" class="form-control" placeholder="นามสกุล" name="inputSurname"></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -72,18 +123,18 @@
 								<label for="nickname">ชื่อเล่น*</label>
 							</div>
 							<div class="col-sm-4">
-								<input type="text" id="inputNickname" class="form-control" placeholder="ชื่อเล่น" name="inputNickname" required></input>
+								<input type="text" id="inputNickname" class="form-control" placeholder="ชื่อเล่น" name="inputNickname"></input>
 							</div>
 						</div>
 						<div class="row form-field">
 							<div class="col-sm-3">
-								<label for="name">เพศ*</label>
+								<label for="name" value="<?= $form->sex ?>">เพศ*</label>
 							</div>
 							<div class="col-sm-4">
 								<select id="level" class="form-control" id="inputSex" name="inputSex">
-									<option>เลือกเพศ</option>
-									<option value="1">ชาย</option>
-									<option value="2">หญิง</option>
+									<option value="0">เลือกเพศ</option>
+									<option value="M">ชาย</option>
+									<option value="F">หญิง</option>
 								</select>
 							</div>
 						</div>
@@ -92,7 +143,7 @@
 								<label for="name">รหัสประจำตัวประชาชน*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="text" id="inputNational_ID" class="form-control" placeholder="xxxxxxxxxxxxx" name="inputNational_ID" required></input>
+								<input type="text" id="inputNational_ID" class="form-control" placeholder="xxxxxxxxxxxxx" name="inputNational_ID"></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -100,7 +151,7 @@
 								<label for="name">สถานศึกษา*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="text" id="inputSchool" class="form-control" placeholder="โรงเรียน....."  name="inputSchool" required></input>
+								<input type="text" id="inputSchool" class="form-control" placeholder="โรงเรียน....."  name="inputSchool"></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -108,11 +159,11 @@
 								<label for="name">ระดับการศึกษา*</label>
 							</div>
 							<div class="col-sm-4">
-								<select id="level" class="form-control" id="inputGrade" name="inputGrade">
-									<option>เลือกระดับชั้น</option>
-									<option>ม.4</option>
-									<option>ม.5</option>
-									<option>ม.6</option>
+								<select class="form-control" id="inputGrade" name="inputGrade">
+									<option value="0">เลือกระดับชั้น</option>
+									<option value="4">ม.4</option>
+									<option value="5">ม.5</option>
+									<option value="6">ม.6</option>
 								</select>
 							</div>
 						</div>
@@ -138,8 +189,8 @@
 							</div>
 							<div class="col-sm-7">
 								<select id="level" class="form-control" id="inputProvince" name="inputProvince">
-									<option>เลือกจังหวัด</option>
-									<option>กรุงเทพมหานคร</option>
+									<option value="0">เลือกจังหวัด</option>
+									<option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
 								</select>
 							</div>
 						</div>
@@ -162,7 +213,7 @@
 
 						<br>
 						<div class="txt-center">
-							<div type = 'submit' class="btn btn-primary btn-lg"id="next1">บันทึกและไปต่อ &raquo;</div>
+							<div onclick="tmp_submit()" class="btn btn-primary btn-lg"id="next1">บันทึกและไปต่อ &raquo;</div>
 						</div>
 					</div>
 				</div>
@@ -180,14 +231,14 @@
 							</div>
 							<div class="col-sm-7">
 								<select class="form-control" id="inputKnowFrom" name="inputKnowFrom">
-									<option>กรุณาเลือก</option>
-									<option>Facebook</option>
-									<option>Twitter</option>
-									<option>โปสเตอร์ประชาสัมพันธ์</option>
-									<option>เพื่อน/คนรู้จัก</option>
-									<option>อื่นๆ (โปรดระบุ)</option>
+									<option value="0">กรุณาเลือก</option>
+									<option value="Facebook">Facebook</option>
+									<option value="Twitter">Twitter</option>
+									<option value="PR">โปสเตอร์ประชาสัมพันธ์</option>
+									<option value="Friend">เพื่อน/คนรู้จัก</option>
+									<option value="etc">อื่นๆ (โปรดระบุ)</option>
 								</select>
-								<input style="margin-top: 5px;" placeholder="อื่นๆ" type="text" id="name" class="form-control"></input>
+								<input name="inputKnowFormEtc" maxlength="50" style="margin-top: 5px;" placeholder="อื่นๆ" type="text" id="name" class="form-control"></input>
 							</div>
 						</div>
 
@@ -196,7 +247,14 @@
 								<label for="name">ไซส์เสื้อ*</label>
 							</div>
 							<div class="col-sm-4">
-								<input type="text" placeholder="S,M,L,XL,XXL" id="inputSizeShirt" class="form-control" name="inputSizeShirt"></input>
+								<select class="form-control" id="inputSizeShirt" name="inputSizeShirt">
+									<option value="0">เลือกไซส์เสื้อ</option>
+									<option value="S">S (รอบอก 34, ยาว 26)</option>
+									<option value="M">M (รอบอก 36, ยาว 27)</option>
+									<option value="X">L (รอบอก 38, ยาว 28)</option>
+									<option value="XL">XL (รอบอก 40, ยาว 29)</option>
+									<option value="XXL">XXL (รอบอก 42, ยาว 30)</option>
+								</select>
 							</div>
 						</div>
 
@@ -235,13 +293,21 @@
 								<input type="text" id="inputDrugAllergy" class="form-control" placeholder="ยาที่แพ้" name="inputDrugAllergy"></input>
 							</div>
 						</div>
+						<div class="row form-field">
+							<div class="col-sm-3">
+								<label for="name">เบอร์โทรศัพท์ผู้ปกครองที่ติดต่อได้*</label>
+							</div>
+							<div class="col-sm-7">
+								<input type="text" id="inputParentPhone" class="form-control" placeholder="08x-xxx-xxxx" name="inputParentPhone"></input>
+							</div>
+						</div>
 
 
 
 						<br>
 						<div class="txt-center">
 							<div class="btn btn-primary btn-lg" id="prev2">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
-							<div class="btn btn-primary btn-lg" id="next2">บันทึกและไปต่อ &raquo;</div>
+							<div onclick="tmp_submit()" class="btn btn-primary btn-lg" id="next2">บันทึกและไปต่อ &raquo;</div>
 						</div>
 					</div>
 				</div>
@@ -270,7 +336,7 @@
 						<br>
 						<div class="txt-center">
 							<div class="btn btn-primary btn-lg" id="prev3">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
-							<div class="btn btn-primary btn-lg" id="next3">บันทึกและไปต่อ &raquo;</div>
+							<div onclick="tmp_submit()" class="btn btn-primary btn-lg" id="next3">บันทึกและไปต่อ &raquo;</div>
 						</div>
 					</div>
 				</div>
@@ -295,19 +361,22 @@
 						<div class="txt-center">
 							<!-- <div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
 							<div class="btn btn-primary btn-lg" id="next4">บันทึกและไปต่อ &raquo;</div> -->
-							<div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
+							<div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;
+							<div onclick="tmp_submit()" class="btn btn-primary btn-lg">บันทึกชั่วคราว</div>&nbsp;
 							<button type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
-							<?php
-									echo validation_errors();
-									if(isset($result)) echo $result;
-							?>
+							<div id="error_log">
+								<?php
+										echo validation_errors();
+										if(isset($result)) echo $result;
+								?>
+							</div>
 						</div>
 					</div>
 				</div>
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-				<!-- <div id="step5">
+				<div id="step5">
 					<div class="col-sm-10 col-sm-offset-1">
 						<h2>ตรวจสอบข้อมูล</h2>
 						<hr>
@@ -411,7 +480,7 @@
 					<div class="txt-center">
 
 					</div>
-				</div> -->
+				</div>
 
 			</div>
 			</form>
