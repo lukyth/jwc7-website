@@ -32,7 +32,7 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-	<img class="free" src="<?=base_url()?>assets/img/main/free.png" />
+	<img class="free" src="<?=base_url()?>assets/img/main/new/free.svg" />
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -66,18 +66,28 @@
 			<img class="pull-left" src="<?= base_url() ?>assets/img/main/topleft.png"/>
 			<img class="pull-right" src="<?= base_url() ?>assets/img/main/topright.png"/>
 		</div>
-		<div class="cover-img" src="<?= base_url() ?>assets/img/main/city.png" alt="">
+		<div class="town">
+			<div class="town-back">
+				<div class="back-left"></div>
+				<div class="back-center"></div>
+				<div class="back-right"></div>
+			</div>
+			<div class="town-front"></div>
+		</div>
+		<div class="cover-img">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-8 col-xs-offset-2 text-center col-logo">
-						<img class="img-center img-responsive logo-img" src="<?= base_url() ?>assets/img/main/logo.png" />
+						<img class="img-center img-responsive logo-img" src="<?= base_url() ?>assets/img/main/new/logo.svg" />
 						<div class="row">
 							<div class="col-xs-12">
-								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/spon2.png"></div>
-								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/spon1.png"></div>
+								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/new/sponsor_1.svg"></div>
+								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/new/sponsor_2.svg"></div>
 							</div>
 						</div>
-						<a class="page-scroll" href="#category-page"><img src="<?= base_url() ?>assets/img/main/regis.png" class="jumpto-register img-center img-responsive register" /></a>
+						<a class="page-scroll" href="#category-page">
+							<div class="jumpto-register img-center img-responsive register">สมัครเลย!</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -85,8 +95,12 @@
 	</div>
 
 	<div id="about-page" class="page">
+		<img class="boat-station" src="<?= base_url() ?>assets/img/main/new/boat_station.svg" />
+		<div class="river">
+			<div class="river-wave"></div>
+		</div>
 		<div class="boat"></div>
-		<img src="<?= base_url() ?>assets/img/main/rivertop.png" style="width:100%;" />
+		<!-- <img src="<?= base_url() ?>assets/img/main/rivertop.png" style="width:100%;" /> -->
 		<div class="img-rivercenter">
 			<div class="container">
 				<div class="row">
@@ -123,7 +137,7 @@
 					<img class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
 					<div class="row">
 						<div class="col-md-4 text-center">
-							<img src="<?= base_url() ?>assets/img/main/pic_cat_design.png" class="head img-center img-responsive" />
+							<img src="<?= base_url() ?>assets/img/main/new/web_design.svg" class="head img-center img-responsive" />
 							<div class="cat-text" style="color:#732777;">Web Design</div>
 							<p class="text-center description">
 								เนรมิตหน้าเว็บ โชว์สเต็ปดีไซน์ ไฉไลสไตล์เว็บสเตอร์สู่การเป็นเว็บ Design อย่างแท้จริง
@@ -132,7 +146,7 @@
 							<a href="register/index/2"><img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" /></a>
 						</div>
 						<div class="col-md-4 text-center">
-							<img src="<?= base_url() ?>assets/img/main/pic_cat_content.png" class="head img-center img-responsive" />
+							<img src="<?= base_url() ?>assets/img/main/new/web_content.svg" class="head img-center img-responsive" />
 							<div class="cat-text" style="color:#07908C;">Web Content</div>
 							<p class="text-center description">
 								สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Contenให้เฉือดเฉือนประโยคเด็ด Content ชนะใจ
@@ -141,7 +155,7 @@
 							<a href="register/index/1"><img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" /></a>
 						</div>
 						<div class="col-md-4 text-center">
-							<img src="<?= base_url() ?>assets/img/main/pic_cat_marketing.png" class="head img-center img-responsive" />
+							<img src="<?= base_url() ?>assets/img/main/new/web_marketing.svg" class="head img-center img-responsive" />
 							<div class="cat-text" style="color:#E64C24;">Web Marketing</div>
 							<p class="text-center description">
 								เรียนรู้ศาสตร์การตลาดยุทธศาสตร์ การสร้างชื่อให้เว็บเลื่องลือระบือไกล
@@ -197,7 +211,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
-						
+
 						<div class="sentence text-center WDB_Bangna head big-text" onclick="Fold.up()" >
 							<div>ถาม - ตอบ</div>
 						</div>
