@@ -16,15 +16,16 @@
 	<div class="row" id="head">
 		<div class="container-fluid txt-center">
 			<div class="col-sm-12">
-				<img src="<?php echo base_url()."assets/" ?>img/mascot_ct.svg">
+				<img class="hidden-sm" src="<?php echo base_url()."assets/" ?>img/mascot_ct.svg">
 				<a href="http://jwc.in.th"><img src="<?php echo base_url()."assets/" ?>img/logo.svg" alt="logo" id="logo"></a>
 			</div>
 		</div>
 	</div>
 	<div class="row" id="body">
 		<div class="container-fluid txt-center">
+			<div class="col-xs-12">
 			<div class="row content" id="form-head">
-				<div class="col-sm-10 col-sm-offset-1">
+				<div class="col-xs-10 col-xs-offset-1">
 					<h1>สมัครเข้าค่าย JWC7</h1>
 					<hr>
 					<h2>Web Content</h2>
@@ -32,11 +33,11 @@
 			</div>
 			<div class="row" id="loginspace">
 				<h2>สมัครเสร็จสิ้น!</h2>
-				<p>รายละเอียดบลาๆๆๆๆๆๆๆๆๆๆๆ</p>
+				<div>ขอบคุณที่เข้ามาร่วมสมัครค่าย JWC7 นะ<br>อย่าลืมลากเพื่อนมากเยอะๆด้วยน้า~<div>
 				<br>
 				<a href="http://jwc.in.th" class="btn btn-success btn-lg">กลับหน้าแรก</a>
 			</div>
-
+			</div>
 		</div>
 	</div>
 </body>
