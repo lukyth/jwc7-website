@@ -78,6 +78,8 @@ class Register extends CI_Controller {
       $data["grade"] = "";
     }
     if( $data["knowFrom"] == "0" ) {
+      $data["knowFrom"] = "";
+    } else if( $data["knowFrom"] == "etc" ) {
       $data["knowFrom"] = $this->input->post('inputKnowFormEtc');
     }
     if( $data["province"] == "0" ) {
