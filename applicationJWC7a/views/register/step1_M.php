@@ -17,13 +17,14 @@
 	<div class="row" id="head">
 		<div class="container-fluid txt-center">
 			<div class="col-sm-12">
-				<img src="<?php echo base_url()."assets/" ?>img/mascot_mkt.svg">
+				<img class="hidden-xs" src="<?php echo base_url()."assets/" ?>img/mascot_mkt.svg">
 				<a href="http://jwc.in.th"><img src="<?php echo base_url()."assets/" ?>img/logo.svg" alt="logo" id="logo"></a>
 			</div>
 		</div>
 	</div>
 	<div class="row" id="body">
 		<div class="container-fluid txt-center">
+			<div class="col-xs-12">
 			<div class="row marketing" id="form-head">
 				<div class="col-sm-10 col-sm-offset-1">
 					<h1>สมัครเข้าค่าย JWC7</h1>
@@ -54,23 +55,23 @@
 							<div class="col-sm-3">
 								<label for="name">ชื่อ*</label>
 							</div>
-							<div class="col-sm-9">
-								<input type="text" id="inputName" class="form-control" placeholder="ชื่อ นามสกุล" name="inputName" required></input>
+							<div class="col-sm-7">
+								<input type="text" id="inputName" class="form-control" placeholder="ชื่อ" name="inputName" required></input>
 							</div>
 						</div>
 						<div class="row form-field">
 							<div class="col-sm-3">
 								<label for="name">นามสกุล*</label>
 							</div>
-							<div class="col-sm-9">
-								<input type="text" id="inputSurname" class="form-control" placeholder="ชื่อ นามสกุล" name="inputSurname" required></input>
+							<div class="col-sm-7">
+								<input type="text" id="inputSurname" class="form-control" placeholder="นามสกุล" name="inputSurname" required></input>
 							</div>
 						</div>
 						<div class="row form-field">
 							<div class="col-sm-3">
 								<label for="nickname">ชื่อเล่น*</label>
 							</div>
-							<div class="col-sm-9">
+							<div class="col-sm-4">
 								<input type="text" id="inputNickname" class="form-control" placeholder="ชื่อเล่น" name="inputNickname" required></input>
 							</div>
 						</div>
@@ -78,7 +79,7 @@
 							<div class="col-sm-3">
 								<label for="name">เพศ*</label>
 							</div>
-							<div class="col-sm-9">
+							<div class="col-sm-4">
 								<select id="level" class="form-control" id="inputSex" name="inputSex">
 									<option>เลือกเพศ</option>
 									<option value="1">ชาย</option>
@@ -90,7 +91,7 @@
 							<div class="col-sm-3">
 								<label for="name">รหัสประจำตัวประชาชน*</label>
 							</div>
-							<div class="col-sm-9">
+							<div class="col-sm-7">
 								<input type="text" id="inputNational_ID" class="form-control" placeholder="xxxxxxxxxxxxx" name="inputNational_ID" required></input>
 							</div>
 						</div>
@@ -98,7 +99,7 @@
 							<div class="col-sm-3">
 								<label for="name">สถานศึกษา*</label>
 							</div>
-							<div class="col-sm-9">
+							<div class="col-sm-7">
 								<input type="text" id="inputSchool" class="form-control" placeholder="โรงเรียน....."  name="inputSchool" required></input>
 							</div>
 						</div>
@@ -106,7 +107,7 @@
 							<div class="col-sm-3">
 								<label for="name">ระดับการศึกษา*</label>
 							</div>
-							<div class="col-sm-9">
+							<div class="col-sm-4">
 								<select id="level" class="form-control" id="inputGrade" name="inputGrade">
 									<option>เลือกระดับชั้น</option>
 									<option>ม.4</option>
@@ -119,7 +120,7 @@
 							<div class="col-sm-3">
 								<label for="name">เบอร์โทรศัพท์*</label>
 							</div>
-							<div class="col-sm-9">
+							<div class="col-sm-7">
 								<input type="text" id="inputPhone" class="form-control" placeholder="08x-xxx-xxxx" name="inputPhone"></input>
 							</div>
 						</div>
@@ -128,14 +129,14 @@
 								<label for="name">ที่อยู่*</label>
 							</div>
 							<div class="col-sm-9">
-								<textarea id="inputAddress" class="form-control"  placeholder="ที่อยู่" name="inputAddress"></textarea>
+								<textarea id="inputAddress" rows="4" class="form-control"  placeholder="ที่อยู่" name="inputAddress"></textarea>
 							</div>
 						</div>
 						<div class="row form-field">
 							<div class="col-sm-3">
 								<label for="name">จังหวัด*</label>
 							</div>
-							<div class="col-sm-9">
+							<div class="col-sm-7">
 								<select id="level" class="form-control" id="inputProvince" name="inputProvince">
 									<option>เลือกจังหวัด</option>
 									<option>กรุงเทพมหานคร</option>
@@ -146,7 +147,7 @@
 							<div class="col-sm-3">
 								<label for="name">รหัสไปรษณีย์*</label>
 							</div>
-							<div class="col-sm-9">
+							<div class="col-sm-4">
 								<input type="text" id="inputPostalCode" class="form-control" placeholder="xxxxx" name="inputPostalCode"></input>
 							</div>
 						</div>
@@ -154,7 +155,7 @@
 							<div class="col-sm-3">
 								<label for="name">e-mail</label>
 							</div>
-							<div class="col-sm-9">
+							<div class="col-sm-7">
 								<input type="email" id="inputEmail" class="form-control" placeholder="jwc7@example.com" name="inputEmail"></input>
 							</div>
 						</div>
@@ -177,7 +178,7 @@
 							<div class="col-sm-3">
 								<label for="name">รู้จักค่ายจากที่ไหน?*</label>
 							</div>
-							<div class="col-sm-9">
+							<div class="col-sm-7">
 								<select class="form-control" id="inputKnowFrom" name="inputKnowFrom">
 									<option>กรุณาเลือก</option>
 									<option>Facebook</option>
@@ -186,7 +187,7 @@
 									<option>เพื่อน/คนรู้จัก</option>
 									<option>อื่นๆ (โปรดระบุ)</option>
 								</select>
-								<input type="text" id="name" class="form-control"></input>
+								<input style="margin-top: 5px;" placeholder="อื่นๆ" type="text" id="name" class="form-control"></input>
 							</div>
 						</div>
 
@@ -194,17 +195,17 @@
 							<div class="col-sm-3">
 								<label for="name">ไซส์เสื้อ*</label>
 							</div>
-							<div class="col-sm-9">
-								<input type="text" id="inputSizeShirt" class="form-control" name="inputSizeShirt"></input>
+							<div class="col-sm-4">
+								<input type="text" placeholder="S,M,L,XL,XXL" id="inputSizeShirt" class="form-control" name="inputSizeShirt"></input>
 							</div>
 						</div>
 
 						<div class="row form-field">
 							<div class="col-sm-3">
-								<label for="name" placeholder="ประเภทอาหารพิเศษ เช่น อาหารฮาลาล มังสวิรัติ เจ ฯลฯ">ประเภทอาหาร</label>
+								<label for="name" >ประเภทอาหาร</label>
 							</div>
 							<div class="col-sm-9">
-								<input type="text" id="inputSpecialFood" class="form-control" placeholder="ประเภทอาหารพิเศษ เช่น อาหารฮาลาล มังสวิรัติ เจ ฯลฯ" name="inputSpecialFood"></input>
+								<input type="text" id="inputSpecialFood" class="form-control" placeholder="ปกิ อิสลาม อาหารฮาลาล มังสวิรัติ เจ ฯลฯ" name="inputSpecialFood"></input>
 							</div>
 						</div>
 
@@ -221,7 +222,7 @@
 							<div class="col-sm-3">
 								<label for="name">โรคประจำตัว</label>
 							</div>
-							<div class="col-sm-9">
+							<div class="col-sm-7">
 								<input type="text" id="inputDisease" class="form-control" placeholder="โรคประจำตัว"   name="inputDisease">  </input>
 							</div>
 						</div>
@@ -230,7 +231,7 @@
 							<div class="col-sm-3">
 								<label for="name">ยาที่แพ้</label>
 							</div>
-							<div class="col-sm-9">
+							<div class="col-sm-7">
 								<input type="text" id="inputDrugAllergy" class="form-control" placeholder="ยาที่แพ้" name="inputDrugAllergy"></input>
 							</div>
 						</div>
@@ -294,7 +295,7 @@
 						<div class="txt-center">
 							<!-- <div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
 							<div class="btn btn-primary btn-lg" id="next4">บันทึกและไปต่อ &raquo;</div> -->
-							<div class="btn btn-primary btn-lg" id="prev5">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
+							<div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
 							<button type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
 							<?php
 									echo validation_errors();
@@ -414,6 +415,7 @@
 
 			</div>
 			</form>
+			</div>
 		</div>
 	</div>
 </body>

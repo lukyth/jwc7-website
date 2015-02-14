@@ -83,6 +83,17 @@ hr{border-color:#000;}
 #body{
 	/*background-color:  #e74c25;*/
 }
+@media screen and (max-width:768px) {
+	#body h1 {
+		font-size : 24px;
+	}
+	#body h2 {
+		font-size : 20px;
+	}
+	#regisform label {
+		font-size : 16px;
+	}
+}
 
 #logo{
 	width:300px;
