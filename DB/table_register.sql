@@ -1,16 +1,31 @@
--- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Server version:               5.6.16 - MySQL Community Server (GPL)
--- Server OS:                    Win32
--- HeidiSQL Version:             9.1.0.4867
--- --------------------------------------------------------
+-- phpMyAdmin SQL Dump
+-- version 4.2.11
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Feb 14, 2015 at 05:15 PM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8mb4 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
--- Dumping structure for table ywc_jwc7.register
+--
+-- Database: `ywc_jwc7`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `register`
+--
+
 CREATE TABLE IF NOT EXISTS `register` (
   `facebookID` varchar(20) NOT NULL,
   `profilePic` int(11) DEFAULT NULL,
@@ -18,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `register` (
   `name` varchar(50) DEFAULT NULL,
   `surname` varchar(50) DEFAULT NULL,
   `nickname` varchar(50) DEFAULT NULL,
-  `sex` varchar(1) DEFAULT NULL,
+  `sex` enum('Male','Female') DEFAULT NULL,
   `school` varchar(50) DEFAULT NULL,
   `national_ID` varchar(13) DEFAULT NULL,
   `grade` float DEFAULT NULL,
@@ -28,18 +43,26 @@ CREATE TABLE IF NOT EXISTS `register` (
   `postalCode` varchar(10) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `knowFrom` varchar(10) DEFAULT NULL,
-  `sizeshirt` varchar(3) DEFAULT NULL,
+  `sizeshirt` enum('S','M','L','XL','XXL') DEFAULT NULL,
   `disease` text,
   `drugAllergy` text,
   `foodAllergy` varchar(50) DEFAULT NULL,
   `specialFood` text,
   `registerDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `parentPhone` varchar(10) DEFAULT NULL,
-  `status` enum('Registered','Homework_Submitted','Homework_Checked','Accepted','Denied','Paid') DEFAULT NULL,
-  PRIMARY KEY (`facebookID`)
+  `status` enum('InProgress','Registered','Homework_Submitted','Homework_Checked','Accepted','Denied','Paid') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `register`
+--
+ALTER TABLE `register`
+ ADD PRIMARY KEY (`facebookID`);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
