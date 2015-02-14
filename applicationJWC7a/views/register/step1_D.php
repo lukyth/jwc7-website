@@ -14,6 +14,7 @@
 	<script type="text/javascript">
 		$( function() {
 
+
 			var data = [
 				["inputName","<?= $form->name ?>"],
 				["inputSurname","<?= $form->surname ?>"],
@@ -42,7 +43,9 @@
 			];
 
 			for( var i=0; i<data.length; i++ ) {
-				if( data[i][0] == "inputKnowFrom" ) {
+				if( ["inputAddress","inputQ1","inputQ2","inputQ3","inputQ4","inputQ5"].indexOf(data[i][0]) != -1 ) {
+					$("#"+data[i][0]).val( data[i][1].replace("\\n","\n") );
+				} else if( data[i][0] == "inputKnowFrom" ) {
 					if( !( new RegExp("Facebook|Twitter|PR|Friend").test( data[i][1] ) ) ) {
 						$("#inputKnowFrom").val("etc");
 						$("#inputKnowFromEtc").val( data[i][1] );
@@ -65,7 +68,10 @@
 
 		function tmp_submit() {
 			$.post( "<?= base_url('register/step1/'.$type.'/tmp') ?>", $("#mainform").serialize(), function(res) {
-				console.log( res );
+				$(".log").html("บันทึกเสร็จสมบูรณ์<br><br>");
+				setTimeout( function() {
+					$(".log").hide();
+				}, 3000 );
 			} );
 		}
 
@@ -323,7 +329,7 @@
 									<option value="Friend">เพื่อน/คนรู้จัก</option>
 									<option value="etc">อื่นๆ (โปรดระบุ)</option>
 								</select>
-								<input id="inputKnowFromEtc" name="inputKnowFormEtc" maxlength="50" style="margin-top: 5px;" placeholder="อื่นๆ" type="text" class="form-control"></input>
+								<input id="inputKnowFromEtc" name="inputKnowFromEtc" maxlength="50" style="margin-top: 5px;" placeholder="อื่นๆ" type="text" class="form-control"></input>
 							</div>
 						</div>
 
@@ -443,18 +449,14 @@
 						</div>
 
 						<br>
+						<div class="log" style="color:red;">
+						</div>
 						<div class="txt-center">
 							<!-- <div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
 							<div class="btn btn-primary btn-lg" id="next4">บันทึกและไปต่อ &raquo;</div> -->
 							<div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;
 							<div onclick="tmp_submit()" class="btn btn-primary btn-lg">บันทึกชั่วคราว</div>&nbsp;
-							<button type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
-							<div id="error_log">
-								<?php
-										echo validation_errors();
-										if(isset($result)) echo $result;
-								?>
-							</div>
+							<button onclick="tmp_submit()" type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
 						</div>
 					</div>
 				</div>
@@ -469,39 +471,43 @@
 						<table class="table txt-center">
 							<tr>
 								<th>ชื่อ-นามสกุล</th>
-								<td>นายสมมติ ไม่ทราบนามสกุล</td>
+								<td>
+									<?php
+										print ($form->sex == 'M' ? "นาย" : "นางสาว")." ".$form->name." ".$form->surname;
+									?>
+								</td>
 							</tr>
 							<tr>
 								<th>ชื่อเล่น</th>
-								<td>ซัพโพส</td>
+								<td><?= $form->nickname ?></td>
 							</tr>
 							<tr>
 								<th>รหัสประจำตัวประชาชน</th>
-								<td>1234567890123</td>
+								<td><?= $form->national_ID ?></td>
 							</tr>
 							<tr>
 								<th>สถานศึกษา</th>
-								<td>โรงเรียนสมมติวิทยา ฝ่ายมัธยม</td>
+								<td><?= $form->school ?></td>
 							</tr>
 							<tr>
 								<th>ระดับศึกษา</th>
-								<td>ม.4</td>
+								<td><?= "ม.".$form->grade ?></td>
 							</tr>
 							<tr>
 								<th>เบอร์โทรศัพท์</th>
-								<td>081-234-5678</td>
+								<td><?= $form->phone ?></td>
 							</tr>
 							<tr>
 								<th>ที่อยู่</th>
-								<td>123 ถนนสมมติโร้ด แขวงสมมติแขวง ไม่ทราบเขต</td>
+								<td><?= str_replace("\\n","<br>", $form->address ) ?></td>
 							</tr>
 							<tr>
 								<th>จังหวัด</th>
-								<td>กรุงเทพมหานคร</td>
+								<td><?= $form->province ?></td>
 							</tr>
 							<tr>
 								<th>รหัสไปรษณีย์</th>
-								<td>12345</td>
+								<td><?= $form->postalCode ?></td>
 							</tr>
 						</table>
 						<hr>
@@ -509,27 +515,27 @@
 						<table class="table txt-center">
 							<tr>
 								<th>รู้จักค่ายจาก</th>
-								<td>เพจ facebook</td>
+								<td><?= $form->knowFrom ?></td>
 							</tr>
 							<tr>
 								<th>ไซส์เสื้อ</th>
-								<td>L</td>
+								<td><?= $form->sizeshirt ?></td>
 							</tr>
 							<tr>
 								<th>ประเภทอาหาร</th>
-								<td>ทั่วไป</td>
+								<td><?= $form->specialFood ?></td>
 							</tr>
 							<tr>
 								<th>อาหารที่แพ้</th>
-								<td>-</td>
+								<td><?= $form->foodAllergy ?></td>
 							</tr>
 							<tr>
 								<th>โรคประจำตัว</th>
-								<td>-</td>
+								<td><?= $form->disease ?></td>
 							</tr>
 							<tr>
 								<th>ยาทีแพ้</th>
-								<td>-</td>
+								<td><?= $form->drugAllergy ?></td>
 							</tr>
 						</table>
 						<hr>
@@ -537,33 +543,45 @@
 						<br>
 						<div class="txt-left">
 							<b>1. ในมุมมองของน้อง เว็บไซต์คืออะไร และเว็บไซต์ที่ดีควรมีลักษณะอย่างไร?</b>
-							<br>
-							<br>
-							<p>ไรเฟิลเอฟเฟ็กต์แฟนซีแทงกั๊กโกลด์ สโลว์ เคลมแจ๊กพ็อตวาไรตี้คีตปฏิภาณอุเทน แรงดูดเทรลเลอร์ รีไทร์แฟนซี ว้อดก้าวิลล์ สปิริต ทาวน์โต๊ะจีน ภูมิทัศน์แมคเคอเรลทัวร์ รากหญ้า ธรรมา เอ๋อลีเมอร์จิ๊กโก๋ ซี้ นรีแพทย์หมิง เปปเปอร์มินต์อิเลียดติ่มซำ สเตริโอ</p>
-							<br>
+							<div class="show_homework_answer">
+							<?= str_replace("\\\\n","<br>",$formhomework->q1) ?>
+							</div>
 							<b>2. ในปัจจุบันนี้ น้องคิดว่าเว็บไซต์มีอิทธิพลต่อคนไทยอย่างไร และเว็บไซต์ที่เหมาะสมสำหรับคนไทยควรเป็นอย่างไร?</b>
-							<br>
-							<br>
-							<p>ไรเฟิลเอฟเฟ็กต์แฟนซีแทงกั๊กโกลด์ สโลว์ เคลมแจ๊กพ็อตวาไรตี้คีตปฏิภาณอุเทน แรงดูดเทรลเลอร์ รีไทร์แฟนซี ว้อดก้าวิลล์ สปิริต ทาวน์โต๊ะจีน ภูมิทัศน์แมคเคอเรลทัวร์ รากหญ้า ธรรมา เอ๋อลีเมอร์จิ๊กโก๋ ซี้ นรีแพทย์หมิง เปปเปอร์มินต์อิเลียดติ่มซำ สเตริโอ</p>
+							<div class="show_homework_answer">
+							<?= str_replace("\\\\n","<br>",$formhomework->q2 ) ?>
+							</div>
+							<b>3. หากเปรียบเพื่อนร่วมทีมของน้องเป็นอวัยวะในร่างกาย เมื่ออวัยวะบางส่วนคือเนื้อร้าย น้องจะจัดการอย่างไร เพราะเหตุใด (ไม่มีผลต่อคะแนน)</b>
+							<div class="show_homework_answer">
+							<?= str_replace("\\\\n","<br>",$formhomework->q3 ) ?>
+							</div>
 						</div>
 						<hr>
 						<h3>คำถามประจำสาขา</h3>
 						<br>
 						<div class="txt-left">
 							<b>1. หากน้องถูกจ้างให้เค้าไปเป็นตำแหน่ง ดูแลการขาย ในสภาวะการเงินของบริษัทย่ำแย่ น้องคิดว่า จะช่วยดึงดูดลูกค้า และชนะคู่แข่งได้โดยวิธีใดบ้าง (สามารถเลือกประเภทธุรกิจเองได้)</b>
-							<br>
-							<br>
-							<p>ไรเฟิลเอฟเฟ็กต์แฟนซีแทงกั๊กโกลด์ สโลว์ เคลมแจ๊กพ็อตวาไรตี้คีตปฏิภาณอุเทน แรงดูดเทรลเลอร์ รีไทร์แฟนซี ว้อดก้าวิลล์ สปิริต ทาวน์โต๊ะจีน ภูมิทัศน์แมคเคอเรลทัวร์ รากหญ้า ธรรมา เอ๋อลีเมอร์จิ๊กโก๋ ซี้ นรีแพทย์หมิง เปปเปอร์มินต์อิเลียดติ่มซำ สเตริโอ</p>
-							<br>
+							<div class="show_homework_answer">
+							<?= str_replace("\\\\n","<br>",$formhomework->q4 ) ?>
+							</div>
 							<b>2. หากมีโครงการจากรัฐ ต้องการสนับสนุนให้สินค้าไทย ส่งออกนอก จะทำอย่างไร ที่จะตีตลาด ให้ทั่วโลก รู้จักความเป็นไทย น้องคิดว่า มีสิ่งใดเป็นจุดขาย อย่างแท้จริง และจะโปรโมทให้ชาวต่างชาติรู้ ด้วยวิธีไหนบ้าง</b>
-							<br>
-							<br>
-							<p>ไรเฟิลเอฟเฟ็กต์แฟนซีแทงกั๊กโกลด์ สโลว์ เคลมแจ๊กพ็อตวาไรตี้คีตปฏิภาณอุเทน แรงดูดเทรลเลอร์ รีไทร์แฟนซี ว้อดก้าวิลล์ สปิริต ทาวน์โต๊ะจีน ภูมิทัศน์แมคเคอเรลทัวร์ รากหญ้า ธรรมา เอ๋อลีเมอร์จิ๊กโก๋ ซี้ นรีแพทย์หมิง เปปเปอร์มินต์อิเลียดติ่มซำ สเตริโอ</p>
+							<div class="show_homework_answer">
+							<?= str_replace("\\\\n","<br>",$formhomework->q5 ) ?>
+							</div>
 						</div>
-					</div>
-					<br>
-					<div class="txt-center">
 
+						<br>
+						<div class="txt-center" style="margin:5px;">
+							ข้อมูลทั้งหมดจะแก้ไขไม่ได้อีก
+						</div>
+
+						<div onclick="$('#goto1').click()" style="padding: 10px 10px;" class="btn btn-primary btn-lg">กลับไปแก้ไข</div>&nbsp;
+						<button onclick="tmp_submit()" style="padding: 10px 40px;" type="submit" class="btn btn-success btn-lg" id="finished">ยืนยัน</button>
+						<div id="error_log">
+							<?php
+									echo validation_errors();
+									if(isset($result)) echo $result;
+							?>
+						</div>
 					</div>
 				</div>
 

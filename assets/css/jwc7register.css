@@ -268,5 +268,22 @@ hr{border-color:#000;}
 }
 
 @media (max-width:899px){
-	[id^=goto]{padding-left:20px; padding-right:20px;}
+	[id^=goto]{padding-left:20px; padding-right:20px;}	
+}
+
+.show_homework_answer {
+	margin: 20px 0px;
+}
+@media screen and (max-width:768px) {
+	.show_homework_answer {
+		margin: 10px 0px;
+	}	
+	* {
+		font-size: 16px;
+	}
+	.btn {
+		padding: 10px 7px;
+		margin: 5px;
+		font-size: 16px;
+	}
 }
