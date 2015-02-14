@@ -19,40 +19,97 @@
   100% { background-position-x: 140%; }
 }
 
+@-webkit-keyframes boatrun2 {
+  0% { background-position-x: -200%; }
+  100% { background-position-x: 280%; }
+}
+@-moz-keyframes boatrun2 {
+  0% { background-position-x: -200%; }
+  100% { background-position-x: 280%; }
+}
+@-o-keyframes boatrun2 {
+  0% { background-position-x: -200%; }
+  100% { background-position-x: 280%; }
+}
+@-ms-keyframes boatrun2 {
+  0% { background-position-x: -200%; }
+  100% { background-position-x: 280%; }
+}
+@keyframes boatrun2 {
+  0% { background-position-x: -200%; }
+  100% { background-position-x: 280%; }
+}
+
 @-webkit-keyframes boatmove {
-  0% { background-position-y: 20%; }
-  20% { background-position-y: 18%; }
-  50% { background-position-y: 16%; }
-  80% { background-position-y: 18%; }
-  100% { background-position-y: 20%; }
+  0% { background-position-y: 30%; }
+  20% { background-position-y: 28%; }
+  50% { background-position-y: 26%; }
+  80% { background-position-y: 28%; }
+  100% { background-position-y: 30%; }
 }
 @-moz-keyframes boatmove {
-  0% { background-position-y: 20%; }
-  20% { background-position-y: 18%; }
-  50% { background-position-y: 16%; }
-  80% { background-position-y: 18%; }
-  100% { background-position-y: 20%; }
+  0% { background-position-y: 30%; }
+  20% { background-position-y: 28%; }
+  50% { background-position-y: 26%; }
+  80% { background-position-y: 28%; }
+  100% { background-position-y: 30%; }
 }
 @-o-keyframes boatmove {
-  0% { background-position-y: 20%; }
-  20% { background-position-y: 18%; }
-  50% { background-position-y: 16%; }
-  80% { background-position-y: 18%; }
-  100% { background-position-y: 20%; }
+  0% { background-position-y: 30%; }
+  20% { background-position-y: 28%; }
+  50% { background-position-y: 26%; }
+  80% { background-position-y: 28%; }
+  100% { background-position-y: 30%; }
 }
 @-ms-keyframes boatmove {
-  0% { background-position-y: 20%; }
-  20% { background-position-y: 18%; }
-  50% { background-position-y: 16%; }
-  80% { background-position-y: 18%; }
-  100% { background-position-y: 20%; }
+  0% { background-position-y: 30%; }
+  20% { background-position-y: 28%; }
+  50% { background-position-y: 26%; }
+  80% { background-position-y: 28%; }
+  100% { background-position-y: 30%; }
 }
 @keyframes boatmove {
-  0% { background-position-y: 20%; }
-  20% { background-position-y: 18%; }
-  50% { background-position-y: 16%; }
-  80% { background-position-y: 18%; }
-  100% { background-position-y: 20%; }
+  0% { background-position-y: 30%; }
+  20% { background-position-y: 28%; }
+  50% { background-position-y: 26%; }
+  80% { background-position-y: 28%; }
+  100% { background-position-y: 30%; }
+}
+
+@-webkit-keyframes boatmove2 {
+  0% { background-position-y: 34px; }
+  20% { background-position-y: 32px; }
+  50% { background-position-y: 30px; }
+  80% { background-position-y: 32px; }
+  100% { background-position-y: 34px; }
+}
+@-moz-keyframes boatmove2 {
+  0% { background-position-y: 34px; }
+  20% { background-position-y: 32px; }
+  50% { background-position-y: 30px; }
+  80% { background-position-y: 32px; }
+  100% { background-position-y: 34px; }
+}
+@-o-keyframes boatmove2 {
+  0% { background-position-y: 34px; }
+  20% { background-position-y: 32px; }
+  50% { background-position-y: 30px; }
+  80% { background-position-y: 32px; }
+  100% { background-position-y: 34px; }
+}
+@-ms-keyframes boatmove2 {
+  0% { background-position-y: 34px; }
+  20% { background-position-y: 32px; }
+  50% { background-position-y: 30px; }
+  80% { background-position-y: 32px; }
+  100% { background-position-y: 34px; }
+}
+@keyframes boatmove2 {
+  0% { background-position-y: 34px; }
+  20% { background-position-y: 32px; }
+  50% { background-position-y: 30px; }
+  80% { background-position-y: 32px; }
+  100% { background-position-y: 34px; }
 }
 
 .boat {
@@ -61,6 +118,16 @@
   -o-animation-name: boatrun 12s linear infinite running, boatmove 2s ease-in infinite running;
   -ms-animation-name: boatrun 12s linear infinite running, boatmove 2s ease-in infinite running;
   animation-name: boatrun 12s linear infinite running, boatmove 2s ease-in infinite running;
+}
+
+@media screen and (max-width: 480px) {
+	.boat {
+		-webkit-animation: boatrun2 12s linear infinite running, boatmove2 2s ease-in infinite running;
+		-moz-animation-name: boatrun2 12s linear infinite running, boatmove2 2s ease-in infinite running;
+		-o-animation-name: boatrun2 12s linear infinite running, boatmove2 2s ease-in infinite running;
+		-ms-animation-name: boatrun2 12s linear infinite running, boatmove2 2s ease-in infinite running;
+		animation-name: boatrun2 12s linear infinite running, boatmove2 2s ease-in infinite running;
+	}
 }
 
 html,body {
@@ -198,7 +265,7 @@ body {
 	z-index: 10000;
 }
 
-@media screen and ( max-width: 1200px ) {
+@media screen and ( max-width: 1199px ) {
 	.free {
 		left: 0px; top: 20px;
 		width: 150px;
@@ -254,7 +321,7 @@ a.register-button {
 }
 
 #header-page .logo-img {
-	margin-top: 50px;
+	margin-top: 14vh;
 	width: 480px;
 }
 
@@ -297,19 +364,23 @@ a.register-button {
 #header-page .boat-station {
 	position: absolute;
   left: 20%;
-  bottom: -9vh;
+  bottom: -8vh;
   width: 30%;
   z-index: 1;
 }
 
-@media screen and (max-width:1200px) {
-	#header-page .jumpto-register {
-		margin-top:50px;
-		width: 14
-		0px;
-	}
+@media screen and (max-width: 1199px) {
 	#header-page .logo-img {
-		width: 450px;
+		width: 400px;
+	}
+
+	#header-page .sponsor-top {
+		width: 100px;
+	}
+
+	#header-page .jumpto-register {
+	  width: 200px;
+	  font-size: 1.4em;
 	}
 }
 @media screen and (max-width:768px) {
@@ -322,7 +393,7 @@ a.register-button {
 #header-page .sponsor-top {
 	display: inline-block;
 	vertical-align: middle;
-	margin: 40px;
+	margin: 40px 40px 50px;
 }
 #header-page .sponsor-top img {
 	width: 100%;
@@ -431,7 +502,7 @@ a.register-button {
 	z-index: 3;
 }
 
-@media screen and ( max-width: 1200px ) {
+@media screen and ( max-width: 1199px ) {
 	#about-page .plata-2 {
 		background-size: 200px auto;
 		background-position: 550px top;
@@ -506,7 +577,6 @@ a.register-button {
 	display: inline-block;
 	padding: 5px 60px;
 	font-size: 35px;
-	margin: 10px 0px;
 	border-radius: 5px;
 	color: #fff;
 }
@@ -662,10 +732,15 @@ a.register-button {
 	}
 
 }
+
 @media screen and (max-width:480px) {
 	#timeline-page .timeline-item {
 		margin: 0 0 30px 20px;
 		font-size: 18px;
+	}
+	#timeline-page .timeline-fish {
+	  top: -20px;
+	  width: 130px;
 	}
 }
 
@@ -803,7 +878,7 @@ a.register-button {
 	font-size:22px;
 	max-width: 550px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	#qa-content .sentence .white, #qa-content .sentence .blue {
 		max-width: 450px;
 	}
@@ -947,7 +1022,8 @@ a.register-button {
 		padding: 10px 60px;
 	}
 	#category-page .register {
-		width: 140px;
+	  width: 150px;
+	  font-size: 1.4em;
 	}
 	#picture-page .table-picture .row > div:nth-child(n+17) {
 		display: none;
@@ -1031,7 +1107,7 @@ a.register-button {
 		height: 106vh;
 	}
 	#header-page .boat-station {
-		bottom: -7vh;
+		bottom: -6vh;
 	}
 	#about-page .river {
 		margin: 2vh 0 0;
@@ -1039,7 +1115,32 @@ a.register-button {
 }
 
 @media screen and (max-width: 991px) {
+	#header-page .town .town-front {
+		background-size: 120%;
+	}
 
+	#header-page .town .back-left {
+	  background-size: 32% auto;
+	  background-position-x: -4%;
+	}
+
+	#header-page .town .back-center {
+		background-size: 68% auto;
+		background-position-y: 94%;
+	}
+
+	#header-page .town .back-right {
+		background-size: 20% auto;
+	}
+
+	#header-page .boat-station {
+	  bottom: -6vh;
+	  width: 34%;
+	}
+
+	#about-page .river {
+	  height: 14vh;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -1062,25 +1163,25 @@ a.register-button {
 	}
 
 	#header-page .logo-img {
-	  margin-top: 28%;
+	  margin-top: 38%;
 	}
 
 	#header-page .sponsor-top {
-	  margin: 40px 8px 0;
+	  margin: 40px 16px 0;
 	}
 
 	#header-page .jumpto-register {
-	  margin-top: 50px;
-	  width: 140px;
+	  margin-top: 10vh;
+	  width: 160px;
 	}
 
 	#header-page .sponsor-top img {
-	  max-width: 90px;
+	  max-width: 76px;
 	}
 
 	#about-page .river {
 	  margin: -4vh 0 0;
-	  height: 16vh;
+	  height: 20vh;
 	}
 
 	#header-page .boat-station {
@@ -1091,9 +1192,14 @@ a.register-button {
 
 	#about-page .boat {
 		background-size: 66% auto;
+		height: 100px;
 	}
 
 	#about-page .river-wave {
 	  background-size: auto 58%;
+	}
+
+	#picture-page .social a img {
+	  width: 44px;
 	}
 }
