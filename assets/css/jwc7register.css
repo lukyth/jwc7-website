@@ -208,6 +208,10 @@ hr{border-color:#000;}
 	overflow: hidden;
 }
 
+#loginspace img {
+	width: 220px;
+}
+
 .fbpic{
 	height:150px;
 	width:150px;
@@ -229,7 +233,7 @@ hr{border-color:#000;}
 @media screen and (max-width:768px) {
 	#step3 textarea, #step4 textarea {
 		margin-top: 3px;
-	}	
+	}
 }
 
 #error_log {
@@ -264,5 +268,5 @@ hr{border-color:#000;}
 }
 
 @media (max-width:899px){
-	[id^=goto]{padding-left:20px; padding-right:20px;}	
+	[id^=goto]{padding-left:20px; padding-right:20px;}
 }
