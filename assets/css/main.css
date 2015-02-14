@@ -37,15 +37,16 @@ body {
 	background-color: rgba(255,255,255,0.9);
 	color: #000;
 	border:none;
+	min-height: 0px;
 	float:none;
 	display:inline-block;
 	vertical-align: top;
-	height:70px;
+	height:60px;
 }
 .navbar .nav > li > a {
 	text-decoration: none;
 	color: #000;
-	margin-top:10px;
+	margin-top:5px;
 	font-size:20px;
 	display:block;
 }
@@ -80,7 +81,7 @@ body {
 
 @media screen and ( max-width:768px ) {
 	.navbar {
-		height:50px;
+		height:40px;
 	}
 	.navbar .navbar-header button {
 		margin-top:7px;
@@ -102,6 +103,14 @@ body {
 	}
 	.navbar .home-large {
 		display:block;
+	}
+}
+@media screen and ( max-width:480px ) {
+	.navbar .navbar-header button {
+		margin-top: 6px;
+	}
+	.navbar-toggle {
+		padding: 6px 7px;
 	}
 }
 
@@ -530,6 +539,11 @@ body {
 #qa-page .big-text {
 	font-size: 40px;
 }
+@media screen and (max-width:480px) {
+	#qa-page .big-text {
+		font-size: 36px;
+	}
+}
 
 #qa-page .folded-container {
 	margin-bottom:30px;
@@ -803,6 +817,23 @@ body {
 	.big-text { font-size: 36px; }
 	.title-text { font-size: 22px; }
 	.normal-text { font-size: 16px; }
+
+	#category-page .description {
+		margin-bottom: 7px;
+	}
+
+	#category-page .head {
+		margin-top: 50px;
+	}
+
+	#category-page .cat-text {
+		margin-top: 10px;
+	}
+
+	#category-page .count-box {
+		font-size: 30px;
+		padding: 5px 50px;
+	}
 
 	#picture-page .table-picture .row > div {
 		width: 50%;
