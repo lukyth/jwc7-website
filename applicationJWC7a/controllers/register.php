@@ -77,7 +77,7 @@ class Register extends CI_Controller {
     if( $data["knowFrom"] == "0" ) {
       $data["knowFrom"] = "";
     } else if( $data["knowFrom"] == "etc" ) {
-      $data["knowFrom"] = $this->input->post('inputKnowFormEtc');
+      $data["knowFrom"] = $this->input->post('inputKnowFromEtc');
     }
     if( $data["province"] == "0" ) {
       $data["province"] = "";
@@ -87,6 +87,22 @@ class Register extends CI_Controller {
 
   function _protectData( $txt ) {
     return str_replace(array("\r\n","\r","\n"), "\\n", $txt);
+  }
+
+  function _more_validation( $data ) {
+    $ret = "";
+    if( strlen( $data["national_ID"] ) != 0 && preg_match( "/^([0-9]{13})$/", $data["national_ID"] ) == 0 ) {
+      $ret .= "<p class='show'>เลขบัตรประชาชนไม่ถูกต้อง</p>";
+    } else if( strlen( $data["phone"] ) != 0 && preg_match( "/^(0[0-9]{2}-[0-9]{3}-[0-9]{4})$/", $data["phone"] ) == 0 ) {
+      $ret .= "<p class='show'>กรุณากรอกเบอร์โทรศัพท์ในรูปของ 0XX-XXX-XXXX</p>";
+    } else if( strlen( $data["postalCode"] ) != 0 && preg_match( "/^([0-9]{5})$/", $data["postalCode"] ) == 0 ) {
+      $ret .= "<p class='show'>รหัสไปรษณีย์ไม่ถูกต้อง</p>";
+    }  else if( strlen( $data["email"] ) != 0 && !filter_var( $data["email"],FILTER_VALIDATE_EMAIL) ) {
+      $ret .= "<p class='show'>E-mail ไม่ถูกต้อง</p>";
+    } else if( strlen( $data["parentPhone"] ) != 0 && preg_match( "/^(0[0-9]{2}-[0-9]{3}-[0-9]{4})$/", $data["parentPhone"] ) == 0 ) {
+      $ret .= "<p class='show'>เบอร์โทรผู้ปกครองไม่ถูกต้อง</p>";
+    }
+    return $ret;
   }
 
   public function step1($type = "1",$status = "normal"){
@@ -104,7 +120,7 @@ class Register extends CI_Controller {
         'redirect' => ""
       );
 
-      $form_register_data= $this->_cleanData( array(
+      $form_register_data = $this->_cleanData( array(
           'profilePic'=>$this->input->post('inputProfilePic'),
           'registerType'=>$type,
           'name'=>$this->_protectData( $this->input->post('inputName') ),
@@ -155,7 +171,7 @@ class Register extends CI_Controller {
                      'rules'   => 'trim|required'
               ),
               array(
-                    'field' => 'inputSurName',
+                    'field' => 'inputSurname',
                     'label' => 'นามสกุล',
                     'rules' => 'trim|required'
               ),
@@ -210,18 +226,13 @@ class Register extends CI_Controller {
                      'rules'   => 'trim|required'
               ),
               array(
-                     'field'   => 'inputKnowFrom',
-                     'label'   => 'รู้จักค่ายจากที่ไหน',
-                     'rules'   => 'trim|required'
-              ),
-              array(
-                     'field'   => 'inputKnowFrom',
-                     'label'   => 'ไซส์เสื้อ',
-                     'rules'   => 'trim|required'
+                'field'   => 'inputKnowFrom',
+                 'label'   => 'รู้จักเราจากที่ไหน',
+                 'rules'   => 'trim|required'
               ),
               array (
-                      'field' => 'inputParentPhone',
-                      'label' => 'เบอร์โทรผู้ปกครอง',
+                      'field' => 'inputSizeShirt',
+                      'label' => 'ไซส์เสื้อ',
                       'rules' => 'trim|required'
               ),
             array(
@@ -248,7 +259,9 @@ class Register extends CI_Controller {
 
       $this->form_validation->set_rules($rulesform);
 
-      if ($this->form_validation->run() == TRUE) {
+      $more_valid = $this->_more_validation($form_register_data);
+
+      if ($this->form_validation->run() == TRUE && strlen($more_valid) == 0 ) {
           $form_register_data['status'] ='Homework_Submitted';
 
           $data['isSubmited'] = "true";
@@ -270,6 +283,8 @@ class Register extends CI_Controller {
 
         if( $this->input->post("issubmited") == "true" )
           $data["redirect"] = "5";
+
+        $data["error_result"] = $more_valid;
 
         if($type == 1)
           $this->load->view('register/step1_C',$data);

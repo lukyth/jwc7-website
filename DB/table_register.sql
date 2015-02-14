@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 14, 2015 at 07:41 PM
+-- Generation Time: Feb 14, 2015 at 11:06 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `register` (
   `sex` enum('M','F') DEFAULT NULL,
   `school` varchar(50) DEFAULT NULL,
   `national_ID` varchar(13) DEFAULT NULL,
-  `grade` enum('4','5','6') DEFAULT NULL,
+  `grade` varchar(10) DEFAULT NULL,
   `phone` varchar(10) DEFAULT NULL,
   `address` text,
   `province` varchar(50) DEFAULT NULL,

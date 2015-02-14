@@ -242,6 +242,10 @@ hr{border-color:#000;}
 	font-size : 18px;
 }
 
+#step5 #error_log {
+	margin-top:50px;
+}
+
 @media (max-width:1023px) and (min-width:480px){
 	body{
 		padding: 0 30px;
@@ -287,3 +291,4 @@ hr{border-color:#000;}
 		font-size: 16px;
 	}
 }
+
