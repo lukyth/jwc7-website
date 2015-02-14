@@ -25,6 +25,7 @@ body{
 .btn-primary:hover{background-color: #084a44;}
 
 .txt-center{text-align: center;}
+
 #subscribeform{
 	max-width: 500px;
 }
@@ -126,5 +127,12 @@ ul.countdown li p {
 	}
 	ul.countdown li:nth-child(odd) {
 		width: 56px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#logo {
+		max-width: none !important;
+		width: 100%;
 	}
 }
