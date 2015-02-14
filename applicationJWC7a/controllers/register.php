@@ -261,6 +261,10 @@ class Register extends CI_Controller {
 
       $more_valid = $this->_more_validation($form_register_data);
 
+      if( $this->register->isRegisted($user_id) ) {
+        redirect('register/registed','refresh');
+      }
+
       if ($this->form_validation->run() == TRUE && strlen($more_valid) == 0 ) {
           $form_register_data['status'] ='Homework_Submitted';
 
@@ -296,7 +300,9 @@ class Register extends CI_Controller {
 
   }
 
-
+  public function registed() {
+    $this->load->view('register/registed');
+  }
 
   public function finish($type){
     $this->load->library(array('email'));
