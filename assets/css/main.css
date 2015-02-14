@@ -12,9 +12,9 @@ body {
 .WDB_Bangna { font-family: 'wdb_bangnaregular'; }
 .CSPraJad { font-family: 'CSPraJad'; }
 
-.big-text { font-size:70px; }
-.title-text { font-size:40px; }
-.normal-text { font-size:30px; }
+.big-text { font-size:60px; }
+.title-text { font-size:30px; }
+.normal-text { font-size:20px; }
 
 .img-center {
 	margin-left:auto;
@@ -46,7 +46,7 @@ body {
 	text-decoration: none;
 	color: #000;
 	margin-top:10px;
-	font-size:24px;
+	font-size:20px;
 	display:block;
 }
 @media screen and (max-width:991px) {
@@ -344,7 +344,7 @@ body {
 
 #category-page .description {
 	min-height: 180px;
-	font-size: 30px;
+	font-size: 20px;
 	font-family: 'CSPraJad';
 	max-width: 450px;
 	margin: auto;
@@ -360,15 +360,20 @@ body {
 #category-page .count-box {
 	display: inline-block;
 	padding: 5px 60px;
-	font-size: 55px;
+	font-size: 35px;
 	margin: 10px 0px;
 	border-radius: 5px;
 	color: #fff;
 }
 
 #category-page .cat-text {
-	font-size: 35px;
+	font-size: 30px;
 	margin-top:20px;
+}
+@media screen and (max-width:480px) {
+	#category-page .cat-text {
+		font-size: 26px;
+	}
 }
 
 #category-page .register {
@@ -378,12 +383,16 @@ body {
 	width: 150px;
 }
 
+#category-page .head {
+	max-width : 240px;
+}
+
 @media screen and (max-width:768px) {
 	#category-page .register {
 		margin-top: 15px;
 	}
 	#category-page .head {
-		width: 200px;
+		max-width: 200px;
 	}
 }
 
@@ -464,6 +473,12 @@ body {
 	}
 
 }
+@media screen and (max-width:480px) {
+	#timeline-page .timeline-item {
+		margin: 0 0 30px 20px;
+		font-size: 18px;
+	}
+}
 
 #picture-page {
 	background: url("../img/main/activity.png");
@@ -499,7 +514,7 @@ body {
 }
 
 #category-page .big-text, #sponsor-page .big-text {
-	padding-top:70px;
+	padding-top:30px;
 }
 @media screen and (max-width:768px) {
 	#category-page .big-text, #sponsor-page .big-text {
@@ -508,7 +523,12 @@ body {
 }
 
 #qa-page {
+	padding-top: 10px;
 	padding-bottom: 0px;
+}
+
+#qa-page .big-text {
+	font-size: 40px;
 }
 
 #qa-page .folded-container {
@@ -545,6 +565,7 @@ body {
 	position: relative;
 	top: -5px;
 }
+
 #qa-content .arrow-boy { right: -8px; }
 #qa-content .arrow-girl { left: -8px; }
 
@@ -560,7 +581,12 @@ body {
 
 #qa-content .sentence {
 	text-align: center;
-	padding: 30px 25px;
+	padding: 20px 25px;
+}
+@media screen and (max-width:768px) {
+	#qa-content .sentence {
+		padding: 15px 10px;
+	}
 }
 
 #qa-page .head,#qa-content .tail {
@@ -591,6 +617,11 @@ body {
 		max-width: 450px;
 	}
 }
+@media screen and (max-width:768px) {
+	#qa-content .sentence .blue {
+		margin-bottom:7px;
+	}	
+}
 @media screen and (max-width: 640px) {
 	#qa-content .sentence .white, #qa-content .sentence .blue {
 		padding: 10px 15px;
@@ -617,7 +648,34 @@ body {
 #qa-content .chat-box * {
 	display: inline-block;
 	vertical-align: middle;
-	margin: 10px 0px;
+	margin: 5px 0px;
+}
+
+@media screen and (max-width:768px) {
+	#qa-content .arrow {
+		display:none;
+	}
+	#qa-content .sentence .white {
+		margin-right: 5px;
+	}
+	#qa-content .sentence .blue {
+		margin-left: 5px;
+	}
+}
+
+@media screen and (max-width:480px) {
+	#qa-content .arrow {
+		display:none;
+	}
+	#qa-content .sentence .white {
+		margin-right: 2px;
+	}
+	#qa-content .sentence .blue {
+		margin-left: 2px;
+	}
+	#qa-content .chat-box img {
+		max-width: ;
+	}
 }
 
 .img-detailheader {
@@ -668,7 +726,7 @@ body {
 
 @media screen and (min-width:991px) {
 	#category-page .description {
-		min-height: 240px;
+		min-height: 100px;
 	}
 }
 
@@ -742,6 +800,10 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+	.big-text { font-size: 36px; }
+	.title-text { font-size: 22px; }
+	.normal-text { font-size: 16px; }
+
 	#picture-page .table-picture .row > div {
 		width: 50%;
 	}
