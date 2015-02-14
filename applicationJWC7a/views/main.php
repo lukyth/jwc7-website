@@ -26,7 +26,6 @@
 	<link rel="stylesheet" href="<?= base_url()."assets/" ?>fonts/CSPraJad.css" />
 	<link rel="stylesheet" href="<?= base_url()."assets/" ?>fonts/wdb_bangna.css" />
 	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/main.css" />
-	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/main2.css" />
 
 </head>
 
@@ -85,7 +84,7 @@
 								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/new/sponsor_2.svg"></div>
 							</div>
 						</div>
-						<a class="page-scroll" href="#category-page">
+						<a class="page-scroll register-button" href="#category-page">
 							<div class="jumpto-register img-center img-responsive register">สมัครเลย!</div>
 						</a>
 					</div>
@@ -97,9 +96,9 @@
 	<div id="about-page" class="page">
 		<img class="boat-station" src="<?= base_url() ?>assets/img/main/new/boat_station.svg" />
 		<div class="river">
+			<div class="boat"></div>
 			<div class="river-wave"></div>
 		</div>
-		<div class="boat"></div>
 		<!-- <img src="<?= base_url() ?>assets/img/main/rivertop.png" style="width:100%;" /> -->
 		<div class="img-rivercenter">
 			<div class="container">
@@ -143,7 +142,9 @@
 								เนรมิตหน้าเว็บ โชว์สเต็ปดีไซน์ ไฉไลสไตล์เว็บสเตอร์สู่การเป็นเว็บ Design อย่างแท้จริง
 							</p>
 							<div class="count-box" style="background:#732777;"><?= $amount_d; ?></div>
-							<a href="register/index/2"><img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" /></a>
+							<a class="register-button" href="register/index/2">
+								<div class="img-center img-responsive register">สมัครเลย!</div>
+							</a>
 						</div>
 						<div class="col-md-4 text-center">
 							<img src="<?= base_url() ?>assets/img/main/new/web_content.svg" class="head img-center img-responsive" />
@@ -152,7 +153,9 @@
 								สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Contenให้เฉือดเฉือนประโยคเด็ด Content ชนะใจ
 							</p>
 							<div class="count-box" style="background:#07908C;"><?= $amount_c; ?></div>
-							<a href="register/index/1"><img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" /></a>
+							<a class="register-button" href="register/index/1">
+								<div class="img-center img-responsive register">สมัครเลย!</div>
+							</a>
 						</div>
 						<div class="col-md-4 text-center">
 							<img src="<?= base_url() ?>assets/img/main/new/web_marketing.svg" class="head img-center img-responsive" />
@@ -161,7 +164,9 @@
 								เรียนรู้ศาสตร์การตลาดยุทธศาสตร์ การสร้างชื่อให้เว็บเลื่องลือระบือไกล
 							</p>
 							<div class="count-box" style="background:#E64C24;"><?= $amount_m; ?></div>
-							<a href="register/index/3"><img src="<?= base_url() ?>assets/img/main/regis.png" class="img-center img-responsive register" /></a>
+							<a class="register-button" href="register/index/3">
+								<div class="img-center img-responsive register">สมัครเลย!</div>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -170,7 +175,7 @@
 	</div>
 
 	<div class="bg-gradient">
-		<div id="sponsor-page" class="page">
+		<!-- <div id="sponsor-page" class="page">
 			<div class="img-sponsorhead" style="width:100%;">
 				<h1 class="text-center big-text">ผู้สนับสนุน</h1>
 				<img style="padding-bottom:20px;" class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
@@ -205,7 +210,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<div id="qa-page" class="page">
 			<div class="container">
@@ -333,6 +338,7 @@
 							<br>
 							วันค่าย JWC#7
 						</div>
+						<div class="timeline-bg"></div>
 						<img class="timeline-fish" src="<?= base_url() ?>assets/img/main/timeline-fish.png" alt="ปลาตะเพียนสาน">
 					</div>
 				</div>
