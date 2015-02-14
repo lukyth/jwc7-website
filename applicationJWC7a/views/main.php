@@ -4,7 +4,7 @@
 
 	<title>Junior Webmaster Camp #7</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta name="description" content="มาจะกล่าวบทไป.. ฤกษ์งามยามดีนี้ไซร้ จักนำมาให้ชมอีกคำรบหนึ่ง ขอป่าวประกาศลั่น! ค่ายปั้นนักพัฒนาเว็บระดับมัธยม กำลังทำการลงเสาเอก ก่อกำแพงเมือง ให้ปวงประชาจักได้สัมผัสถึงความยิ่งใหญ่ มินานเพียงชั่วเคี้ยวหมากแหลกแล้วไซร้ อันกาลใกล้จักใกล้ได้เชยชม !!">
   <meta name="keywords" content="webmaster,ค่ายไอที,ค่ายคอม,jwc,jwc7,jwc#7,junior webmaster camp,ค่ายทำเว็บ,ค่ายเว็บ">
@@ -34,7 +34,7 @@
 	<img class="free" src="<?=base_url()?>assets/img/main/new/free.svg" />
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
-		<!-- Brand and toggle get grouped for better mobile display -->
+
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-content">
 				<span class="sr-only">Toggle navigation</span>
@@ -44,7 +44,7 @@
 				</button>
 			</div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
+
 			<div class="text-center">
 				<div class="collapse navbar-collapse" id="navbar-content">
 					<ul class="nav navbar-nav">
@@ -55,9 +55,9 @@
 						<li><a class="page-scroll" href="#timeline-page">กำหนดการ</a></li>
 						<li><a class="page-scroll" href="#picture-page">ติดตามข่าวสาร</a></li>
 					</ul>
-				</div><!-- /.navbar-collapse -->
+				</div>
 			</div>
-		</div><!-- /.container-fluid -->
+		</div>
 	</nav>
 
 	<div id="header-page">
@@ -98,7 +98,7 @@
 			<div class="boat"></div>
 			<div class="river-wave"></div>
 		</div>
-		<!-- <img src="<?= base_url() ?>assets/img/main/rivertop.png" style="width:100%;" /> -->
+
 		<div class="img-rivercenter">
 			<div class="container">
 				<div class="row">
@@ -141,9 +141,9 @@
 								เนรมิตหน้าเว็บ โชว์สเต็ปดีไซน์ ไฉไลสไตล์เว็บสเตอร์สู่การเป็นเว็บ Design อย่างแท้จริง
 							</p>
 							<div class="count-box" style="background:#732777;"><?= $amount_d; ?></div>
-<!-- 							<a class="register-button" href="register/index/2">
+							<a class="register-button" href="register/index/2">
 								<div class="img-center img-responsive register">สมัครเลย!</div>
-							</a> -->
+							</a>
 						</div>
 						<div class="col-md-4 text-center">
 							<img src="<?= base_url() ?>assets/img/main/new/web_content.svg" class="head img-center img-responsive" />
@@ -152,9 +152,9 @@
 								สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Contenให้เฉือดเฉือนประโยคเด็ด Content ชนะใจ
 							</p>
 							<div class="count-box" style="background:#07908C;"><?= $amount_c; ?></div>
-							<!-- <a class="register-button" href="register/index/1">
+							<a class="register-button" href="register/index/1">
 								<div class="img-center img-responsive register">สมัครเลย!</div>
-							</a> -->
+							</a>
 							</div>
 						<div class="col-md-4 text-center">
 							<img src="<?= base_url() ?>assets/img/main/new/web_marketing.svg" class="head img-center img-responsive" />
@@ -163,9 +163,9 @@
 								เรียนรู้ศาสตร์การตลาดยุทธศาสตร์ การสร้างชื่อให้เว็บเลื่องลือระบือไกล
 							</p>
 							<div class="count-box" style="background:#E64C24;"><?= $amount_m; ?></div>
-							<!-- <a class="register-button" href="register/index/3">
+							<a class="register-button" href="register/index/3">
 								<div class="img-center img-responsive register">สมัครเลย!</div>
-							</a> -->
+							</a>
 						</div>
 					</div>
 				</div>
@@ -181,18 +181,15 @@
 			</div>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-10 col-md-offset-1">
+					<div class="col-md-12">
 						<div class="row">
-							<div class="col-md-1 text-center">
-							</div>
-							<div class="col-md-5 col-xs-6 text-center">
+							<div class="col-md-6 col-xs-6 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_large.png" />
 							</div>
-							<div class="col-md-5 col-xs-6 text-center">
+							<div class="col-md-6 col-xs-6 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_large.png" />
 							</div>
-							<div class="col-md-1 text-center">
-							</div>
+							<div class="col-md-12 col-xs-12"></div>
 							<div class="col-md-3 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
@@ -203,6 +200,25 @@
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
 							<div class="col-md-3 col-xs-4 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
+							</div>
+							<div class="col-md-12 col-xs-12"></div>
+							<div class="col-md-2 col-xs-3 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
+							</div>
+							<div class="col-md-2 col-xs-3 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
+							</div>
+							<div class="col-md-2 col-xs-3 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
+							</div>
+							<div class="col-md-2 col-xs-3 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
+							</div>
+							<div class="col-md-2 col-xs-3 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
+							</div>
+							<div class="col-md-2 col-xs-3 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
 						</div>
@@ -315,7 +331,6 @@
 					</div>
 				</div>
 				<div class="row">
-					<!-- <img class="img-center img-responsive timeline-img" src="<?= base_url() ?>assets/img/main/timeline_item.png" alt="" /> -->
 					<div class="timeline">
 						<div class="timeline-item">
 							14 ก.พ. - 14 มี.ค. 2558

@@ -71,7 +71,7 @@ html,body {
 body {
 	color: #fff;
 	font-family: 'wdb_bangnaregular';
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 }
 
 .WDB_Bangna { font-family: 'wdb_bangnaregular'; }
@@ -371,9 +371,11 @@ a.register-button {
 	background: url(../img/main/new/river.svg) no-repeat center center;
   background-size: cover;
   z-index: 1;
-  width: 104%;
+  width: 100%;
   height: 12vw;
-  margin: 3vh -2% 0;
+  margin: 3vh 0 0;
+  -ms-overflow-x: hidden;
+      overflow-x: hidden;
 }
 
 #about-page .river-wave {
@@ -425,7 +427,7 @@ a.register-button {
 	background-repeat: no-repeat;
 	position: absolute;
 	height: 210px;
-	width: 104%;
+	width: 100%;
 	z-index: 3;
 }
 
@@ -542,9 +544,33 @@ a.register-button {
 #sponsor-page {
 	padding-top: 0px;
 }
+
+#sponsor-page .col-xs-6 {
+	padding: 0 60px;
+}
+
 #sponsor-page .big-text {
 	text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
 }
+
+@media screen and (max-width: 991px) {
+	#sponsor-page .col-xs-6 {
+		padding: 0 30px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#sponsor-page .col-xs-6 {
+		padding: 0 10px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#sponsor-page .col-xs-6 {
+		padding: 0px;
+	}
+}
+
 
 #timeline-page {
 	background-image: url(../img/main/timeline_bottom.png);
@@ -611,6 +637,9 @@ a.register-button {
 @media screen and (max-width: 768px) {
 	#timeline-page {
 		background-size: cover;
+	}
+	#timeline-page .timeline-bg {
+		display: none;
 	}
 	#timeline-page .timeline {
 		background: none;
@@ -888,8 +917,17 @@ a.register-button {
 
 @media screen and (min-width:991px) {
 	#category-page .description {
-		min-height: 100px;
+		min-height: 120px;
 	}
+	#sponsor-page {
+		text-align: center;
+	}
+	/*#sponsor-page .text-center {
+	  display: inline-block;
+	  float: none;
+	  margin: 0;
+	  padding: 0;
+	}*/
 }
 
 @media screen and (max-width:991px) {
@@ -989,4 +1027,28 @@ a.register-button {
 	#picture-page .table-picture .row > div:nth-child(n+13) {
 		display: none;
 	}
+}
+
+@media screen and (max-width: 1199px) {
+	#header-page .town .town-front {
+		height: 106vh;
+	}
+	#header-page .boat-station {
+		bottom: -7vh;
+	}
+	#about-page .river {
+		margin: 2vh 0 0;
+	}
+}
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
 }
