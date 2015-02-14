@@ -1017,8 +1017,10 @@ a.register-button {
 }
 
 .img-rivercenter {
-	background: url(../img/main/rivercenter.png);
-	background-size: 100% 100%;
+	background: -webkit-linear-gradient(#565590, #32898f);
+  background: -o-linear-gradient(#565590, #32898f);
+  background: -moz-linear-gradient(#565590, #32898f);
+  background: linear-gradient(#565590, #32898f);
 }
 
 .img-detailtext {
@@ -1232,7 +1234,7 @@ a.register-button {
 	}
 
 	#header-page .logo-img {
-	  margin-top: 38%;
+	  margin-top: 16vh;
 	}
 
 	#header-page .sponsor-top {
@@ -1328,4 +1330,12 @@ a.register-button {
 	#picture-page .social a img {
 	  width: 44px;
 	}
+}
+
+#header-page .sponsor-top:first-child {
+	margin-left: 0 !important;
+}
+
+#header-page .sponsor-top:last-child {
+	margin-right: 0 !important;
 }
