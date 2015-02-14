@@ -56,6 +56,7 @@ $(document).ready(function(){
 	$('#goto5').click(function(){active5(); $('#step1').hide(); $('#step2').hide(); $('#step3').hide(); $('#step4').hide(); $('#step5').show();});		
 
 	$("#error_log p:not(:first)").hide();
+	$("#error_log p.show").show();
 
 });
 

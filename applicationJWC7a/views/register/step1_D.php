@@ -44,7 +44,7 @@
 
 			for( var i=0; i<data.length; i++ ) {
 				if( ["inputAddress","inputQ1","inputQ2","inputQ3","inputQ4","inputQ5"].indexOf(data[i][0]) != -1 ) {
-					$("#"+data[i][0]).val( data[i][1].replace("\\n","\n") );
+					$("#"+data[i][0]).val( data[i][1].split("\\n").join("\n") );
 				} else if( data[i][0] == "inputKnowFrom" ) {
 					if( !( new RegExp("Facebook|Twitter|PR|Friend").test( data[i][1] ) ) ) {
 						$("#inputKnowFrom").val("etc");
@@ -63,6 +63,14 @@
 				} else {
 					$("#goto<?= $redirect ?>").click();
 				}
+			}
+
+			if( $.trim($("#error_log").text()).length != 0 ) {
+				$("#step5 .show_validation").show();	
+				$("#step5 .show_info").hide();
+			} else {
+				$("#step5 .show_validation").hide();	
+				$("#step5 .show_info").show();
 			}
 		});
 
@@ -146,8 +154,8 @@
 								<label for="name" value="<?= $form->sex ?>">เพศ*</label>
 							</div>
 							<div class="col-sm-4">
-								<select id="level" class="form-control" id="inputSex" name="inputSex">
-									<option value="0">เลือกเพศ</option>
+								<select class="form-control" id="inputSex" name="inputSex">
+									<option value="">เลือกเพศ</option>
 									<option value="M">ชาย</option>
 									<option value="F">หญิง</option>
 								</select>
@@ -175,10 +183,13 @@
 							</div>
 							<div class="col-sm-4">
 								<select class="form-control" id="inputGrade" name="inputGrade">
-									<option value="0">เลือกระดับชั้น</option>
-									<option value="4">ม.4</option>
-									<option value="5">ม.5</option>
-									<option value="6">ม.6</option>
+									<option value="">เลือกระดับชั้น</option>
+									<option value="ม.4">ม.4</option>
+									<option value="ม.5">ม.5</option>
+									<option value="ม.6">ม.6</option>
+									<option value="ปวช.1">ปวช.1</option>
+									<option value="ปวช.2">ปวช.2</option>
+									<option value="ปวช.3">ปวช.3</option>
 								</select>
 							</div>
 						</div>
@@ -187,7 +198,7 @@
 								<label for="name">เบอร์โทรศัพท์*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="text" id="inputPhone" class="form-control" placeholder="08x-xxx-xxxx" name="inputPhone"></input>
+								<input type="text" id="inputPhone" class="form-control" placeholder="0xx-xxx-xxxx" name="inputPhone"></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -204,7 +215,7 @@
 							</div>
 							<div class="col-sm-7">
 								<select class="form-control" id="inputProvince" name="inputProvince">
-									<option value="0">กรุณาเลือกจังหวัด</option>
+									<option value="">กรุณาเลือกจังหวัด</option>
 									<option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
 									<option value="กระบี่">กระบี่ </option>
 									<option value="กาญจนบุรี">กาญจนบุรี </option>
@@ -322,7 +333,7 @@
 							</div>
 							<div class="col-sm-7">
 								<select class="form-control" id="inputKnowFrom" name="inputKnowFrom">
-									<option value="0">กรุณาเลือก</option>
+									<option value="">กรุณาเลือก</option>
 									<option value="Facebook">Facebook</option>
 									<option value="Twitter">Twitter</option>
 									<option value="PR">โปสเตอร์ประชาสัมพันธ์</option>
@@ -339,7 +350,7 @@
 							</div>
 							<div class="col-sm-4">
 								<select class="form-control" id="inputSizeShirt" name="inputSizeShirt">
-									<option value="0">เลือกไซส์เสื้อ</option>
+									<option value="">เลือกไซส์เสื้อ</option>
 									<option value="S">S (รอบอก 34, ยาว 26)</option>
 									<option value="M">M (รอบอก 36, ยาว 27)</option>
 									<option value="X">L (รอบอก 38, ยาว 28)</option>
@@ -389,7 +400,7 @@
 								<label for="name">เบอร์โทรศัพท์ผู้ปกครองที่ติดต่อได้*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="text" id="inputParentPhone" class="form-control" placeholder="08x-xxx-xxxx" name="inputParentPhone"></input>
+								<input type="text" id="inputParentPhone" class="form-control" placeholder="0xx-xxx-xxxx" name="inputParentPhone"></input>
 							</div>
 						</div>
 
@@ -464,7 +475,17 @@
 <!--////////////////////////////////////////////////////////////////////////////////////////////////-->
 
 				<div id="step5">
-					<div class="col-sm-10 col-sm-offset-1">
+					<div class="col-sm-10 col-sm-offset-1 show_validation">
+						<div id="error_log">
+						<?php
+								echo validation_errors();
+								if(isset($error_result)) echo $error_result;
+						?>
+						</div>
+						<br>
+						<div onclick="$('#goto1').click()" style="padding: 10px 10px;" class="btn btn-danger btn-lg">กลับไปแก้ไข</div>&nbsp;
+					</div>
+					<div class="col-sm-10 col-sm-offset-1 show_info">
 						<h2>ตรวจสอบข้อมูล</h2>
 						<hr>
 						<h3>ข้อมูลส่วนตัว</h3>
@@ -576,12 +597,7 @@
 
 						<div onclick="$('#goto1').click()" style="padding: 10px 10px;" class="btn btn-primary btn-lg">กลับไปแก้ไข</div>&nbsp;
 						<button onclick="tmp_submit()" style="padding: 10px 40px;" type="submit" class="btn btn-success btn-lg" id="finished">ยืนยัน</button>
-						<div id="error_log">
-							<?php
-									echo validation_errors();
-									if(isset($result)) echo $result;
-							?>
-						</div>
+						
 					</div>
 				</div>
 
