@@ -32,7 +32,7 @@
 					</div>
 				</div>
 				<div class="row" id="loginspace">
-					<a href="<?php echo $login_url; ?>"><img src="<?php echo base_url()."assets/" ?>img/mockup/fb_login.png"></a>
+					<a href="<?php echo $login_url; ?>"><img src="<?php echo base_url()."assets/" ?>img/main/FB_login.svg"></a>
 
 				</div>
 			</div>

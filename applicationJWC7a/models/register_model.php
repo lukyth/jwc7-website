@@ -37,6 +37,8 @@
       $query = $this->db->get_where('register', array('facebookID' => $facebookID));
 
       if($query->num_rows()>0){
+          $result=$query->result();
+          $result=$result[0];
           $result=$query->result()[0];
           $this->facebookID=$result->facebookID;
           $this->profilePic=$result->profilePic;
@@ -63,7 +65,7 @@
           $this->status=$result->status;
           $this->sizeshirt=$result->sizeshirt;
           return true;
-      }else {
+      } else {
       //  $this->facebookID=$facebookID;
         //$this->db->set($this);
       //  $this->db->insert('register');
