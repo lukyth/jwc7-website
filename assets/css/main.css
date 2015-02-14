@@ -968,9 +968,6 @@ a.register-button {
 		margin:0px 0px;
 		padding: 5px 40px;
 	}
-	#category-page .register {
-		width: 100px;
-	}
 
 	#timeline-page .timeline-img {
 		margin:20px auto;
@@ -1050,5 +1047,53 @@ a.register-button {
 }
 
 @media screen and (max-width: 480px) {
+	#header-page .town .town-front {
+	  background-size: auto 50vh;
+	  height: 100vh;
+	}
 
+	#header-page .town .back-right {
+	  background-size: 34% auto;
+	}
+
+	#header-page .town .back-left {
+	  background-position: -18% bottom;
+	  background-size: 56% auto;
+	}
+
+	#header-page .logo-img {
+	  margin-top: 28%;
+	}
+
+	#header-page .sponsor-top {
+	  margin: 40px 8px 0;
+	}
+
+	#header-page .jumpto-register {
+	  margin-top: 50px;
+	  width: 140px;
+	}
+
+	#header-page .sponsor-top img {
+	  max-width: 90px;
+	}
+
+	#about-page .river {
+	  margin: -4vh 0 0;
+	  height: 16vh;
+	}
+
+	#header-page .boat-station {
+	  bottom: 0vh;
+	  width: 74%;
+	  left: -16%;
+	}
+
+	#about-page .boat {
+		background-size: 66% auto;
+	}
+
+	#about-page .river-wave {
+	  background-size: auto 58%;
+	}
 }
