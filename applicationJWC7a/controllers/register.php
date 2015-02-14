@@ -68,9 +68,6 @@ class Register extends CI_Controller {
   }
 
   public function _cleanData( $data ) {
-    foreach( $data as $sub ) {
-      $sub = addslashes( $sub );
-    }
     if( $data["sex"] == "0" ) {
       $data["sex"] = "";
     }
@@ -86,6 +83,10 @@ class Register extends CI_Controller {
       $data["province"] = "";
     }
     return $data;
+  }
+
+  function _protectData( $txt ) {
+    return str_replace(array("\r\n","\r","\n"), "\\n", $txt);
   }
 
   public function step1($type = "1",$status = "normal"){
@@ -106,36 +107,36 @@ class Register extends CI_Controller {
       $form_register_data= $this->_cleanData( array(
           'profilePic'=>$this->input->post('inputProfilePic'),
           'registerType'=>$type,
-          'name'=>$this->input->post('inputName'),
-          'surname'=>$this->input->post('inputSurname'),
-          'nickname'=>$this->input->post('inputNickname'),
-          'sex'=>$this->input->post('inputSex'),
-          'national_ID'=>$this->input->post('inputNational_ID'),
-          'school'=>$this->input->post('inputSchool'),
-          'grade'=>$this->input->post('inputGrade'),
-          'phone'=>$this->input->post('inputPhone'),
-          'address'=>$this->input->post('inputAddress'),
-          'province'=>$this->input->post('inputProvince'),
-          'postalCode'=>$this->input->post('inputPostalCode'),
-          'email'=>$this->input->post('inputEmail'),
-          'knowFrom'=>$this->input->post('inputKnowFrom'),
-          'foodAllergy'=>$this->input->post('inputFoodAllergy'),
-          'disease'=>$this->input->post('inputDisease'),
-          'drugAllergy'=>$this->input->post('inputDrugAllergy'),
-          'specialFood'=>$this->input->post('inputSpecialFood'),
-          'parentPhone'=>$this->input->post('inputParentPhone'),
+          'name'=>$this->_protectData( $this->input->post('inputName') ),
+          'surname'=>$this->_protectData( $this->input->post('inputSurname') ),
+          'nickname'=>$this->_protectData( $this->input->post('inputNickname') ),
+          'sex'=>$this->_protectData( $this->input->post('inputSex') ),
+          'national_ID'=>$this->_protectData( $this->input->post('inputNational_ID') ),
+          'school'=>$this->_protectData( $this->input->post('inputSchool') ),
+          'grade'=>$this->_protectData( $this->input->post('inputGrade') ),
+          'phone'=>$this->_protectData( $this->input->post('inputPhone') ),
+          'address'=>$this->_protectData( $this->input->post('inputAddress') ),
+          'province'=>$this->_protectData( $this->input->post('inputProvince') ),
+          'postalCode'=>$this->_protectData( $this->input->post('inputPostalCode') ),
+          'email'=>$this->_protectData( $this->input->post('inputEmail') ),
+          'knowFrom'=>$this->_protectData( $this->input->post('inputKnowFrom') ),
+          'foodAllergy'=>$this->_protectData( $this->input->post('inputFoodAllergy') ),
+          'disease'=>$this->_protectData( $this->input->post('inputDisease') ),
+          'drugAllergy'=>$this->_protectData( $this->input->post('inputDrugAllergy') ),
+          'specialFood'=>$this->_protectData( $this->input->post('inputSpecialFood') ),
+          'parentPhone'=>$this->_protectData( $this->input->post('inputParentPhone') ),
           'registerDate'=>date('Y-m-d H:i:s', time()),
           //'parentPhone'=>$this->input->post('input'),
           'status'=>'InProgress',
-          'sizeshirt'=>$this->input->post('inputSizeShirt'),
+          'sizeshirt'=>$this->_protectData( $this->input->post('inputSizeShirt') ),
       ) );
 
       $form_homework_data=array(
-          'q1'=>$this->input->post('inputQ1'),
-          'q2'=>$this->input->post('inputQ2'),
-          'q3'=>$this->input->post('inputQ3'),
-          'q4'=>$this->input->post('inputQ4'),
-          'q5'=>$this->input->post('inputQ5'),
+          'q1'=>$this->_protectData( $this->input->post('inputQ1') ),
+          'q2'=>$this->_protectData( $this->input->post('inputQ2') ),
+          'q3'=>$this->_protectData( $this->input->post('inputQ3') ),
+          'q4'=>$this->_protectData( $this->input->post('inputQ4') ),
+          'q5'=>$this->_protectData( $this->input->post('inputQ5') ),
       );
 
       if( $status == "tmp" ) {
