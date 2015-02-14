@@ -189,7 +189,7 @@
 							<div class="col-md-6 col-xs-6 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_large.png" />
 							</div>
-							<div class="col-md-12 col-xs-12"></div>
+							<div class="col-md-12 col-xs-12 text-center"></div>
 							<div class="col-md-3 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
@@ -202,7 +202,7 @@
 							<div class="col-md-3 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-12 col-xs-12"></div>
+							<div class="col-md-12 col-xs-12 text-center"></div>
 							<div class="col-md-2 col-xs-3 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
