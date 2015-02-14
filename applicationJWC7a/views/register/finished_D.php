@@ -15,8 +15,8 @@
 <body>
 	<div class="row" id="head">
 		<div class="container-fluid txt-center">
-			<div class="col-sm-12">
-				<img class="hidden-sm" src="<?php echo base_url()."assets/" ?>img/mascot_ds.svg">
+			<div class="col-xs-12">
+				<img class="hidden-xs" src="<?php echo base_url()."assets/" ?>img/mascot_ds.svg">
 				<a href="http://jwc.in.th"><img src="<?php echo base_url()."assets/" ?>img/logo.svg" alt="logo" id="logo"></a>
 			</div>
 		</div>
@@ -37,7 +37,8 @@
 				<br>
 				<a href="http://jwc.in.th" class="btn btn-success btn-lg">กลับหน้าแรก</a>
 			</div>
-			</div>
+
+		</div>
 		</div>
 	</div>
 </body>
