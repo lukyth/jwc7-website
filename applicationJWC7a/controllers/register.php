@@ -143,7 +143,7 @@ class Register extends CI_Controller {
     }
 
     $data["form"] = $this->register->data($user_id);
-    $data["formhomework"] = $this->homework->data($user_id); 
+    $data["formhomework"] = $this->homework->data($user_id);
     $data["redirect"] = "";
 
     if($type == 1)
@@ -209,7 +209,7 @@ class Register extends CI_Controller {
       );
 
       if( $status == "tmp" ) {
-        
+
         $this->register->update($form_register_data,$user_id);
         $this->homework->update($form_homework_data,$user_id);
 
@@ -290,12 +290,12 @@ class Register extends CI_Controller {
               ),
               array(
                 'field'   => 'inputParentPhone',
-                 'label'   => 'เบอร์โทรของผู้ปกครอง',
+                 'label'   => 'รู้จักเราจากที่ไหน',
                  'rules'   => 'trim|required'
               ),
               array(
                 'field'   => 'inputRelateParent',
-                 'label'   => 'ผู้ปกครองเกี่ยวข้องเป็นอะไร',
+                 'label'   => 'รู้จักเราจากที่ไหน',
                  'rules'   => 'trim|required'
               ),
               array(
@@ -366,7 +366,15 @@ class Register extends CI_Controller {
         $this->email->to($this->register->email);
 
         $this->email->subject('ยืนยันการสมัครค่าย JWC7');
-        $this->email->message('ขอบคุณที่สมัครค่าย JWC7 <br><br> ขอบคุณครับ <br>ทีมงาน jwc7');
+
+        $image = getcwd() . '/assets/img/main/logo_2.png';
+      //  var_dump($image);
+
+        $txtMessage  = '<img src="cid:'.$image.'" /><br /><br />';
+        $txtMessage.='ยินดีด้วย '.$this->register->name.' '.$this->register->surname.' <br>ได้สมัคร Junior Webmaster Camp 7 สาขา '.$this->register->registerType;
+        $txtMessage.='<br>เรียบร้อยแล้ว <br><br>ประกาศผลวันที่ 21 มีนาคม 2558<br>ติดตามรายละเอียดเพิ่มเติมที่ <a href="www.jwc.in.th">www.jwc.in.th</a> แล้วเจอกัน';
+        $this->email->message($txtMessage);
+
         if($this->email->send()) {
             $data['result']='OK';
         }
