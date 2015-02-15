@@ -458,7 +458,7 @@
 							<!-- <div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
 							<div class="btn btn-primary btn-lg" id="next4">บันทึกและไปต่อ &raquo;</div> -->
 							<div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>
-							<div onclick="tmp_submit()" class="btn btn-primary btn-lg">บันทึกชั่วคราว</div>
+							<div onclick="tmp_submit()" class="tmp_saved_btn btn btn-primary btn-lg">บันทึกชั่วคราว</div>
 							<button onclick="tmp_submit()" type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
 						</div>
 					</div>
