@@ -198,7 +198,7 @@
 								<label for="name">เบอร์โทรศัพท์*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="text" id="inputPhone" class="form-control" placeholder="0xx-xxx-xxxx" name="inputPhone"></input>
+								<input type="text" id="inputPhone" class="form-control" placeholder="0xxxxxxxxx" name="inputPhone"></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -400,7 +400,7 @@
 								<label for="name">เบอร์โทรศัพท์ผู้ปกครองที่ติดต่อได้*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="text" id="inputParentPhone" class="form-control" placeholder="0xx-xxx-xxxx" name="inputParentPhone"></input>
+								<input type="text" id="inputParentPhone" class="form-control" placeholder="0xxxxxxxxx" name="inputParentPhone"></input>
 							</div>
 						</div>
 
@@ -596,7 +596,7 @@
 						</div>
 
 						<div onclick="$('#goto1').click()" style="padding: 10px 10px;" class="btn btn-primary btn-lg">กลับไปแก้ไข</div>&nbsp;
-						<button onclick="real_submit();" style="padding: 10px 40px;" class="btn btn-success btn-lg">ยืนยัน</div>
+						<button onclick="real_submit();" style="padding: 10px 40px;" class="btn btn-success btn-lg">ยืนยัน</button>
 						
 					</div>
 				</div>

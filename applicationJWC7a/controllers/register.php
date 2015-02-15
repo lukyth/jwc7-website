@@ -93,13 +93,13 @@ class Register extends CI_Controller {
     $ret = "";
     if( strlen( $data["national_ID"] ) != 0 && preg_match( "/^([0-9]{13})$/", $data["national_ID"] ) == 0 ) {
       $ret .= "<p class='show'>เลขบัตรประชาชนไม่ถูกต้อง</p>";
-    } else if( strlen( $data["phone"] ) != 0 && preg_match( "/^(0[0-9]{2}-[0-9]{3}-[0-9]{4})$/", $data["phone"] ) == 0 ) {
-      $ret .= "<p class='show'>กรุณากรอกเบอร์โทรศัพท์ในรูปของ 0XX-XXX-XXXX</p>";
+    } else if( strlen( $data["phone"] ) != 0 && preg_match( "/^(0[0-9]{9})$/", $data["phone"] ) == 0 ) {
+      $ret .= "<p class='show'>หมายเลขโทรศัพท์ไม่ถูกต้อง</p>";
     } else if( strlen( $data["postalCode"] ) != 0 && preg_match( "/^([0-9]{5})$/", $data["postalCode"] ) == 0 ) {
       $ret .= "<p class='show'>รหัสไปรษณีย์ไม่ถูกต้อง</p>";
     }  else if( strlen( $data["email"] ) != 0 && !filter_var( $data["email"],FILTER_VALIDATE_EMAIL) ) {
       $ret .= "<p class='show'>E-mail ไม่ถูกต้อง</p>";
-    } else if( strlen( $data["parentPhone"] ) != 0 && preg_match( "/^(0[0-9]{2}-[0-9]{3}-[0-9]{4})$/", $data["parentPhone"] ) == 0 ) {
+    } else if( strlen( $data["parentPhone"] ) != 0 && preg_match( "/^(0[0-9]{9})$/", $data["parentPhone"] ) == 0 ) {
       $ret .= "<p class='show'>เบอร์โทรผู้ปกครองไม่ถูกต้อง</p>";
     }
     return $ret;
