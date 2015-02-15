@@ -23,7 +23,6 @@ class Register extends CI_Controller {
           'appId'  => '1540852432838036',
           'secret' => '06ac519f4aa347ae3059da8bc6504ea6'
         );
-
         $this->load->library('facebook/facebook', $fb_config,'facebook');
 
 		}

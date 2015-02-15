@@ -80,7 +80,8 @@
 
     function getUserType($facebookID) {
       $query = $this->db->get_where('register',array('facebookID' => $facebookID));
-      return $query->result()[0]->registerType;
+      $result = $query->result();
+      return $result[0]->registerType;
     }
 
     function data($facebookID) {
