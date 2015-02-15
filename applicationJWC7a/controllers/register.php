@@ -40,6 +40,8 @@ class Register extends CI_Controller {
         if(!$this->register->checkRegister($user_id))
         {
           $this->register->facebookID=$user_id;
+          $this->register->registerType = $type-1;
+          $this->register->status = "InProgress";
           $this->register->insert();
         }
         redirect('register/step1/'.$type, 'refresh');
@@ -165,7 +167,7 @@ class Register extends CI_Controller {
       $data=array(
         'type' => $type,
         'redirect' => "",
-        'edit' => '1',
+        'edit' => '',
         'user_id' => $user_id
       );
 
