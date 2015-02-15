@@ -150,7 +150,7 @@
 							<img src="<?= base_url() ?>assets/img/main/new/web_content.svg" class="head img-center img-responsive" />
 							<div class="cat-text" style="color:#07908C;">Web Content</div>
 							<p class="text-center description">
-								สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Content ให้เฉือดเฉือนประโยคเด็ด Content ชนะใจ
+								สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Content ให้เชือดเฉือนประโยคเด็ด Content ชนะใจ
 							</p>
 							<div class="count-box" style="background:#07908C;"><?= $amount_c; ?></div>
 							<!--<a class="register-button" href="register/index/1">
@@ -334,9 +334,9 @@
 				<div class="row">
 					<div class="timeline">
 						<div class="timeline-item">
-							14 ก.พ. - 14 มี.ค. 2558
+							14 มี.ค. 2558
 							<br>
-							รับสมัคร
+							ปิดรับสมัคร
 						</div>
 						<div class="timeline-item">
 							21 มี.ค. 2558
