@@ -27,7 +27,7 @@ class Register extends CI_Controller {
 
 		}
 
-  public function index($type)
+  public function index($type = '1')
   {
     $this->load->helper(array('form','html'));
     $this->load->model('Register_Model','register');

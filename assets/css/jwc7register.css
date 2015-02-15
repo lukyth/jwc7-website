@@ -110,6 +110,14 @@ hr{border-color:#000;}
 #head img{
 	max-height:250px;
 }
+@media screen and (max-width:768px) {
+	#logo{
+		margin: 35px 0;
+	}
+	#head {
+		max-height: 150px;
+	}
+}
 
 #login{
 	padding-top:50px;
