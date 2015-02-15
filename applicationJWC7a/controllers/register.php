@@ -327,13 +327,14 @@ class Register extends CI_Controller {
 
       $this->form_validation->set_rules($rulesform);
 
-      $more_valid = $this->_more_validation($form_register_data);
-
       if( $this->register->isRegisted($user_id) ) {
         redirect('register/edit/','refresh');
       }
 
-      if ( $this->form_validation->run() == TRUE && strlen($more_valid) == 0 && $status == "submit" ) {
+      $more_valid = $this->_more_validation($form_register_data);
+      $required_check = $this->form_validation->run();
+
+      if ( $required_check == TRUE && strlen($more_valid) == 0 && $status == "submit" ) {
           $form_register_data['status'] ='Registered';
 
           $data['isSubmited'] = "true";
@@ -354,7 +355,7 @@ class Register extends CI_Controller {
         $data["formhomework"] = $this->homework->data($user_id);
 
         $data["redirect"] = "";
-        if( $status == "confirm" )
+        if( $status == "confirm" && $this->input->server('REQUEST_METHOD') == "POST" )
           $data["redirect"] = "5";
 
         $data["error_result"] = $more_valid;
