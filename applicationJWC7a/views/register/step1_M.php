@@ -192,6 +192,7 @@
 							<div class="col-sm-4">
 								<select class="form-control" id="inputGrade" name="inputGrade">
 									<option value="">เลือกระดับชั้น</option>
+									<option value="ม.3">ม.3</option>
 									<option value="ม.4">ม.4</option>
 									<option value="ม.5">ม.5</option>
 									<option value="ม.6">ม.6</option>
