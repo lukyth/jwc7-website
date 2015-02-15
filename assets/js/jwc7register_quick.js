@@ -60,6 +60,15 @@ $(document).ready(function(){
 
 });
 
+function real_submit() {
+	var raw = $("#mainform").attr("action");
+	var base = raw.split("/");
+	base[ base.length-1 ] = "submit";
+	$("#mainform").attr("action",base.join("/"));
+	console.log( base.join("/") );
+	$("#mainform").submit();
+}
+
 function active1(){
 	$('#goto1').addClass("active");
 

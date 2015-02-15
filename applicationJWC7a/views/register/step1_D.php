@@ -111,7 +111,7 @@
 					<div id="goto1">1. ข้อมูลส่วนตัว</div><div id="goto2">2. ข้อมูลเกี่ยวกับค่าย</div><div id="goto3">3. คำถามคัดเลือก</div><div id="goto4">4. คำถามประจำสาขา</div><!-- <div id="goto5">5. ตรวจสอบข้อมูล</div> -->
 				</div>
 			</div>
-			<?php echo form_open('register/step1/'.$type,array("id"=>"mainform")) ?>
+			<?php echo form_open('register/step1/'.$type."/confirm",array("id"=>"mainform")) ?>
 			<input type="hidden" name="issubmited" value="true"></input>
 			<div class="row" id="regisform">
 
@@ -596,7 +596,7 @@
 						</div>
 
 						<div onclick="$('#goto1').click()" style="padding: 10px 10px;" class="btn btn-primary btn-lg">กลับไปแก้ไข</div>&nbsp;
-						<button onclick="tmp_submit()" style="padding: 10px 40px;" type="submit" class="btn btn-success btn-lg" id="finished">ยืนยัน</button>
+						<button onclick="real_submit();" style="padding: 10px 40px;" class="btn btn-success btn-lg">ยืนยัน</button>
 						
 					</div>
 				</div>

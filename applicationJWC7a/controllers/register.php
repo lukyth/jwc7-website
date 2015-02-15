@@ -265,7 +265,7 @@ class Register extends CI_Controller {
         redirect('register/registed','refresh');
       }
 
-      if ($this->form_validation->run() == TRUE && strlen($more_valid) == 0 ) {
+      if ( $status == "submit" && $this->form_validation->run() == TRUE && strlen($more_valid) == 0 ) {
           $form_register_data['status'] ='Homework_Submitted';
 
           $data['isSubmited'] = "true";
@@ -285,7 +285,8 @@ class Register extends CI_Controller {
         $data["form"] = $this->register->data($user_id);
         $data["formhomework"] = $this->homework->data($user_id);
 
-        if( $this->input->post("issubmited") == "true" )
+        $data["redirect"] = "";
+        if( $status == "confirm" )
           $data["redirect"] = "5";
 
         $data["error_result"] = $more_valid;
