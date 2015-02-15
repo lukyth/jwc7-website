@@ -182,16 +182,17 @@ hr{border-color:#000;}
 [id^=goto]{
 	display:inline-block;
 	padding:15px 10px;
-	cursor: pointer;
+	cursor: default;
+	pointer-events: none;
 	/*background-color: #888;*/
 	border-right: 1px #555 solid;
 	border-left: 1px #222 solid;
 	margin:0;
 }
 
-[id^=goto]:hover{
+/*[id^=goto]:hover{
 	background-color: #777;
-}
+}*/
 
 [id^=goto]:first-of-type{border-left:none;}
 [id^=goto]:last-of-type{border-right:none;}
@@ -341,7 +342,7 @@ hr{border-color:#000;}
 
 @media screen and (max-width:768px) {
 	.rule .head {
-		font-size: 20px;	
+		font-size: 20px;
 	}
 	#loginspace {
 		padding: 10px 0;

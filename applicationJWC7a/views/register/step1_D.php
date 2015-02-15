@@ -204,7 +204,7 @@
 						</div>
 						<div class="row form-field">
 							<div class="col-sm-3">
-								<label for="name">เบอร์โทรศัพท์*</label>
+								<label for="name">เบอร์โทรศัพท์มือถือ*</label>
 							</div>
 							<div class="col-sm-7">
 								<input type="text" id="inputPhone" class="form-control" placeholder="0xxxxxxxxx" name="inputPhone"></input>
@@ -315,7 +315,7 @@
 						</div>
 						<div class="row form-field">
 							<div class="col-sm-3">
-								<label for="name">e-mail</label>
+								<label for="name">E-mail*</label>
 							</div>
 							<div class="col-sm-7">
 								<input type="email" id="inputEmail" class="form-control" placeholder="jwc7@example.com" name="inputEmail"></input>
@@ -624,7 +624,7 @@
 
 						<div onclick="$('#goto1').click()" style="padding: 10px 10px;" class="btn btn-primary btn-lg">กลับไปแก้ไข</div>&nbsp;
 						<button onclick="real_submit();" style="padding: 10px 40px;" class="btn btn-success btn-lg">ยืนยัน</button>
-						
+
 					</div>
 				</div>
 

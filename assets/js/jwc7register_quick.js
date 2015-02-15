@@ -7,7 +7,7 @@ $(document).ready(function(){
 	$('#step3').hide();
 	$('#step4').hide();
 	$('#step5').hide();
-	
+
 	// $('#step2').css('opacity','0');
 	// $('#step3').css('opacity','0');
 	// $('#step4').css('opacity','0');
@@ -49,11 +49,11 @@ $(document).ready(function(){
 	$('#prev4').click(function(){active3(); $('#step3').show(); $('#step4').hide(); $('html,body').animate({scrollTop: '300px'});});
 	$('#prev5').click(function(){active4(); $('#step4').show(); $('#step5').hide(); $('html,body').animate({scrollTop: '300px'});});
 
-	$('#goto1').click(function(){active1(); $('#step1').show(); $('#step2').hide(); $('#step3').hide(); $('#step4').hide(); $('#step5').hide();});	
-	$('#goto2').click(function(){active2(); $('#step1').hide(); $('#step2').show(); $('#step3').hide(); $('#step4').hide(); $('#step5').hide();});	
-	$('#goto3').click(function(){active3(); $('#step1').hide(); $('#step2').hide(); $('#step3').show(); $('#step4').hide(); $('#step5').hide();});	
-	$('#goto4').click(function(){active4(); $('#step1').hide(); $('#step2').hide(); $('#step3').hide(); $('#step4').show(); $('#step5').hide();});	
-	$('#goto5').click(function(){active5(); $('#step1').hide(); $('#step2').hide(); $('#step3').hide(); $('#step4').hide(); $('#step5').show();});		
+	$('#goto1').click(function(){active1(); $('#step1').show(); $('#step2').hide(); $('#step3').hide(); $('#step4').hide(); $('#step5').hide();});
+	$('#goto2').click(function(){active2(); $('#step1').hide(); $('#step2').show(); $('#step3').hide(); $('#step4').hide(); $('#step5').hide();});
+	$('#goto3').click(function(){active3(); $('#step1').hide(); $('#step2').hide(); $('#step3').show(); $('#step4').hide(); $('#step5').hide();});
+	$('#goto4').click(function(){active4(); $('#step1').hide(); $('#step2').hide(); $('#step3').hide(); $('#step4').show(); $('#step5').hide();});
+	$('#goto5').click(function(){active5(); $('#step1').hide(); $('#step2').hide(); $('#step3').hide(); $('#step4').hide(); $('#step5').show();});
 
 	$("#error_log p:not(:first)").hide();
 	$("#error_log p.show").show();
@@ -126,7 +126,7 @@ function init( can_edit,redirect,data ) {
 				$("#inputKnowFrom").val( data[i][1] );
 			}
 		} else {
-			$("#"+data[i][0]).val( data[i][1] );	
+			$("#"+data[i][0]).val( data[i][1] );
 		}
 	}
 
@@ -151,10 +151,10 @@ function init( can_edit,redirect,data ) {
 	}
 
 	if( $.trim($("#error_log").text()).length != 0 ) {
-		$("#step5 .show_validation").show();	
+		$("#step5 .show_validation").show();
 		$("#step5 .show_info").hide();
 	} else {
-		$("#step5 .show_validation").hide();	
+		$("#step5 .show_validation").hide();
 		$("#step5 .show_info").show();
 	}
 }

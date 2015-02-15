@@ -12,7 +12,7 @@
 	<!--<script src="js/jwc7register.js"></script> -->
 	<script src="<?php echo base_url()."assets/" ?>js/jwc7register_quick.js"></script>
 	<script type="text/javascript">
-		
+
 		var can_edit = <?= ($edit == "1" ? "false" : "true") ?>;
 		var redirect = "<?= $redirect ?>";
 
@@ -204,7 +204,7 @@
 						</div>
 						<div class="row form-field">
 							<div class="col-sm-3">
-								<label for="name">เบอร์โทรศัพท์*</label>
+								<label for="name">เบอร์โทรศัพท์มือถือ*</label>
 							</div>
 							<div class="col-sm-7">
 								<input type="text" id="inputPhone" class="form-control" placeholder="0xxxxxxxxx" name="inputPhone"></input>
@@ -315,7 +315,7 @@
 						</div>
 						<div class="row form-field">
 							<div class="col-sm-3">
-								<label for="name">e-mail</label>
+								<label for="name">E-mail*</label>
 							</div>
 							<div class="col-sm-7">
 								<input type="email" id="inputEmail" class="form-control" placeholder="jwc7@example.com" name="inputEmail"></input>
