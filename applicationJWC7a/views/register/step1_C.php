@@ -12,71 +12,50 @@
 	<!--<script src="js/jwc7register.js"></script> -->
 	<script src="<?php echo base_url()."assets/" ?>js/jwc7register_quick.js"></script>
 	<script type="text/javascript">
+		
+		var can_edit = <?= ($edit == "1" ? "false" : "true") ?>;
+		var redirect = "<?= $redirect ?>";
+
+		var data = [
+			["inputName","<?= $form->name ?>"],
+			["inputSurname","<?= $form->surname ?>"],
+			["inputNickname","<?= $form->nickname ?>"],
+			["inputSex","<?= $form->sex ?>"],
+			["inputNational_ID","<?= $form->national_ID ?>"],
+			["inputSchool","<?= $form->school ?>"],
+			["inputGrade","<?= $form->grade ?>"],
+			["inputPhone","<?= $form->phone ?>"],
+			["inputAddress","<?= $form->address ?>"],
+			["inputProvince","<?= $form->province ?>"],
+			["inputPostalCode","<?= $form->postalCode ?>"],
+			["inputEmail","<?= $form->email ?>"],
+			["inputKnowFrom","<?= $form->knowFrom ?>"],
+			["inputSizeShirt","<?= $form->sizeshirt ?>"],
+			["inputSpecialFood","<?= $form->specialFood ?>"],
+			["inputFoodAllergy","<?= $form->foodAllergy ?>"],
+			["inputDisease","<?= $form->disease ?>"],
+			["inputDrugAllergy","<?= $form->drugAllergy ?>"],
+			["inputParentPhone","<?= $form->parentPhone ?>"],
+			["inputQ1","<?= $formhomework->q1 ?>"],
+			["inputQ2","<?= $formhomework->q2 ?>"],
+			["inputQ3","<?= $formhomework->q3 ?>"],
+			["inputQ4","<?= $formhomework->q4 ?>"],
+			["inputQ5","<?= $formhomework->q5 ?>"]
+		];
+
 		$( function() {
-
-
-			var data = [
-				["inputName","<?= $form->name ?>"],
-				["inputSurname","<?= $form->surname ?>"],
-				["inputNickname","<?= $form->nickname ?>"],
-				["inputSex","<?= $form->sex ?>"],
-				["inputNational_ID","<?= $form->national_ID ?>"],
-				["inputSchool","<?= $form->school ?>"],
-				["inputGrade","<?= $form->grade ?>"],
-				["inputPhone","<?= $form->phone ?>"],
-				["inputAddress","<?= $form->address ?>"],
-				["inputProvince","<?= $form->province ?>"],
-				["inputPostalCode","<?= $form->postalCode ?>"],
-				["inputEmail","<?= $form->email ?>"],
-				["inputKnowFrom","<?= $form->knowFrom ?>"],
-				["inputSizeShirt","<?= $form->sizeshirt ?>"],
-				["inputSpecialFood","<?= $form->specialFood ?>"],
-				["inputFoodAllergy","<?= $form->foodAllergy ?>"],
-				["inputDisease","<?= $form->disease ?>"],
-				["inputDrugAllergy","<?= $form->drugAllergy ?>"],
-				["inputParentPhone","<?= $form->parentPhone ?>"],
-				["inputQ1","<?= $formhomework->q1 ?>"],
-				["inputQ2","<?= $formhomework->q2 ?>"],
-				["inputQ3","<?= $formhomework->q3 ?>"],
-				["inputQ4","<?= $formhomework->q4 ?>"],
-				["inputQ5","<?= $formhomework->q5 ?>"]
-			];
-
-			for( var i=0; i<data.length; i++ ) {
-				if( ["inputAddress","inputQ1","inputQ2","inputQ3","inputQ4","inputQ5"].indexOf(data[i][0]) != -1 ) {
-					$("#"+data[i][0]).val( data[i][1].split("\\n").join("\n") );
-				} else if( data[i][0] == "inputKnowFrom" ) {
-					if( !( new RegExp("Facebook|Twitter|PR|Friend").test( data[i][1] ) ) ) {
-						$("#inputKnowFrom").val("etc");
-						$("#inputKnowFromEtc").val( data[i][1] );
-					} else {
-						$("#inputKnowFrom").val( data[i][1] );
-					}
-				} else {
-					$("#"+data[i][0]).val( data[i][1] );
-				}
-			}
-
-			if( "<?= $redirect || "" ?>" != "" ) {
-				if( "<?= $redirect ?>" == "5" ) {
-					active5(); $('#step1').hide(); $('#step2').hide(); $('#step3').hide(); $('#step4').hide(); $('#step5').show();
-				} else {
-					$("#goto<?= $redirect ?>").click();
-				}
-			}
-
-			if( $.trim($("#error_log").text()).length != 0 ) {
-				$("#step5 .show_validation").show();
-				$("#step5 .show_info").hide();
-			} else {
-				$("#step5 .show_validation").hide();
-				$("#step5 .show_info").show();
-			}
+			init( can_edit,redirect,data );
 		});
 
 		function tmp_submit() {
-			$.post( "<?= base_url('register/step1/'.$type.'/tmp') ?>", $("#mainform").serialize(), function(res) {
-				$(".log").html("บันทึกเสร็จสมบูรณ์<br><br>");
+			var url = "";
+			if( can_edit ) {
+				url = "<?= base_url('register/step1/'.$type.'/tmp') ?>";
+			} else {
+				url = "<?= base_url('register/edit/update') ?>";
+			}
+			$.post( url, $("#mainform").serialize(), function(res) {
+				$(".log").html("บันทึกเสร็จสมบูรณ์<br><br>").show();
 				setTimeout( function() {
 					$(".log").hide();
 				}, 3000 );
@@ -111,7 +90,13 @@
 					<div id="goto1">1. ข้อมูลส่วนตัว</div><div id="goto2">2. ข้อมูลเกี่ยวกับค่าย</div><div id="goto3">3. คำถามคัดเลือก</div><div id="goto4">4. คำถามประจำสาขา</div><!-- <div id="goto5">5. ตรวจสอบข้อมูล</div> -->
 				</div>
 			</div>
-			<?php echo form_open('register/step1/'.$type."/confirm",array("id"=>"mainform")) ?>
+			<?php
+				if( $edit == "1" ) {
+					print form_open('register/edit/update', array("id"=>"mainform") );
+				} else {
+					print form_open('register/step1/'.$type."/confirm",array("id"=>"mainform"));
+				}
+			?>
 			<input type="hidden" name="issubmited" value="true"></input>
 			<div class="row" id="regisform">
 
@@ -121,10 +106,16 @@
 					<div class="col-sm-10 col-sm-offset-1">
 						<h2>ข้อมูลส่วนตัว</h2>
 						<hr>
+						<div class="cant_edit_message">คุณไม่สามารถแก้ไขข้อมูลส่วนนี้ได้อีกแล้ว</div>
 						<!-- <div class="row fbprofile">
 							<div class="fbpic"></div>
 							<h2>Thanawit Tae Prasongpongchai</h2>
 						</div> -->
+						<div id="facebook_img">
+							<div class="col-xs-12">
+								<img class="img-responsive img-center" src="http://graph.facebook.com/<?= $user_id ?>/picture?type=large" />
+							</div>
+						</div>
 						<div class="row form-field">
 							<div class="col-sm-3">
 								<label for="name">ชื่อ*</label>
@@ -326,6 +317,7 @@
 					<div class="col-sm-10 col-sm-offset-1">
 						<h2>ข้อมูลเกี่ยวกับค่าย</h2>
 						<hr>
+						<div class="cant_edit_message">คุณไม่สามารถแก้ไขข้อมูลส่วนนี้ได้อีกแล้ว</div>
 
 						<div class="row form-field">
 							<div class="col-sm-3">
@@ -408,7 +400,7 @@
 
 						<br>
 						<div class="txt-center">
-							<div class="btn btn-primary btn-lg" id="prev2">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
+							<div class="btn btn-primary btn-lg" id="prev2">&laquo; หน้าที่แล้ว</div>
 							<div onclick="tmp_submit()" class="btn btn-primary btn-lg" id="next2">บันทึกและไปต่อ &raquo;</div>
 						</div>
 					</div>
@@ -437,7 +429,7 @@
 
 						<br>
 						<div class="txt-center">
-							<div class="btn btn-primary btn-lg" id="prev3">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
+							<div class="btn btn-primary btn-lg" id="prev3">&laquo; หน้าที่แล้ว</div>
 							<div onclick="tmp_submit()" class="btn btn-primary btn-lg" id="next3">บันทึกและไปต่อ &raquo;</div>
 						</div>
 					</div>
@@ -465,8 +457,8 @@
 						<div class="txt-center">
 							<!-- <div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
 							<div class="btn btn-primary btn-lg" id="next4">บันทึกและไปต่อ &raquo;</div> -->
-							<div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;
-							<div onclick="tmp_submit()" class="btn btn-primary btn-lg">บันทึกชั่วคราว</div>&nbsp;
+							<div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>
+							<div onclick="tmp_submit()" class="btn btn-primary btn-lg">บันทึกชั่วคราว</div>
 							<button onclick="tmp_submit()" type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
 						</div>
 					</div>

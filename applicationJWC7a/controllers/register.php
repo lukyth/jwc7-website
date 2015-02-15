@@ -105,6 +105,54 @@ class Register extends CI_Controller {
     return $ret;
   }
 
+  public function edit( $status = "normal" ) {
+
+    $this->load->helper(array('form','html'));
+    $this->load->model('Register_Model','register');
+    $this->load->model('Homework_Model','homework');
+
+    $user_id =$this->facebook->getUser();
+    if(!$this->register->checkRegister($user_id)){
+      redirect('register/index/'.$type, 'refresh');
+    }
+
+    $type = $this->register->getUserType($user_id);
+      switch( $type ) {
+        case "Content" : $type = 1; break;
+        case "Design" : $type = 2; break;
+        case "Marketing" : $type = 3; break;
+      }
+
+    $data = array(
+      'type' => $type,
+      'redirect' => '',
+      'edit' => '1',
+      'user_id' => $user_id
+    );
+
+    if( $status == "update" ) {
+      $form_homework_data=array(
+          'q1'=>$this->_protectData( $this->input->post('inputQ1') ),
+          'q2'=>$this->_protectData( $this->input->post('inputQ2') ),
+          'q3'=>$this->_protectData( $this->input->post('inputQ3') ),
+          'q4'=>$this->_protectData( $this->input->post('inputQ4') ),
+          'q5'=>$this->_protectData( $this->input->post('inputQ5') ),
+      );
+      $this->homework->update($form_homework_data,$user_id);
+    }
+
+    $data["form"] = $this->register->data($user_id);
+    $data["formhomework"] = $this->homework->data($user_id); 
+    $data["redirect"] = "";
+
+    if($type == 1)
+      $this->load->view('register/step1_C',$data);
+    else if($type == 2)
+      $this->load->view('register/step1_D',$data);
+    else if($type == 3)
+      $this->load->view('register/step1_M',$data);
+  }
+
   public function step1($type = "1",$status = "normal"){
 
       $this->load->helper(array('form','html'));
@@ -117,7 +165,9 @@ class Register extends CI_Controller {
       }
       $data=array(
         'type' => $type,
-        'redirect' => ""
+        'redirect' => "",
+        'edit' => '',
+        'user_id' => $user_id
       );
 
       $form_register_data = $this->_cleanData( array(
@@ -262,7 +312,7 @@ class Register extends CI_Controller {
       $more_valid = $this->_more_validation($form_register_data);
 
       if( $this->register->isRegisted($user_id) ) {
-        redirect('register/registed','refresh');
+        redirect('register/edit/','refresh');
       }
 
       if ( $this->form_validation->run() == TRUE && strlen($more_valid) == 0 && $status == "submit" ) {

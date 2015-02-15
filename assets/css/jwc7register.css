@@ -1,7 +1,7 @@
 *{
 	transition:all 0.15s;
 	/*font-family: 'CSPraJad';*/
-	font-family: 'wdb_bangnaregular';
+	font-family: 'CSPraJad';
 	font-size: 15pt;
 }
 body{
@@ -211,6 +211,9 @@ hr{border-color:#000;}
 
 #loginspace img {
 	width: 220px;
+	background: #fff;
+	padding: 10px 30px;
+	border-radius: 20px;
 }
 
 .fbpic{
@@ -293,3 +296,12 @@ hr{border-color:#000;}
 	}
 }
 
+.cant_edit_message {
+	color: #f00;
+	margin : 30px 0px;
+}
+
+#facebook_img img {
+	margin-bottom : 50px;
+	border-radius: 100px;
+}

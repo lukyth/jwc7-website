@@ -113,3 +113,48 @@ function active5(){
 	$('#goto4').removeClass("active");
 	$('#goto1').removeClass("active");
 }
+
+function init( can_edit,redirect,data ) {
+	for( var i=0; i<data.length; i++ ) {
+		if( ["inputAddress","inputQ1","inputQ2","inputQ3","inputQ4","inputQ5"].indexOf(data[i][0]) != -1 ) {
+			$("#"+data[i][0]).val( data[i][1].split("\\n").join("\n") );
+		} else if( data[i][0] == "inputKnowFrom" ) {
+			if( !( new RegExp("Facebook|Twitter|PR|Friend").test( data[i][1] ) ) ) {
+				$("#inputKnowFrom").val("etc");
+				$("#inputKnowFromEtc").val( data[i][1] );
+			} else {
+				$("#inputKnowFrom").val( data[i][1] );
+			}
+		} else {
+			$("#"+data[i][0]).val( data[i][1] );	
+		}
+	}
+
+	if( !can_edit ) {
+		for( var i=0; i<data.length; i++ ) {
+			if( ["inputQ1","inputQ2","inputQ3","inputQ4","inputQ5"].indexOf(data[i][0]) == -1 ) {
+				$("#"+data[i][0]).prop('disabled', 'disabled');
+			}
+		}
+		$("#inputKnowFromEtc").prop("disabled",'disabled');
+		$(".tmp_saved_btn").hide();
+	} else {
+		$(".cant_edit_message").hide();
+	}
+
+	if( redirect != "" ) {
+		if( redirect == "5" ) {
+			active5(); $('#step1').hide(); $('#step2').hide(); $('#step3').hide(); $('#step4').hide(); $('#step5').show();
+		} else {
+			$("#goto"+redirect).click();
+		}
+	}
+
+	if( $.trim($("#error_log").text()).length != 0 ) {
+		$("#step5 .show_validation").show();	
+		$("#step5 .show_info").hide();
+	} else {
+		$("#step5 .show_validation").hide();	
+		$("#step5 .show_info").show();
+	}
+}
