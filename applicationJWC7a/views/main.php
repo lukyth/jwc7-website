@@ -82,7 +82,7 @@
 								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/new/sponsor_2.svg"></div>
 							</div>
 						</div>
-						<div style="color:#000; font-size:30px; margin-top:50px;">
+						<div style="color:#000; font-size:35px; margin-top:10px;">
 							รับสมัครเร็วๆนี้
 						</div>
 						<!--<a class="page-scroll register-button" href="#category-page">
