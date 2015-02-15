@@ -12,8 +12,6 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="<?= base_url()?>">
   <meta property="og:image" content="<?= base_url()?>assets/img/fb-og.jpg">
-  <meta property="og:image" content="<?= base_url()?>assets/img/fb-og-large.jpg">
-  <meta property="og:image" content="<?= base_url()?>assets/img/fb-og-large-2.jpg">
   <meta property="og:image" content="<?= base_url()?>assets/img/fb-og-large-3.jpg">
   <meta property="og:image" content="<?= base_url()?>assets/img/fb-og-large-4.jpg">
   <meta property="og:site_name" content="Junior Webmaster Camp #7">
