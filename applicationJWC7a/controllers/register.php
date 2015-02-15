@@ -40,7 +40,7 @@ class Register extends CI_Controller {
         if(!$this->register->checkRegister($user_id))
         {
           $this->register->facebookID=$user_id;
-          $this->register->registerType = $type-1;
+          $this->register->registerType = $type;
           $this->register->status = "InProgress";
           $this->register->insert();
         }
