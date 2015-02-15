@@ -290,7 +290,7 @@ class Register extends CI_Controller {
               ),
               array(
                 'field'   => 'inputParentPhone',
-                 'label'   => 'เบอร์โทรของผู้ปกครอง',
+                 'label'   => 'เบอร์โทรศัพท์ของผู้ปกครอง',
                  'rules'   => 'trim|required'
               ),
               array(
