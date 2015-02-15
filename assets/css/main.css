@@ -1053,10 +1053,15 @@ a.register-button {
 
 #qa-page .head, #qa-content .tail {
 	cursor: pointer;
-	background-image: url(../img/main/faq_show.png);
 	background-size: auto 50px;
 	background-position: center bottom;
 	background-repeat: no-repeat;
+}
+#qa-content .head {
+	background-image: url(../img/main/faq_show.png);
+}
+#qa-content .tail {
+	background-image: url(../img/main/faq_hide.png);
 }
 @media screen and (max-width:480px) {
 	#qa-page .head, #qa-page .tail {

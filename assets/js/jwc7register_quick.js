@@ -137,7 +137,7 @@ function init( can_edit,redirect,data ) {
 			}
 		}
 		$("#inputKnowFromEtc").prop("disabled",'disabled');
-		$(".tmp_saved_btn").hide();
+		//$(".tmp_saved_btn").hide();
 	} else {
 		$(".cant_edit_message").hide();
 	}

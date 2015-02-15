@@ -77,7 +77,7 @@
     }
 
     function isRegisted($facebookID) {
-      $query = $this->db->get_where('register', array('facebookID' => $facebookID, "status" => "Homework_Submitted") );
+      $query = $this->db->get_where('register', array('facebookID' => $facebookID, "status" => "Registered") );
       if( $query->num_rows()>0 ) return true;
       return false;
     }

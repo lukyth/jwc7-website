@@ -165,7 +165,7 @@ class Register extends CI_Controller {
       $data=array(
         'type' => $type,
         'redirect' => "",
-        'edit' => '',
+        'edit' => '1',
         'user_id' => $user_id
       );
 
@@ -332,7 +332,7 @@ class Register extends CI_Controller {
       }
 
       if ( $this->form_validation->run() == TRUE && strlen($more_valid) == 0 && $status == "submit" ) {
-          $form_register_data['status'] ='Homework_Submitted';
+          $form_register_data['status'] ='Registered';
 
           $data['isSubmited'] = "true";
           $data['result']='SAVE';

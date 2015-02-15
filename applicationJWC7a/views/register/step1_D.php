@@ -547,7 +547,7 @@
 								<th>รหัสไปรษณีย์</th>
 								<td><?= $form->postalCode ?></td>
 							</tr>
-							
+
 						</table>
 						<hr>
 						<h3>ข้อมูลเกี่ยวกับค่าย</h3>
@@ -617,8 +617,9 @@
 						</div>
 
 						<br>
-						<div class="txt-center" style="margin:5px;">
-							ข้อมูลทั้งหมดจะแก้ไขไม่ได้อีก
+						<div class="txt-center" style="margin:10px;">
+							ข้อมูลส่วนตัวทั้งหมดจะแก้ไขไม่ได้อีกหลังจากยืนยัน<br>
+							*คำถามแต่ละสาขายังคงแก้ไขได้อยู่
 						</div>
 
 						<div onclick="$('#goto1').click()" style="padding: 10px 10px;" class="btn btn-primary btn-lg">กลับไปแก้ไข</div>&nbsp;
