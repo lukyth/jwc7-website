@@ -172,6 +172,7 @@ class Register extends CI_Controller {
       $form_register_data = $this->_cleanData( array(
           'profilePic'=>$this->input->post('inputProfilePic'),
           'registerType'=>$type,
+          'prefix'=>$this->_protectData( $this->input->post('inputPrefix') ),
           'name'=>$this->_protectData( $this->input->post('inputName') ),
           'surname'=>$this->_protectData( $this->input->post('inputSurname') ),
           'nickname'=>$this->_protectData( $this->input->post('inputNickname') ),
@@ -189,6 +190,7 @@ class Register extends CI_Controller {
           'disease'=>$this->_protectData( $this->input->post('inputDisease') ),
           'drugAllergy'=>$this->_protectData( $this->input->post('inputDrugAllergy') ),
           'specialFood'=>$this->_protectData( $this->input->post('inputSpecialFood') ),
+          'relateParent'=>$this->_protectData( $this->input->post('inputRelateParent') ),
           'parentPhone'=>$this->_protectData( $this->input->post('inputParentPhone') ),
           'registerDate'=>date('Y-m-d H:i:s', time()),
           //'parentPhone'=>$this->input->post('input'),
@@ -214,6 +216,11 @@ class Register extends CI_Controller {
 
       $this->form_validation->set_message('required', 'กรุณากรอก %s');
       $rulesform=array(
+              array(
+                     'field'   => 'inputPrefix',
+                     'label'   => 'คำนำหน้าชื่อ',
+                     'rules'   => 'trim|required'
+              ),
               array(
                      'field'   => 'inputName',
                      'label'   => 'ชื่อ',
@@ -276,6 +283,16 @@ class Register extends CI_Controller {
               ),
               array(
                 'field'   => 'inputKnowFrom',
+                 'label'   => 'รู้จักเราจากที่ไหน',
+                 'rules'   => 'trim|required'
+              ),
+              array(
+                'field'   => 'inputParentPhone',
+                 'label'   => 'รู้จักเราจากที่ไหน',
+                 'rules'   => 'trim|required'
+              ),
+              array(
+                'field'   => 'inputRelateParent',
                  'label'   => 'รู้จักเราจากที่ไหน',
                  'rules'   => 'trim|required'
               ),

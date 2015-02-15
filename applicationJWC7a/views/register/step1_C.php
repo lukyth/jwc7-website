@@ -17,6 +17,7 @@
 		var redirect = "<?= $redirect ?>";
 
 		var data = [
+			["inputPrefix","<?= $form->prefix ?>"],
 			["inputName","<?= $form->name ?>"],
 			["inputSurname","<?= $form->surname ?>"],
 			["inputNickname","<?= $form->nickname ?>"],
@@ -36,6 +37,7 @@
 			["inputDisease","<?= $form->disease ?>"],
 			["inputDrugAllergy","<?= $form->drugAllergy ?>"],
 			["inputParentPhone","<?= $form->parentPhone ?>"],
+			["inputRelateParent","<?= $form->relateParent ?>"],
 			["inputQ1","<?= $formhomework->q1 ?>"],
 			["inputQ2","<?= $formhomework->q2 ?>"],
 			["inputQ3","<?= $formhomework->q3 ?>"],
@@ -114,6 +116,21 @@
 						<div id="facebook_img">
 							<div class="col-xs-12">
 								<img class="img-responsive img-center" src="http://graph.facebook.com/<?= $user_id ?>/picture?type=large" />
+							</div>
+						</div>
+						<div class="row form-field">
+							<div class="col-sm-3">
+								<label for="name">คำนำหน้าชื่อ*</label>
+							</div>
+							<div class="col-sm-4">
+								<select class="form-control" id="inputPrefix" name="inputPrefix">
+									<option value="">เลือกคำนำหน้า</option>
+									<option value="เด็กชาย">เด็กชาย</option>
+									<option value="เด็กหญิง">เด็กหญิง</option>
+									<option value="นาย">นาย</option>
+									<option value="นางสาว">นางสาว</option>
+									<option value="นาง">นาง</option>
+								</select>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -395,6 +412,14 @@
 								<input type="text" id="inputParentPhone" class="form-control" placeholder="0xxxxxxxxx" name="inputParentPhone"></input>
 							</div>
 						</div>
+						<div class="row form-field">
+							<div class="col-sm-3">
+								<label for="name">ผู้ปกครองเกี่ยวข้องเป็น*</label>
+							</div>
+							<div class="col-sm-7">
+								<input type="text" id="inputRelateParent" class="form-control" placeholder="บิดา มารดา" maxlength="10" name="inputRelateParent"></input>
+							</div>
+						</div>
 
 
 
@@ -486,7 +511,7 @@
 								<th>ชื่อ-นามสกุล</th>
 								<td>
 									<?php
-										print ($form->sex == 'M' ? "นาย" : "นางสาว")." ".$form->name." ".$form->surname;
+										print $form->prefix." ".$form->name." ".$form->surname;
 									?>
 								</td>
 							</tr>
@@ -504,7 +529,7 @@
 							</tr>
 							<tr>
 								<th>ระดับศึกษา</th>
-								<td><?= "ม.".$form->grade ?></td>
+								<td><?= $form->grade ?></td>
 							</tr>
 							<tr>
 								<th>เบอร์โทรศัพท์</th>
@@ -522,6 +547,7 @@
 								<th>รหัสไปรษณีย์</th>
 								<td><?= $form->postalCode ?></td>
 							</tr>
+
 						</table>
 						<hr>
 						<h3>ข้อมูลเกี่ยวกับค่าย</h3>
@@ -549,6 +575,14 @@
 							<tr>
 								<th>ยาทีแพ้</th>
 								<td><?= $form->drugAllergy ?></td>
+							</tr>
+							<tr>
+								<th>เบอร์โทรศัพท์ผู้ปกครอง</th>
+								<td><?= $form->parentPhone ?></td>
+							</tr>
+							<tr>
+								<th>ผู้ปกครองเกี่ยวข้องเป็น</th>
+								<td><?= $form->relateParent ?></td>
 							</tr>
 						</table>
 						<hr>

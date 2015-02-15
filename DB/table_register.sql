@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 14, 2015 at 11:06 PM
+-- Generation Time: Feb 15, 2015 at 05:26 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -29,7 +29,8 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `register` (
   `facebookID` varchar(20) NOT NULL,
   `profilePic` int(11) DEFAULT NULL,
-  `registerType` enum('Design','Content','Marketing') DEFAULT NULL,
+  `registerType` enum('Content','Design','Marketing') DEFAULT NULL,
+  `prefix` varchar(10) DEFAULT NULL,
   `name` varchar(50) DEFAULT NULL,
   `surname` varchar(50) DEFAULT NULL,
   `nickname` varchar(50) DEFAULT NULL,
@@ -37,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `register` (
   `school` varchar(50) DEFAULT NULL,
   `national_ID` varchar(13) DEFAULT NULL,
   `grade` varchar(10) DEFAULT NULL,
-  `phone` varchar(10) DEFAULT NULL,
+  `phone` varchar(13) DEFAULT NULL,
   `address` text,
   `province` varchar(50) DEFAULT NULL,
   `postalCode` varchar(10) DEFAULT NULL,
@@ -49,7 +50,8 @@ CREATE TABLE IF NOT EXISTS `register` (
   `foodAllergy` varchar(50) DEFAULT NULL,
   `specialFood` text,
   `registerDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `parentPhone` varchar(10) DEFAULT NULL,
+  `parentPhone` varchar(13) DEFAULT NULL,
+  `relateParent` varchar(50) DEFAULT NULL,
   `status` enum('InProgress','Registered','Homework_Submitted','Homework_Checked','Accepted','Denied','Paid') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

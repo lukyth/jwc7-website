@@ -4,6 +4,7 @@
     var $facebookID;
     var $profilePic=null;
     var $registerType=null;
+    var $prefix=null;
     var $name=null;
     var $surname=null;
     var $nickname=null;
@@ -23,6 +24,7 @@
     var $specialFood=null;
     var $registerDate=null;
     var $parentPhone=null;
+    var $relateParent=null;
     var $status=null;
     var $sizeshirt=null;
 
@@ -42,6 +44,7 @@
           $this->facebookID=$result->facebookID;
           $this->profilePic=$result->profilePic;
           $this->registerType=$result->registerType;
+          $this->prefix=$result->prefix;
           $this->name=$result->name;
           $this->surname=$result->surname;
           $this->nickname=$result->nickname;
@@ -61,6 +64,7 @@
           $this->specialFood=$result->specialFood;
           $this->registerDate=$result->registerDate;
           $this->parentPhone=$result->parentPhone;
+          $this->relateParent=$result->relateParent;
           $this->status=$result->status;
           $this->sizeshirt=$result->sizeshirt;
           return true;
