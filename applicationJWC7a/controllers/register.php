@@ -387,12 +387,10 @@ class Register extends CI_Controller {
 
         $this->email->subject('ยืนยันการสมัครค่าย JWC7');
 
-        $image = getcwd() . '/assets/img/main/logo_2.png';
-      //  var_dump($image);
-
-        $txtMessage  = '<img src="cid:'.$image.'" /><br /><br />';
+        $txtMessage  = '<img src="http://jwc.in.th/jwc7/assets/img/main/logo_2.png"><br><br>';
         $txtMessage.='ยินดีด้วย '.$this->register->name.' '.$this->register->surname.' <br>ได้สมัคร Junior Webmaster Camp 7 สาขา '.$this->register->registerType;
         $txtMessage.='<br>เรียบร้อยแล้ว <br><br>ประกาศผลวันที่ 21 มีนาคม 2558<br>ติดตามรายละเอียดเพิ่มเติมที่ <a href="www.jwc.in.th">www.jwc.in.th</a> แล้วเจอกัน';
+
         $this->email->message($txtMessage);
 
         if($this->email->send()) {
