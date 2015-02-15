@@ -298,31 +298,11 @@ class Register extends CI_Controller {
                  'label'   => 'ผู้ปกครองเกี่ยวข้องเป็นอะไร',
                  'rules'   => 'trim|required'
               ),
-              array (
-                      'field' => 'inputSizeShirt',
-                      'label' => 'ไซส์เสื้อ',
-                      'rules' => 'trim|required'
-              ),
-            array(
-                   'field'   => 'inputQ1',
-                   'label'   => 'คำถามข้อที่ 1',
-                   'rules'   => 'trim|required'
-            ),
-            array(
-                   'field'   => 'inputQ2',
-                   'label'   => 'คำถามข้อที่ 2',
-                   'rules'   => 'trim|required'
-            ),
-            array(
-                   'field'   => 'inputQ3',
-                   'label'   => 'คำถามข้อที่ 3',
-                   'rules'   => 'trim|required'
-            ),
-            array(
-                   'field'   => 'inputQ4',
-                   'label'   => 'คำถามข้อที่ 4',
-                   'rules'   => 'trim|required'
-            )
+              array(
+                'field' => 'inputSizeShirt',
+                'label' => 'ไซส์เสื้อ',
+                'rules' => 'trim|required'
+              )
       );
 
       $this->form_validation->set_rules($rulesform);
