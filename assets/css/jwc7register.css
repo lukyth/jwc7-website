@@ -311,15 +311,8 @@ hr{border-color:#000;}
 	width: 220px;
 	background: #fff;
 	padding: 20px 30px;
-	border-radius: 20px;
+	border-radius: 10px;
 	margin: 7px 0;
-}
-
-#loginspace img {
-	width: 220px;
-	background: #fff;
-	padding: 10px 30px;
-	border-radius: 20px;
 }
 
 .rule .design{background-color:#732877;}

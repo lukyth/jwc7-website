@@ -52,7 +52,7 @@
 						<div class="confirm">หากผู้สมัครเข้าใจกฎกติกาในการสมัครแล้ว ให้กดปุ่มเข้าสู่ระบบ เพื่อรับรองว่าได้อ่านกฏและกติกาครบแล้ว</div>
 					</div>
 
-					<a id="facebook_img" href="<?php echo $login_url; ?>"><img src="<?php echo base_url()."assets/" ?>img/main/FB_login.svg"></a>
+					<a id="login" href="<?php echo $login_url; ?>"><img src="<?php echo base_url()."assets/" ?>img/main/FB_login.svg"></a>
 
 				</div>
 			</div>
