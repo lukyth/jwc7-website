@@ -37,9 +37,8 @@
       $query = $this->db->get_where('register', array('facebookID' => $facebookID));
 
       if($query->num_rows()>0){
-          $result=$query->result();
-          $result=$result[0];
-          $result=$query->result()[0];
+          $results=$query->result();
+          $result=$results[0];
           $this->facebookID=$result->facebookID;
           $this->profilePic=$result->profilePic;
           $this->registerType=$result->registerType;
