@@ -209,7 +209,7 @@ class Register extends CI_Controller {
       );
 
       if( $status == "tmp" ) {
-        
+
         $this->register->update($form_register_data,$user_id);
         $this->homework->update($form_homework_data,$user_id);
 
@@ -386,7 +386,12 @@ class Register extends CI_Controller {
         $this->email->to($this->register->email);
 
         $this->email->subject('ยืนยันการสมัครค่าย JWC7');
-        $this->email->message('ขอบคุณที่สมัครค่าย JWC7 <br><br> ขอบคุณครับ <br>ทีมงาน jwc7');
+
+
+        $txtMessage='ยินดีด้วย '.$this->register->name.' '.$this->register->surname.' <br>ได้สมัคร Junior Webmaster Camp 7 สาขา '.$this->register->registerType;
+        $txtMessage.='<br>เรียบร้อยแล้ว <br><br>ประกาศผลวันที่ 21 มีนาคม 2558<br>ติดตามรายละเอียดเพิ่มเติมที่ <a href="www.jwc.in.th">www.jwc.in.th</a> แล้วเจอกัน';
+        $this->email->message($txtMessage);
+
         if($this->email->send()) {
             $data['result']='OK';
         }
