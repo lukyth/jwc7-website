@@ -143,7 +143,7 @@ class Register extends CI_Controller {
     }
 
     $data["form"] = $this->register->data($user_id);
-    $data["formhomework"] = $this->homework->data($user_id); 
+    $data["formhomework"] = $this->homework->data($user_id);
     $data["redirect"] = "";
 
     if($type == 1)
