@@ -264,7 +264,7 @@ html,body {
 
 body {
 	color: #fff;
-	font-family: 'wdb_bangnaregular';
+	font-family: 'wdb_bangnaregular', Helvetica, Arial, Tahoma, sans-serif;
 	/*overflow-x: hidden;*/
 }
 
