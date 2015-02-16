@@ -443,5 +443,6 @@
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/oridomi.min.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/main.js"></script>
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54e1746342145a46" async="async"></script>
 </body>
 </html>
