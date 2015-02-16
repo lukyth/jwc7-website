@@ -365,7 +365,7 @@
 									<option value="">เลือกไซส์เสื้อ</option>
 									<option value="S">S (รอบอก 34, ยาว 26)</option>
 									<option value="M">M (รอบอก 36, ยาว 27)</option>
-									<option value="X">L (รอบอก 38, ยาว 28)</option>
+									<option value="L">L (รอบอก 38, ยาว 28)</option>
 									<option value="XL">XL (รอบอก 40, ยาว 29)</option>
 									<option value="XXL">XXL (รอบอก 42, ยาว 30)</option>
 								</select>
