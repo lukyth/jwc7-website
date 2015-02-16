@@ -718,7 +718,7 @@ a.register-button {
 	font-size: 22px;
 	border-radius: 5px;
 	color: #fff;
-	width: 120px;
+	width: 150px;
 	text-align: center;
 }
 
@@ -1059,9 +1059,6 @@ a.register-button {
 }
 
 @media screen and (max-width:1199px) {
-	#category-page .count-box {
-		font-size: 45px;
-	}
 }
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
@@ -1100,10 +1097,6 @@ a.register-button {
 	#category-page .description {
 		font-size: 20px;
 	}
-	#category-page .count-box {
-		font-size: 35px;
-		padding: 10px 60px;
-	}
 	#category-page .register {
 	  width: 150px;
 	  font-size: 1.4em;
@@ -1120,12 +1113,6 @@ a.register-button {
 
 	.page .title {
 		margin-bottom: 10px;
-	}
-
-	#category-page .count-box {
-		font-size: 35px;
-		margin:0px 0px;
-		padding: 5px 40px;
 	}
 
 	#timeline-page .timeline-img {
@@ -1170,11 +1157,6 @@ a.register-button {
 
 	#category-page .cat-text {
 		margin-top: 10px;
-	}
-
-	#category-page .count-box {
-		font-size: 30px;
-		padding: 5px 50px;
 	}
 
 	#picture-page .table-picture .row > div {
