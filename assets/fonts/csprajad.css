@@ -1,0 +1,61 @@
+@font-face {
+	font-family: 'CSPraJad';
+	src: url('csprajad.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CSPraJad';
+	src: url('csprajad-bold.otf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/*@font-face {
+    font-family: 'CSPraJad';
+    src: url('csprajad.otf');
+    src: url('csprajad-webfont.otf');
+    src: url('csprajad-webfont.eot?#iefix') format('embedded-opentype'),
+         url('csprajad-webfont.woff2') format('woff2'),
+         url('csprajad-webfont.woff') format('woff'),
+         url('csprajad-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CSPraJad';
+    src: url('csprajad-bold-webfont.eot');
+    src: url('csprajad-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('csprajad-bold-webfont.woff2') format('woff2'),
+         url('csprajad-bold-webfont.woff') format('woff'),
+         url('csprajad-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}*/
+
+/* --- not used yet --- */
+/*
+@font-face {
+    font-family: 'CSPraJad';
+    src: url('csprajad-italic-webfont.eot');
+    src: url('csprajad-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('csprajad-italic-webfont.woff2') format('woff2'),
+         url('csprajad-italic-webfont.woff') format('woff'),
+         url('csprajad-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CSPraJad';
+    src: url('csprajad-bolditalic-webfont.eot');
+    src: url('csprajad-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('csprajad-bolditalic-webfont.woff2') format('woff2'),
+         url('csprajad-bolditalic-webfont.woff') format('woff'),
+         url('csprajad-bolditalic-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+*/
