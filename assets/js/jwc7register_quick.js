@@ -27,11 +27,17 @@ $(document).ready(function(){
 
 	var move = function(target, dir){
 		var current = $(target).closest('.stepitem');
+
+		if(dir && !validate(current)){
+			return;
+		}
+
 		current.hide();
 		var next = current[dir ? 'next' : 'prev']().show();
-		$('html,body').animate({scrollTop: '300px'});
 		$('.goto.active').removeClass('active');
 		$('.goto').eq(next.data('step')-1).addClass('active');
+
+		$('html,body').animate({scrollTop: '300px'});
 
 		if(dir){
 			tmp_submit();
@@ -137,4 +143,24 @@ function init( can_edit,redirect,data ) {
 		$("#step5 .show_validation").hide();
 		$("#step5 .show_info").show();
 	}
+}
+
+function validate(current){
+	var emptyFields = current.find('[required]').filter(function(){
+		return $(this).val().length === 0;
+	});
+	if(emptyFields.length === 0){
+		return true;
+	}
+
+	var emptyLabels = emptyFields.map(function(){
+		var label = $(this).siblings('label');
+		if(label.length === 0){
+			label = $(this).parent().prev().find('label');
+		}
+
+		return label.text().replace(/\*$/, '');
+	}).get();
+	show_log('กรุณากรอกช่องต่อไปนี้: ' + emptyLabels.join(', '));
+	return false;
 }

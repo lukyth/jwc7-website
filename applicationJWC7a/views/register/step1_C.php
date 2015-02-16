@@ -319,6 +319,7 @@
 						</div>
 
 						<br>
+						<div class="log" style="color:red;"></div>
 						<div class="txt-center">
 							<div class="btn btn-primary btn-lg nextbtn" id="next1">บันทึกและไปต่อ &raquo;</div>
 						</div>
@@ -338,7 +339,7 @@
 								<label for="name">รู้จักค่ายจากที่ไหน?*</label>
 							</div>
 							<div class="col-sm-7">
-								<select class="form-control" id="inputKnowFrom" name="inputKnowFrom">
+								<select class="form-control" id="inputKnowFrom" name="inputKnowFrom" required>
 									<option value="">กรุณาเลือก</option>
 									<option value="Facebook">Facebook</option>
 									<option value="Twitter">Twitter</option>
@@ -355,7 +356,7 @@
 								<label for="name">ไซส์เสื้อ*</label>
 							</div>
 							<div class="col-sm-4">
-								<select class="form-control" id="inputSizeShirt" name="inputSizeShirt">
+								<select class="form-control" id="inputSizeShirt" name="inputSizeShirt" required>
 									<option value="">เลือกไซส์เสื้อ</option>
 									<option value="S">S (รอบอก 34, ยาว 26)</option>
 									<option value="M">M (รอบอก 36, ยาว 27)</option>
@@ -406,7 +407,7 @@
 								<label for="name">เบอร์โทรศัพท์ผู้ปกครองที่ติดต่อได้*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="text" id="inputParentPhone" class="form-control" placeholder="0xxxxxxxxx" name="inputParentPhone"></input>
+								<input type="text" id="inputParentPhone" class="form-control" placeholder="0xxxxxxxxx" name="inputParentPhone" required></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -414,13 +415,14 @@
 								<label for="name">ผู้ปกครองเกี่ยวข้องเป็น*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="text" id="inputRelateParent" class="form-control" placeholder="บิดา มารดา" maxlength="10" name="inputRelateParent"></input>
+								<input type="text" id="inputRelateParent" class="form-control" placeholder="บิดา มารดา" maxlength="10" name="inputRelateParent" required></input>
 							</div>
 						</div>
 
 
 
 						<br>
+						<div class="log" style="color:red;"></div>
 						<div class="txt-center">
 							<div class="btn btn-primary btn-lg prevbtn" id="prev2">&laquo; หน้าที่แล้ว</div>
 							<div class="btn btn-primary btn-lg nextbtn" id="next2">บันทึกและไปต่อ &raquo;</div>
@@ -436,20 +438,21 @@
 						<hr>
 						<div class="row form-field txt-left">
 							<label for="name">1. ในมุมมองของน้อง เว็บไซต์คืออะไร และเว็บไซต์ที่ดีควรมีลักษณะอย่างไร?</label>
-							<textarea id="inputQ1" class="form-control" rows="7" name="inputQ1"></textarea>
+							<textarea id="inputQ1" class="form-control" rows="7" name="inputQ1" required></textarea>
 						</div>
 
 						<div class="row form-field txt-left">
 							<label for="name">2. ในปัจจุบันนี้ น้องคิดว่าเว็บไซต์มีอิทธิพลต่อคนไทยอย่างไร และเว็บไซต์ที่เหมาะสมสำหรับคนไทยควรเป็นอย่างไร?</label>
-							<textarea id="inputQ2" class="form-control" rows="7" name="inputQ2"></textarea>
+							<textarea id="inputQ2" class="form-control" rows="7" name="inputQ2" required></textarea>
 						</div>
 
 						<div class="row form-field txt-left">
 							<label for="name">3. หากเปรียบเพื่อนร่วมทีมของน้องเป็นอวัยวะในร่างกาย เมื่ออวัยวะบางส่วนคือเนื้อร้าย น้องจะจัดการอย่างไร เพราะเหตุใด</label>
-							<textarea id="inputQ3" class="form-control" rows="7" name="inputQ3"></textarea>
+							<textarea id="inputQ3" class="form-control" rows="7" name="inputQ3" required></textarea>
 						</div>
 
 						<br>
+						<div class="log" style="color:red;"></div>
 						<div class="txt-center">
 							<div class="btn btn-primary btn-lg prevbtn" id="prev3">&laquo; หน้าที่แล้ว</div>
 							<div class="btn btn-primary btn-lg nextbtn" id="next3">บันทึกและไปต่อ &raquo;</div>
@@ -465,17 +468,16 @@
 						<hr>
 						<div class="row form-field txt-left">
 							<label for="name">1. ในมุมมองของน้อง Content คืออะไร มีความสำคัญกับเว็บไซต์อย่างไร และคิดว่า Content แบบไหนที่จะทำให้เว็บไซต์ของคนไทยเป็นที่รู้จักในระดับโลก</label>
-							<textarea id="inputQ4" class="form-control" rows="7" name="inputQ4"></textarea>
+							<textarea id="inputQ4" class="form-control" rows="7" name="inputQ4" required></textarea>
 						</div>
 
 						<div class="row form-field txt-left">
 							<label for="name">2. ในมุมมองของน้อง “ความเป็นไทย” คืออะไร เขียนอธิบายไม่เกิน 200 ตัวอักษร</label>
-							<textarea id="inputQ5" class="form-control hascounter" rows="7" name="inputQ5" maxlength="200"></textarea>
+							<textarea id="inputQ5" class="form-control hascounter" rows="7" name="inputQ5" maxlength="200" required></textarea>
 						</div>
 
 						<br>
-						<div class="log" style="color:red;">
-						</div>
+						<div class="log" style="color:red;"></div>
 						<div class="txt-center">
 							<div class="btn btn-primary btn-lg prevbtn" id="prev4">&laquo; หน้าที่แล้ว</div>
 							<div onclick="tmp_submit()" class="tmp_saved_btn btn btn-primary btn-lg">บันทึกชั่วคราว</div>
