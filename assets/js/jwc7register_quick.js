@@ -60,6 +60,13 @@ $(document).ready(function(){
 
 });
 
+function show_log( txt ) {
+	$(".log").html( txt ).show();
+	setTimeout( function() {
+		$(".log").hide();
+	}, 3000 );
+}
+
 function real_submit() {
 	var raw = $("#mainform").attr("action");
 	var base = raw.split("/");
@@ -137,7 +144,8 @@ function init( can_edit,redirect,data ) {
 			}
 		}
 		$("#inputKnowFromEtc").prop("disabled",'disabled');
-		//$(".tmp_saved_btn").hide();
+		$("#goto3").click();
+		$(".tmp_saved_btn").hide();
 	} else {
 		$(".cant_edit_message").hide();
 	}
