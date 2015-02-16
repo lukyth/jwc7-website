@@ -1,7 +1,7 @@
 *{
 	transition:all 0.15s;
 	/*font-family: 'CSPraJad';*/
-	font-family: 'CSPraJad';
+	font-family: 'CSPraJad', Helvetica, Arial, Tahoma, sans-serif;
 	font-size: 15pt;
 }
 body{

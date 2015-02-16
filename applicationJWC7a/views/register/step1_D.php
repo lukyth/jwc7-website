@@ -379,17 +379,17 @@
 							<div class="col-sm-9">
 								<div class="radio">
 									<label>
-										<input type="radio" name="inputSpecialFood" value="normal" checked> ปกติ
+										<input type="radio" name="inputSpecialFood" value="ปกติ" checked> ปกติ
 									</label>
 								</div>
 								<div class="radio">
 									<label>
-										<input type="radio" name="inputSpecialFood" value="halal"> ฮาลาล
+										<input type="radio" name="inputSpecialFood" value="ฮาลาล"> ฮาลาล
 									</label>
 								</div>
 								<div class="radio">
 									<label>
-										<input type="radio" name="inputSpecialFood" value="veg"> เจ
+										<input type="radio" name="inputSpecialFood" value="มังสวิรัติ"> มังสวิรัติ
 									</label>
 								</div>
 							</div>
