@@ -76,6 +76,9 @@ function show_log( txt ) {
 }
 
 function real_submit() {
+	if(!confirm('หากกดตกลงจะไม่สามารถแก้ไขใบสมัครได้อีก')){
+		return;
+	}
 	var raw = $("#mainform").attr("action");
 	var base = raw.split("/");
 	base[ base.length-1 ] = "submit";
