@@ -353,7 +353,6 @@
 							<br>
 							วันค่าย JWC#7
 						</div>
-						<div class="timeline-bg"></div>
 						<img class="timeline-fish" src="<?= base_url() ?>assets/img/main/timeline-fish.png" alt="ปลาตะเพียนสาน">
 					</div>
 				</div>
