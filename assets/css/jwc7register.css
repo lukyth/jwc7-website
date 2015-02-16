@@ -154,6 +154,10 @@ hr{border-color:#000;}
 	overflow: hidden;
 }
 
+.radio{
+	text-align: left;
+}
+
 #form-head{
 	color:#fff;
 	border-top-right-radius: 30px;

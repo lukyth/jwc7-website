@@ -99,8 +99,13 @@ function init( can_edit,redirect,data ) {
 			var el = $("#"+data[i][0]).val( data[i][1].split("\\n").join("\n") );
 
 			if(el.hasClass('hascounter')){
+				// update character counter
 				el.trigger('keyup');
 			}
+		} else if( ["inputSex", "inputSpecialFood"].indexOf(data[i][0]) != -1 && data[i][1] ) {
+			console.log(data[i][1]);
+			$("input[name="+data[i][0]+"]:checked").prop('checked', false);
+			$("input[name="+data[i][0]+"][value="+data[i][1]+"]").prop('checked', true);
 		} else if( data[i][0] == "inputKnowFrom" ) {
 			if( !( new RegExp("Facebook|Twitter|PR|Friend").test( data[i][1] ) ) ) {
 				$("#inputKnowFrom").val("etc");
