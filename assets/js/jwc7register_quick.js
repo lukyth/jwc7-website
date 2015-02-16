@@ -78,6 +78,9 @@ $(document).ready(function(){
 		return str;
 	};
 
+	$(".go_back").click(function() {
+		window.onbeforeunload = function(){};
+	});
 	$('form').submit(function(){
 		window.onbeforeunload = function(){};
 	});
@@ -91,17 +94,11 @@ function show_log( txt ) {
 	}, 3000 );
 }
 
-function real_submit() {
+function prompt_submit() {
 	if(!confirm('หากกดตกลงจะไม่สามารถแก้ไขใบสมัครได้อีก')){
 		event.preventDefault();
 		return;
 	}
-	var raw = $("#mainform").attr("action");
-	var base = raw.split("/");
-	base[ base.length-1 ] = "submit";
-	$("#mainform").attr("action",base.join("/"));
-	console.log( base.join("/") );
-	$("#mainform").submit();
 }
 
 function init( can_edit,redirect,data ) {

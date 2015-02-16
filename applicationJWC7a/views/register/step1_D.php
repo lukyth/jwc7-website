@@ -90,11 +90,14 @@
 				</div>
 			</div>
 			<?php
-				if( $edit == "1" ) {
+				/*if( $edit == "1" ) {
 					print form_open('register/edit/update', array("id"=>"mainform") );
+				}*/
+				if( $redirect == "5" ) {
+					print form_open('register/step1/'.$type."/submit",array("id"=>"mainform"));
 				} else {
 					print form_open('register/step1/'.$type."/confirm",array("id"=>"mainform"));
-				}
+				} 
 			?>
 			<input type="hidden" name="issubmited" value="true"></input>
 			<div class="row" id="regisform">
@@ -634,8 +637,8 @@
 							ข้อมูล "ทั้งหมด" จะไม่สามารถแก้ไขได้อีก
 						</div>
 
-						<div onclick="$('#goto1').click()" style="padding: 10px 10px;" class="btn btn-primary btn-lg">กลับไปแก้ไข</div>&nbsp;
-						<button onclick="real_submit();" type="button" style="padding: 10px 40px;" class="btn btn-success btn-lg">ยืนยัน</button>
+						<div onclick="location.href='<?= base_url().'register/step1/'.$type ?>'" style="padding: 10px 10px;" class="go_back btn btn-primary btn-lg">กลับไปแก้ไข</div>&nbsp;
+						<button onclick="prompt_submit()" type="submit" style="padding: 10px 40px;" class="btn btn-success btn-lg">ยืนยัน</button>
 
 					</div>
 				</div>

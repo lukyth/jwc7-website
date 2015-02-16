@@ -221,7 +221,7 @@ class Register extends CI_Controller {
         $this->register->update($form_register_data,$user_id);
         $this->homework->update($form_homework_data,$user_id);
 
-        die();
+        return ;
       }
 
       $this->form_validation->set_message('required', 'กรุณากรอก %s');
