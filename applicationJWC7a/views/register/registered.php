@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="<?php echo base_url()."assets/" ?>css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo base_url()."assets/" ?>css/jwc7register.css">
-	<link rel="stylesheet" href="<?php echo base_url()."assets/" ?>fonts/CSPraJad.css">
+	<link rel="stylesheet" href="<?php echo base_url()."assets/" ?>fonts/csprajad.css">
 	<link rel="stylesheet" href="<?php echo base_url()."assets/" ?>fonts/wdb_bangna.css">
 	<script src="<?php echo base_url()."assets/" ?>js/jquery-1.11.1.min.js"></script>
 	<script src="<?php echo base_url()."assets/" ?>js/jwc7register.js"></script>
