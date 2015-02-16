@@ -622,6 +622,14 @@ a.register-button {
 	height: 200px;
 }
 
+#about-page .river-bottom {
+	background: url(../img/main/riverbottom.png) repeat-x;
+	width: 100%;
+	height: 183px;
+	margin-top: 20px;
+	position: absolute;
+}
+
 #about-page .boat {
 	background: url(../img/main/new/boat.svg);
 	background-size: 32% auto;
@@ -1092,6 +1100,7 @@ a.register-button {
   background: -o-linear-gradient(#565590, #32898f);
   background: -moz-linear-gradient(#565590, #32898f);
   background: linear-gradient(#565590, #32898f);
+  padding-bottom: 200px;
 }
 
 .img-detailtext {

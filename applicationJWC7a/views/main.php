@@ -124,8 +124,8 @@
 					</div>
 				</div>
 			</div>
+			<div class="river-bottom"></div>
 		</div>
-		<img src="<?= base_url() ?>assets/img/main/riverbottom.png" style="width:100%;"></div>
 	</div>
 
 	<div id="category-page" class="page">
