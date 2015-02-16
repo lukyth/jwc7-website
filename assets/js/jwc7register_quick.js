@@ -58,6 +58,14 @@ $(document).ready(function(){
 	$("#error_log p:not(:first)").hide();
 	$("#error_log p.show").show();
 
+	$('.hascounter[maxlength]').each(function(){
+		var maxlength = this.getAttribute('maxlength');
+		var el = $('<div class="lengthcounter"></div>').text(maxlength - this.value.length).insertAfter(this);
+		$(this).on('keyup', function(){
+			el.text(Math.max(0, maxlength - this.value.length));
+		});
+	});
+
 });
 
 function show_log( txt ) {
@@ -124,7 +132,11 @@ function active5(){
 function init( can_edit,redirect,data ) {
 	for( var i=0; i<data.length; i++ ) {
 		if( ["inputAddress","inputQ1","inputQ2","inputQ3","inputQ4","inputQ5"].indexOf(data[i][0]) != -1 ) {
-			$("#"+data[i][0]).val( data[i][1].split("\\n").join("\n") );
+			var el = $("#"+data[i][0]).val( data[i][1].split("\\n").join("\n") );
+
+			if(el.hasClass('hascounter')){
+				el.trigger('keyup');
+			}
 		} else if( data[i][0] == "inputKnowFrom" ) {
 			if( !( new RegExp("Facebook|Twitter|PR|Friend").test( data[i][1] ) ) ) {
 				$("#inputKnowFrom").val("etc");

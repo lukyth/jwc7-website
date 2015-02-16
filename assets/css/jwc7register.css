@@ -236,6 +236,15 @@ hr{border-color:#000;}
 #step3 textarea, #step4 textarea {
 	margin-top: 10px;
 }
+
+.lengthcounter{
+	text-align: right;
+	color: #ccc;
+	font-size: 48pt;
+	margin-top: -1.2em;
+	pointer-events: none;
+}
+
 @media screen and (max-width:768px) {
 	#step3 textarea, #step4 textarea {
 		margin-top: 3px;

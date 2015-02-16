@@ -469,8 +469,8 @@
 						</div>
 
 						<div class="row form-field txt-left">
-							<label for="name">2. ในมุมมองของน้อง “ความเป็นไทย” คืออะไร เขียนอธิบายไม่เกิน 140-200 ตัวอักษร (เกินได้เล็กน้อย)</label>
-							<textarea id="inputQ5" class="form-control" rows="7" name="inputQ5"></textarea>
+							<label for="name">2. ในมุมมองของน้อง “ความเป็นไทย” คืออะไร เขียนอธิบายไม่เกิน 200 ตัวอักษร</label>
+							<textarea id="inputQ5" class="form-control hascounter" rows="7" name="inputQ5" maxlength="200"></textarea>
 						</div>
 
 						<br>
