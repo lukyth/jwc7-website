@@ -2,132 +2,135 @@
 
 class Admin extends CI_Controller {
 
-  /**
-   * admin Page for this controller.
-   *
-   * Maps to the following URL
-   * 		http://example.com/index.php/admin
-   *	- or -
-   * 		http://example.com/index.php/admin/index
-   *	- or -
-   * Since this controller is set as the default controller in
-   * config/routes.php, it's displayed at http://example.com/
-   *
-   * So any other public methods not prefixed with an underscore will
-   * map to /index.php/welcome/<method_name>
-   * @see http://codeigniter.com/user_guide/general/urls.html
-   */
+	public $crud_allowed = array('User', 'Subscribe');
 
-  public function index(){
+	public function index(){
+		// $this->checkAccess();
 
-    $this->checkAccess();
+		$this->load->view('admin/index');
+	}
 
-    $this->load->view('admin/index');
-  }
+	public function login(){
+		$this->load->model('User_Model', 'user');
+		$post = $this->get_post_body();
 
-  public function login()
-  {
-    //echo sha1("night");
-    $this->load->helper(array('form','html'));
-    $this->load->library(array('form_validation'));
-    $this->load->model('user_model','user');
+		if($this->user->login($post->username,$post->password)){
+			$session_array = array(
+				'id' => $this->user->id,
+				'username'=>$this->user->username,
+				'permission'=>$this->user->permission
+			);
 
-    $data=array();
+			$this->session->set_userdata('login', $session_array);
 
-    $this->form_validation->set_message('required', 'กรุณากรอก %s');
-    $this->form_validation->set_rules('inputUsername', 'Username', 'trim|required');
-    $this->form_validation->set_rules('inputPassword', 'Password', 'trim|required');
-    if ($this->form_validation->run() == TRUE) {
-          $usename=$this->input->post('inputUsername');
-          $password=$this->input->post('inputPassword');
-          if($this->user->login($usename,$password)){
-            $session_array=array('id'=>$this->user->getId(),'username'=>$this->user->getUsername(),'permission'=>$this->user->getPermission());
-            $this->session->set_userdata('login', $session_array);
+			$this->output_json($session_array);
+		}else {
+			$this->output_error('Cannot log you in', 401);
+		}
+	}
 
-            redirect('admin/index', 'refresh');
+	public function refresh(){
+		$this->output_json($this->session->userdata('login'));
+	}
 
-          }else {
-            $data['result']= 'no';
-          }
-    }
+	public function crud($object){
+		if(!$this->checkAccessJson()){
+			return;
+		}
 
-    $this->load->view('admin/login',$data);
+		if(!in_array($object, $this->crud_allowed)){
+			return $this->output_error('Not found', 404);
+		}
 
-  }
+		$this->load->model($object.'_Model', 'model');
 
+		$this->output_json($this->model->get());
+	}
 
+	public function sendmail(){
+		if(!$this->checkAccessJson()){
+			return;
+		}
 
-  public function subscribe() {
+		$data = $this->get_post_body();
+		
+		if(empty($data->subject) || empty($data->body)){
+			$this->output_error('Incomplete form!');
+			return;
+		}
 
-    $this->load->model('subscribe_model','subscribe');
+		$this->load->library('email');
+		$this->email->initialize();
+		$this->email->from('jwc@jwc.in.th', 'Junior Webmaster Camp #7');
+		$this->email->to('jwc@jwc.in.th', 'Junior Webmaster Camp #7');
 
-    $this->checkAccess();
+		$sentCount = 0;
 
-    $data=array();
+		if($data->all) {
+			$query = $this->db->get('subscribe');
+			$listEmail = array();
 
-    $data['listSubscribe']=$this->subscribe->get();
+			foreach ($query->result() as $row) {
+				$listEmail[] = $row->email;
+				$sentCount++;
+			}
 
-    $this->load->view('admin/subscribe',$data);
-  }
+			$this->email->bcc($listEmail);
+		}else{
+			if(empty($data->to)){
+				$this->output_error('Requested sending to an address, but address is not given');
+				return;
+			}
+			$sentCount++;
+			$this->email->bcc($data->to);
+		}
 
-  public function sendmail(){
-      $this->checkAccess();
-      $this->load->helper(array('form','html'));
-      $this->load->library(array('form_validation','email'));
+		$this->email->subject($data->subject);
+		$this->email->message($data->body);
 
+		if($this->email->send()) {
+			$this->output_json(array('count' => $sentCount));
+		}else {
+			$this->output_error($this->email->print_debugger());
+		}
+	}
 
-      $data=array();
+	public function logout(){
+		$this->session->sess_destroy();
+		redirect('admin', 'refresh');
+	}
 
-      $this->form_validation->set_message('required', 'กรุณากรอก %s');
-      $this->form_validation->set_rules('inputSubject', 'Subject', 'trim|required');
-      $this->form_validation->set_rules('text', 'Text', 'trim|required');
+	private function checkAccess(){
 
-      $sendToAll=$this->input->post('inputSendAll') ? true:false;
-      if(!$sendToAll) $this->form_validation->set_rules('inputTo', 'To', 'trim|required');
+		if ($this->session->userdata('login') == FALSE)
+		{
+			 redirect('admin/login', 'refresh');
+		}
+	}
+	private function checkAccessJson(){
+		if ($this->session->userdata('login') == FALSE){
+			$this->output_error('You must be logged in to use this page', 403);
+			return false;
+		}
+		return true;
+	}
 
-      if ($this->form_validation->run() == TRUE) {
-            $this->email->initialize();
-            $this->email->from('pichet_nk@hotmail.com', 'pichet');
+	private function get_post_body(){
+		return json_decode(file_get_contents('php://input')); 
+	}
 
-            if($sendToAll) {
-                $query = $this->db->get('subscribe');
-                $listEmail=array();
-                foreach ($query->result()  as $row)
-                {
-                  array_push($listEmail,$row->email);
-                }
-                $this->email->to($listEmail);
-            }
-            else{
-                $this->email->to($this->input->post('inputTo'));
-            }
+	private function output_json($out){
+		$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode($out));
+	}
 
-            $this->email->subject($this->input->post('inputSubject'));
-            $this->email->message($this->input->post('inputText'));
-
-            if($this->email->send()) {
-              $data['result']='OK';
-            }
-            else {
-              $data['result']='ERROR';
-              $data['error'] =$this->email->print_debugger();
-            }
-
-      }
-      $this->load->view('admin/sendmail',$data);
-
-  }
-
-  public function logout(){
-    $this->session->sess_destroy();
-    redirect('admin', 'refresh');
-  }
-
-  private function checkAccess(){
-
-    if ($this->session->userdata('login') == FALSE)
-    {
-       redirect('admin/login', 'refresh');
-    }
-  }
+	private function output_error($out, $status=500){
+		$this->output
+			->set_status_header($status)
+			->set_content_type('application/json')
+			->set_output(json_encode(array(
+				'error' => $out
+			)));
+	}
 }
