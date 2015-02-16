@@ -5,6 +5,13 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'CSPraJad';
+	src: url('csprajad-bold.otf');
+	font-weight: bold;
+	font-style: normal;
+}
+
 /*@font-face {
     font-family: 'CSPraJad';
     src: url('csprajad.otf');
