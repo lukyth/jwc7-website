@@ -49,12 +49,29 @@ class Admin extends CI_Controller {
 			if(!$obj){
 				return $this->output_error('Object not found', 404);
 			}
+
+			if($object == 'Homework_Score'){
+				foreach(array('q1', 'q2', 'q3', 'q4', 'q5') as $name){
+					if(isset($obj->$name)){
+						$obj->$name = (int) $obj->$name;
+					}
+				}
+			}
+
 			$this->output_json($obj);
 		}else{
 			if($object == 'Register'){
 				$user = $this->session->userdata('login');
 				$userid = $user['id'];
 				$data = $this->model->getWithUser($userid);
+
+				foreach($data as &$item){
+					foreach(array('q1', 'q2', 'q3', 'q4', 'q5') as $name){
+						if(isset($item->$name)){
+							$item->$name = (int) $item->$name;
+						}
+					}
+				}
 			}else{
 				$data = $this->model->get();
 			}
