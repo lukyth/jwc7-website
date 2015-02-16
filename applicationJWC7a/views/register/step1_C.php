@@ -86,7 +86,7 @@
 			</div>
 			<div class="row" id="form-progress">
 				<div class="col-sm-12">
-					<div id="goto1">1. ข้อมูลส่วนตัว</div><div id="goto2">2. ข้อมูลเกี่ยวกับค่าย</div><div id="goto3">3. คำถามคัดเลือก</div><div id="goto4">4. คำถามประจำสาขา</div><!-- <div id="goto5">5. ตรวจสอบข้อมูล</div> -->
+					<div id="goto1" class="goto">1. ข้อมูลส่วนตัว</div><div id="goto2" class="goto">2. ข้อมูลเกี่ยวกับค่าย</div><div id="goto3" class="goto">3. คำถามคัดเลือก</div><div id="goto4" class="goto">4. คำถามประจำสาขา</div><!-- <div id="goto5">5. ตรวจสอบข้อมูล</div> -->
 				</div>
 			</div>
 			<?php
@@ -101,7 +101,7 @@
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-				<div id="step1">
+				<div id="step1" class="stepitem" data-step="1">
 					<div class="col-sm-10 col-sm-offset-1">
 						<h2>ข้อมูลส่วนตัว</h2>
 						<hr>
@@ -119,7 +119,7 @@
 								<label for="name">คำนำหน้าชื่อ*</label>
 							</div>
 							<div class="col-sm-4">
-								<select class="form-control" id="inputPrefix" name="inputPrefix">
+								<select class="form-control" id="inputPrefix" name="inputPrefix" required>
 									<option value="">เลือกคำนำหน้า</option>
 									<option value="เด็กชาย">เด็กชาย</option>
 									<option value="เด็กหญิง">เด็กหญิง</option>
@@ -134,7 +134,7 @@
 								<label for="name">ชื่อ*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="text" id="inputName" class="form-control" placeholder="ชื่อ" name="inputName"></input>
+								<input type="text" id="inputName" class="form-control" placeholder="ชื่อ" name="inputName" required></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -142,7 +142,7 @@
 								<label for="name">นามสกุล*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="text" id="inputSurname" class="form-control" placeholder="นามสกุล" name="inputSurname"></input>
+								<input type="text" id="inputSurname" class="form-control" placeholder="นามสกุล" name="inputSurname" required></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -150,7 +150,7 @@
 								<label for="nickname">ชื่อเล่น*</label>
 							</div>
 							<div class="col-sm-4">
-								<input type="text" id="inputNickname" class="form-control" placeholder="ชื่อเล่น" name="inputNickname"></input>
+								<input type="text" id="inputNickname" class="form-control" placeholder="ชื่อเล่น" name="inputNickname" required></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -158,7 +158,7 @@
 								<label for="name" value="<?= $form->sex ?>">เพศ*</label>
 							</div>
 							<div class="col-sm-4">
-								<select class="form-control" id="inputSex" name="inputSex">
+								<select class="form-control" id="inputSex" name="inputSex" required>
 									<option value="">เลือกเพศ</option>
 									<option value="M">ชาย</option>
 									<option value="F">หญิง</option>
@@ -170,7 +170,7 @@
 								<label for="name">รหัสประจำตัวประชาชน*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="text" id="inputNational_ID" class="form-control" placeholder="xxxxxxxxxxxxx" name="inputNational_ID"></input>
+								<input type="text" id="inputNational_ID" class="form-control" placeholder="xxxxxxxxxxxxx" name="inputNational_ID" required></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -178,7 +178,7 @@
 								<label for="name">สถานศึกษา*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="text" id="inputSchool" class="form-control" placeholder="โรงเรียน....."  name="inputSchool"></input>
+								<input type="text" id="inputSchool" class="form-control" placeholder="โรงเรียน....."  name="inputSchool" required></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -186,7 +186,7 @@
 								<label for="name">ระดับการศึกษา*</label>
 							</div>
 							<div class="col-sm-4">
-								<select class="form-control" id="inputGrade" name="inputGrade">
+								<select class="form-control" id="inputGrade" name="inputGrade" required>
 									<option value="">เลือกระดับชั้น</option>
 									<option value="ม.3">ม.3</option>
 									<option value="ม.4">ม.4</option>
@@ -203,7 +203,7 @@
 								<label for="name">เบอร์โทรศัพท์มือถือ*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="text" id="inputPhone" class="form-control" placeholder="0xxxxxxxxx" name="inputPhone"></input>
+								<input type="text" id="inputPhone" class="form-control" placeholder="0xxxxxxxxx" name="inputPhone" required></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -211,7 +211,7 @@
 								<label for="name">ที่อยู่*</label>
 							</div>
 							<div class="col-sm-9">
-								<textarea id="inputAddress" rows="4" class="form-control"  placeholder="ที่อยู่" name="inputAddress"></textarea>
+								<textarea id="inputAddress" rows="4" class="form-control"  placeholder="ที่อยู่" name="inputAddress" required></textarea>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -219,7 +219,7 @@
 								<label for="name">จังหวัด*</label>
 							</div>
 							<div class="col-sm-7">
-								<select class="form-control" id="inputProvince" name="inputProvince">
+								<select class="form-control" id="inputProvince" name="inputProvince" required>
 									<option value="">กรุณาเลือกจังหวัด</option>
 									<option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
 									<option value="กระบี่">กระบี่ </option>
@@ -306,7 +306,7 @@
 								<label for="name">รหัสไปรษณีย์*</label>
 							</div>
 							<div class="col-sm-4">
-								<input type="text" id="inputPostalCode" class="form-control" placeholder="xxxxx" name="inputPostalCode"></input>
+								<input type="text" id="inputPostalCode" class="form-control" placeholder="xxxxx" name="inputPostalCode" required></input>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -314,20 +314,20 @@
 								<label for="name">E-mail*</label>
 							</div>
 							<div class="col-sm-7">
-								<input type="email" id="inputEmail" class="form-control" placeholder="jwc7@example.com" name="inputEmail"></input>
+								<input type="email" id="inputEmail" class="form-control" placeholder="jwc7@example.com" name="inputEmail" required></input>
 							</div>
 						</div>
 
 						<br>
 						<div class="txt-center">
-							<div onclick="tmp_submit()" class="btn btn-primary btn-lg"id="next1">บันทึกและไปต่อ &raquo;</div>
+							<div class="btn btn-primary btn-lg nextbtn" id="next1">บันทึกและไปต่อ &raquo;</div>
 						</div>
 					</div>
 				</div>
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-				<div id="step2">
+				<div id="step2" class="stepitem" data-step="2">
 					<div class="col-sm-10 col-sm-offset-1">
 						<h2>ข้อมูลเกี่ยวกับค่าย</h2>
 						<hr>
@@ -422,15 +422,15 @@
 
 						<br>
 						<div class="txt-center">
-							<div class="btn btn-primary btn-lg" id="prev2">&laquo; หน้าที่แล้ว</div>
-							<div onclick="tmp_submit()" class="btn btn-primary btn-lg" id="next2">บันทึกและไปต่อ &raquo;</div>
+							<div class="btn btn-primary btn-lg prevbtn" id="prev2">&laquo; หน้าที่แล้ว</div>
+							<div class="btn btn-primary btn-lg nextbtn" id="next2">บันทึกและไปต่อ &raquo;</div>
 						</div>
 					</div>
 				</div>
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-				<div id="step3">
+				<div id="step3" class="stepitem" data-step="3">
 					<div class="col-sm-10 col-sm-offset-1">
 						<h2>คำถามคัดเลือก</h2>
 						<hr>
@@ -451,15 +451,15 @@
 
 						<br>
 						<div class="txt-center">
-							<div class="btn btn-primary btn-lg" id="prev3">&laquo; หน้าที่แล้ว</div>
-							<div onclick="tmp_submit()" class="btn btn-primary btn-lg" id="next3">บันทึกและไปต่อ &raquo;</div>
+							<div class="btn btn-primary btn-lg prevbtn" id="prev3">&laquo; หน้าที่แล้ว</div>
+							<div class="btn btn-primary btn-lg nextbtn" id="next3">บันทึกและไปต่อ &raquo;</div>
 						</div>
 					</div>
 				</div>
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-				<div id="step4">
+				<div id="step4" class="stepitem" data-step="4">
 					<div class="col-sm-10 col-sm-offset-1">
 						<h2>คำถามประจำสาขา</h2>
 						<hr>
@@ -477,9 +477,7 @@
 						<div class="log" style="color:red;">
 						</div>
 						<div class="txt-center">
-							<!-- <div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>&nbsp;&nbsp;
-							<div class="btn btn-primary btn-lg" id="next4">บันทึกและไปต่อ &raquo;</div> -->
-							<div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>
+							<div class="btn btn-primary btn-lg prevbtn" id="prev4">&laquo; หน้าที่แล้ว</div>
 							<div onclick="tmp_submit()" class="tmp_saved_btn btn btn-primary btn-lg">บันทึกชั่วคราว</div>
 							<button type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
 						</div>
@@ -488,7 +486,7 @@
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-				<div id="step5">
+				<div id="step5" class="stepitem" data-step="5">
 					<div class="col-sm-10 col-sm-offset-1 show_validation">
 						<div id="error_log">
 						<?php

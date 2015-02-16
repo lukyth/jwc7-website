@@ -1,19 +1,4 @@
 $(document).ready(function(){
-	console.log("!")
-
-	active1();
-
-	$('#step2').hide();
-	$('#step3').hide();
-	$('#step4').hide();
-	$('#step5').hide();
-
-	// $('#step2').css('opacity','0');
-	// $('#step3').css('opacity','0');
-	// $('#step4').css('opacity','0');
-	// $('#step5').css('opacity','0');
-
-	// $('#step1').css("transform","translateX(-100px)");​
 
 	if($(window).width() < 900){
 		$('#goto1').html('1');
@@ -40,20 +25,35 @@ $(document).ready(function(){
 		}
 	});
 
-	$('#next1').click(function(){active2(); $('#step1').hide(); $('#step2').show(); $('html,body').animate({scrollTop: '300px'});});
-	$('#next2').click(function(){active3(); $('#step2').hide(); $('#step3').show(); $('html,body').animate({scrollTop: '300px'});});
-	$('#next3').click(function(){active4(); $('#step3').hide(); $('#step4').show(); $('html,body').animate({scrollTop: '300px'});});
-	$('#next4').click(function(){active5(); $('#step4').hide(); $('#step5').show(); $('html,body').animate({scrollTop: '300px'});});
-	$('#prev2').click(function(){active1(); $('#step1').show(); $('#step2').hide(); $('html,body').animate({scrollTop: '300px'});});
-	$('#prev3').click(function(){active2(); $('#step2').show(); $('#step3').hide(); $('html,body').animate({scrollTop: '300px'});});
-	$('#prev4').click(function(){active3(); $('#step3').show(); $('#step4').hide(); $('html,body').animate({scrollTop: '300px'});});
-	$('#prev5').click(function(){active4(); $('#step4').show(); $('#step5').hide(); $('html,body').animate({scrollTop: '300px'});});
+	var move = function(target, dir){
+		var current = $(target).closest('.stepitem');
+		current.hide();
+		var next = current[dir ? 'next' : 'prev']().show();
+		$('html,body').animate({scrollTop: '300px'});
+		$('.goto.active').removeClass('active');
+		$('.goto').eq(next.data('step')-1).addClass('active');
 
-	$('#goto1').click(function(){active1(); $('#step1').show(); $('#step2').hide(); $('#step3').hide(); $('#step4').hide(); $('#step5').hide();});
-	$('#goto2').click(function(){active2(); $('#step1').hide(); $('#step2').show(); $('#step3').hide(); $('#step4').hide(); $('#step5').hide();});
-	$('#goto3').click(function(){active3(); $('#step1').hide(); $('#step2').hide(); $('#step3').show(); $('#step4').hide(); $('#step5').hide();});
-	$('#goto4').click(function(){active4(); $('#step1').hide(); $('#step2').hide(); $('#step3').hide(); $('#step4').show(); $('#step5').hide();});
-	$('#goto5').click(function(){active5(); $('#step1').hide(); $('#step2').hide(); $('#step3').hide(); $('#step4').hide(); $('#step5').show();});
+		if(dir){
+			tmp_submit();
+		}
+	};
+
+	$('.nextbtn').click(function(){
+		move(this, true);
+	});
+	$('.prevbtn').click(function(){
+		move(this, false);
+	});
+	$('.stepitem:gt(0)').hide();
+	$('.goto:eq(0)').addClass('active');
+	$('.goto').each(function(index){
+		$(this).on('click', function(){
+			$('.stepitem:visible').hide();
+			$('.stepitem').eq(index).show();
+			$('.goto.active').removeClass('active');
+			$('.goto').eq(index).addClass('active');
+		});
+	});
 
 	$("#error_log p:not(:first)").hide();
 	$("#error_log p.show").show();
@@ -85,51 +85,6 @@ function real_submit() {
 	$("#mainform").attr("action",base.join("/"));
 	console.log( base.join("/") );
 	$("#mainform").submit();
-}
-
-function active1(){
-	$('#goto1').addClass("active");
-
-	$('#goto2').removeClass("active");
-	$('#goto3').removeClass("active");
-	$('#goto4').removeClass("active");
-	$('#goto5').removeClass("active");
-}
-
-function active2(){
-	$('#goto2').addClass("active");
-
-	$('#goto1').removeClass("active");
-	$('#goto3').removeClass("active");
-	$('#goto4').removeClass("active");
-	$('#goto5').removeClass("active");
-}
-
-function active3(){
-	$('#goto3').addClass("active");
-
-	$('#goto2').removeClass("active");
-	$('#goto1').removeClass("active");
-	$('#goto4').removeClass("active");
-	$('#goto5').removeClass("active");
-}
-
-function active4(){
-	$('#goto4').addClass("active");
-
-	$('#goto2').removeClass("active");
-	$('#goto3').removeClass("active");
-	$('#goto1').removeClass("active");
-	$('#goto5').removeClass("active");
-}
-
-function active5(){
-	$('#goto5').addClass("active");
-
-	$('#goto2').removeClass("active");
-	$('#goto3').removeClass("active");
-	$('#goto4').removeClass("active");
-	$('#goto1').removeClass("active");
 }
 
 function init( can_edit,redirect,data ) {
@@ -167,7 +122,9 @@ function init( can_edit,redirect,data ) {
 
 	if( redirect != "" ) {
 		if( redirect == "5" ) {
-			active5(); $('#step1').hide(); $('#step2').hide(); $('#step3').hide(); $('#step4').hide(); $('#step5').show();
+			$('.stepitem:visible').hide();
+			$('#step5').show();
+			$('.goto.active').removeClass('active');
 		} else {
 			$("#goto"+redirect).click();
 		}
