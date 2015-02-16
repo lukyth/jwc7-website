@@ -328,6 +328,8 @@ hr{border-color:#000;}
 	margin: 7px 0;
 }
 
+.log { margin-bottom: 15px; }
+
 .rule .design{background-color:#732877;}
 .rule .marketing{background-color:#e74c25;}
 .rule .content{background-color:#01908c;}

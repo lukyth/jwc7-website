@@ -419,9 +419,6 @@
 							</div>
 						</div>
 
-
-
-						<br>
 						<div class="log" style="color:red;"></div>
 						<div class="txt-center">
 							<div class="btn btn-primary btn-lg prevbtn" id="prev2">&laquo; หน้าที่แล้ว</div>
