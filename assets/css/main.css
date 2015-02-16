@@ -787,6 +787,7 @@ a.register-button {
 	background-image: url(../img/main/timeline_bottom.png);
 	background-size: 100% auto;
 	background-position:top center;
+	background-repeat: no-repeat;
 }
 
 #timeline-page .timeline {
