@@ -634,7 +634,7 @@
 						</div>
 
 						<div onclick="$('#goto1').click()" style="padding: 10px 10px;" class="btn btn-primary btn-lg">กลับไปแก้ไข</div>&nbsp;
-						<button onclick="real_submit();" style="padding: 10px 40px;" class="btn btn-success btn-lg">ยืนยัน</button>
+						<button onclick="real_submit();" type="button" style="padding: 10px 40px;" class="btn btn-success btn-lg">ยืนยัน</button>
 
 					</div>
 				</div>
