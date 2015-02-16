@@ -72,9 +72,15 @@ $(document).ready(function(){
 		});
 	});
 
-	window.onbeforeunload = function(){
-		return 'ยังสมัครค่าย JWC7 ไม่เรียบร้อย\n\nถ้าต้องการส่งใบสมัคร ให้คลิกที่ปุ่ม ส่งใบสมัคร\nถ้ายังกรอกไม่เรียบร้อย ระบบจะบันทึกให้กลับมากรอกใหม่ได้จนถึงวันปิดรับสมัคร';
+	window.onbeforeunload = function(e){
+		var str = 'ยังสมัครค่าย JWC7 ไม่เรียบร้อย\n\nถ้าต้องการส่งใบสมัคร ให้คลิกที่ปุ่ม เสร็จสิ้น และ ยึนยัน\nถ้ายังกรอกไม่เรียบร้อย ระบบจะบันทึกให้กลับมากรอกใหม่ได้จนถึงวันปิดรับสมัคร';
+		e.returnValue = str;
+		return str;
 	};
+
+	$('form').submit(function(){
+		window.onbeforeunload = function(){};
+	});
 
 });
 
@@ -87,6 +93,7 @@ function show_log( txt ) {
 
 function real_submit() {
 	if(!confirm('หากกดตกลงจะไม่สามารถแก้ไขใบสมัครได้อีก')){
+		event.preventDefault();
 		return;
 	}
 	var raw = $("#mainform").attr("action");
