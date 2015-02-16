@@ -77,7 +77,10 @@
     }
 
     function isRegisted($facebookID) {
-      $query = $this->db->get_where('register', array('facebookID' => $facebookID, "status" => "Registered") );
+      $query = $this->db->get_where('register', array(
+        'facebookID' => $facebookID,
+        "status !=" => "InProgress"
+      ) );
       if( $query->num_rows()>0 ) return true;
       return false;
     }
@@ -125,9 +128,8 @@
     function getId($id){
       $query = $this->db->from('register')
         ->where('register.facebookID', $id)
-        ->join('homework', 'register.facebookID = register.facebookID')
+        ->join('homework', 'register.facebookID = homework.facebookID')
         ->get();
-
       return $query->row();
     }
 }
