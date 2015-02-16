@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 16, 2015 at 01:40 PM
+-- Generation Time: Feb 16, 2015 at 01:45 PM
 -- Server version: 10.0.16-MariaDB
 -- PHP Version: 5.6.5
 
@@ -29,3 +29,13 @@ CREATE TABLE IF NOT EXISTS `homework_score` (
   `q4` tinyint(4) NOT NULL DEFAULT '0',
   `q5` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `homework_score`
+--
+ALTER TABLE `homework_score`
+  ADD PRIMARY KEY (`facebookID`,`userID`);
