@@ -57,10 +57,7 @@
 				url = "<?= base_url('register/edit/update') ?>";
 			}
 			$.post( url, $("#mainform").serialize(), function(res) {
-				$(".log").html("บันทึกเสร็จสมบูรณ์<br><br>").show();
-				setTimeout( function() {
-					$(".log").hide();
-				}, 3000 );
+				show_log("บันทึกเสร็จสมบูรณ์<br><br>");
 			} );
 		}
 
@@ -484,7 +481,7 @@
 							<div class="btn btn-primary btn-lg" id="next4">บันทึกและไปต่อ &raquo;</div> -->
 							<div class="btn btn-primary btn-lg" id="prev4">&laquo; หน้าที่แล้ว</div>
 							<div onclick="tmp_submit()" class="tmp_saved_btn btn btn-primary btn-lg">บันทึกชั่วคราว</div>
-							<button onclick="tmp_submit()" type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
+							<button type="submit" class="btn btn-success btn-lg" id="finished">เสร็จสิ้น</button>
 						</div>
 					</div>
 				</div>
@@ -617,8 +614,8 @@
 						</div>
 
 						<br>
-						<div class="txt-center" style="margin:10px;">
-							หลังจากยึนยันแล้วจะไม่สามารถแก้ไขใบสมัครได้อีก
+						<div class="txt-center" style="margin:10px; color:red;">
+							ข้อมูล "ทั้งหมด" จะไม่สามารถแก้ไขได้อีก
 						</div>
 
 						<div onclick="$('#goto1').click()" style="padding: 10px 10px;" class="btn btn-primary btn-lg">กลับไปแก้ไข</div>&nbsp;

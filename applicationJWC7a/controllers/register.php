@@ -106,7 +106,14 @@ class Register extends CI_Controller {
     return $ret;
   }
 
+  public function registered() {
+    $this->load->view('register/registered');
+  }
+
   public function edit( $status = "normal" ) {
+
+    redirect('register/registered','refresh');
+    die();
 
     $this->load->helper(array('form','html'));
     $this->load->model('Register_Model','register');
@@ -208,6 +215,7 @@ class Register extends CI_Controller {
           'q5'=>$this->_protectData( $this->input->post('inputQ5') ),
       );
 
+      // sync data
       if( $status == "tmp" ) {
 
         $this->register->update($form_register_data,$user_id);
@@ -308,13 +316,14 @@ class Register extends CI_Controller {
       $this->form_validation->set_rules($rulesform);
 
       if( $this->register->isRegisted($user_id) ) {
-        redirect('register/edit/','refresh');
+        redirect('register/registered/','refresh');
       }
 
       $more_valid = $this->_more_validation($form_register_data);
       $required_check = $this->form_validation->run();
 
       if ( $required_check == TRUE && strlen($more_valid) == 0 && $status == "submit" ) {
+          // real submit, complete register task
           $form_register_data['status'] ='Registered';
 
           $data['isSubmited'] = "true";
@@ -331,12 +340,16 @@ class Register extends CI_Controller {
       }
       else{
 
+        $data["redirect"] = "";
+        // goto5 page display all information after cicked first submit
+        if( $status == "confirm" && $this->input->server('REQUEST_METHOD') == "POST" ) {
+          $this->register->update($form_register_data,$user_id);
+          $this->homework->update($form_homework_data,$user_id);
+          $data["redirect"] = "5";
+        }
+
         $data["form"] = $this->register->data($user_id);
         $data["formhomework"] = $this->homework->data($user_id);
-
-        $data["redirect"] = "";
-        if( $status == "confirm" && $this->input->server('REQUEST_METHOD') == "POST" )
-          $data["redirect"] = "5";
 
         $data["error_result"] = $more_valid;
 
