@@ -109,17 +109,25 @@
       );
       return $query->result();
     }
-    function getId($id){
-      $query = $this->db->select('*')
+
+    /**
+     * Return a list of registrations with annotated homework grading status
+     */
+    function getWithUser($userId){
+      $query = $this->db->select('register.*, q1, q2, q3, q4, q5')
         ->from('register')
+        ->where('status !=', 'InProgress')
+        ->join('homework_score', 'register.facebookID = homework_score.facebookID AND homework_score.userID = '.(int) $userId, 'left')
+        ->get();
+      return $query->result();
+    }
+
+    function getId($id){
+      $query = $this->db->from('register')
         ->where('register.facebookID', $id)
         ->join('homework', 'register.facebookID = register.facebookID')
         ->get();
 
-      $res = $query->result();
-      if(empty($res)){
-        return null;
-      }
-      return $res[0];
+      return $query->row();
     }
 }

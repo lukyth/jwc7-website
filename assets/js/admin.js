@@ -153,13 +153,32 @@ module.controller('RegisterController', function($scope, $http, API_BASE){
 			localStorage.filter = JSON.stringify(val);
 		}
 	}, true);
+	$scope.showNeedCheck = localStorage.showNeedCheck == 'true';
+	$scope.$watch('showNeedCheck', function(val){
+		localStorage.showNeedCheck = val;
+	});
 });
 
 module.controller('RegisterInfoController', function($scope, $stateParams, $http, API_BASE){
 	$scope.id = $stateParams.id;
+	$scope.scoreRange = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	$scope.vote = {
+		q1: 0, q2: 0, q3: 0, q4: 0, q5: 0
+	}
+
 	$http.get(API_BASE + 'crud/Register/' + $stateParams.id).success(function(data){
 		$scope.register = data;
 	});
+
+	$http.get(API_BASE + 'crud/Homework_Score/' + $stateParams.id).success(function(data){
+		$scope.vote = data;
+	});
+
+	$scope.saveScore = function(){
+		$http.post(API_BASE + 'save_hw_score/' + $stateParams.id, $scope.vote).success(function(){
+			$scope.success = 'Saved';
+		});
+	};
 });
 
 })();

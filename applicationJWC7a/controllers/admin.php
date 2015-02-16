@@ -2,7 +2,7 @@
 
 class Admin extends CI_Controller {
 
-	public $crud_allowed = array('User', 'Subscribe', 'Register');
+	public $crud_allowed = array('User', 'Subscribe', 'Register', 'Homework_Score');
 
 	public function index(){
 		// $this->checkAccess();
@@ -46,13 +46,39 @@ class Admin extends CI_Controller {
 
 		if($objectId != -1){
 			$obj = $this->model->getId($objectId);
-			if($obj === null){
+			if(!$obj){
 				return $this->output_error('Object not found', 404);
 			}
 			$this->output_json($obj);
 		}else{
-			$this->output_json($this->model->get());
+			if($object == 'Register'){
+				$user = $this->session->userdata('login');
+				$userid = $user['id'];
+				$data = $this->model->getWithUser($userid);
+			}else{
+				$data = $this->model->get();
+			}
+
+			$this->output_json($data);
 		}
+	}
+
+	public function save_hw_score($id){
+		if(!$this->checkAccessJson()){
+			return;
+		}
+
+		$this->load->model('Homework_Score_Model', 'model');
+		$this->load->helper('array');
+
+		$post = $this->get_post_body();
+
+		$user = $this->session->userdata('login');
+		$userid = $user['id'];
+
+		$this->model->upsert($id, $userid, $post);
+
+		$this->output_json(array('succes' => true));
 	}
 
 	public function sendmail(){

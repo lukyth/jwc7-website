@@ -15,23 +15,32 @@
 				<option value="Denied">Denied ({{(register|filter:{status:'Denied'}).length}})</option>
 				<option value="Paid">Paid ({{(register|filter:{status:'Paid'}).length}})</option>
 			</select>
+			<br>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" ng-model="showNeedCheck">
+					แสดงการบ้านที่เฉพาะยังไม่ตรวจ
+				</label>
+			</div>
 		</div>
 	</div>
 	<p><strong>{{(register|filter:filter).length}}</strong> registrations</p>
+	<div class="clearfix"></div>
 
-	<br>
+	<br><br>
 	
 	<table class="table table-bordered table-striped">
 		<thead>
 			<tr>
-				<th ng-click="predicate='name';reverse=!reverse">Name</th>
+				<th class="col-xs-3" ng-click="predicate='name';reverse=!reverse">ชื่อ</th>
 				<th>FB</th>
-				<th ng-click="predicate='nickname';reverse=!reverse">Nick</th>
-				<th ng-click="predicate='sex';reverse=!reverse">Sex</th>
-				<th ng-click="predicate='registerType';reverse=!reverse">Type</th>
-				<th ng-click="predicate='registerDate';reverse=!reverse">Date</th>
-				<th ng-click="predicate='phone';reverse=!reverse">Tel</th>
-				<th ng-click="predicate='status';reverse=!reverse">Status</th>
+				<th class="col-xs-2" ng-click="predicate='nickname';reverse=!reverse">ชื่อเล่น</th>
+				<th ng-click="predicate='sex';reverse=!reverse">เพศ</th>
+				<th ng-click="predicate='registerType';reverse=!reverse">สาขา</th>
+				<th ng-click="predicate='grade';reverse=!reverse">ชั้น</th>
+				<th ng-click="predicate='phone';reverse=!reverse">โทร</th>
+				<th ng-click="predicate='status';reverse=!reverse">สถานะ</th>
+				<th>ตรวจ<span ng-if="!showNeedCheck">แล้ว</span></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -41,9 +50,25 @@
 				<td ng-bind="item.nickname"></td>
 				<td ng-bind="item.sex"></td>
 				<td ng-bind="item.registerType"></td>
-				<td ng-bind="item.registerDate"></td>
+				<td ng-bind="item.grade"></td>
 				<td ng-bind="item.phone"></td>
 				<td ng-bind="item.status"></td>
+				<td>
+					<div ng-if="showNeedCheck">
+						<div class="label label-danger" ng-if="!item.q1">1</div>
+						<div class="label label-danger" ng-if="!item.q2">2</div>
+						<div class="label label-danger" ng-if="!item.q3">3</div>
+						<div class="label label-danger" ng-if="!item.q4">4</div>
+						<div class="label label-danger" ng-if="!item.q5">5</div>
+					</div>
+					<div ng-if="!showNeedCheck">
+						<div class="label label-default" ng-if="item.q1 > 0">1</div>
+						<div class="label label-default" ng-if="item.q2 > 0">2</div>
+						<div class="label label-default" ng-if="item.q3 > 0">3</div>
+						<div class="label label-default" ng-if="item.q4 > 0">4</div>
+						<div class="label label-default" ng-if="item.q5 > 0">5</div>
+					</div>
+				</td>
 			</tr>
 		</tbody>
 	</table>

@@ -23,6 +23,10 @@
 .valuelist .value.small{
 	font-size: 10pt;
 }
+.scoretable{
+	width: auto;
+	margin-top: 10px;
+}
 	</style>
 </head>
 <body ng-app="admin">
