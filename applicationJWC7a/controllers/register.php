@@ -317,6 +317,7 @@ class Register extends CI_Controller {
 
       if( $this->register->isRegisted($user_id) ) {
         redirect('register/registered/','refresh');
+        return;
       }
 
       $more_valid = $this->_more_validation($form_register_data);
