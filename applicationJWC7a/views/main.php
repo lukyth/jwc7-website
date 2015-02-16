@@ -82,12 +82,12 @@
 								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/new/sponsor_2.svg"></div>
 							</div>
 						</div>
-						<div style="color:#000; font-size:35px; margin-top:10px;">
+						<!--<div style="color:#000; font-size:35px; margin-top:10px;">
 							รับสมัครเร็วๆนี้
-						</div>
-						<!--<a class="page-scroll register-button" href="#category-page">
+						</div>//-->
+						<a class="page-scroll register-button" href="#category-page">
 							<div class="jumpto-register img-center img-responsive register">สมัครเลย!</div>
-						</a>//-->
+						</a>
 					</div>
 				</div>
 			</div>
@@ -142,20 +142,20 @@
 								เนรมิตหน้าเว็บ โชว์สเต็ปดีไซน์ ไฉไลสไตล์เว็บสเตอร์สู่การเป็นเว็บ Design อย่างแท้จริง
 							</p>
 							<div class="count-box" style="background:#732777;"><?= $amount_d; ?></div>
-							<!--<a class="register-button" href="register/index/2">
+							<a class="register-button" href="register/index/2">
 								<div class="img-center img-responsive register">สมัครเลย!</div>
-							</a>//-->
+							</a>
 						</div>
 						<div class="col-md-4 text-center">
 							<img src="<?= base_url() ?>assets/img/main/new/web_content.svg" class="head img-center img-responsive" />
 							<div class="cat-text" style="color:#07908C;">Web Content</div>
 							<p class="text-center description">
-								สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Content ให้เฉือดเฉือนประโยคเด็ด Content ชนะใจ
+								สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Content ให้เชือดเฉือนประโยคเด็ด Content ชนะใจ
 							</p>
 							<div class="count-box" style="background:#07908C;"><?= $amount_c; ?></div>
-							<!--<a class="register-button" href="register/index/1">
+							<a class="register-button" href="register/index/1">
 								<div class="img-center img-responsive register">สมัครเลย!</div>
-							</a>//-->
+							</a>
 							</div>
 						<div class="col-md-4 text-center">
 							<img src="<?= base_url() ?>assets/img/main/new/web_marketing.svg" class="head img-center img-responsive" />
@@ -164,9 +164,9 @@
 								เรียนรู้ศาสตร์การตลาดยุทธศาสตร์ การสร้างชื่อให้เว็บเลื่องลือระบือไกล
 							</p>
 							<div class="count-box" style="background:#E64C24;"><?= $amount_m; ?></div>
-							<!--<a class="register-button" href="register/index/3">
+							<a class="register-button" href="register/index/3">
 								<div class="img-center img-responsive register">สมัครเลย!</div>
-							</a>//-->
+							</a>
 						</div>
 					</div>
 				</div>
@@ -334,9 +334,9 @@
 				<div class="row">
 					<div class="timeline">
 						<div class="timeline-item">
-							14 ก.พ. - 14 มี.ค. 2558
+							14 มี.ค. 2558
 							<br>
-							รับสมัคร
+							ปิดรับสมัคร
 						</div>
 						<div class="timeline-item">
 							21 มี.ค. 2558

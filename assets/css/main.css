@@ -565,6 +565,10 @@ a.register-button {
 	position: relative;
 }
 
+#about-page p {
+  font-family: 'CSPraJad';
+}
+
 #about-page .river {
 	background: url(../img/main/new/river.svg) no-repeat center center;
   background-size: cover;
