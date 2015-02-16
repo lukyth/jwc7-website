@@ -318,7 +318,6 @@
 							</div>
 						</div>
 
-						<br>
 						<div class="log" style="color:red;"></div>
 						<div class="txt-center">
 							<div class="btn btn-primary btn-lg nextbtn" id="next1">บันทึกและไปต่อ &raquo;</div>
