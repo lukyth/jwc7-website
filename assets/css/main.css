@@ -805,7 +805,7 @@ a.register-button {
 #timeline-page .timeline-fish {
 	position: absolute;
 	top: -22px;
-	right: 98%;
+	right: 99%;
 	width: 160px;
 }
 
@@ -860,6 +860,10 @@ a.register-button {
 	#category-page .big-text, #sponsor-page .big-text {
 		padding-top:50px;
 	}
+
+  #timeline-page .timeline-fish {
+    right: 98%;
+  }
 }
 
 #qa-page {
