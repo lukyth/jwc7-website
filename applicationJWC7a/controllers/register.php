@@ -19,11 +19,11 @@ class Register extends CI_Controller {
    */
    function __construct(){
   		    parent::__construct();
-   		   $fb_config = array(
+   		   $this->fb_config = array(
           'appId'  => '1540852432838036',
           'secret' => '06ac519f4aa347ae3059da8bc6504ea6'
         );
-        $this->load->library('facebook/facebook', $fb_config,'facebook');
+        $this->load->library('facebook/facebook', $this->fb_config,'facebook');
 
 		}
 
@@ -317,6 +317,7 @@ class Register extends CI_Controller {
 
       if( $this->register->isRegisted($user_id) ) {
         redirect('register/registered/','refresh');
+        return;
       }
 
       $more_valid = $this->_more_validation($form_register_data);
@@ -352,6 +353,8 @@ class Register extends CI_Controller {
         $data["formhomework"] = $this->homework->data($user_id);
 
         $data["error_result"] = $more_valid;
+
+        $data["user_profile"] = $this->facebook->api('/me');
 
         if($type == 1)
           $this->load->view('register/step1_C',$data);

@@ -106,13 +106,12 @@
 						<h2>ข้อมูลส่วนตัว</h2>
 						<hr>
 						<div class="cant_edit_message">คุณไม่สามารถแก้ไขข้อมูลส่วนนี้ได้อีกแล้ว</div>
-						<!-- <div class="row fbprofile">
-							<div class="fbpic"></div>
-							<h2>Thanawit Tae Prasongpongchai</h2>
-						</div> -->
 						<div id="facebook_img">
 							<div class="col-xs-12">
 								<img class="img-responsive img-center" src="http://graph.facebook.com/<?= $user_id ?>/picture?type=large" />
+							</div>
+							<div class="col-xs-12 last">
+								<?=html_escape($user_profile['name'])?>
 							</div>
 						</div>
 						<div class="row form-field">

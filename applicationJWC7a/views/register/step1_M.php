@@ -106,13 +106,12 @@
 						<h2>ข้อมูลส่วนตัว</h2>
 						<hr>
 						<div class="cant_edit_message">คุณไม่สามารถแก้ไขข้อมูลส่วนนี้ได้อีกแล้ว</div>
-						<!-- <div class="row fbprofile">
-							<div class="fbpic"></div>
-							<h2>Thanawit Tae Prasongpongchai</h2>
-						</div> -->
 						<div id="facebook_img">
 							<div class="col-xs-12">
 								<img class="img-responsive img-center" src="http://graph.facebook.com/<?= $user_id ?>/picture?type=large" />
+							</div>
+							<div class="col-xs-12 last">
+								<?=html_escape($user_profile['name'])?>
 							</div>
 						</div>
 						<div class="row form-field">
@@ -446,7 +445,7 @@
 						</div>
 
 						<div class="row form-field txt-left">
-							<label for="name">3. หากเปรียบเพื่อนร่วมทีมของน้องเป็นอวัยวะในร่างกาย เมื่ออวัยวะบางส่วนคือเนื้อร้าย น้องจะจัดการอย่างไร เพราะเหตุใด (ไม่มีผลต่อคะแนน)</label>
+							<label for="name">3. หากเปรียบเพื่อนร่วมทีมของน้องเป็นอวัยวะในร่างกาย เมื่ออวัยวะบางส่วนคือเนื้อร้าย น้องจะจัดการอย่างไร เพราะเหตุใด</label>
 							<textarea id="inputQ3" class="form-control" rows="7" name="inputQ3"></textarea>
 						</div>
 
