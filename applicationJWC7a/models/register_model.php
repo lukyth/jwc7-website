@@ -100,4 +100,26 @@
     function update($data,$id){
         $this->db->update('register', $data, array('facebookID' => $id));
     }
+
+    function get(){
+      $query = $this->db->get_where(
+        'register', array(
+          'status !=' => 'InProgress'
+        )
+      );
+      return $query->result();
+    }
+    function getId($id){
+      $query = $this->db->select('*')
+        ->from('register')
+        ->where('register.facebookID', $id)
+        ->join('homework', 'register.facebookID = register.facebookID')
+        ->get();
+
+      $res = $query->result();
+      if(empty($res)){
+        return null;
+      }
+      return $res[0];
+    }
 }

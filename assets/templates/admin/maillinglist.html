@@ -1,0 +1,59 @@
+<div class="container">
+	<div class="alert alert-danger" ng-if="error">{{error}}</div>
+	<div class="alert alert-success" ng-if="success">{{success}}</div>
+	<accordion>
+		<accordion-group heading="Send emails" is-open="true">
+			<form class="form-horizontal" ng-submit="submit()">
+				<div class="form-group">
+					<label class="col-sm-1 control-label">Subject</label>
+					<div class="col-sm-11">
+						<input type="text" class="form-control" ng-model="input.subject" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-1 control-label">To</label>
+					<div class="col-sm-11">
+						<input type="email" class="form-control" ng-model="input.to" placeholder="Optional" ng-disabled="input.all">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-1">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" ng-model="input.all">
+								Send to all subscribers
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-1 col-sm-11">
+						<textarea class="form-control" rows="10" ng-model="input.body" required></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-1 col-sm-11">
+						<button type="submit" class="btn btn-primary" ng-disabled="sending">Send</button>
+					</div>
+				</div>
+			</form>
+		</accordion-group>
+	</accordion>
+
+	<p><strong>{{subscribers.length}}</strong> subscribers</p>
+
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Email</th>
+				<th>Registered</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in subscribers">
+				<td ng-bind="item.email"></td>
+				<td ng-bind="item.timestamp"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

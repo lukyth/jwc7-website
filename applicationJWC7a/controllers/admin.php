@@ -2,7 +2,7 @@
 
 class Admin extends CI_Controller {
 
-	public $crud_allowed = array('User', 'Subscribe');
+	public $crud_allowed = array('User', 'Subscribe', 'Register');
 
 	public function index(){
 		// $this->checkAccess();
@@ -33,7 +33,7 @@ class Admin extends CI_Controller {
 		$this->output_json($this->session->userdata('login'));
 	}
 
-	public function crud($object){
+	public function crud($object, $objectId=-1){
 		if(!$this->checkAccessJson()){
 			return;
 		}
@@ -44,7 +44,15 @@ class Admin extends CI_Controller {
 
 		$this->load->model($object.'_Model', 'model');
 
-		$this->output_json($this->model->get());
+		if($objectId != -1){
+			$obj = $this->model->getId($objectId);
+			if($obj === null){
+				return $this->output_error('Object not found', 404);
+			}
+			$this->output_json($obj);
+		}else{
+			$this->output_json($this->model->get());
+		}
 	}
 
 	public function sendmail(){

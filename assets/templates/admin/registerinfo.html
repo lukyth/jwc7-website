@@ -1,0 +1,145 @@
+<div class="container">
+	<div class="btn btn-primary" ui-sref="base.register()">Back</div>
+	<a href="https://www.facebook.com/{{id}}" class="pull-right text-center">
+		<img ng-src="http://graph.facebook.com/{{id}}/picture?type=large" class="img-circle">
+		<br>
+		<span class="btn">Facebook</span>
+	</a>
+	<h2>{{register.prefix}} {{register.name}} {{register.surname}}</h2>
+	<div class="row valuelist">
+		<div class="col-md-4">
+			<strong>ชื่อ</strong>
+			<div class="value">{{register.prefix}} {{register.name}} {{register.surname}}</div>
+		</div>
+		<div class="col-md-2">
+			<strong>ชื่อเล่น</strong>
+			<div class="value">{{register.nickname}}</div>
+		</div>
+		<div class="col-md-1">
+			<strong>เพศ</strong>
+			<div class="value">{{register.sex}}</div>
+		</div>
+		<div class="col-md-2">
+			<strong>สาขา</strong>
+			<div class="value">{{register.registerType}}</div>
+		</div>
+		<div class="col-md-1">
+			<strong>ชั้น</strong>
+			<div class="value">{{register.grade}}</div>
+		</div>
+		<div class="col-md-5">
+			<strong>โรงเรียน</strong>
+			<div class="value">{{register.school}}</div>
+		</div>
+		<div class="col-md-2">
+			<strong>จังหวัด</strong>
+			<div class="value">{{register.province}}</div>
+		</div>
+	</div>
+	<accordion close-others="false">
+		<accordion-group heading="ข้อมูลส่วนตัว" is-open="false">
+			<div class="row valuelist">
+				<div class="col-md-2">
+					<strong>รหัสประจำตัวประชาชน</strong>
+					<div class="value">{{register.national_ID}}</div>
+				</div>
+				<div class="col-md-2">
+					<strong>เบอร์โทรศัพท์มือถือ</strong>
+					<div class="value">{{register.phone}}</div>
+				</div>
+				<div class="col-md-4">
+					<strong>E-mail</strong>
+					<div class="value">{{register.email}}</div>
+				</div>
+			</div>
+			<div class="row valuelist">
+				<div class="col-md-2">
+					<strong>ที่อยู่</strong>
+					<div class="value small">
+						<div class="pre">
+							{{register.address}}
+							{{register.postalCode}}
+							{{register.province}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</accordion-group>
+		<accordion-group heading="ข้อมูลค่าย" is-open="false">
+			<div class="row valuelist">
+				<div class="col-md-4">
+					<strong>รู้จักค่ายจากที่ไหน</strong>
+					<div class="value">{{register.knowFrom}}</div>
+				</div>
+				<div class="col-md-1">
+					<strong>ไซส์เสื้อ</strong>
+					<div class="value">{{register.sizeshirt}}</div>
+				</div>
+				<div class="col-md-2">
+					<strong>ประเภทอาหาร</strong>
+					<div class="value">
+						<span ng-if="register.specialFood == 'normal'">ปกติ</span>
+						<span ng-if="register.specialFood == 'halal'">ฮาลาล</span>
+						<span ng-if="register.specialFood == 'veg'">เจ</span>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<strong>อาหารที่แพ้</strong>
+					<div class="value">{{register.foodAllergy}}&nbsp;</div>
+				</div>
+			</div>
+			<div class="row valuelist">
+				<div class="col-md-4">
+					<strong>โรคประจำตัว</strong>
+					<div class="value">{{register.disease}}&nbsp;</div>
+				</div>
+				<div class="col-md-4">
+					<strong>ยาที่แพ้</strong>
+					<div class="value">{{register.drugAllergy}}&nbsp;</div>
+				</div>
+				<div class="col-md-4">
+					<strong>ผู้ปกครอง</strong>
+					<div class="value">{{register.parentPhone}} ({{register.relateParent}})</div>
+				</div>
+			</div>
+		</accordion-group>
+		<accordion-group heading="คำถามคัดเลือก" is-open="true">
+			<div class="row valuelist">
+				<div class="col-md-12">
+					<strong>1. ในมุมมองของน้อง เว็บไซต์คืออะไร และเว็บไซต์ที่ดีควรมีลักษณะอย่างไร?</strong>
+					<div class="value pre">{{register.q1}}</div>
+				</div>
+			</div>
+			<div class="row valuelist">
+				<div class="col-md-12">
+					<strong>2. ในปัจจุบันนี้ น้องคิดว่าเว็บไซต์มีอิทธิพลต่อคนไทยอย่างไร และเว็บไซต์ที่เหมาะสมสำหรับคนไทยควรเป็นอย่างไร?</strong>
+					<div class="value pre">{{register.q2}}</div>
+				</div>
+			</div>
+			<div class="row valuelist">
+				<div class="col-md-12">
+					<strong>3. หากเปรียบเพื่อนร่วมทีมของน้องเป็นอวัยวะในร่างกาย เมื่ออวัยวะบางส่วนคือเนื้อร้าย น้องจะจัดการอย่างไร เพราะเหตุใด</strong>
+					<div class="value pre">{{register.q3}}</div>
+				</div>
+			</div>
+		</accordion-group>
+		<accordion-group heading="คำถามสาขา {{register.registerType}}" is-open="true">
+			<div class="row valuelist">
+				<div class="col-md-12">
+					<strong ng-if="register.registerType == 'Content'">1. ในมุมมองของน้อง Content คืออะไร มีความสำคัญกับเว็บไซต์อย่างไร และคิดว่า Content แบบไหนที่จะทำให้เว็บไซต์ของคนไทยเป็นที่รู้จักในระดับโลก</strong>
+					<strong ng-if="register.registerType == 'Design'">1. Design มีความสำคัญกับเว็บไซต์อย่างไร รวมถึงการออกแบบเว็บไซต์ที่ดีและไม่ดีมีลักษณะอย่างไร?</strong>
+					<strong ng-if="register.registerType == 'Marketing'">1. หากน้องถูกจ้างให้เค้าไปเป็นตำแหน่ง ดูแลการขาย ในสภาวะการเงินของบริษัทย่ำแย่ น้องคิดว่า จะช่วยดึงดูดลูกค้า และชนะคู่แข่งได้โดยวิธีใดบ้าง (สามารถเลือกประเภทธุรกิจเองได้)</strong>
+					<div class="value pre">{{register.q4}}</div>
+				</div>
+			</div>
+			<div class="row valuelist">
+				<div class="col-md-12">
+					<strong ng-if="register.registerType == 'Content'">2. ในมุมมองของน้อง “ความเป็นไทย” คืออะไร เขียนอธิบายไม่เกิน 200 ตัวอักษร</strong>
+					<strong ng-if="register.registerType == 'Design'">2. หากน้องได้ออกแบบเว็บไซต์เพื่อคนไทย น้องจะออกแบบอย่างไรเพื่อให้เข้าถึงคนไทยอย่างแท้จริง พร้อมอธิบายเหตุผล</strong>
+					<strong ng-if="register.registerType == 'Marketing'">2.หากมีโครงการจากรัฐ ต้องการสนับสนุนให้สินค้าไทย ส่งออกนอก จะทำอย่างไร ที่จะตีตลาด ให้ทั่วโลก รู้จักความเป็นไทย น้องคิดว่า มีสิ่งใดเป็นจุดขาย อย่างแท้จริง และจะโปรโมทให้ชาวต่างชาติรู้ ด้วยวิธีไหนบ้าง</strong>
+					<div class="value pre">{{register.q5}}</div>
+				</div>
+			</div>
+		</accordion-group>
+	</accordion>
+</div>
