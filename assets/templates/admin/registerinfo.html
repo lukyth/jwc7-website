@@ -80,11 +80,7 @@
 				</div>
 				<div class="col-md-2">
 					<strong>ประเภทอาหาร</strong>
-					<div class="value">
-						<span ng-if="register.specialFood == 'normal'">ปกติ</span>
-						<span ng-if="register.specialFood == 'halal'">ฮาลาล</span>
-						<span ng-if="register.specialFood == 'veg'">เจ</span>
-					</div>
+					<div class="value">{{register.specialFood}}</div>
 				</div>
 				<div class="col-md-4">
 					<strong>อาหารที่แพ้</strong>
