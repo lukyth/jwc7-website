@@ -146,12 +146,16 @@ function init( can_edit,redirect,data ) {
 }
 
 function validate(current){
+	current.find('.has-error').removeClass('has-error');
+
 	var emptyFields = current.find('[required]').filter(function(){
 		return $(this).val().length === 0;
 	});
 	if(emptyFields.length === 0){
 		return true;
 	}
+
+	emptyFields.closest('.form-field').addClass('has-error');
 
 	var emptyLabels = emptyFields.map(function(){
 		var label = $(this).siblings('label');
