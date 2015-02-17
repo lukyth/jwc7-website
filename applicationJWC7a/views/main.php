@@ -242,6 +242,36 @@
 									<div class="sentence">
 										<div class="chat-box text-left">
 											<div><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_boy.png"><img class="arrow arrow-boy" src="<?= base_url() ?>assets/img/main/faq_boy_arrow.png"></div>
+											<div class="blue">ค่ายนี้จะจัดเมื่อไร ที่ไหน?</div>
+										</div>
+										<div class="chat-box text-right">
+											<div class="white text-center">ค่ายนี้จัด 3 วัน 2 คืน ระหว่างวันที่ 3-5 เมษายน 2558 ที่มหาวิทยาลัยราชภัฏจันทรเกษม ถนนรัชดาภิเษก กรุงเทพมหานครจ้า</div>
+											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
+										</div>
+									</div>
+									<div class="sentence">
+										<div class="chat-box text-left">
+											<div><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_boy.png"><img class="arrow arrow-boy" src="<?= base_url() ?>assets/img/main/faq_boy_arrow.png"></div>
+											<div class="blue">รับสมัครใครบ้าง?</div>
+										</div>
+										<div class="chat-box text-right">
+											<div class="white text-center">ค่ายนี้รับสมัครน้องๆ ที่กำลังศึกษาอยู่ในระดับชั้น ม.ปลาย หรือเทียบเท่า รวมถึงน้องๆ ที่เพิ่งจบชั้น ม.3 และน้องที่เพิ่งจบชั้นม. 6 กำลังจะเข้ามหาลัย ซึ่งรวมไปถึงระดับ ปวช.1 ถึง ปวช.3 เลยจ้า</div>
+											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
+										</div>
+									</div>
+									<div class="sentence">
+										<div class="chat-box text-left">
+											<div><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_boy.png"><img class="arrow arrow-boy" src="<?= base_url() ?>assets/img/main/faq_boy_arrow.png"></div>
+											<div class="blue">ค่ายนี้รับสมัครกี่คน?</div>
+										</div>
+										<div class="chat-box text-right">
+											<div class="white text-center">เราจะคัดเลือกน้องๆ ที่สมัครมาเพื่อเข้าค่ายทั้งหมด 48 คน แบ่งเป็นสาขาละ 16 คน โดยจะมีรายชื่อสำรอง อีกสาขาละ 6 คน การคัดเลือกจะดูจากการตอบคำถามของน้องๆ เพราะฉะนั้น ใครมีไอเดียอะไร ใส่มาให้เต็มที่ !!</div>
+											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
+										</div>
+									</div>
+									<div class="sentence">
+										<div class="chat-box text-left">
+											<div><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_boy.png"><img class="arrow arrow-boy" src="<?= base_url() ?>assets/img/main/faq_boy_arrow.png"></div>
 											<div class="blue">ทำไมต้องมีการเก็บค่ามัดจำ ทั้งๆ ที่ฟรีไม่เสียค่าใช้จ่าย?</div>
 										</div>
 										<div class="chat-box text-right">
