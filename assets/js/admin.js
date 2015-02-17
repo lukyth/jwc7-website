@@ -90,6 +90,12 @@ module.filter('nbr', function(){
 	};
 });
 
+module.filter('age', function(){
+	return function(text){
+		return Math.floor((new Date() - new Date(text))/(3600 * 24 * 365 * 1000));
+	};
+});
+
 module.controller('LoginController', function($scope, $state, User){
 	$scope.input = {
 		username: '',

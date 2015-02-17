@@ -197,6 +197,7 @@ class Register extends CI_Controller {
           'surname'=>$this->_protectData( $this->input->post('inputSurname') ),
           'nickname'=>$this->_protectData( $this->input->post('inputNickname') ),
           'sex'=>$this->_protectData( $this->input->post('inputSex') ),
+          'birthday'=>$this->_protectData( $this->input->post('inputBirthday') ),
           'national_ID'=>$this->_protectData( $this->input->post('inputNational_ID') ),
           'school'=>$this->_protectData( $this->input->post('inputSchool') ),
           'grade'=>$this->_protectData( $this->input->post('inputGrade') ),
@@ -322,7 +323,12 @@ class Register extends CI_Controller {
                 'field' => 'inputSizeShirt',
                 'label' => 'ไซส์เสื้อ',
                 'rules' => 'trim|required'
-              )
+              ),
+              array(
+                'field' => 'inputBirthday',
+                'label' => 'วันเกิด',
+                'rules' => 'trim|required'
+              ),
       );
 
       $this->form_validation->set_rules($rulesform);
