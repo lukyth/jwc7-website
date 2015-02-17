@@ -242,10 +242,10 @@
 									<div class="sentence">
 										<div class="chat-box text-left">
 											<div><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_boy.png"><img class="arrow arrow-boy" src="<?= base_url() ?>assets/img/main/faq_boy_arrow.png"></div>
-											<div class="blue">ค่ายนี้จะจัดเมื่อไร ที่ไหน?</div>
+											<div class="blue">ค่ายนี้จะจัดเมื่อไร ?</div>
 										</div>
 										<div class="chat-box text-right">
-											<div class="white text-center">ค่ายนี้จัด 3 วัน 2 คืน ระหว่างวันที่ 3-5 เมษายน 2558 ที่มหาวิทยาลัยราชภัฏจันทรเกษม ถนนรัชดาภิเษก กรุงเทพมหานครจ้า</div>
+											<div class="white text-center">ค่ายนี้จัด 3 วัน 2 คืน ระหว่างวันที่ 3-5 เมษายน 2558 จ้า</div>
 											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
 										</div>
 									</div>
@@ -335,7 +335,7 @@
 											<div class="blue">อยากช่วยโปรโมทค่าย ต้องทำอย่างไร?</div>
 										</div>
 										<div class="chat-box text-right">
-											<div class="white text-center">สามารถเข้าที่หน้า Media เพื่อนำแบนเนอร์ไปโปรโมท หรือ ใช้ Hashtag #jwcth บน Social Network</div>
+											<div class="white text-center">ใช้ Hashtag #jwcth โพสบน Social Network ได้เลยจ้า</div>
 											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
 										</div>
 									</div>
