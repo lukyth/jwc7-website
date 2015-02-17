@@ -10,10 +10,10 @@
   <meta name="keywords" content="webmaster,ค่ายไอที,ค่ายคอม,jwc,jwc7,jwc#7,junior webmaster camp,ค่ายทำเว็บ,ค่ายเว็บ">
   <meta property="og:title" content="Junior Webmaster Camp #7">
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="<?= base_url()?>">
-  <meta property="og:image" content="<?= base_url()?>assets/img/fb-og.jpg">
-  <meta property="og:image" content="<?= base_url()?>assets/img/fb-og-large-3.jpg">
-  <meta property="og:image" content="<?= base_url()?>assets/img/fb-og-large-4.jpg">
+  <meta property="og:url" content="http://www.jwc.in.th/jwc7/">
+  <meta property="og:image" content="http://www.jwc.in.th/jwc7/assets/img/fb-og.jpg">
+  <meta property="og:image" content="http://www.jwc.in.th/jwc7/assets/img/fb-og-large.jpg">
+  <meta property="og:image" content="http://www.jwc.in.th/jwc7/assets/img/fb-og-large-2.jpg">
   <meta property="og:site_name" content="Junior Webmaster Camp #7">
   <meta property="og:description" content="มาจะกล่าวบทไป.. ฤกษ์งามยามดีนี้ไซร้ จักนำมาให้ชมอีกคำรบหนึ่ง ขอป่าวประกาศลั่น! ค่ายปั้นนักพัฒนาเว็บระดับมัธยม กำลังทำการลงเสาเอก ก่อกำแพงเมือง ให้ปวงประชาจักได้สัมผัสถึงความยิ่งใหญ่ มินานเพียงชั่วเคี้ยวหมากแหลกแล้วไซร้ อันกาลใกล้จักใกล้ได้เชยชม !!">
   <link rel="icon" type="image/png" href="<?php echo base_url()."assets/" ?>img/favicon.png">
