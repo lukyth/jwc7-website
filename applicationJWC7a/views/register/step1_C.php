@@ -22,6 +22,7 @@
 			["inputSurname","<?= $form->surname ?>"],
 			["inputNickname","<?= $form->nickname ?>"],
 			["inputSex","<?= $form->sex ?>"],
+			["inputBirthday","<?= $form->birthday ?>"],
 			["inputNational_ID","<?= $form->national_ID ?>"],
 			["inputSchool","<?= $form->school ?>"],
 			["inputGrade","<?= $form->grade ?>"],
@@ -182,6 +183,15 @@
 									</label>
 								</div>
 
+							</div>
+						</div>
+						<div class="row form-field">
+							<div class="col-sm-3">
+								<label for="name">วันเกิด*</label>
+							</div>
+
+							<div class="col-sm-7">
+								<input type="date" id="inputBirthday" class="form-control" placeholder="2000-01-01" name="inputBirthday" required></input>
 							</div>
 						</div>
 						<div class="row form-field">

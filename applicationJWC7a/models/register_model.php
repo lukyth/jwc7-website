@@ -9,6 +9,7 @@
     var $surname=null;
     var $nickname=null;
     var $sex=null;
+    var $birthday=null;
     var $national_ID=null;
     var $school=null;
     var $grade=null;
@@ -49,6 +50,7 @@
           $this->surname=$result->surname;
           $this->nickname=$result->nickname;
           $this->sex=$result->sex;
+          $this->birthday=$result->birthday;
           $this->national_ID=$result->national_ID;
           $this->school=$result->school;
           $this->address=$result->address;
