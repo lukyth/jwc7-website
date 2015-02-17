@@ -176,13 +176,18 @@ module.controller('RegisterInfoController', function($scope, $stateParams, $http
 
 	$scope.saveScore = function(){
 		$scope.success = null;
+		$scope.saving = true;
 		$http.post(API_BASE + 'save_hw_score/' + $stateParams.id, $scope.vote).success(function(){
 			$scope.success = 'Saved';
+			$scope.saving = false;
+		}).finally(function(){
+			$scope.saving = false;
 		});
 	};
 
 	$scope.saveStatus = function(){
 		$scope.success_status = null;
+		$scope.saving_status = true;
 		if($scope.register.status == 'InProgress' && !confirm('ถ้าเลือกให้กรอกใบสมัครใหม่จะไม่ขึ้นในหน้า admin ต้องตามน้องมากรอกใหม่เท่านั้น')){
 			return;
 		}
@@ -190,6 +195,9 @@ module.controller('RegisterInfoController', function($scope, $stateParams, $http
 			status: $scope.register.status
 		}).success(function(){
 			$scope.success_status = 'Saved';
+			$scope.saving_status = false;
+		}).finally(function(){
+			$scope.saving_status = false;
 		});
 	};
 });

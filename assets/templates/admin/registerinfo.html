@@ -41,7 +41,6 @@
 	</div>
 	<accordion close-others="false">
 		<accordion-group heading="สถานะ" is-open="true">
-			<div class="alert alert-success" ng-bind="success_status" ng-if="success_status"></div>
 			<div class="col-md-4">
 				<select ng-model="register.status" class="form-control">
 					<option value="InProgress">InProgress (น้องสามารถแก้ไขใบสมัครได้)</option>
@@ -51,7 +50,7 @@
 					<option value="Paid">Paid</option>
 				</select>
 			</div>
-			<div class="btn btn-primary" ng-click="saveStatus()">บันทึกสถานะ</div>
+			<div class="btn" ng-class="{'btn-primary': !success_status, 'btn-success': success_status}" ng-click="saveStatus()">บันทึกสถานะ<span ng-if="saving_status">...</span></div>
 		</accordion-group>
 		<accordion-group heading="ข้อมูลส่วนตัว" is-open="false">
 			<div class="row valuelist">
@@ -214,8 +213,9 @@
 			</div>
 		</accordion-group>
 	</accordion>
-	<div class="alert alert-success" ng-bind="success" ng-if="success"></div>
-	<div class="btn btn-primary" ng-click="saveScore()">บันทึกคะแนน</div>
+	<div class="btn" ng-class="{'btn-primary': !success, 'btn-success': success}" ng-click="saveScore()">
+		บันทึกคะแนน<span ng-if="saving">...</span>
+	</div>
 	<div class="btn btn-default" ui-sref="base.register()">Back</div>
 	<br><br>
 </div>
