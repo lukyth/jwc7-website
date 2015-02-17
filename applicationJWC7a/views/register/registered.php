@@ -30,7 +30,8 @@
 			</div>
 			<div class="row" id="loginspace">
 				<h2>ขออภัยน้า</h2>
-				<p>Facebook นี้ได้สมัคร JWC7 ไปแล้วจ้า~</p>
+				<p>Facebook <?=html_escape($user['name'])?> ได้สมัคร JWC7 สาขา <?=$major?> ไปแล้วจ้า~</p>
+				<p>ต้องการแก้ไขอะไร ติดต่อพี่ๆ ที่เพจ <a href="https://www.facebook.com/jwcth">Junior Webmaster Camp</a> ได้เลย</p>
 				<br>
 				<a href="http://jwc.in.th" class="btn btn-success btn-lg">กลับหน้าแรก</a>
 			</div>

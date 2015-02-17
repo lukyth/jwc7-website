@@ -107,7 +107,19 @@ class Register extends CI_Controller {
   }
 
   public function registered() {
-    $this->load->view('register/registered');
+    if(!$this->facebook->getUser()){
+      redirect('','refresh');
+      return;
+    }
+    $user = $this->facebook->api('/me');
+
+    $this->load->model('Register_Model','register');
+    $this->register->checkRegister($user['id']);
+
+    $this->load->view('register/registered', array(
+      'user' => $user,
+      'major' => $this->register->registerType,
+    ));
   }
 
   public function edit( $status = "normal" ) {
@@ -365,10 +377,6 @@ class Register extends CI_Controller {
           $this->load->view('register/step1_M',$data);
       }
 
-  }
-
-  public function registed() {
-    $this->load->view('register/registed');
   }
 
   public function finish($type){
