@@ -157,6 +157,9 @@ hr{border-color:#000;}
 .radio{
 	text-align: left;
 }
+.radio+.radio{
+	margin-top: 10px;
+}
 
 #form-head{
 	color:#fff;

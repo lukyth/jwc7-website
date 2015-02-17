@@ -84,6 +84,12 @@ module.factory('User', function(API_BASE, $http, $rootScope, $q){
 	return new User();
 });
 
+module.filter('nbr', function(){
+	return function(text){
+		return text.replace('\\n', '\n');
+	};
+});
+
 module.controller('LoginController', function($scope, $state, User){
 	$scope.input = {
 		username: '',

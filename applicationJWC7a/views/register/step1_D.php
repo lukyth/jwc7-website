@@ -163,12 +163,12 @@
 								<label for="name" value="<?= $form->sex ?>">เพศ*</label>
 							</div>
 							<div class="col-sm-4">
-								<div class="radio">
+								<div class="radio col-sm-6">
 									<label>
 										<input type="radio" name="inputSex" value="M" checked> ชาย
 									</label>
 								</div>
-								<div class="radio">
+								<div class="radio col-sm-6">
 									<label>
 										<input type="radio" name="inputSex" value="F"> หญิง
 									</label>
@@ -391,18 +391,18 @@
 							<div class="col-sm-3">
 								<label for="name" >ประเภทอาหาร</label>
 							</div>
-							<div class="col-sm-9">
-								<div class="radio">
+							<div class="col-sm-7">
+								<div class="radio col-sm-4">
 									<label>
 										<input type="radio" name="inputSpecialFood" value="ปกติ" checked> ปกติ
 									</label>
 								</div>
-								<div class="radio">
+								<div class="radio col-sm-4">
 									<label>
 										<input type="radio" name="inputSpecialFood" value="ฮาลาล"> ฮาลาล
 									</label>
 								</div>
-								<div class="radio">
+								<div class="radio col-sm-4">
 									<label>
 										<input type="radio" name="inputSpecialFood" value="มังสวิรัติ"> มังสวิรัติ
 									</label>
