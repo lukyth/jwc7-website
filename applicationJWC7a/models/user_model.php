@@ -9,17 +9,17 @@
     }
 
     function get_amount_c(){
-        $query = $this->db->get_where('register', array('registerType' => 'Content',"status" => "Registered"));
+        $query = $this->db->get_where('register', array('registerType' => 'Content',"status !=" => "InProgress"));
         return $query->num_rows();       
     }
 
     function get_amount_d(){
-        $query = $this->db->get_where('register', array('registerType' => 'Design',"status" => "Registered"));
+        $query = $this->db->get_where('register', array('registerType' => 'Design',"status !=" => "InProgress"));
         return $query->num_rows();       
     }
 
     function get_amount_m(){
-        $query = $this->db->get_where('register', array('registerType' => 'Marketing',"status" => "Registered"));
+        $query = $this->db->get_where('register', array('registerType' => 'Marketing',"status !=" => "InProgress"));
         return $query->num_rows();       
     }
 
