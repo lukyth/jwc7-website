@@ -2,13 +2,13 @@
 	<div class="pull-right">
 		<div class="form-inline">
 			<select class="form-control" ng-model="filter.registerType">
-				<option value="">All type</option>
+				<option value="">ทุกสาขา</option>
 				<option value="Content">Content ({{(register|filter:{registerType:'Content'}).length}})</option>
 				<option value="Design">Design ({{(register|filter:{registerType:'Design'}).length}})</option>
 				<option value="Marketing">Marketing ({{(register|filter:{registerType:'Marketing'}).length}})</option>
 			</select>
 			<select class="form-control" ng-model="filter.status">
-				<option value="">All status</option>
+				<option value="">ทุกสถานะ</option>
 				<option value="Registered">Registered ({{(register|filter:{status:'Registered'}).length}})</option>
 				<option value="Homework_Checked">Homework checked ({{(register|filter:{status:'Homework_Checked'}).length}})</option>
 				<option value="Accepted">Accepted ({{(register|filter:{status:'Accepted'}).length}})</option>
@@ -19,7 +19,7 @@
 			<div class="checkbox">
 				<label>
 					<input type="checkbox" ng-model="showNeedCheck">
-					แสดงการบ้านที่เฉพาะยังไม่ตรวจ
+					แสดงการบ้านเฉพาะที่ยังไม่ตรวจ
 				</label>
 			</div>
 		</div>

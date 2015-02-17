@@ -98,6 +98,22 @@ class Admin extends CI_Controller {
 		$this->output_json(array('succes' => true));
 	}
 
+	public function save_status($id){
+		if(!$this->checkAccessJson()){
+			return;
+		}
+
+		$this->load->model('Register_Model', 'model');
+		
+		$post = $this->get_post_body();
+
+		$this->model->update(array(
+			'status' => $post->status
+		), $id);
+
+		$this->output_json(array('succes' => true));
+	}
+
 	public function sendmail(){
 		if(!$this->checkAccessJson()){
 			return;

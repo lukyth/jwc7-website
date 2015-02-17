@@ -49,7 +49,7 @@
 				<li><a href="#" ui-sref="base.user()">Admin users</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#" ng-if="user" ng-bind="user.username"></a></li>
+				<li><a href="<?=base_url()?>admin/logout" ng-if="user" ng-bind="user.username"></a></li>
 			</ul>
 		</div>
 	</div>
