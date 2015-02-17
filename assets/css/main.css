@@ -229,7 +229,7 @@
 		animation-play-state: running;
 }
 
-.boat {
+/*.boat {
   -webkit-animation: boatrun 12s linear infinite running, boatmove 2s ease-in infinite running;
   -moz-animation-name: boatrun 12s linear infinite running, boatmove 2s ease-in infinite running;
   -o-animation-name: boatrun 12s linear infinite running, boatmove 2s ease-in infinite running;
@@ -255,7 +255,7 @@
 		-ms-animation-name: boatrun3 12s linear infinite running, boatmove3 2s ease-in infinite running;
 		animation-name: boatrun3 12s linear infinite running, boatmove3 2s ease-in infinite running;
 	}
-}
+}*/
 
 html,body {
 	width: 100%;
@@ -448,39 +448,44 @@ a.register-button {
 }
 
 #header-page .logo-img {
-	margin-top: 14vh;
-	width: 480px;
+	margin-top: 14%;
+	width: 460px;
 }
 
 #header-page .town {
-	position: relative;
+	position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 #header-page .town div {
 	position: absolute;
-	height: 100vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
 }
 
 #header-page .town .back-left {
 	background: url(../img/main/new/town_back_left.svg) no-repeat left bottom;
-	background-size: 26% auto;
+	background-size: 30% auto;
+  background-position: -6% 100%;
 }
 
 #header-page .town .back-center {
 	background: url(../img/main/new/town_back_center.svg) no-repeat center bottom;
 	background-size: 60% auto;
+  background-position: 62% 100%;
 }
 
 #header-page .town .back-right {
 	background: url(../img/main/new/town_back_right.svg) no-repeat right bottom;
-	background-size: 16% auto;
+	background-size: 24% auto;
+  background-position: 110% 100%;
 }
 
 #header-page .town .town-front {
 	background: url(../img/main/new/town_front.svg) no-repeat center bottom;
 	background-size: 100%;
-	height: 108vh;
+	height: 100%;
 }
 
 #header-page .jumpto-register {
@@ -490,9 +495,9 @@ a.register-button {
 
 #header-page .boat-station {
 	position: absolute;
-  left: 20%;
-  bottom: -8vh;
-  width: 30%;
+  left: 25%;
+  bottom: -1%;
+  width: 14%;
   z-index: 1;
 }
 
@@ -524,11 +529,11 @@ a.register-button {
 }
 #header-page .sponsor-top img {
 	width: 100%;
-	max-width: 180px;
+	max-width: 160px;
 }
 @media screen and (max-width:768px) {
 	#header-page .sponsor-top {
-		margin: 10px 10px 0;
+		margin: 20% 10px 0;
 	}
 	#header-page .sponsor-top img {
 		max-width: 70px;
@@ -570,22 +575,20 @@ a.register-button {
 }
 
 #about-page .river {
-	background: url(../img/main/new/river.svg) no-repeat center center;
-  background-size: cover;
-  z-index: 1;
+	background: url(../img/main/new/river.svg) repeat-x center center;
+  background-size: auto 100%;
   width: 100%;
-  height: 12vw;
-  margin: 3vh 0 0;
-  -ms-overflow-x: hidden;
-      overflow-x: hidden;
+  height: 80px;
+  margin-top: -14px;
 }
 
 #about-page .river-wave {
-	background: url(../img/main/new/river_wave.svg) no-repeat center center;
-	background-size: 100% 100%;
-	z-index: 2;
-	width: 100%;
-	height: 100%;
+	background: url(../img/main/new/river_wave.svg) repeat-x center center;
+  background-size: auto 68%;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-position-y: 90%;
 }
 
 #about-page .desciption {
@@ -632,13 +635,13 @@ a.register-button {
 
 #about-page .boat {
 	background: url(../img/main/new/boat.svg);
-	background-size: 32% auto;
-	background-position: 0 20%;
-	background-repeat: no-repeat;
-	position: absolute;
-	height: 210px;
-	width: 100%;
-	z-index: 3;
+  background-size: 16% auto;
+  background-position: 0 16%;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 140px;
+  width: 100%;
+  z-index: 3;
 }
 
 @media screen and ( max-width: 1199px ) {
@@ -1173,73 +1176,69 @@ a.register-button {
 }
 
 @media screen and (max-width: 1199px) {
-	#header-page .town .town-front {
-		height: 106vh;
-	}
-	#header-page .boat-station {
-		bottom: -6vh;
-	}
 	#about-page .river {
-		margin: 2vh 0 0;
-	}
+    margin-top: -11px;
+    height: 60px;
+  }
 }
 
 @media screen and (max-width: 991px) {
 	#header-page .town .town-front {
-		background-size: 120%;
+		background-size: 132%;
 	}
 
 	#header-page .town .back-left {
-	  background-size: 32% auto;
-	  background-position-x: -4%;
+	  background-size: 34% auto;
+	  background-position-x: -10%;
 	}
 
 	#header-page .town .back-center {
-		background-size: 68% auto;
-		background-position-y: 94%;
+		background-size: 58% auto;
+    background-position: 50% 98%;
 	}
 
 	#header-page .town .back-right {
-		background-size: 20% auto;
+		background-size: 26% auto;
+    background-position-x: 106%;
 	}
 
-	#header-page .boat-station {
-	  bottom: -6vh;
-	  width: 34%;
-	}
+  #header-page .logo-img {
+    width: 320px;
+  }
 
-	#about-page .river {
-	  height: 16vh;
-	}
+  #header-page .jumpto-register {
+    width: 180px;
+    padding: 14px;
+    font-size: 1.3em;
+  }
 }
 
 @media screen and (max-width: 768px) {
 	#header-page .town .town-front {
-	  background-size: auto 40vh;
-	  height: 100vh;
+	  background-size: auto 40%;
 	}
 
 	#header-page .town .back-right {
-	  background-size: 32% auto;
-	  background-position-x: 110%;
+    background-size: 64% auto;
+    background-position-x: -120%;
 	}
 
 	#header-page .town .back-center {
-	  background-size: 70% auto;
-	  background-position-y: 84%;
+	  background-size: 160% auto;
+    background-position: 0% 98%;
 	}
 
 	#header-page .town .back-left {
-	  background-position: -26% bottom;
-	  background-size: 56% auto;
+	  background-position: 188% bottom;
+    background-size: 57% auto;
 	}
 
 	#header-page .logo-img {
-	  margin-top: 16vh;
+	  margin-top: 36%;
 	}
 
 	#header-page .jumpto-register {
-	  margin-top: 10vh;
+	  margin-top: 24%;
 	  width: 160px;
 	}
 
@@ -1248,19 +1247,17 @@ a.register-button {
 	}
 
 	#about-page .river {
-	  margin: -4vh 0 0;
-	  height: 16vh;
+	  margin-top: -13px;
+    height: 70px;
 	}
 
 	#header-page .boat-station {
-	  bottom: 0vh;
-	  width: 46%;
-	  left: 10%;
+	  width: 30%;
 	}
 
 	#about-page .boat {
-		background-size: 52% auto;
-		height: 160px;
+		background-size: 32% auto;
+    height: 80px;
 	}
 
 	#about-page .river-wave {
@@ -1273,52 +1270,33 @@ a.register-button {
 }
 
 @media screen and (max-width: 480px) {
-	#header-page .town .town-front {
-	  background-size: auto 50vh;
-	  height: 100vh;
-	}
+  #header-page .logo-img {
+    margin-top: 38%;
+  }
 
-	#header-page .town .back-right {
-	  background-size: 34% auto;
-	}
-
-	#header-page .town .back-left {
-	  background-position: -18% bottom;
-	  background-size: 56% auto;
-	}
-
-	#header-page .logo-img {
-	  margin-top: 38%;
-	}
-
-	#header-page .jumpto-register {
-	  margin-top: 10vh;
-	  width: 160px;
-	}
-
-	#header-page .sponsor-top img {
-	  max-width: 76px;
-	}
+  #header-page .jumpto-register {
+    margin-top: 18%;
+  }
 
 	#about-page .river {
-	  margin: -4vh 0 0;
-	  height: 20vh;
+	  margin-top: -13px;
+    height: 54px;
 	}
 
 	#header-page .boat-station {
-	  bottom: 0vh;
-	  width: 74%;
-	  left: -16%;
+    width: 38%;
+    bottom: -0.4%;
+    left: 12%;
 	}
 
 	#about-page .boat {
-		background-size: 66% auto;
-		height: 100px;
+		background-size: 44% auto;
+    height: 60px;
 	}
 
-	#about-page .river-wave {
+	/*#about-page .river-wave {
 	  background-size: auto 58%;
-	}
+	}*/
 
 	#picture-page .social a img {
 	  width: 44px;

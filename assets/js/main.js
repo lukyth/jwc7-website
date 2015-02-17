@@ -24,7 +24,7 @@ var Fold = (function() {
 	ret.up = function() {
 
 		h = $("#qa-page .folded").height();
-		
+
 		if( isShow ) {
 			$folded.accordion( 90, 1 );
 			if( isMobile ) {
