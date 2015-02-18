@@ -35,6 +35,7 @@
 				<h2>สมัครเสร็จสิ้น!</h2>
 				<div>ขอบคุณที่เข้ามาร่วมสมัครค่าย JWC7 นะ<br>อย่าลืมลากเพื่อนมากันเยอะๆด้วยน้า~<div>
 				<br>
+				<a id="share" href="#" class="btn btn-primary btn-lg">แชร์ลง Facebook</a>
 				<a href="http://jwc.in.th" class="btn btn-success btn-lg">กลับหน้าแรก</a>
 			</div>
 
@@ -50,6 +51,32 @@
 	  ga('create', 'UA-59770266-1', 'auto');
 	  ga('send', 'pageview');
 
+	</script>
+	<script>
+window.fbAsyncInit = function() {
+	FB.init({
+		appId: '1540852432838036',
+		version: 'v2.1'
+	});
+	$('#share').on('click', function(e){
+		e.preventDefault();
+		FB.ui({
+			method: 'feed',
+			link: 'http://www.jwc.in.th/jwc7/',
+			name: 'Junior Webmaster Camp 7',
+			description : <?=json_encode($register)?> + ' ได้สมัครเข้าคัดเลือกเป็นชาว #SiamWebster ณ ค่าย Junior Webmaster Camp ครั้งที่ 7 แล้ว ใครใคร่จะมาเข้าร่วม #JWC7 จงเร่งตามมาเถิด',
+			redirect_uri: 'http://www.jwc.in.th/jwc7/'
+		}, function(){});
+	});
+};
+
+(function(d, s, id){
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) {return;}
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_US/sdk.js";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 	</script>
 </body>
 </html>

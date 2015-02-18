@@ -427,7 +427,7 @@
 								</div>
 								<div class="radio col-sm-4">
 									<label>
-										<input type="radio" name="inputSpecialFood" value="ฮาลาล"> ฮาลาล
+										<input type="radio" name="inputSpecialFood" value="อิสลาม"> อิสลาม
 									</label>
 								</div>
 								<div class="radio col-sm-4">

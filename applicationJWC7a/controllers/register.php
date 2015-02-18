@@ -1,4 +1,4 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+ <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Register extends CI_Controller {
 
@@ -389,8 +389,10 @@ class Register extends CI_Controller {
     $this->load->library(array('email'));
     $this->load->model('Register_Model','register');
     $user_id =$this->facebook->getUser();
+    $data = array();
 
     if($this->register->checkRegister($user_id)){
+        $data['register'] = $this->register->name;
         $this->email->initialize();
         $this->email->from('jwc7@ywc.in.th', 'jwc7');
 

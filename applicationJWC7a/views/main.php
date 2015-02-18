@@ -325,7 +325,7 @@
 											<div class="blue">เมื่อไรจะประกาศผล แล้วจะทราบได้อย่างไรว่าเข้ารอบ?</div>
 										</div>
 										<div class="chat-box text-right">
-											<div class="white text-center">จะมีรายชื่อผู้ที่ผ่านเข้าค่ายประกาศที่หน้าเว็บไซต์ และ น้องๆ สามารถเข้าสู่ระบบเพื่ออัพโหลดเอกสารยืนยันตนได้ หรืออีกช่องทางหนึ่งระบบจะทำการประกาศผลที่หน้า Wall Facebook ของน้องๆ เอง</div>
+											<div class="white text-center">จะมีรายชื่อผู้ที่ผ่านเข้าค่ายประกาศที่หน้าเว็บไซต์ และ น้องๆ สามารถเข้าสู่ระบบเพื่ออัพโหลดเอกสารยืนยันตนได้</div>
 											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
 										</div>
 									</div>
