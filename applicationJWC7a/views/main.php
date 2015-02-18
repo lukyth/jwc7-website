@@ -368,7 +368,7 @@
 					</div>
 				</div>
 			</div>
-			<img src="<?= base_url() ?>assets/img/main/timeline_top.png" style="width:100%;" />
+			<img src="<?= base_url() ?>assets/img/main/new/town_mirror.svg" style="width:100%;margin-bottom:-18%;" />
 		</div>
 
 

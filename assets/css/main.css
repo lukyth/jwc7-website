@@ -833,10 +833,14 @@ a.register-button {
 
 
 #timeline-page {
-  background-image: url(../img/main/timeline_bottom.png);
+  /*background-image: url(../img/main/timeline_bottom.png);
   background-size: 100% auto;
   background-position:top center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
+  background: -webkit-linear-gradient(#308291, #724493);
+  background: -o-linear-gradient(#308291, #724493);
+  background: -moz-linear-gradient(#308291, #724493);
+  background: linear-gradient(#308291, #724493);
 }
 
 #timeline-page .timeline {
