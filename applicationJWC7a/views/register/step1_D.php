@@ -422,7 +422,7 @@
 
 						<div class="row form-field">
 							<div class="col-sm-3">
-								<label for="name">อาหารที่แพ้</label>
+								<label for="name">อาหารที่แพ้ , ไม่รับประทาน</label>
 							</div>
 							<div class="col-sm-9">
 								<input type="text" id="inputFoodAllergy" class="form-control" placeholder="อาหารที่แพ้" name="inputFoodAllergy"></input>
