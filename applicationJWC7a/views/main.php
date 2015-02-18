@@ -185,10 +185,10 @@
 					<div class="col-xs-8 col-xs-offset-2">
 						<div class="row">
 							<div class="col-md-4 col-xs-6 text-center">
-								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_large.png" />
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/sponsor_large_2.png" />
 							</div>
 							<div class="col-md-4 col-xs-6 text-center">
-								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_large.png" />
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/sponsor_large_1.png" />
 							</div>
 							<div class="col-md-12 col-xs-12 text-center"></div>
 							<div class="col-md-3 col-xs-4 text-center">
@@ -265,7 +265,7 @@
 											<div class="blue">ค่ายนี้รับสมัครกี่คน?</div>
 										</div>
 										<div class="chat-box text-right">
-											<div class="white text-center">เราจะคัดเลือกน้องๆ ที่สมัครมาเพื่อเข้าค่ายทั้งหมด 48 คน แบ่งเป็นสาขาละ 16 คน โดยจะมีรายชื่อสำรอง อีกสาขาละ 6 คน การคัดเลือกจะดูจากการตอบคำถามของน้องๆ เพราะฉะนั้น ใครมีไอเดียอะไร ใส่มาให้เต็มที่ !!</div>
+											<div class="white text-center">เราจะคัดเลือกน้องๆ ที่สมัครมาเพื่อเข้าค่ายทั้งหมด 42 คน แบ่งเป็นสาขาละ 14 คน โดยจะมีรายชื่อสำรอง อีกสาขาละ 6 คน การคัดเลือกจะดูจากการตอบคำถามของน้องๆ เพราะฉะนั้น ใครมีไอเดียอะไร ใส่มาให้เต็มที่ !!</div>
 											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
 										</div>
 									</div>
@@ -295,7 +295,7 @@
 											<div class="blue">ไม่มี Facebook สมัครได้ไหม?</div>
 										</div>
 										<div class="chat-box text-right">
-											<div class="white text-center">ไม่สามารถสมัครได้ เพราะเราจะมีกลุ่มที่ใช้ในการติดต่อสื่อสารระหว่างก่อนค่ายและหลังค่าย และยังมีกลุ่มลับ JWC ซึ่งเป็นเอกลักษณ์สืบทอดกันมา ไม่มีค่ายไหนเหมือน หรือเป็นได้อย่างครอบครัว JWC</div>
+											<div class="white text-center">ไม่สามารถสมัครได้ เพราะเราจะมีการเก็บข้อมูล อีกทั้งยังจะมีกลุ่มที่ใช้ในการติดต่อสื้อสาร ก่อนค่าย ระหว่างค่าย และหลังค่าย โดยใช้ Facebook เป็นช่องทางหลัก อีกทั้งยังมีกลุ่มลับ JWC สำหรับผู้ที่ได้เข้าร่วมค่าย ซึ่งเป็นเอกลักษณ์สืบทอดกันมาอีกด้วย</div>
 											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
 										</div>
 									</div>
