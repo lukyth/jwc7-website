@@ -185,10 +185,10 @@
 					<div class="col-xs-8 col-xs-offset-2">
 						<div class="row">
 							<div class="col-md-4 col-xs-6 text-center">
-								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_large.png" />
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/sponsor_large_2.png" />
 							</div>
 							<div class="col-md-4 col-xs-6 text-center">
-								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_large.png" />
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/sponsor_large_1.png" />
 							</div>
 							<div class="col-md-12 col-xs-12 text-center"></div>
 							<div class="col-md-3 col-xs-4 text-center">
