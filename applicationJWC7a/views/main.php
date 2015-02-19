@@ -155,7 +155,15 @@
 					<img class="title img-center img-responsive hr-line" src="<?= base_url() ?>assets/img/main/hr_1.svg" />
 					<div class="row">
 						<div class="col-md-4 text-center">
-							<img src="<?= base_url() ?>assets/img/main/new/web_design.svg" class="head img-center img-responsive" />
+							<div class="category-image design">
+								<img src="<?= base_url() ?>assets/img/main/new/character_design.svg" alt="design" class="character">
+								<div class="category-image-bg">
+									<img src="<?= base_url() ?>assets/img/main/new/color.svg" alt="color">
+									<img src="<?= base_url() ?>assets/img/main/new/star.svg" alt="star">
+									<img src="<?= base_url() ?>assets/img/main/new/star.svg" alt="star">
+									<img src="<?= base_url() ?>assets/img/main/new/brush.svg" alt="brush">
+								</div>
+							</div>
 							<div class="cat-text" style="color:#732777;">Web Design</div>
 							<p class="text-center description">
 								เนรมิตหน้าเว็บ โชว์สเต็ปดีไซน์ ไฉไลสไตล์เว็บสเตอร์สู่การเป็นเว็บ Design อย่างแท้จริง
@@ -166,7 +174,12 @@
 							</a>
 						</div>
 						<div class="col-md-4 text-center">
-							<img src="<?= base_url() ?>assets/img/main/new/web_content.svg" class="head img-center img-responsive" />
+							<div class="category-image content">
+								<img src="<?= base_url() ?>assets/img/main/new/character_content.svg" alt="content" class="character">
+								<div class="category-image-bg">
+									ก ข ฃ ค ฅ ฆ ง จ ฉ ช ซ ฌ ญ ฎ ฏ ฐ ฑ ฒ ณ ด ต ถ ท ธ น บ ป ผ ฝ พ ฟ ภ ม ย ร ล ว ศ ษ ส ห ฬ อ ฮ
+								</div>
+							</div>
 							<div class="cat-text" style="color:#07908C;">Web Content</div>
 							<p class="text-center description">
 								สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Content ให้เชือดเฉือนประโยคเด็ด Content ชนะใจ
@@ -177,7 +190,17 @@
 							</a>
 							</div>
 						<div class="col-md-4 text-center">
-							<img src="<?= base_url() ?>assets/img/main/new/web_marketing.svg" class="head img-center img-responsive" />
+							<div class="category-image marketing">
+								<img src="<?= base_url() ?>assets/img/main/new/character_marketing.svg" alt="marketing" class="character">
+								<div class="category-image-bg">
+									<img src="<?= base_url() ?>assets/img/main/new/graph.svg" alt="graph">
+									<span>฿</span>
+									<span>฿</span>
+									<span>฿</span>
+									<span>฿</span>
+									<span>฿</span>
+								</div>
+							</div>
 							<div class="cat-text" style="color:#E64C24;">Web Marketing</div>
 							<p class="text-center description">
 								เรียนรู้ศาสตร์การตลาดยุทธศาสตร์ การสร้างชื่อให้เว็บเลื่องลือระบือไกล
