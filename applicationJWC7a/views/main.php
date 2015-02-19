@@ -112,7 +112,7 @@
 							</div>
 							<div class="img-center img-detailtext text-center">
 								<h1 class="title-text">อะไรคือ JWC7</h1>
-								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
+								<img class="img-center img-responsive hr-line" src="<?= base_url() ?>assets/img/main/hr_1.svg" />
 								<br>
 								<p class="img-center normal-text desciption" style="line-height:2; margin-bottom:30px;">
 								ค่ายสร้างเว็บที่จะพาน้องๆ ม.ปลาย มาเรียนรู้เทคนิคการสร้างสรรค์อย่างบรรเจิด สัมผัสประสบการณ์พิเศษผ่านกิจกรรมสนุกๆ และ Workshop จากสาขาต่างๆ พร้อมทั้งการนำเสนอผลงานกับกูรูใจดี แห่งวงการเว็บไทยมากมาย
@@ -124,8 +124,27 @@
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div class="detail">
+			<div class="detail-item">
+				<img src="<?= base_url() ?>assets/img/main/new/detail-1.svg" alt="รับสมัคร">
+				<span>รับสมัคร</span>
+				วันนี้ - 14 มีนาคม 2558
+			</div>
+			<div class="detail-item">
+				<img src="<?= base_url() ?>assets/img/main/new/detail-2.svg" alt="วันจัดค่าย">
+				<span>วันจัดค่าย</span>
+				3 - 5 เมษายน 2558
+			</div>
+			<div class="detail-item">
+				<img src="<?= base_url() ?>assets/img/main/new/detail-3.svg" alt="สถานที่">
+				<span>สถานที่</span>
+				มหาวิทยาลัยราชภัฎจันทรเกษม
+			</div>
 			<div class="river-bottom"></div>
 		</div>
+
 	</div>
 
 	<div id="category-page" class="page">
@@ -133,7 +152,7 @@
 			<div class="row">
 				<div class="col-xs-10 col-xs-offset-1">
 					<h1 class="text-center big-text">สาขา</h1>
-					<img class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
+					<img class="title img-center img-responsive hr-line" src="<?= base_url() ?>assets/img/main/hr_1.svg" />
 					<div class="row">
 						<div class="col-md-4 text-center">
 							<img src="<?= base_url() ?>assets/img/main/new/web_design.svg" class="head img-center img-responsive" />
@@ -178,7 +197,7 @@
 		<div id="sponsor-page" class="page">
 			<div class="img-sponsorhead" style="width:100%;">
 				<h1 class="text-center big-text">ผู้สนับสนุน</h1>
-				<img style="padding-bottom:20px;" class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
+				<img style="padding-bottom:20px;" class="title img-center img-responsive hr-line" src="<?= base_url() ?>assets/img/main/hr_1.svg" />
 			</div>
 			<div class="container">
 				<div class="row">
@@ -349,7 +368,7 @@
 					</div>
 				</div>
 			</div>
-			<img src="<?= base_url() ?>assets/img/main/timeline_top.png" style="width:100%;" />
+			<img src="<?= base_url() ?>assets/img/main/new/town_mirror.svg" style="width:100%;margin-bottom:-18%;" />
 		</div>
 
 
@@ -358,7 +377,7 @@
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
 						<h1 class="text-center big-text">กำหนดการ</h1>
-						<img class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
+						<img class="title img-center img-responsive hr-line" src="<?= base_url() ?>assets/img/main/hr_1.svg" />
 					</div>
 				</div>
 				<div class="row">
@@ -383,7 +402,7 @@
 							<br>
 							วันค่าย JWC#7
 						</div>
-						<img class="timeline-fish" src="<?= base_url() ?>assets/img/main/timeline-fish.png" alt="ปลาตะเพียนสาน">
+						<img class="timeline-fish" src="<?= base_url() ?>assets/img/main/new/timeline-fish.svg" alt="ปลาตะเพียนสาน">
 					</div>
 				</div>
 			</div>
@@ -395,7 +414,7 @@
 			<div class="row">
 				<div class="col-xs-10 col-xs-offset-1">
 					<h1 class="big-text text-center">ภาพจากปีเก่า</h1>
-					<img class="title img-center img-responsive" src="<?= base_url() ?>assets/img/main/hr_1.png" />
+					<img class="title img-center img-responsive hr-line" src="<?= base_url() ?>assets/img/main/hr_1.svg" />
 					<div class="row">
 						<div class="table-picture col-xs-12">
 							<div class="row">
