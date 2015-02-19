@@ -80,6 +80,20 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function report($type){
+		if(!$this->checkAccessJson()){
+			return;
+		}
+		$allowed = array('roster', 'food', 'mkt', 'size');
+
+		if(!in_array($type, $allowed)){
+			$this->output_error('No such report');
+			return;
+		}
+
+		return call_user_func(array($this, '_report_' . $type));
+	}
+
 	public function save_hw_score($id){
 		if(!$this->checkAccessJson()){
 			return;
@@ -199,5 +213,49 @@ class Admin extends CI_Controller {
 			->set_output(json_encode(array(
 				'error' => $out
 			)));
+	}
+
+	private function _report_roster(){
+		$this->load->model('Register_Model', 'model');
+		$this->output_json($this->model->get($this->_get_filter()));
+	}
+
+	private function _report_food(){
+		$this->load->model('Register_Model', 'model');
+		$filter = $this->_get_filter();
+		$result = array(
+			'food_allergic' => $this->model->getFoodAllergic($filter),
+			'drug_allergic' => $this->model->getDrugAllergic($filter),
+			'food' => $this->model->getSpecialFood($filter),
+			'list' => $this->model->get($filter)
+		);
+		$this->output_json($result);
+	}
+
+	private function _report_mkt(){
+		$this->load->model('Register_Model', 'model');
+		$filter = $this->_get_filter();
+		$result = array(
+			'knowFrom' => $this->model->getKnowFrom($filter),
+			'list' => $this->model->get($filter)
+		);
+		$this->output_json($result);
+	}
+
+	private function _report_size(){
+		$this->load->model('Register_Model', 'model');
+		$filter = $this->_get_filter();
+		$result = array(
+			'sizeShirt' => $this->model->getSizeShirt($filter),
+			'list' => $this->model->get($filter)
+		);
+		$this->output_json($result);
+	}
+
+	private function _get_filter(){
+		return array_filter(array(
+			'registerType' => $_GET['type'],
+			'status' => $_GET['status']
+		));
 	}
 }

@@ -1,0 +1,80 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4">
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th></th>
+						<th>อาหาร</th>
+						<th>จำนวน</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in data.food">
+						<td ng-bind="$index+1"></td>
+						<td ng-bind="item.specialFood"></td>
+						<td ng-bind="item.count"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-sm-4">
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th></th>
+						<th>แพ้อาหาร</th>
+						<th>จำนวน</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in data.food_allergic">
+						<td ng-bind="$index+1"></td>
+						<td ng-bind="item.foodAllergy"></td>
+						<td ng-bind="item.count"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-sm-4">
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th></th>
+						<th>แพ้ยา</th>
+						<th>จำนวน</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in data.drug_allergic">
+						<td ng-bind="$index+1"></td>
+						<td ng-bind="item.drugAllergy"></td>
+						<td ng-bind="item.count"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th></th>
+				<th>ชื่อ</th>
+				<th>ชื่อเล่น</th>
+				<th>อาหาร</th>
+				<th>แพ้อาหาร</th>
+				<th>แพ้ยา</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in data.list">
+				<td ng-bind="$index+1"></td>
+				<td>{{item.prefix}} {{item.name}} {{item.surname}}</td>
+				<td ng-bind="item.nickname"></td>
+				<td ng-bind="item.specialFood"></td>
+				<td ng-bind="item.foodAllergy"></td>
+				<td ng-bind="item.drugAllergy"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

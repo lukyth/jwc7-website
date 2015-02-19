@@ -106,11 +106,12 @@
         $this->db->update('register', $data, array('facebookID' => $id));
     }
 
-    function get(){
+    function get($filter=array()){
+      $filter = array_merge(array(
+        'status !=' => 'InProgress'
+      ), $filter);
       $query = $this->db->get_where(
-        'register', array(
-          'status !=' => 'InProgress'
-        )
+        'register', $filter
       );
       return $query->result();
     }
@@ -133,5 +134,70 @@
         ->join('homework', 'register.facebookID = homework.facebookID')
         ->get();
       return $query->row();
+    }
+
+    function getFoodAllergic($filter=array()){
+      $filter = array_merge(array(
+        'status !=' => 'InProgress'
+      ), $filter);
+      $query = $this->db->select('foodAllergy')
+        ->select('COUNT(*) AS count')
+        ->from('register')
+        ->where($filter)
+        ->group_by('foodAllergy')
+        ->get();
+      return $query->result();
+    }
+
+    function getDrugAllergic($filter=array()){
+      $filter = array_merge(array(
+        'status !=' => 'InProgress'
+      ), $filter);
+      $query = $this->db->select('drugAllergy')
+        ->select('COUNT(*) AS count')
+        ->from('register')
+        ->where($filter)
+        ->group_by('drugAllergy')
+        ->get();
+      return $query->result();
+    }
+
+    function getSpecialFood($filter=array()){
+      $filter = array_merge(array(
+        'status !=' => 'InProgress'
+      ), $filter);
+      $query = $this->db->select('specialFood')
+        ->select('COUNT(*) AS count')
+        ->from('register')
+        ->where($filter)
+        ->group_by('specialFood')
+        ->get();
+      return $query->result();
+    }
+
+    function getKnowFrom($filter=array()){
+      $filter = array_merge(array(
+        'status !=' => 'InProgress'
+      ), $filter);
+      $query = $this->db->select('knowFrom')
+        ->select('COUNT(*) AS count')
+        ->from('register')
+        ->where($filter)
+        ->group_by('knowFrom')
+        ->get();
+      return $query->result();
+    }
+
+    function getSizeShirt($filter=array()){
+      $filter = array_merge(array(
+        'status !=' => 'InProgress'
+      ), $filter);
+      $query = $this->db->select('sizeshirt')
+        ->select('COUNT(*) AS count')
+        ->from('register')
+        ->where($filter)
+        ->group_by('sizeshirt')
+        ->get();
+      return $query->result();
     }
 }

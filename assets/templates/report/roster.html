@@ -1,0 +1,26 @@
+<div class="container">
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th></th>
+				<th class="col-xs-4">ชื่อ</th>
+				<th>ชื่อเล่น</th>
+				<th class="col-xs-1">สาขา</th>
+				<th class="col-xs-1">เสื้อ</th>
+				<th>โทร</th>
+				<th class="col-xs-3"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in data">
+				<td ng-bind="$index+1"></td>
+				<td>{{item.prefix}} {{item.name}} {{item.surname}}</td>
+				<td ng-bind="item.nickname"></td>
+				<td ng-bind="item.registerType"></td>
+				<td ng-bind="item.sizeshirt"></td>
+				<td ng-bind="item.phone"></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

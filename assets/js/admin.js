@@ -43,6 +43,14 @@ module.config(function($stateProvider, $urlRouterProvider, ASSET_BASE){
 			url: '/register/{id}',
 			templateUrl: ASSET_BASE + 'templates/admin/registerinfo.html',
 			controller: 'RegisterInfoController',
+		})
+		.state('base.report', {
+			url: '/report/{report}?type&status',
+			templateUrl: function($stateParams){
+				// XXX: This function does not use injection
+				return window.asset_base + 'templates/report/'+$stateParams.report+'.html';
+			},
+			controller: 'ReportController',
 		});
 	$urlRouterProvider.otherwise('/');
 });
@@ -155,7 +163,7 @@ module.controller('MailController', function(API_BASE, $scope, $http){
 	};
 });
 
-module.controller('RegisterController', function($scope, $http, API_BASE){
+module.controller('RegisterController', function($scope, $state, $http, API_BASE){
 	$http.get(API_BASE + 'crud/Register').success(function(data){
 		$scope.register = data;
 	});
@@ -169,6 +177,16 @@ module.controller('RegisterController', function($scope, $http, API_BASE){
 	$scope.$watch('showNeedCheck', function(val){
 		localStorage.showNeedCheck = val;
 	});
+
+	$scope.report = '';
+
+	$scope.viewReport = function(){
+		$state.go('base.report', {
+			report: $scope.report,
+			type: $scope.filter.registerType,
+			status: $scope.filter.status
+		});
+	};
 });
 
 module.controller('RegisterInfoController', function($scope, $stateParams, $http, API_BASE){
@@ -212,6 +230,16 @@ module.controller('RegisterInfoController', function($scope, $stateParams, $http
 			$scope.saving_status = false;
 		});
 	};
+});
+
+module.controller('ReportController', function($scope, $stateParams, $http, API_BASE){
+	$http.get(
+		API_BASE + 'report/' + $stateParams.report +
+		'?type=' + ($stateParams.type||'') +
+		'&status=' + ($stateParams.status||'')
+	).success(function(data){
+		$scope.data = data;
+	});
 });
 
 })();

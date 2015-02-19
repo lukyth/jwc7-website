@@ -1,5 +1,18 @@
 <div class="container">
-	<div class="pull-right">
+	<div class="col-sm-8">
+		<div><strong>{{(register|filter:filter).length}}</strong> registrations</div>
+		<div class="col-sm-6">
+			<select class="form-control" ng-model="report" ng-change="viewReport()">
+				<option value="">เลือกรายงาน</option>
+				<option value="roster">ใบรายชื่อ</option>
+				<option value="food">อาหาร-ยา</option>
+				<option value="mkt">รู้จักค่ายจาก</option>
+				<option value="size">ไซส์เสื้อ</option>
+			</select>
+			<div class="help-block">เลือกตัวกรองที่ต้องการจากด้านขวาก่อนเลือกรายงาน</div>
+		</div>
+	</div>
+	<div class="col-sm-4">
 		<div class="form-inline">
 			<select class="form-control" ng-model="filter.registerType">
 				<option value="">ทุกสาขา</option>
@@ -24,8 +37,6 @@
 			</div>
 		</div>
 	</div>
-	<p><strong>{{(register|filter:filter).length}}</strong> registrations</p>
-	<div class="clearfix"></div>
 
 	<br><br>
 	

@@ -1,0 +1,36 @@
+<div class="container">
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th></th>
+				<th>รู้จักค่ายจาก</th>
+				<th>จำนวน</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in data.knowFrom">
+				<td ng-bind="$index+1"></td>
+				<td ng-bind="item.knowFrom"></td>
+				<td ng-bind="item.count"></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th></th>
+				<th>ชื่อ</th>
+				<th>ชื่อเล่น</th>
+				<th>รู้จักค่ายจาก</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in data.list">
+				<td ng-bind="$index+1"></td>
+				<td>{{item.prefix}} {{item.name}} {{item.surname}}</td>
+				<td ng-bind="item.nickname"></td>
+				<td ng-bind="item.knowFrom"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
