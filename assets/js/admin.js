@@ -100,7 +100,11 @@ module.filter('nbr', function(){
 
 module.filter('age', function(){
 	return function(text){
-		return Math.floor((new Date() - new Date(text))/(3600 * 24 * 365 * 1000));
+		var age = Math.floor((new Date() - new Date(text))/(3600 * 24 * 365 * 1000));
+		if(age < 0){
+			age += 543;
+		}
+		return age;
 	};
 });
 
