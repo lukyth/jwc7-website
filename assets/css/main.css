@@ -275,7 +275,10 @@ body {
 .title-text { font-size:30px; }
 .normal-text { font-size:20px; }
 
-.hr-line { width: 70%; }
+.hr-line {
+  width: 70%;
+  max-width: 480px;
+}
 
 .img-center {
   margin-left:auto;
@@ -965,7 +968,7 @@ a.register-button {
 #timeline-page .timeline-fish {
   position: absolute;
   top: -12px;
-  right: 98%;
+  right: 99%;
   width: 160px;
   -webkit-transform: rotate(180deg);
      -moz-transform: rotate(180deg);
@@ -1011,7 +1014,7 @@ a.register-button {
 }
 
 #picture-page .social {
-  margin-top:60px;
+  margin: 60px 0;
 }
 
 #picture-page .social p {
@@ -1021,6 +1024,14 @@ a.register-button {
 #picture-page .social a img {
   width: 70px;
   margin-left:30px;
+}
+
+#picture-page .social a:nth-child(2) img {
+  margin-left: 0;
+}
+
+#picture-page .partner img {
+  width: 100px;
 }
 
 #category-page .big-text, #sponsor-page .big-text {

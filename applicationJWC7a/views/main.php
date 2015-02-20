@@ -247,7 +247,7 @@
 							</div>
 							<div class="col-md-12 col-xs-12 text-center"></div>
 							<div class="col-md-2 col-xs-3 text-center">
-								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/gold/dual.png" />
 							</div>
 							<div class="col-md-2 col-xs-3 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
@@ -502,6 +502,16 @@
 								<a href="http://www.twitter.com/jwcth" class="shadowlink" title="JWC on Twitter" target="_blank"><img src="<?php echo base_url()."assets/" ?>img/social/tw.svg" alt="tw"></a>
 								<a href="http://www.instagram.com/jwcth" class="shadowlink" title="JWC on Instagram" target="_blank"><img src="<?php echo base_url()."assets/" ?>img/social/ig.svg" alt="ig"></a>
 								<a href="https://www.youtube.com/channel/UCvoljJxOdeqTlguPsh9nHVg" class="shadowlink" title="YWC YouTube Channel" target="_blank"><img src="<?php echo base_url()."assets/" ?>img/social/yt.svg" alt="yt"></a></h3>
+							</div>
+							<div class="partner text-center">
+								<img src="<?= base_url() ?>assets/img/main/sponsor/partner/camphub.png" alt="CampHub">
+								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
+								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
+								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
+								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
+								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
+								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
+								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
 							</div>
 						</div>
 					</div>
