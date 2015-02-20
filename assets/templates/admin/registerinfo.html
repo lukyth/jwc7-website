@@ -68,7 +68,7 @@
 				</div>
 				<div class="col-md-2">
 					<strong>วันเกิด</strong>
-					<div class="value">{{register.birthday}} ({{register.birthday|age}} ปี)</div>
+					<div class="value"  ng-if="register.birthday">{{register.birthday}} ({{register.birthday|age}} ปี)</div>
 				</div>
 			</div>
 			<div class="row valuelist">

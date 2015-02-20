@@ -50,4 +50,14 @@ class Homework_Score_Model extends CI_Model {
 
 		$this->db->trans_complete();
 	}
+
+	function getList(){
+		return $this->db->select('register.facebookID,userID,q1,q2,q3,q4,q5,prefix,name,surname,nickname,username')
+			->from('homework_score')
+			->order_by('register.facebookID')
+			->join('register', 'register.facebookID = homework_score.facebookID')
+			->join('users', 'users.id = homework_score.userID')
+			->get()
+			->result();
+	}
 }

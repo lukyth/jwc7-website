@@ -94,7 +94,8 @@ module.factory('User', function(API_BASE, $http, $rootScope, $q){
 
 module.filter('nbr', function(){
 	return function(text){
-		return text.replace('\\n', '\n');
+		console.log(text);
+		return text && text.replace(/\\n/g, '\n');
 	};
 });
 
@@ -105,6 +106,11 @@ module.filter('age', function(){
 			age += 543;
 		}
 		return age;
+	};
+});
+module.filter('keyslength', function(){
+	return function(text){
+		return Object.keys(text).length;
 	};
 });
 
@@ -244,6 +250,18 @@ module.controller('ReportController', function($scope, $stateParams, $http, API_
 	).success(function(data){
 		$scope.data = data;
 	});
+
+	$scope.average = function(list){
+		var avg = 0;
+		angular.forEach(list, function(v){
+			avg += (v.q1+v.q2+v.q4+v.q5)/4;
+		});
+		return avg;
+	};
+
+	$scope.getAvg = function(item){
+		return item && $scope.average(item.score);
+	};
 });
 
 })();
