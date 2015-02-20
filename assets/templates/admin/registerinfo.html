@@ -68,7 +68,7 @@
 				</div>
 				<div class="col-md-2">
 					<strong>วันเกิด</strong>
-					<div class="value">{{register.birthday}} ({{register.birthday|age}} ปี)</div>
+					<div class="value"  ng-if="register.birthday">{{register.birthday}} ({{register.birthday|age}} ปี)</div>
 				</div>
 			</div>
 			<div class="row valuelist">
@@ -159,18 +159,6 @@
 				<div class="col-md-12">
 					<strong>3. หากเปรียบเพื่อนร่วมทีมของน้องเป็นอวัยวะในร่างกาย เมื่ออวัยวะบางส่วนคือเนื้อร้าย น้องจะจัดการอย่างไร เพราะเหตุใด</strong>
 					<div class="value pre">{{register.q3|nbr}}</div>
-				</div>
-				<div class="col-md-12">
-					<table class="table table-condensed table-bordered scoretable">
-						<tr>
-							<th>x</th>
-							<th ng-repeat="score in scoreRange" ng-bind="score"></th>
-						</tr>
-						<tr>
-							<td><input type="radio" name="q3" ng-model="vote.q3" ng-value="0"></td>
-							<td ng-repeat="score in scoreRange"><input type="radio" name="q3" ng-model="vote.q3" ng-value="{{score}}"></td>
-						</tr>
-					</table>
 				</div>
 			</div>
 		</accordion-group>

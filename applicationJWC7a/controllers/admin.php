@@ -84,7 +84,7 @@ class Admin extends CI_Controller {
 		if(!$this->checkAccessJson()){
 			return;
 		}
-		$allowed = array('roster', 'food', 'mkt', 'size');
+		$allowed = array('roster', 'food', 'mkt', 'size', 'hw');
 
 		if(!in_array($type, $allowed)){
 			$this->output_error('No such report');
@@ -250,6 +250,34 @@ class Admin extends CI_Controller {
 			'list' => $this->model->get($filter)
 		);
 		$this->output_json($result);
+	}
+
+	private function _report_hw(){
+		$this->load->model('Homework_Score_Model', 'score');
+
+		$raw = $this->score->getList();
+		$out = array();
+
+		foreach($raw as $item){
+			if(!isset($raw[$item->facebookID])){
+				$out[$item->facebookID] = array(
+					'data' => clone $item,
+					'score' => array()
+				);
+				foreach(array('q1', 'q2', 'q3', 'q4', 'q5', 'userID', 'username') as $remove){
+					unset($out[$item->facebookID]['data']->$remove);
+				}
+			}
+			$out[$item->facebookID]['score'][$item->username] = array(
+				'q1' => (int) $item->q1,
+				'q2' => (int) $item->q2,
+				'q3' => (int) $item->q3,
+				'q4' => (int) $item->q4,
+				'q5' => (int) $item->q5,
+			);
+		}
+
+		$this->output_json(array_values($out));
 	}
 
 	private function _get_filter(){

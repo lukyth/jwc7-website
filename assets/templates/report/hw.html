@@ -1,0 +1,29 @@
+<div class="container">
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>ผู้ตรวจ</th>
+				<th>1</th>
+				<th>2</th>
+				<th>4</th>
+				<th>5</th>
+				<th>Avg</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat-start="item in data|orderBy:getAvg:true" class="info">
+				<td colspan="4"><a href="#" ui-sref="base.registerinfo({id: item.data.facebookID})">{{item.data.prefix}} {{item.data.name}} {{item.data.surname}}</a></td>
+				<td ng-bind="item.data.nickname"></td>
+				<td ng-bind="average(item.score)|number"></td>
+			</tr>
+			<tr ng-repeat="(who, score) in item.score" ng-repeat-end>
+				<th ng-bind="who"></th>
+				<td ng-bind="score.q1"></td>
+				<td ng-bind="score.q2"></td>
+				<td ng-bind="score.q4"></td>
+				<td ng-bind="score.q5"></td>
+				<td ng-bind="{{(score.q1+score.q2+score.q4+score.q5)/4|number}}"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
