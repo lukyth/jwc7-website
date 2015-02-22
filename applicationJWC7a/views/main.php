@@ -227,10 +227,10 @@
 					<div class="col-xs-8 col-xs-offset-2">
 						<div class="row">
 							<div class="col-md-4 col-xs-6 text-center">
-								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/sponsor_large_2.png" />
+								<a href="http://www.chandra.ac.th/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/sponsor_large_2.png" /></a>
 							</div>
 							<div class="col-md-4 col-xs-6 text-center">
-								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/sponsor_large_1.png" />
+								<a href="http://www.webmaster.or.th/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/sponsor_large_1.png" /></a>
 							</div>
 							<div class="col-md-12 col-xs-12 text-center"></div>
 							<div class="col-md-3 col-xs-4 text-center">
@@ -247,7 +247,7 @@
 							</div>
 							<div class="col-md-12 col-xs-12 text-center"></div>
 							<div class="col-md-2 col-xs-3 text-center">
-								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/gold/dual.png" />
+								<a href="https://www.02dual.com/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/gold/dual.png" /></a>
 							</div>
 							<div class="col-md-2 col-xs-3 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
@@ -504,7 +504,7 @@
 								<a href="https://www.youtube.com/channel/UCvoljJxOdeqTlguPsh9nHVg" class="shadowlink" title="YWC YouTube Channel" target="_blank"><img src="<?php echo base_url()."assets/" ?>img/social/yt.svg" alt="yt"></a></h3>
 							</div>
 							<div class="partner text-center">
-								<img src="<?= base_url() ?>assets/img/main/sponsor/partner/camphub.png" alt="CampHub">
+								<a href="http://www.camphub.in.th/" target="_blank"><img src="<?= base_url() ?>assets/img/main/sponsor/partner/camphub.png" alt="CampHub"></a>
 								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
 								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
 								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
