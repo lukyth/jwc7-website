@@ -337,7 +337,7 @@
 											<div class="blue">ไม่มี Facebook สมัครได้ไหม?</div>
 										</div>
 										<div class="chat-box text-right">
-											<div class="white text-center">ไม่สามารถสมัครได้ เพราะเราจะมีการเก็บข้อมูล อีกทั้งยังจะมีกลุ่มที่ใช้ในการติดต่อสื้อสาร ก่อนค่าย ระหว่างค่าย และหลังค่าย โดยใช้ Facebook เป็นช่องทางหลัก อีกทั้งยังมีกลุ่มลับ JWC สำหรับผู้ที่ได้เข้าร่วมค่าย ซึ่งเป็นเอกลักษณ์สืบทอดกันมาอีกด้วย</div>
+											<div class="white text-center">ไม่สามารถสมัครได้ เพราะเราจะมีการเก็บข้อมูล อีกทั้งยังจะมีกลุ่มที่ใช้ในการติดต่อสื่อสาร ก่อนค่าย ระหว่างค่าย และหลังค่าย โดยใช้ Facebook เป็นช่องทางหลัก อีกทั้งยังมีกลุ่มลับ JWC สำหรับผู้ที่ได้เข้าร่วมค่าย ซึ่งเป็นเอกลักษณ์สืบทอดกันมาอีกด้วย</div>
 											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
 										</div>
 									</div>
