@@ -458,10 +458,8 @@ a.register-button {
 }
 
 #header-page .logo-img {
-  margin-top: 15vh;
+  margin-top: 10vh;
   width: 360px;
-  width: 100% !important;
-  max-width: 640px;
 }
 
 #header-page .town {
@@ -503,7 +501,6 @@ a.register-button {
 #header-page .jumpto-register {
   display: inline-block;
   width: 224px;
-  margin-top: 10vh;
 }
 
 #header-page .boat-station {
@@ -538,8 +535,8 @@ a.register-button {
 #header-page .sponsor-top {
   display: inline-block;
   vertical-align: middle;
-  margin: 8vh 40px;
-  display: none;
+  margin: 6vh 40px 8vh;
+  /*display: none;*/
 }
 #header-page .sponsor-top img {
   width: 100%;
@@ -1520,6 +1517,9 @@ a.register-button {
   }
   #sponsor-page .col-xs-4 {
     width: 40%;
+  }
+  #sponsor-page .col-xs-6 {
+    width: 49%;
   }
 }
 

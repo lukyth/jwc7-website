@@ -11,8 +11,6 @@
   <meta property="og:title" content="Junior Webmaster Camp #7">
   <meta property="og:type" content="website" />
   <meta property="og:url" content="http://www.jwc.in.th/jwc7/">
-  <!-- <meta property="og:image" content="http://www.jwc.in.th/jwc7/assets/img/og-image.jpg">
-  <meta property="og:image" content="http://www.jwc.in.th/jwc7/assets/img/og-image-large.jpg"> -->
   <meta property="og:image" content="http://www.jwc.in.th/jwc7/assets/img/og-image-large-2.jpg">
   <meta property="og:site_name" content="Junior Webmaster Camp #7">
   <meta property="og:description" content="มาจะกล่าวบทไป.. ฤกษ์งามยามดีนี้ไซร้ จักนำมาให้ชมอีกคำรบหนึ่ง ขอป่าวประกาศลั่น! ค่ายปั้นนักพัฒนาเว็บระดับมัธยม กำลังทำการลงเสาเอก ก่อกำแพงเมือง ให้ปวงประชาจักได้สัมผัสถึงความยิ่งใหญ่ มินานเพียงชั่วเคี้ยวหมากแหลกแล้วไซร้ อันกาลใกล้จักใกล้ได้เชยชม !!">
@@ -78,13 +76,10 @@
 						<img class="img-center img-responsive logo-img" src="<?= base_url() ?>assets/img/main/new/logo.svg" />
 						<div class="row">
 							<div class="col-xs-12">
-								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/new/sponsor_1.svg"></div>
-								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/new/sponsor_2.svg"></div>
+								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/new/visualize.png"></div>
+								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/sponsor_large.png"></div>
 							</div>
 						</div>
-						<!--<div style="color:#000; font-size:35px; margin-top:10px;">
-							รับสมัครเร็วๆนี้
-						</div>//-->
 						<a class="page-scroll register-button" href="#category-page">
 							<div class="jumpto-register img-center img-responsive register">สมัครเลย!</div>
 						</a>
@@ -226,13 +221,16 @@
 				<div class="row">
 					<div class="col-xs-10 col-xs-offset-1">
 						<div class="row">
-							<div class="col-md-4 col-xs-6 text-center">
+							<div class="col-md-3 col-xs-6 text-center">
 								<a href="http://www.chandra.ac.th/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/sponsor_large_2.png" /></a>
 							</div>
-							<div class="col-md-4 col-xs-6 text-center">
+							<div class="col-md-3 col-xs-6 text-center">
 								<a href="http://visualizelab.com/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/visualize.png" /></a>
 							</div>
-							<div class="col-md-4 col-xs-6 text-center">
+							<div class="col-md-3 col-xs-6 text-center">
+								<a href="http://www.webmaster.or.th/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_large.png" /></a>
+							</div>
+							<div class="col-md-3 col-xs-6 text-center">
 								<a href="http://www.webmaster.or.th/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/sponsor_large_1.png" /></a>
 							</div>
 							<div class="col-md-12 col-xs-12 text-center"></div>
