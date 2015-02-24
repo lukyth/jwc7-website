@@ -1,3 +1,7 @@
+#sponsor-page .col-md-4 {
+  width: 32.333333%;
+}
+
 @-webkit-keyframes boatrun {
   0% { background-position-x: -40%; }
   100% { background-position-x: 140%; }
@@ -1517,6 +1521,9 @@ a.register-button {
   #sponsor-page .col-xs-4 {
     width: 40%;
   }
+}
+
+@media screen and (max-width: 768px) {
   #sponsor-page .col-xs-6 {
     width: 48%;
   }
