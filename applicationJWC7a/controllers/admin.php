@@ -135,7 +135,7 @@ class Admin extends CI_Controller {
 		$out = array();
 
 		foreach(array('q1', 'q2', 'q3', 'q4', 'q5') as $name){
-			$out[$name] = (int) $obj->$name;
+			@$out[$name] = (int) $obj->$name;
 		}
 
 		$this->output_json($out);
