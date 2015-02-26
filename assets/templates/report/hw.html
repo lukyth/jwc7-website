@@ -3,6 +3,7 @@
 		<thead>
 			<tr>
 				<th>ชื่อ</th>
+				<th>สาขา</th>
 				<th>1</th>
 				<th>2</th>
 				<th>4</th>
@@ -14,10 +15,11 @@
 		<tbody>
 			<tr ng-repeat="item in data">
 				<td><a href="#" ui-sref="base.registerinfo({id: item.facebookID})">{{item.prefix}} {{item.name}} {{item.surname}}</a></td>
+				<td ng-bind="item.registerType"></td>
 				<td ng-bind="item.q1|number"></td>
 				<td ng-bind="item.q2|number"></td>
-				<td ng-class="{info: item.data.registerType=='Content', warning: item.data.registerType=='Design', success: item.data.registerType=='Marketing'}" ng-bind="item.q4|number"></td>
-				<td ng-class="{info: item.data.registerType=='Content', warning: item.data.registerType=='Design', success: item.data.registerType=='Marketing'}" ng-bind="item.q5|number"></td>
+				<td ng-class="{info: item.registerType=='Content', warning: item.registerType=='Design', success: item.registerType=='Marketing'}" ng-bind="item.q4|number"></td>
+				<td ng-class="{info: item.registerType=='Content', warning: item.registerType=='Design', success: item.registerType=='Marketing'}" ng-bind="item.q5|number"></td>
 				<td ng-bind="item.sum|number"></td>
 				<td ng-bind="item.notChecked"></td>
 			</tr>
