@@ -52,11 +52,12 @@ class Homework_Score_Model extends CI_Model {
 	}
 
 	function getList(){
-		return $this->db->select('register.facebookID,userID,q1,q2,q3,q4,q5,prefix,name,surname,nickname,username')
-			->from('homework_score')
-			->order_by('register.facebookID')
-			->join('register', 'register.facebookID = homework_score.facebookID')
-			->join('users', 'users.id = homework_score.userID')
+		return $this->db->select('register.facebookID,AVG(q1) AS q1,AVG(q2) AS q2,AVG(q4) AS q4,AVG(q5) AS q5,SUM(q1+q2+q4+q5)/COUNT(userID) AS sum,prefix,name,surname,nickname,registerType, (SELECT GROUP_CONCAT(username) FROM users WHERE id NOT IN (homework_score.userID) AND permission <= 4) AS notChecked')
+			->from('register')
+			->order_by('sum desc')
+			->join('homework_score', 'register.facebookID = homework_score.facebookID', 'left')
+			->where('status !=', 'InProgress')
+			->group_by('register.facebookID')
 			->get()
 			->result();
 	}
