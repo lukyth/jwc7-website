@@ -4,6 +4,8 @@ class Admin extends CI_Controller {
 
 	public $crud_allowed = array('User', 'Subscribe', 'Register', 'Homework_Score');
 
+	private $encKey = '/yLGaB+oKKNLPWDNjtdSCo0RWGv6tnrA9EjrTaUcdv56KE/2fScNQIQebDdrrrby';
+
 	public function index(){
 		// $this->checkAccess();
 
@@ -18,7 +20,7 @@ class Admin extends CI_Controller {
 			$session_array = array(
 				'id' => $this->user->id,
 				'username'=>$this->user->username,
-				'permission'=>$this->user->permission
+				'permission'=>(int) $this->user->permission
 			);
 
 			$this->session->set_userdata('login', $session_array);
@@ -34,7 +36,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function crud($object, $objectId=-1){
-		if(!$this->checkAccessJson()){
+		if(!$this->checkAccessLevel(5)){
 			return;
 		}
 
@@ -80,8 +82,67 @@ class Admin extends CI_Controller {
 		}
 	}
 
-	public function report($type){
+	public function get_obs_register(){
 		if(!$this->checkAccessJson()){
+			return;
+		}
+
+		$this->load->model('Register_Model', 'model');
+		$this->load->library('encrypt');
+
+		@$id = $_GET['id'];
+
+		if(empty($id)){
+			$user = $this->session->userdata('login');
+			$userid = $user['id'];
+			$data = $this->model->getWithUser($userid);
+			$out = array();
+
+			foreach($data as $item){
+				$obj = array();
+				$obj['id'] = $this->encrypt->encode($item->facebookID, $this->encKey);
+				foreach(array('registerType', 'status') as $name){
+					if(isset($item->$name)){
+						$obj[$name] = $item->$name;
+					}
+				}
+				foreach(array('q1', 'q2', 'q3', 'q4', 'q5') as $name){
+					if(isset($item->$name)){
+						$obj[$name] = (int) $item->$name;
+					}
+				}
+				$out[] = $obj;
+			}
+		}else{
+			$objectId = $this->encrypt->decode($id, $this->encKey);
+			$obj = $this->model->getId($objectId);
+			$out = array();
+
+			foreach(array('q1', 'q2', 'q3', 'q4', 'q5', 'registerType') as $item){
+				$out[$item] = $obj->$item;
+			}
+		}
+
+		$this->output_json($out);
+	}
+
+	public function get_obs_score(){
+		$this->load->model('Homework_Score_Model', 'model');
+		$this->load->library('encrypt');
+
+		$objectId = $this->encrypt->decode($_GET['id'], $this->encKey);
+		$obj = $this->model->getId($objectId);
+		$out = array();
+
+		foreach(array('q1', 'q2', 'q3', 'q4', 'q5') as $name){
+			$out[$name] = (int) $obj->$name;
+		}
+
+		$this->output_json($out);
+	}
+
+	public function report($type){
+		if(!$this->checkAccessLevel(5)){
 			return;
 		}
 		$allowed = array('roster', 'food', 'mkt', 'size', 'hw');
@@ -94,18 +155,30 @@ class Admin extends CI_Controller {
 		return call_user_func(array($this, '_report_' . $type));
 	}
 
-	public function save_hw_score($id){
+	public function save_hw_score(){
 		if(!$this->checkAccessJson()){
 			return;
 		}
 
 		$this->load->model('Homework_Score_Model', 'model');
 		$this->load->helper('array');
+		$this->load->library('encrypt');
+
+		$id = $this->encrypt->decode($_GET['id'], $this->encKey);
 
 		$post = $this->get_post_body();
 
 		$user = $this->session->userdata('login');
 		$userid = $user['id'];
+		if(in_array($user['permission'], array(1, 2, 3))){
+			// cannot check q1, q2, q3
+			unset($post->q1);
+			unset($post->q2);
+			unset($post->q3);
+		}else if($user['permission'] == 4){
+			unset($post->q4);
+			unset($post->q5);
+		}
 
 		$this->model->upsert($id, $userid, $post);
 
@@ -113,7 +186,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function save_status($id){
-		if(!$this->checkAccessJson()){
+		if(!$this->checkAccessLevel(5)){
 			return;
 		}
 
@@ -129,7 +202,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function sendmail(){
-		if(!$this->checkAccessJson()){
+		if(!$this->checkAccessLevel(7)){
 			return;
 		}
 
@@ -191,6 +264,28 @@ class Admin extends CI_Controller {
 	private function checkAccessJson(){
 		if ($this->session->userdata('login') == FALSE){
 			$this->output_error('You must be logged in to use this page', 403);
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * Access level:
+	 * 1: check content only
+	 * 2: check design only
+	 * 3: check marketing only
+	 * 4: check all only
+	 * 5: access register list and dashboard
+	 * 7: send email
+	 * 10: add user
+	 */
+	private function checkAccessLevel($level){
+		if(!$this->checkAccessJson()){
+			return;
+		}
+		$userdata = $this->session->userdata('login');
+		if($userdata['permission'] < $level){
+			$this->output_error('Your user level cannot access this page', 403);
 			return false;
 		}
 		return true;

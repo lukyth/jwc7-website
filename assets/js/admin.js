@@ -51,6 +51,16 @@ module.config(function($stateProvider, $urlRouterProvider, ASSET_BASE){
 				return window.asset_base + 'templates/report/'+$stateParams.report+'.html';
 			},
 			controller: 'ReportController',
+		})
+		.state('base.check', {
+			url: '/check',
+			templateUrl: ASSET_BASE + 'templates/admin/check.html',
+			controller: 'CheckController',
+		})
+		.state('base.checkinfo', {
+			url: '/check/{id}?index',
+			templateUrl: ASSET_BASE + 'templates/admin/checkinfo.html',
+			controller: 'CheckInfoController',
 		});
 	$urlRouterProvider.otherwise('/');
 });
@@ -94,7 +104,6 @@ module.factory('User', function(API_BASE, $http, $rootScope, $q){
 
 module.filter('nbr', function(){
 	return function(text){
-		console.log(text);
 		return text && text.replace(/\\n/g, '\n');
 	};
 });
@@ -201,29 +210,10 @@ module.controller('RegisterController', function($scope, $state, $http, API_BASE
 
 module.controller('RegisterInfoController', function($scope, $stateParams, $http, API_BASE){
 	$scope.id = $stateParams.id;
-	$scope.scoreRange = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-	$scope.vote = {
-		q1: 0, q2: 0, q3: 0, q4: 0, q5: 0
-	}
 
 	$http.get(API_BASE + 'crud/Register/' + $stateParams.id).success(function(data){
 		$scope.register = data;
 	});
-
-	$http.get(API_BASE + 'crud/Homework_Score/' + $stateParams.id).success(function(data){
-		$scope.vote = data;
-	});
-
-	$scope.saveScore = function(){
-		$scope.success = null;
-		$scope.saving = true;
-		$http.post(API_BASE + 'save_hw_score/' + $stateParams.id, $scope.vote).success(function(){
-			$scope.success = 'Saved';
-			$scope.saving = false;
-		}).finally(function(){
-			$scope.saving = false;
-		});
-	};
 
 	$scope.saveStatus = function(){
 		$scope.success_status = null;
@@ -261,6 +251,56 @@ module.controller('ReportController', function($scope, $stateParams, $http, API_
 
 	$scope.getAvg = function(item){
 		return item && $scope.average(item.score);
+	};
+});
+
+module.controller('CheckController', function($scope, $http, API_BASE, User){
+	var majorMap = {
+		1: 'Content',
+		2: 'Design',
+		3: 'Marketing'
+	};
+	var user;
+	User.getUser().then(function(u){
+		user = u;
+		return $http.get(API_BASE + 'get_obs_register');
+	}).then(function(data){
+		data = data.data;
+		var major = majorMap[user.permission];
+		$scope.register = data.filter(function(item){
+			if(user.permission > 3){
+				return true;
+			}
+			return item.registerType == major;
+		});
+	});
+});
+
+module.controller('CheckInfoController', function($scope, $http, $stateParams, API_BASE){
+	$scope.id = $stateParams.id;
+	$scope.index = $stateParams.index;
+	$scope.scoreRange = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	$scope.vote = {
+		q1: 0, q2: 0, q3: 0, q4: 0, q5: 0
+	}
+
+	$http.get(API_BASE + 'get_obs_register?id=' + encodeURIComponent($stateParams.id)).success(function(data){
+		$scope.register = data;
+	});
+
+	$http.get(API_BASE + 'get_obs_score?id=' + encodeURIComponent($stateParams.id)).success(function(data){
+		$scope.vote = data;
+	});
+
+	$scope.saveScore = function(){
+		$scope.success = null;
+		$scope.saving = true;
+		$http.post(API_BASE + 'save_hw_score?id=' + encodeURIComponent($stateParams.id), $scope.vote).success(function(){
+			$scope.success = 'Saved';
+			$scope.saving = false;
+		}).finally(function(){
+			$scope.saving = false;
+		});
 	};
 });
 

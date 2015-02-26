@@ -1,0 +1,97 @@
+<div class="container">
+	<div class="btn btn-default" ui-sref="base.check()">Back</div>
+	<h1>น้องคนที่ {{index}}</h1>
+	<accordion close-others="false">
+		<accordion-group heading="คำถามคัดเลือก" is-open="true" ng-if="user.permission >= 4">
+			<div class="row valuelist">
+				<div class="col-md-12">
+					<strong>1. ในมุมมองของน้อง เว็บไซต์คืออะไร และเว็บไซต์ที่ดีควรมีลักษณะอย่างไร?</strong>
+					<div class="value pre">{{register.q1|nbr}}</div>
+				</div>
+				<div class="col-md-12">
+					<table class="table table-condensed table-bordered scoretable">
+						<tr>
+							<th>x</th>
+							<th ng-repeat="score in scoreRange" ng-bind="score"></th>
+						</tr>
+						<tr>
+							<td><input type="radio" name="q1" ng-model="vote.q1" ng-value="0"></td>
+							<td ng-repeat="score in scoreRange"><input type="radio" name="q1" ng-model="vote.q1" ng-value="{{score}}"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="row valuelist">
+				<div class="col-md-12">
+					<strong>2. ในปัจจุบันนี้ น้องคิดว่าเว็บไซต์มีอิทธิพลต่อคนไทยอย่างไร และเว็บไซต์ที่เหมาะสมสำหรับคนไทยควรเป็นอย่างไร?</strong>
+					<div class="value pre">{{register.q2|nbr}}</div>
+				</div>
+				<div class="col-md-12">
+					<table class="table table-condensed table-bordered scoretable">
+						<tr>
+							<th>x</th>
+							<th ng-repeat="score in scoreRange" ng-bind="score"></th>
+						</tr>
+						<tr>
+							<td><input type="radio" name="q2" ng-model="vote.q2" ng-value="0"></td>
+							<td ng-repeat="score in scoreRange"><input type="radio" name="q2" ng-model="vote.q2" ng-value="{{score}}"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="row valuelist">
+				<div class="col-md-12">
+					<strong>3. หากเปรียบเพื่อนร่วมทีมของน้องเป็นอวัยวะในร่างกาย เมื่ออวัยวะบางส่วนคือเนื้อร้าย น้องจะจัดการอย่างไร เพราะเหตุใด</strong>
+					<div class="value pre">{{register.q3|nbr}}</div>
+				</div>
+			</div>
+		</accordion-group>
+		<accordion-group heading="คำถามสาขา {{register.registerType}}" is-open="true" ng-if="user.permission != 4">
+			<div class="row valuelist">
+				<div class="col-md-12">
+					<strong ng-if="register.registerType == 'Content'">1. ในมุมมองของน้อง Content คืออะไร มีความสำคัญกับเว็บไซต์อย่างไร และคิดว่า Content แบบไหนที่จะทำให้เว็บไซต์ของคนไทยเป็นที่รู้จักในระดับโลก</strong>
+					<strong ng-if="register.registerType == 'Design'">1. Design มีความสำคัญกับเว็บไซต์อย่างไร รวมถึงการออกแบบเว็บไซต์ที่ดีและไม่ดีมีลักษณะอย่างไร?</strong>
+					<strong ng-if="register.registerType == 'Marketing'">1. หากน้องถูกจ้างให้เค้าไปเป็นตำแหน่ง ดูแลการขาย ในสภาวะการเงินของบริษัทย่ำแย่ น้องคิดว่า จะช่วยดึงดูดลูกค้า และชนะคู่แข่งได้โดยวิธีใดบ้าง (สามารถเลือกประเภทธุรกิจเองได้)</strong>
+					<div class="value pre">{{register.q4|nbr}}</div>
+				</div>
+				<div class="col-md-12">
+					<table class="table table-condensed table-bordered scoretable">
+						<tr>
+							<th>x</th>
+							<th ng-repeat="score in scoreRange" ng-bind="score"></th>
+						</tr>
+						<tr>
+							<td><input type="radio" name="q4" ng-model="vote.q4" ng-value="0"></td>
+							<td ng-repeat="score in scoreRange"><input type="radio" name="q4" ng-model="vote.q4" ng-value="{{score}}"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="row valuelist">
+				<div class="col-md-12">
+					<strong ng-if="register.registerType == 'Content'">2. ในมุมมองของน้อง “ความเป็นไทย” คืออะไร เขียนอธิบายไม่เกิน 200 ตัวอักษร</strong>
+					<strong ng-if="register.registerType == 'Design'">2. หากน้องได้ออกแบบเว็บไซต์เพื่อคนไทย น้องจะออกแบบอย่างไรเพื่อให้เข้าถึงคนไทยอย่างแท้จริง พร้อมอธิบายเหตุผล</strong>
+					<strong ng-if="register.registerType == 'Marketing'">2.หากมีโครงการจากรัฐ ต้องการสนับสนุนให้สินค้าไทย ส่งออกนอก จะทำอย่างไร ที่จะตีตลาด ให้ทั่วโลก รู้จักความเป็นไทย น้องคิดว่า มีสิ่งใดเป็นจุดขาย อย่างแท้จริง และจะโปรโมทให้ชาวต่างชาติรู้ ด้วยวิธีไหนบ้าง</strong>
+					<div class="value pre">{{register.q5|nbr}}</div>
+				</div>
+				<div class="col-md-12">
+					<table class="table table-condensed table-bordered scoretable">
+						<tr>
+							<th>x</th>
+							<th ng-repeat="score in scoreRange" ng-bind="score"></th>
+						</tr>
+						<tr>
+							<td><input type="radio" name="q5" ng-model="vote.q5" ng-value="0"></td>
+							<td ng-repeat="score in scoreRange"><input type="radio" name="q5" ng-model="vote.q5" ng-value="{{score}}"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</accordion-group>
+	</accordion>
+	<div class="btn" ng-class="{'btn-primary': !success, 'btn-success': success}" ng-click="saveScore()">
+		บันทึกคะแนน<span ng-if="saving">...</span>
+	</div>
+	<div class="btn btn-default" ui-sref="base.check()">Back</div>
+	<br><br>
+</div>

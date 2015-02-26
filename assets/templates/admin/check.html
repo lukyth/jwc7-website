@@ -1,0 +1,49 @@
+<div class="container">
+	<div class="col-sm-8">
+		<div><strong>{{register.length}}</strong> registrations</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="form-inline">
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" ng-model="showNeedCheck">
+					แสดงการบ้านเฉพาะที่ยังไม่ตรวจ
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<br><br>
+	
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>หมายเลข</th>
+				<th ng-click="predicate='registerType';reverse=!reverse">สาขา</th>
+				<th ng-click="predicate='status';reverse=!reverse">สถานะ</th>
+				<th>ตรวจ<span ng-if="!showNeedCheck">แล้ว</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in register|orderBy:predicate:reverse">
+				<td><a href="#" ui-sref="base.checkinfo({id: item.id, index: $index+1})">{{$index+1}}</a></td>
+				<td>{{item.registerType}}</td>
+				<td>{{item.status}}</td>
+				<td>
+					<div ng-if="showNeedCheck">
+						<div class="label label-danger" ng-if="!item.q1 && (user.permission >= 4)">1</div>
+						<div class="label label-danger" ng-if="!item.q2 && (user.permission >= 4)">2</div>
+						<div class="label label-danger" ng-if="!item.q4 && (user.permission != 4)">4</div>
+						<div class="label label-danger" ng-if="!item.q5 && (user.permission != 4)">5</div>
+					</div>
+					<div ng-if="!showNeedCheck">
+						<div class="label label-default" ng-if="item.q1 > 0 && (user.permission >= 4)">1</div>
+						<div class="label label-default" ng-if="item.q2 > 0 && (user.permission >= 4)">2</div>
+						<div class="label label-default" ng-if="item.q4 > 0 && (user.permission != 4)">4</div>
+						<div class="label label-default" ng-if="item.q5 > 0 && (user.permission != 4)">5</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
