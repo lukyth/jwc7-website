@@ -51,84 +51,84 @@
               <p class="banner-title">ขนาด 120x600</p>
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_120_600-01.jpg">
             </div><!-- end banner-img -->
-            <textarea class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_120_600-01.jpg" width="120" height="600" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_120_600-01.jpg" width="120" height="600" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
           <article class="banner">
             <p class="banner-title">ขนาด 125x125</p>
             <div class="banner-img">
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_125_125-01.jpg">
             </div><!-- end banner-img -->
-            <textarea class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_125_125-01.jpg" width="125" height="125" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_125_125-01.jpg" width="125" height="125" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
           <article class="banner">
             <p class="banner-title">ขนาด 160x600</p>
             <div class="banner-img">
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_160_600-01.jpg">
             </div><!-- end banner-img -->
-            <textarea class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_160_600-01.jpg" width="160" height="600" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_160_600-01.jpg" width="160" height="600" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
           <article class="banner">
             <p class="banner-title">ขนาด 200x200</p>
             <div class="banner-img">
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_200_200-01.jpg">
             </div><!-- end banner-img -->
-            <textarea class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_200_200-01.jpg" width="200" height="200" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_200_200-01.jpg" width="200" height="200" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
           <article class="banner">
             <p class="banner-title">ขนาด 250x250</p>
             <div class="banner-img">
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_250_250-01.jpg">
             </div><!-- end banner-img -->
-            <textarea class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_250_250-01.jpg" width="250" height="250" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_250_250-01.jpg" width="250" height="250" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
           <article class="banner">
             <p class="banner-title">ขนาด 300x250</p>
             <div class="banner-img">
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_300_250-01.jpg">
             </div><!-- end banner-img -->
-            <textarea class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_300_250-01.jpg" width="300" height="250" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_300_250-01.jpg" width="300" height="250" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
           <article class="banner">
             <p class="banner-title">ขนาด 336x280</p>
             <div class="banner-img">
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_336_280-01.jpg">
             </div><!-- end banner-img -->
-            <textarea class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_336_280-01.jpg" width="336" height="280" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_336_280-01.jpg" width="336" height="280" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
           <article class="banner">
             <p class="banner-title">ขนาด 468x60</p>
             <div class="banner-img">
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_468_60-01.jpg">
             </div><!-- end banner-img -->
-            <textarea class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_468_60-01.jpg" width="468" height="60" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_468_60-01.jpg" width="468" height="60" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
           <article class="banner">
             <p class="banner-title">ขนาด 560x290</p>
             <div class="banner-img">
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_560_290-01.jpg">
             </div><!-- end banner-img -->
-            <textarea class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_560_290-01.jpg" width="560" height="290" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_560_290-01.jpg" width="560" height="290" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
           <article class="banner">
             <p class="banner-title">ขนาด 600x300</p>
             <div class="banner-img">
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_600_300-01.jpg">
             </div><!-- end banner-img -->
-            <textarea class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_600_300-01.jpg" width="600" height="300" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_600_300-01.jpg" width="600" height="300" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
           <article class="banner">
             <p class="banner-title">ขนาด 728x90</p>
             <div class="banner-img">
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_728_90-01.jpg">
             </div><!-- end banner-img -->
-            <textarea class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_728_90-01.jpg" width="728" height="90" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_728_90-01.jpg" width="728" height="90" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
           <article class="banner">
             <p class="banner-title">ขนาด 800x150</p>
             <div class="banner-img">
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_800_150-01.jpg">
             </div><!-- end banner-img -->
-            <textarea class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_800_150-01.jpg" width="800" height="150" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_800_150-01.jpg" width="800" height="150" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
         </div>
       </div><!-- end row -->

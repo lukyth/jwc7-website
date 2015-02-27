@@ -37,8 +37,9 @@
 }
 
 #banner-list{
-	background: url(../img/mediacenter/banner-bg.png) repeat-y center center;
+	background: url(../img/mediacenter/banner-bg.png) repeat-y center bottom;
 	background-size: 100% auto;
+	padding-bottom: 20px;
 }
 
 #detail .banner{
@@ -59,7 +60,7 @@
 }
 
 #detail .banner .banner-text {
-	word-break: keep-all;
+	word-break: break-all;
 	cursor: pointer;
 }
 
