@@ -251,7 +251,7 @@
 								<a href="https://www.02dual.com/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/gold/dual.png" /></a>
 							</div>
 							<div class="col-md-2 col-xs-3 text-center">
-								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
+								<a href="http://www.nextzy.com/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/gold/nextzy.png" /></a>
 							</div>
 							<div class="col-md-2 col-xs-3 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
