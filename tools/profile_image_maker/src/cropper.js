@@ -823,7 +823,7 @@
         }
 
         context.drawImage(this.$clone[0], data.x, data.y, data.width, data.height, 0, 0, options.width, options.height);
-        context.drawImage(  $("<img" + ' src="/profile_image_maker/img/jwc7.png">')[0], 0, 0, 500, 500, 0, 0, options.width, options.height);
+        context.drawImage(  $("<img" + ' src="./img/jwc7.png">')[0], 0, 0, 500, 500, 0, 0, options.width, options.height);
         dataURL = canvas.toDataURL(type, quality);
       }
 

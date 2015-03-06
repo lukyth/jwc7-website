@@ -50,7 +50,7 @@
             <div class="banner-img">
               <p class="banner-title">แต่งรูปโปรไฟล์</p>
               <img class="img-responsive img-center" style="width:60%;" src="<?= base_url() ?>assets/img/mediacenter/example.png">
-              <a href="/tools/profile_image_maker/" target="_blank"><div class="btn btn-default btn-lg" style="margin-top:20px;">Click!</div></a>
+              <a href="<?= base_url() ?>tools/profile_image_maker/" target="_blank"><div class="btn btn-default btn-lg" style="margin-top:20px;">Click!</div></a>
             </div>
           </article><!-- end banner -->
         </div>

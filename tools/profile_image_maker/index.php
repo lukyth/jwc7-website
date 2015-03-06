@@ -57,7 +57,7 @@
 			<div class="eg-preview clearfix">
 				<div id="get_preview">
 					<div class="preview preview-lg"></div>
-					<div class="ywc"></div>
+					<div class="ywc" style="background: url(./img/jwc7.png) bottom no-repeat;"></div>
 				</div>
 			</div>
 		</div>
