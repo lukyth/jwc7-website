@@ -44,6 +44,44 @@
   </header><!-- end header -->
   <section id="detail">
     <div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <article class="banner">
+            <div class="banner-img">
+              <p class="banner-title">แต่งรูปโปรไฟล์</p>
+              <img class="img-responsive img-center" style="width:60%;" src="<?= base_url() ?>assets/img/mediacenter/example.png">
+              <a href="/tools/profile_image_maker/" target="_blank"><div class="btn btn-default btn-lg" style="margin-top:20px;">Click!</div></a>
+            </div>
+          </article><!-- end banner -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <article class="banner">
+            <div class="banner-img">
+              <p class="banner-title">เนื้อหาสำหรับประชาสัมพันธ์</p>
+              <!-- <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_120_600-01.jpg"> -->
+            </div>
+            <textarea rows="13" class="banner-text form-control" onclick="this.select();">
+            "Junior Webmaster Camp 7th” ค่ายเจาะลึก วิชาชีพเว็บมาสเตอร์ ค่ายสำหรับน้องๆ มัธยมปลาย หรือเทียบเท่า ที่มีไฟและใจรักในการทำเว็บไซต์ มารวมพลังพลิกโฉมหน้าเว็บไซต์ให้เกิดขึ้นในประเทศไทย โดยปีนี้มาในแนวคิด "เว็บสร้างสรรค์ปีที่เจ็ด เว็บเด็ดสไตล์ไทย" โดยแบ่งออกเป็น 3 สาขาให้ได้เลือกตามความถนัดและสนใจ ดังนี้ 
+
+            Web design “เสกสรรค์เว็บไซต์ให้งามงด ร่ายมนต์สะกดทุกสายตา” สาขาที่จะเนรมิตหน้าเว็บ โชว์สเต็ปดีไซน์ ไฉไลสไตล์เว็บสเตอร์ สู่การเป็นเว็บดีไซน์เนอร์อย่างแท้จริง เหมาะกับ น้องๆที่ชอบออกแบบ มีความคิดสร้างสรรค์ เป็นนักสังเกต
+
+            Web content “ประดิษฐ์ข้อความงามวิจิตร เนรมิตความคิดล้ำสมัย” สาขาที่เน้นการสื่อสารให้ถูกจริต งามวิจิตรประดิษฐ์สร้างสรรค์ ประชันความคิดเนรมิตล้ำสมัย เหมาะกับ น้องๆที่ชอบคิดชอบเขียน รักการอ่าน ชอบเล่าเรื่อง
+
+            Web marketing “เรียนรู้ศาสตร์การตลาด ยุทธศาสตร์การสร้างชื่อ ให้เว็บเลื่องลือระบือไกล”  สาขาที่จะเปิดโอกาสให้น้องๆ เรียนรู้ศาสตร์การตลาด ยุทธศาสตร์การสร้างชื่อ ให้เลื่องลือทั่วประเทศไทย กอบกำรายได้มหาศาล เหมาะกับ น้องๆที่ชอบคิดคำนวน ชอบการวางแผน อัพเดทข่าวสารสม่ำเสมอ
+
+            ซึ่งน้องๆที่สมัครลงทะเบียนเข้าค่ายทั้งหมด จะถูกคัดเลือกอย่างเข้มข้น เพื่อค้นหาสุดยอดเยาวชนเพียง 42 คนใน 3 สาขา สาขาละ 14 คน  โดยพิจารณาจากการตอบคำถามในใบสมัครที่คัดสรรมาอย่างดี โดยการสมัครน้องๆสามารถเลือกสมัคร ได้ตามความสนใจเพียงหนึ่งสาขาเท่านั้น
+
+            ตลอดเวลาในค่ายจะมีกิจกรรมสนุกๆ ที่จะปลุกเสียงความเป็นจูเนียร์เว็บมาสเตอร์ให้ดังขึ้น  น้องๆจะได้เรียนรู้เทคนิคการออกแบบ วิธีแยบยลที่สร้างกระแสให้กับเว็บไซต์ และการใช้ทักษะการพรีเซ้นอย่างมืออาชีพ กับพี่ๆกูรูในวงการ ที่สำคัญคือ ค่ายนี้ฟรีไม่มีค่าใช้จ่ายในการสมัครและการเข้าค่าย แถมยังมีรางวัลกลับบ้านอีกด้วย รับรองว่า JWC7 เผ็ดแสบในความทรงจำของน้องๆแน่นอน สมัครได้แล้ววันนี้ - 14 มีนาคม 2558 ที่ http://www.jwc.in.th
+            ประกาศผล 21 มีนาคม 2558 วันจัดค่าย 3 - 5 เมษายน 25​58 ณ มหาวิทยาลัยราชภัฏจันทรเกษม
+            ติดตามข่าวสารผ่าน Tag และ Social Media #JWC7 #SiamWebster
+            Facebook (http://facebook.com/jwcth)
+            Twitter (http://twitter.com/jwcth)
+            Instagram (http://instagram.com/jwcth)</textarea>
+          </article><!-- end banner -->
+        </div>
+      </div>
       <div id="banner-list" class="row">
         <div class="col-sm-8 col-sm-offset-2">
           <article class="banner">
@@ -94,13 +132,6 @@
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_336_280-01.jpg">
             </div><!-- end banner-img -->
             <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_336_280-01.jpg" width="336" height="280" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
-          </article><!-- end banner -->
-          <article class="banner">
-            <p class="banner-title">ขนาด 468x60</p>
-            <div class="banner-img">
-              <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_468_60-01.jpg">
-            </div><!-- end banner-img -->
-            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_468_60-01.jpg" width="468" height="60" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
           <article class="banner">
             <p class="banner-title">ขนาด 560x290</p>
