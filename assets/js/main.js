@@ -81,6 +81,10 @@ $(function() {
 		isMobile = true;
 	}
 
+	setTimeout(function() {
+		$('.popup a').trigger('click');
+	},2000);
+
 	$(".navbar").hide();
 
 	$(window).scroll( function() {

@@ -22,6 +22,7 @@
 	<link rel="stylesheet" href="<?= base_url()."assets/" ?>fonts/csprajad.css" />
 	<link rel="stylesheet" href="<?= base_url()."assets/" ?>fonts/wdb_bangna.css" />
 	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/main.css" />
+	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/lightbox.css" />
 
 </head>
 
@@ -533,10 +534,15 @@
 		</div>
 	</div>
 
+	<div class="popup" style="display: none;">
+		<a href="<?= base_url() ?>assets/img/popup_register.svg" data-lightbox="popup"></a>
+	</div>
+
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.easing.min.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/oridomi.min.js"></script>
+	<script type="text/javascript" src="<?= base_url() ?>assets/js/lightbox.min.js"></script>
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/main.js"></script>
 	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54e1746342145a46" async="async"></script>
 	<script>

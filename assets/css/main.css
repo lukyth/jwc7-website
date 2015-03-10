@@ -1528,3 +1528,17 @@ a.register-button {
     width: 48%;
   }
 }
+
+.lb-outerContainer {
+  width: 90% !important;
+  height: auto !important;
+}
+
+.lb-outerContainer img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.lb-dataContainer {
+  width: 90% !important;
+}
