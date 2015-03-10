@@ -77,7 +77,7 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/new/visualize.png"></div>
-								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/sponsor_large.png"></div>
+								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/sponsor/vip/dekd.png"></div>
 							</div>
 						</div>
 						<a class="page-scroll register-button" href="#category-page">
@@ -221,48 +221,60 @@
 				<div class="row">
 					<div class="col-xs-10 col-xs-offset-1">
 						<div class="row">
-							<div class="col-md-3 col-xs-6 text-center">
-								<a href="http://www.chandra.ac.th/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/sponsor_large_2.png" /></a>
-							</div>
-							<div class="col-md-3 col-xs-6 text-center">
+							<div class="col-md-2 col-xs-6 text-center">
 								<a href="http://visualizelab.com/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/visualize.png" /></a>
 							</div>
-							<div class="col-md-3 col-xs-6 text-center">
-								<a href="http://www.webmaster.or.th/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_large.png" /></a>
+							<div class="col-md-2 col-xs-6 text-center">
+								<a href="http://www.dek-d.com/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/vip/dekd.png" /></a>
 							</div>
-							<div class="col-md-3 col-xs-6 text-center">
+							<div class="col-md-2 col-xs-6 text-center">
+								<a href="http://www.tnyshipping.com/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/vip/tny.png" /></a>
+							</div>
+							<div class="col-md-2 col-xs-6 text-center">
+								<a href="http://www.chandra.ac.th/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/sponsor_large_2.png" /></a>
+							</div>
+							<div class="col-md-2 col-xs-6 text-center">
 								<a href="http://www.webmaster.or.th/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/sponsor_large_1.png" /></a>
 							</div>
 							<div class="col-md-12 col-xs-12 text-center"></div>
-							<div class="col-md-3 col-xs-4 text-center">
+							<div class="col-md-2 col-xs-4 text-center">
+								<a href="http://www.kapook.com" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/platinum/kapook.png" /></a>
+							</div>
+							<div class="col-md-2 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-3 col-xs-4 text-center">
+							<div class="col-md-2 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-3 col-xs-4 text-center">
+							<div class="col-md-2 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-3 col-xs-4 text-center">
+							<div class="col-md-2 col-xs-4 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
 							<div class="col-md-12 col-xs-12 text-center"></div>
-							<div class="col-md-2 col-xs-3 text-center">
+							<div class="col-md-1 col-xs-3 text-center">
 								<a href="https://www.02dual.com/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/gold/dual.png" /></a>
 							</div>
-							<div class="col-md-2 col-xs-3 text-center">
+							<div class="col-md-1 col-xs-3 text-center">
 								<a href="http://www.nextzy.com/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/gold/nextzy.png" /></a>
 							</div>
-							<div class="col-md-2 col-xs-3 text-center">
+							<div class="col-md-1 col-xs-3 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-2 col-xs-3 text-center">
+							<div class="col-md-1 col-xs-3 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-2 col-xs-3 text-center">
+							<div class="col-md-1 col-xs-3 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
-							<div class="col-md-2 col-xs-3 text-center">
+							<div class="col-md-1 col-xs-3 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
+							</div>
+							<div class="col-md-1 col-xs-3 text-center">
+								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
+							</div>
+							<div class="col-md-1 col-xs-3 text-center">
 								<img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor_small.png" />
 							</div>
 						</div>
