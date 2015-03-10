@@ -1530,8 +1530,9 @@ a.register-button {
 }
 
 .lb-outerContainer {
-  width: 90% !important;
+  width: 94% !important;
   height: auto !important;
+  max-width: 640px;
 }
 
 .lb-outerContainer img {
@@ -1540,5 +1541,6 @@ a.register-button {
 }
 
 .lb-dataContainer {
-  width: 90% !important;
+  width: 94% !important;
+  max-width: 640px;
 }

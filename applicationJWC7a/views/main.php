@@ -420,22 +420,22 @@
 				<div class="row">
 					<div class="timeline">
 						<div class="timeline-item">
-							14 มี.ค. 2558
+							28 มี.ค. 2558
 							<br>
 							ปิดรับสมัคร
 						</div>
 						<div class="timeline-item">
-							21 มี.ค. 2558
+							4 เม.ย. 2558
 							<br>
 							ประกาศผลผู้เข้ารอบ
 						</div>
 						<div class="timeline-item">
-							22 - 28 มี.ค. 2558
+							5 - 11 เม.ย. 2558
 							<br>
 							โอนเงินค่ามัดจำ
 						</div>
 						<div class="timeline-item">
-							3 - 5 เม.ย. 2558
+							2 - 4 พ.ค. 2558
 							<br>
 							วันค่าย JWC#7
 						</div>
