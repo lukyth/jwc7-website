@@ -126,12 +126,12 @@
 			<div class="detail-item">
 				<img src="<?= base_url() ?>assets/img/main/new/detail-1.svg" alt="รับสมัคร">
 				<span>รับสมัคร</span>
-				วันนี้ - 14 มีนาคม 2558
+				วันนี้ - 28 มีนาคม 2558
 			</div>
 			<div class="detail-item">
 				<img src="<?= base_url() ?>assets/img/main/new/detail-2.svg" alt="วันจัดค่าย">
 				<span>วันจัดค่าย</span>
-				3 - 5 เมษายน 2558
+				2 - 4 พฤษภาคม 2558
 			</div>
 			<div class="detail-item">
 				<img src="<?= base_url() ?>assets/img/main/new/detail-3.svg" alt="สถานที่">
