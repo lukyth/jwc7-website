@@ -2,7 +2,7 @@
 
 'use strict';
 
-var module = angular.module('admin', ['ui.router', 'ui.bootstrap']);
+var module = angular.module('admin', ['ui.router', 'ui.bootstrap', 'textAngular']);
 
 module.constant('ASSET_BASE', window.asset_base);
 module.constant('API_BASE', window.api_base);

@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>JWC7 Admin</title>
 	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?= base_url()."assets/" ?>css/font-awesome.min.css">
 	<style>
 [ui-sref],[ng-click]{
 	cursor: pointer;
@@ -27,7 +28,11 @@
 	width: auto;
 	margin-top: 10px;
 }
+.ta-toolbar .btn-group {
+	margin-bottom: 10px;
+}
 	</style>
+	<link rel="stylesheet" type="text/css" href="<?= base_url()."assets/" ?>css/textAngular.css" >
 </head>
 <body ng-app="admin">
 <nav class="navbar navbar-default">
@@ -65,6 +70,9 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
+<script src='<?= base_url()."assets/" ?>js/textAngular-rangy.min.js'></script>
+<script src='<?= base_url()."assets/" ?>js/textAngular-sanitize.min.js'></script>
+<script src='<?= base_url()."assets/" ?>js/textAngular.min.js'></script>
 <script>
 window.asset_base = <?=json_encode(base_url() . 'assets/')?>;
 window.api_base = <?=json_encode(base_url() . 'admin/')?>;
