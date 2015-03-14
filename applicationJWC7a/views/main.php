@@ -301,7 +301,7 @@
 											<div class="blue">ค่ายนี้จะจัดเมื่อไร ?</div>
 										</div>
 										<div class="chat-box text-right">
-											<div class="white text-center">ค่ายนี้จัด 3 วัน 2 คืน ระหว่างวันที่ 3-5 เมษายน 2558 จ้า</div>
+											<div class="white text-center">ค่ายนี้จัด 3 วัน 2 คืน ระหว่างวันที่ 2 - 4 พฤษภาคม 2558 จ้า</div>
 											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
 										</div>
 									</div>
@@ -341,7 +341,7 @@
 											<div class="blue">ค่ายมีการค้างคืน หรือไม่?</div>
 										</div>
 										<div class="chat-box text-right">
-											<div class="white text-center">มีการค้างคืนที่ มหาวิทยาลัยราชภัฏจันทรเกษม 2 คืน ในวันที่ 3 และ 4 เมษายน</div>
+											<div class="white text-center">มีการค้างคืนที่ มหาวิทยาลัยราชภัฏจันทรเกษม 2 คืน ในวันที่ 2 และ 3 พฤษภาคม</div>
 											<div><img class="arrow arrow-girl" src="<?= base_url() ?>assets/img/main/faq_girl_arrow.png"><img class="img-responsive icon" src="<?= base_url() ?>assets/img/main/faq_girl.png"></div>
 										</div>
 									</div>
