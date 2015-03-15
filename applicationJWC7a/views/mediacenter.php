@@ -53,6 +53,13 @@
               <a href="<?= base_url() ?>tools/profile_image_maker/" target="_blank"><div class="btn btn-default btn-lg" style="margin-top:20px;">Click!</div></a>
             </div>
           </article><!-- end banner -->
+          <article class="banner">
+            <div class="banner-img">
+              <p class="banner-title">Facebook Cover</p>
+              <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/coverfb.png">
+              <a href="<?= base_url() ?>assets/img/mediacenter/coverfb.png" target="_blank"><div class="btn btn-default btn-lg" style="margin-top:20px;">Download!</div></a>
+            </div>
+          </article><!-- end banner -->
         </div>
       </div>
       <div class="row">
@@ -134,6 +141,13 @@
             <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_336_280-01.jpg" width="336" height="280" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
           <article class="banner">
+            <p class="banner-title">ขนาด 468x60</p>
+            <div class="banner-img">
+              <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_468_60-01.jpg">
+            </div><!-- end banner-img -->
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_468_60-01.jpg" width="468" height="60" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
+          </article><!-- end banner -->
+          <article class="banner">
             <p class="banner-title">ขนาด 560x290</p>
             <div class="banner-img">
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_560_290-01.jpg">
@@ -148,6 +162,13 @@
             <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_600_300-01.jpg" width="600" height="300" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
           <article class="banner">
+            <p class="banner-title">ขนาด 660x330</p>
+            <div class="banner-img">
+              <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_660_330-01.jpg">
+            </div><!-- end banner-img -->
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_660_330-01.jpg" width="660" height="330" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
+          </article><!-- end banner -->
+          <article class="banner">
             <p class="banner-title">ขนาด 728x90</p>
             <div class="banner-img">
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_728_90-01.jpg">
@@ -160,6 +181,50 @@
               <img class="img-responsive img-center" src="<?= base_url() ?>assets/img/mediacenter/banner/banner_800_150-01.jpg">
             </div><!-- end banner-img -->
             <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href="http://www.jwc.in.th"&gt;&lt;img src="<?= base_url() ?>assets/img/mediacenter/banner/banner_800_150-01.jpg" width="800" height="150" border="0" alt="Young Webmaster Camp"&gt;&lt;/a&gt;</textarea>
+          </article><!-- end banner -->
+          <article class="banner">
+            <p class="banner-title">Flash ขนาด 160x120</p>
+            <div class="banner-img">
+              <object type="application/x-shockwave-flash" width="160" height="120" data="<?= base_url() ?>assets/img/mediacenter/banner/banner_160-120.swf"> 
+                  <param name="movie" value="<?= base_url() ?>assets/img/mediacenter/banner/banner_160-120.swf" />
+                  <param name="quality" value="high" />
+                  <embed src="myclip.swf" quality="<?= base_url() ?>assets/img/mediacenter/banner/banner_160-120.swf" />
+              </object>
+            </div><!-- end banner-img -->
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href=&quot;http://www.jwc.in.th&quot;&gt;&lt;object type=&quot;application/x-shockwave-flash&quot; width=&quot;160&quot; height=&quot;120&quot; data=&quot;<?= base_url() ?>assets/img/mediacenter/banner/banner_160-120.swf&quot;&gt; &lt;param name=&quot;movie&quot; value=&quot;<?= base_url() ?>assets/img/mediacenter/banner/banner_160-120.swf&quot; /&gt;&lt;param name=&quot;quality&quot; value=&quot;high&quot; /&gt;&lt;embed src=&quot;myclip.swf&quot; quality=&quot;&lt;?= base_url() ?&gt;assets/img/mediacenter/banner/banner_160-120.swf&quot; /&gt;&lt;/object&gt;&lt;/a&gt;</textarea>
+          </article><!-- end banner -->
+          <article class="banner">
+            <p class="banner-title">Flash ขนาด 300x250</p>
+            <div class="banner-img">
+              <object type="application/x-shockwave-flash" width="300" height="250" data="<?= base_url() ?>assets/img/mediacenter/banner/banner_300-250.swf"> 
+                  <param name="movie" value="<?= base_url() ?>assets/img/mediacenter/banner/banner_300-250.swf" />
+                  <param name="quality" value="high" />
+                  <embed src="myclip.swf" quality="<?= base_url() ?>assets/img/mediacenter/banner/banner_300-250.swf" />
+              </object>
+            </div><!-- end banner-img -->
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href=&quot;http://www.jwc.in.th&quot;&gt;&lt;object type=&quot;application/x-shockwave-flash&quot; width=&quot;300&quot; height=&quot;250&quot; data=&quot;<?= base_url() ?>assets/img/mediacenter/banner/banner_300-250.swf&quot;&gt; &lt;param name=&quot;movie&quot; value=&quot;<?= base_url() ?>assets/img/mediacenter/banner/banner_300-250.swf&quot; /&gt;&lt;param name=&quot;quality&quot; value=&quot;high&quot; /&gt;&lt;embed src=&quot;myclip.swf&quot; quality=&quot;&lt;?= base_url() ?&gt;assets/img/mediacenter/banner/banner_300-250.swf&quot; /&gt;&lt;/object&gt;&lt;/a&gt;</textarea>
+          </article><!-- end banner -->
+          <article class="banner">
+            <p class="banner-title">Flash ขนาด 700x90</p>
+            <div class="banner-img">
+              <object type="application/x-shockwave-flash" width="700" height="90" data="<?= base_url() ?>assets/img/mediacenter/banner/banner_700-90.swf"> 
+                  <param name="movie" value="<?= base_url() ?>assets/img/mediacenter/banner/banner_700-90.swf" />
+                  <param name="quality" value="high" />
+                  <embed src="myclip.swf" quality="<?= base_url() ?>assets/img/mediacenter/banner/banner_700-90.swf" />
+              </object>
+            </div><!-- end banner-img -->
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href=&quot;http://www.jwc.in.th&quot;&gt;&lt;object type=&quot;application/x-shockwave-flash&quot; width=&quot;700&quot; height=&quot;90&quot; data=&quot;<?= base_url() ?>assets/img/mediacenter/banner/banner_700-90.swf&quot;&gt; &lt;param name=&quot;movie&quot; value=&quot;<?= base_url() ?>assets/img/mediacenter/banner/banner_700-90.swf&quot; /&gt;&lt;param name=&quot;quality&quot; value=&quot;high&quot; /&gt;&lt;embed src=&quot;myclip.swf&quot; quality=&quot;&lt;?= base_url() ?&gt;assets/img/mediacenter/banner/banner_700-90.swf&quot; /&gt;&lt;/object&gt;&lt;/a&gt;</textarea>
+          </article><!-- end banner -->
+          <article class="banner">
+            <p class="banner-title">Flash ขนาด 728x90</p>
+            <div class="banner-img">
+              <object type="application/x-shockwave-flash" width="728" height="90" data="<?= base_url() ?>assets/img/mediacenter/banner/banner_728-90.swf"> 
+                  <param name="movie" value="<?= base_url() ?>assets/img/mediacenter/banner/banner_728-90.swf" />
+                  <param name="quality" value="high" />
+                  <embed src="myclip.swf" quality="<?= base_url() ?>assets/img/mediacenter/banner/banner_728-90.swf" />
+              </object>
+            </div><!-- end banner-img -->
+            <textarea rows="3" class="banner-text form-control" onclick="this.select();">&lt;a href=&quot;http://www.jwc.in.th&quot;&gt;&lt;object type=&quot;application/x-shockwave-flash&quot; width=&quot;728&quot; height=&quot;90&quot; data=&quot;<?= base_url() ?>assets/img/mediacenter/banner/banner_728-90.swf&quot;&gt; &lt;param name=&quot;movie&quot; value=&quot;<?= base_url() ?>assets/img/mediacenter/banner/banner_728-90.swf&quot; /&gt;&lt;param name=&quot;quality&quot; value=&quot;high&quot; /&gt;&lt;embed src=&quot;myclip.swf&quot; quality=&quot;&lt;?= base_url() ?&gt;assets/img/mediacenter/banner/banner_728-90.swf&quot; /&gt;&lt;/object&gt;&lt;/a&gt;</textarea>
           </article><!-- end banner -->
         </div>
       </div><!-- end row -->
