@@ -517,13 +517,6 @@
 							</div>
 							<div class="partner text-center">
 								<a href="http://www.camphub.in.th/" target="_blank"><img src="<?= base_url() ?>assets/img/main/sponsor/partner/camphub.png" alt="CampHub"></a>
-								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
-								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
-								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
-								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
-								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
-								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
-								<img src="<?= base_url() ?>assets/img/main/sponsor_small.png" alt="">
 							</div>
 						</div>
 					</div>
