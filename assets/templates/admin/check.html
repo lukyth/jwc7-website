@@ -14,10 +14,10 @@
 	</div>
 
 	<br><br>
-	
+
 	<table class="table table-bordered table-striped">
 		<thead>
-			<tr>
+			<tr ng-init="predicate='id'">
 				<th>หมายเลข</th>
 				<th ng-click="predicate='registerType';reverse=!reverse">สาขา</th>
 				<th ng-click="predicate='status';reverse=!reverse">สถานะ</th>
