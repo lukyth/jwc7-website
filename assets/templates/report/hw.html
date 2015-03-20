@@ -6,6 +6,7 @@
 				<th>สาขา</th>
 				<th>1</th>
 				<th>2</th>
+				<th>3</th>
 				<th>4</th>
 				<th>5</th>
 				<th>รวม</th>
@@ -18,6 +19,7 @@
 				<td ng-bind="item.registerType"></td>
 				<td ng-bind="item.q1|number"></td>
 				<td ng-bind="item.q2|number"></td>
+				<td ng-bind="item.q3|number"></td>
 				<td ng-class="{info: item.registerType=='Content', warning: item.registerType=='Design', success: item.registerType=='Marketing'}" ng-bind="item.q4|number"></td>
 				<td ng-class="{info: item.registerType=='Content', warning: item.registerType=='Design', success: item.registerType=='Marketing'}" ng-bind="item.q5|number"></td>
 				<td ng-bind="item.sum|number"></td>
