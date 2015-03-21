@@ -53,8 +53,16 @@ class Homework_Score_Model extends CI_Model {
 
 	function getList(){
 		return $this->db->select(
-				'register.facebookID,AVG(q1) AS q1,AVG(q2) AS q2,AVG(q3) as q3,AVG(q4) AS q4,AVG(q5) AS q5,SUM(q1+q2+q4+q5)/COUNT(userID) AS sum,prefix,name,surname,nickname,registerType,'.
-				'(SELECT GROUP_CONCAT(username) FROM users WHERE id NOT IN (homework_score.userID) AND (permission = 4 OR (register.registerType="Content" AND permission=1) OR (register.registerType="Design" AND permission=2) OR (register.registerType="Marketing" AND permission=3))) AS notChecked')
+				'register.facebookID,AVG(q1) AS q1,AVG(q2) AS q2,AVG(q3) as q3,AVG(q4) AS q4,AVG(q5) AS q5,'. //Score
+				'SUM(q1+q2+q4+q5)/COUNT(userID) AS sum,prefix,name,surname,nickname,registerType,'. //Ordinary Column
+				'(SELECT group_concat(username) FROM users '. //Query all username which not checked
+					'WHERE id NOT IN (SELECT userID FROM homework_score WHERE facebookID = register.facebookID) '. //select where id not in checked users_id
+					//grouping content,design,marketing
+					'AND (permission = 4 '.
+						'OR (register.registerType="Content" AND permission=1) '.
+						'OR (register.registerType="Design" AND permission=2) '.
+						'OR (register.registerType="Marketing" AND permission=3))) '.
+					'AS notChecked')
 			->from('register')
 			->order_by('registerType, sum desc')
 			->join('homework_score', 'register.facebookID = homework_score.facebookID', 'left')
