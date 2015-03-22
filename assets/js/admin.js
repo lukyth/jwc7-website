@@ -145,7 +145,7 @@ module.controller('BaseController', function($rootScope, $state, user){
 });
 
 module.controller('HomeController', function($scope){
-	
+
 });
 module.controller('MailController', function(API_BASE, $scope, $http){
 	$scope.input = {
@@ -238,6 +238,16 @@ module.controller('ReportController', function($scope, $stateParams, $http, API_
 		'?type=' + ($stateParams.type||'') +
 		'&status=' + ($stateParams.status||'')
 	).success(function(data){
+		for( var i=0; i<data.length; i++ ) {
+			data[i].notChecked = data[i].notChecked.split(",").map(function(x){
+				var prefix = ["content","design","marketing","common"];
+				var change = ["CT","DS","MKT","CM"];
+				for( var i=0; i<prefix.length; i++ ) {
+					if( x.indexOf( prefix[i] ) == 0 )
+						return change[i] + x.substring( prefix[i].length,x.length );
+				}
+			});
+		}
 		$scope.data = data;
 	});
 });

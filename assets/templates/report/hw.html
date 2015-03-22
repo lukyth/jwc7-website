@@ -23,7 +23,9 @@
 				<td ng-class="{info: item.registerType=='Content', warning: item.registerType=='Design', success: item.registerType=='Marketing'}" ng-bind="item.q4|number"></td>
 				<td ng-class="{info: item.registerType=='Content', warning: item.registerType=='Design', success: item.registerType=='Marketing'}" ng-bind="item.q5|number"></td>
 				<td ng-bind="item.sum|number"></td>
-				<td ng-bind="item.notChecked" style="font-size:11px;"></td>
+				<td>
+					<div class="label label-danger" style="margin-right:3px;" ng-repeat="item2 in item.notChecked" ng-bind="item2" ></div>
+				</td>
 			</tr>
 		</tbody>
 	</table>
