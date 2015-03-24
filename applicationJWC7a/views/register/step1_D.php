@@ -678,6 +678,28 @@
 		</div>
 	</div>
 	<script>
+		$(function() {
+			$("#inputPhone,#inputParentPhone").keyup(function(){
+				var txt = $(this).val();
+				var res = "";
+				var reg = new RegExp("[0-9]");
+				for( var i=0; i<txt.length; i++ ) {
+					if( reg.test( txt[i] ) ) res += txt[i];
+				}
+				$(this).val( res );
+			});
+			$("#inputEmail").keyup(function() {
+				var txt = $(this).val();
+				var res = "";
+				var reg = new RegExp("[0-9A-Za-z@!#$%&'*+-/=?^_`{|}~.]");
+				for( var i=0; i<txt.length; i++ ) {
+					if( reg.test( txt[i] ) )
+						res += txt[i];
+				}
+				$(this).val( res );
+			});
+		});
+
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
