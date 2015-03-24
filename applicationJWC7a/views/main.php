@@ -258,6 +258,9 @@
 							<div class="col-md-2 col-xs-4 text-center">
 								<a href="https://www.facebook.com/minteraction" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/platinum/mInteraction.png" /></a>
 							</div>
+							<div class="col-md-2 col-xs-4 text-center">
+								<a href="http://www.sanook.com" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/platinum/sanook.png" /></a>
+							</div>
 							<div class="col-md-12 col-xs-12 text-center"></div>
 							<div class="col-md-2 col-xs-3 text-center" style="width:12%;">
 								<a href="https://www.02dual.com/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/gold/dual.png" /></a>

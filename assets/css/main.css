@@ -544,7 +544,7 @@ a.register-button {
 }
 @media screen and (max-width:768px) {
   #header-page .sponsor-top {
-    margin: 20% 10px 0;
+    margin: 0;
   }
   #header-page .sponsor-top img {
     max-width: 70px;
