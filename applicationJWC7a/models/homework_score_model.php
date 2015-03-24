@@ -62,7 +62,15 @@ class Homework_Score_Model extends CI_Model {
 						'OR (register.registerType="Content" AND permission=1) '.
 						'OR (register.registerType="Design" AND permission=2) '.
 						'OR (register.registerType="Marketing" AND permission=3))) '.
-					'AS notChecked')
+					'AS notChecked,'.
+				'(SELECT group_concat(username) FROM users '. //Query all username which has checked
+					'WHERE id IN (SELECT userID FROM homework_score WHERE facebookID = register.facebookID) '.
+					//grouping content,design,marketing
+					'AND (permission = 4 '.
+						'OR (register.registerType="Content" AND permission=1) '.
+						'OR (register.registerType="Design" AND permission=2) '.
+						'OR (register.registerType="Marketing" AND permission=3))) '.
+					'AS checked')
 			->from('register')
 			->order_by('registerType, sum desc')
 			->join('homework_score', 'register.facebookID = homework_score.facebookID', 'left')

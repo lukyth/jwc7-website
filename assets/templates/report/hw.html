@@ -10,7 +10,7 @@
 				<th>4</th>
 				<th>5</th>
 				<th>รวม</th>
-				<th>ยังไม่ตรวจ</th>
+				<th>ตรวจ</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -25,6 +25,7 @@
 				<td ng-bind="item.sum|number"></td>
 				<td>
 					<div class="label label-danger" style="margin-right:3px;" ng-repeat="item2 in item.notChecked" ng-bind="item2" ></div>
+					<div class="label label-success" style="margin-right:3px;" ng-repeat="item2 in item.checked" ng-bind="item2" ></div>
 				</td>
 			</tr>
 		</tbody>
