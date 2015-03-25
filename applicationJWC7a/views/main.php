@@ -75,6 +75,18 @@
 				<div class="row">
 					<div class="col-xs-8 col-xs-offset-2 text-center col-logo">
 						<img class="img-center img-responsive logo-img" src="<?= base_url() ?>assets/img/main/new/logo.svg" />
+						<div class="row counter">
+							<div class="col-xs-12 head">เหลือเวลาไม่มากแล้ว !!!</div>
+							<div class="col-sm-2 col-xs-3"><span class="large days">4</span><br>วัน</div>
+							<div class="col-xs-1 delimiter-middle">:</div>
+							<div class="col-sm-2 col-xs-3"><span class="large hours">5</span><br>ชั่วโมง</div>
+							<div class="col-xs-1 delimiter-middle">:</div>
+							<div class="col-sm-2 col-xs-3"><span class="large minutes">5</span><br>นาที</div>
+							<div class="hidden-xs">
+								<div class="col-sm-1 delimiter-middle">:</div>
+								<div class="col-sm-2"><span class="large seconds">5</span><br>วินาที</div>
+							</div>
+						</div>
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/new/visualize.png"></div>
@@ -524,10 +536,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="popup" style="display: none;">
-		<a href="<?= base_url() ?>assets/img/popup_register.svg" data-lightbox="popup"></a>
 	</div>
 
 	<script type="text/javascript" src="<?= base_url() ?>assets/js/jquery-1.11.1.min.js"></script>

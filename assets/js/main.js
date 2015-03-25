@@ -101,6 +101,18 @@ $(function() {
 	// Animate.init();
 
 	// setInterval( Animate.moveBoat,1000/5 );
+	setInterval( function() {
+		var end = new Date("March 29, 2015 00:00:00 GMT+0700").getTime();
+		var time = end - new Date().getTime();
+		time = Math.floor(Math.max(0,time)/1000);
+		$(".counter .days").text( Math.floor(time/(24*60*60)) );
+		time %= (24*60*60);
+		$(".counter .hours").text( Math.floor(time/(60*60)) );
+		time %= (60*60);
+		$(".counter .minutes").text( Math.floor(time/60) );
+		time %= 60;
+		$(".counter .seconds").text( time );
+	}, 1000);
 
 	$('a.page-scroll').bind('click', function(event) {
 		var $anchor = $(this);
@@ -110,4 +122,3 @@ $(function() {
 		event.preventDefault();
 	});
 });
-

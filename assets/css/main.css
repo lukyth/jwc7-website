@@ -434,6 +434,30 @@ a.register-button {
   font-size: 1.6em;
 }
 
+.counter {
+  margin: 20px 0px;
+  font-size: 16px;
+  color: #9d1f66;
+}
+
+.counter .head { font-size: 18px; margin-bottom:7px; }
+.counter .large { font-size: 24px; font-weight: bold; }
+.counter .delimiter-middle { font-size:30px; }
+
+@media screen and ( max-width: 480px ) {
+  .counter { font-size: 12px; }
+}
+
+@media screen and ( min-width: 768px ) {
+  .counter {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+  .counter .head { font-size: 24px; }
+  .counter .large { font-size: 40px; }
+  .counter .delimiter-middle { font-size:60px; }
+}
+
 #header-page .cover-img {
   height: 100%;
   width: 100%;
@@ -517,7 +541,7 @@ a.register-button {
   }
 
   #header-page .sponsor-top {
-    max-width: 100px;
+    max-width: 95px;
   }
 
   #header-page .jumpto-register {
@@ -544,6 +568,7 @@ a.register-button {
 }
 @media screen and (max-width:768px) {
   #header-page .sponsor-top {
+    max-width: 57px;
     margin: 0;
   }
   #header-page .sponsor-top img {
@@ -1417,7 +1442,7 @@ a.register-button {
   }
 
   #header-page .jumpto-register {
-    margin-top: 24%;
+    margin-top: 14%;
     width: 160px;
   }
 
@@ -1454,7 +1479,7 @@ a.register-button {
   }
 
   #header-page .jumpto-register {
-    margin-top: 18%;
+    margin-top: 7%;
   }
 
   #about-page .river {
