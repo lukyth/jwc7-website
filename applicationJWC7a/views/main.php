@@ -76,16 +76,7 @@
 					<div class="col-xs-8 col-xs-offset-2 text-center col-logo">
 						<img class="img-center img-responsive logo-img" src="<?= base_url() ?>assets/img/main/new/logo.svg" />
 						<div class="row counter">
-							<div class="col-xs-12 head">เหลือเวลาไม่มากแล้ว !!!</div>
-							<div class="col-sm-2 col-xs-3"><span class="large days">4</span><br>วัน</div>
-							<div class="col-xs-1 delimiter-middle">:</div>
-							<div class="col-sm-2 col-xs-3"><span class="large hours">5</span><br>ชั่วโมง</div>
-							<div class="col-xs-1 delimiter-middle">:</div>
-							<div class="col-sm-2 col-xs-3"><span class="large minutes">5</span><br>นาที</div>
-							<div class="hidden-xs">
-								<div class="col-sm-1 delimiter-middle">:</div>
-								<div class="col-sm-2"><span class="large seconds">5</span><br>วินาที</div>
-							</div>
+							<div class="col-xs-12 head">ปิดรับสมัครแล้วนะ !!!</div>
 						</div>
 						<div class="row">
 							<div class="col-xs-12">
@@ -95,9 +86,6 @@
 								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/sponsor/vip/lurkrich.png"></div>
 							</div>
 						</div>
-						<a class="page-scroll register-button" href="#category-page">
-							<div class="jumpto-register img-center img-responsive register">สมัครเลย!</div>
-						</a>
 					</div>
 				</div>
 			</div>
@@ -187,9 +175,6 @@
 								เนรมิตหน้าเว็บ โชว์สเต็ปดีไซน์ ไฉไลสไตล์เว็บสเตอร์สู่การเป็นเว็บ Design อย่างแท้จริง
 							</p>
 							<div class="count-box" style="background:#732777;"><?= $amount_d; ?></div>
-							<a class="register-button" href="register/index/2">
-								<div class="img-center img-responsive register">สมัครเลย!</div>
-							</a>
 						</div>
 						<div class="col-md-4 text-center">
 							<div class="category-image content">
@@ -203,9 +188,6 @@
 								สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Content ให้เชือดเฉือนประโยคเด็ด Content ชนะใจ
 							</p>
 							<div class="count-box" style="background:#07908C;"><?= $amount_c; ?></div>
-							<a class="register-button" href="register/index/1">
-								<div class="img-center img-responsive register">สมัครเลย!</div>
-							</a>
 							</div>
 						<div class="col-md-4 text-center">
 							<div class="category-image marketing">
@@ -224,9 +206,6 @@
 								เรียนรู้ศาสตร์การตลาดยุทธศาสตร์ การสร้างชื่อให้เว็บเลื่องลือระบือไกล
 							</p>
 							<div class="count-box" style="background:#E64C24;"><?= $amount_m; ?></div>
-							<a class="register-button" href="register/index/3">
-								<div class="img-center img-responsive register">สมัครเลย!</div>
-							</a>
 						</div>
 					</div>
 				</div>

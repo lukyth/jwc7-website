@@ -440,7 +440,7 @@ a.register-button {
   color: #9d1f66;
 }
 
-.counter .head { font-size: 18px; margin-bottom:7px; }
+.counter .head { font-size: 36px; margin-bottom: 20px; margin-top: 20px; }
 .counter .large { font-size: 24px; font-weight: bold; }
 .counter .delimiter-middle { font-size:30px; }
 
@@ -453,7 +453,7 @@ a.register-button {
     margin-top: 40px;
     font-size: 18px;
   }
-  .counter .head { font-size: 24px; }
+  .counter .head { font-size: 42px; margin-top: 30px; margin-bottom: 0; }
   .counter .large { font-size: 40px; }
   .counter .delimiter-middle { font-size:60px; }
 }
@@ -993,7 +993,7 @@ a.register-button {
 
 #timeline-page .timeline-fish {
   position: absolute;
-  top: -12px;
+  top: 100px;
   right: 99%;
   width: 160px;
   -webkit-transform: rotate(180deg);
@@ -1014,7 +1014,7 @@ a.register-button {
     font-size: 18px;
   }
   #timeline-page .timeline-fish {
-    top: -20px;
+    top: 70px;
     width: 130px;
   }
 }

@@ -1,7 +1,6 @@
- <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Register extends CI_Controller {
-
   /**
    * Subscribe Page for this controller.
    *
@@ -24,7 +23,7 @@ class Register extends CI_Controller {
           'secret' => '06ac519f4aa347ae3059da8bc6504ea6'
         );
         $this->load->library('facebook/facebook', $this->fb_config,'facebook');
-
+        redirect('', 'refresh');
 		}
 
   public function index($type = '1')
