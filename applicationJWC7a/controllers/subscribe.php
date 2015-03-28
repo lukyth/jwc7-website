@@ -19,6 +19,7 @@ class Subscribe extends CI_Controller {
    */
   public function index()
   {
+    redirect('', 'refresh');
     $this->load->helper(array('form','html'));
     $this->load->library('form_validation');
 
