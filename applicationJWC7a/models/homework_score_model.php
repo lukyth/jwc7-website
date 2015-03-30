@@ -53,8 +53,14 @@ class Homework_Score_Model extends CI_Model {
 
 	function getList(){
 		return $this->db->select(
-				'register.facebookID,AVG(q1) AS q1,AVG(q2) AS q2,AVG(q3) as q3,AVG(q4) AS q4,AVG(q5) AS q5,'. //Score
-				'SUM(q1+q2+q4+q5)/COUNT(userID) AS sum,prefix,name,surname,nickname,registerType,'. //Ordinary Column
+				'register.facebookID,'.
+				'AVG(CASE WHEN q1 <> 0 THEN q1 ELSE NULL END) AS q1'.
+				',AVG(CASE WHEN q2 <> 0 THEN q2 ELSE NULL END) AS q2'.
+				',AVG(CASE WHEN q3 <> 0 THEN q3 ELSE NULL END) as q3'.
+				',AVG(CASE WHEN q4 <> 0 THEN q4 ELSE NULL END) AS q4'.
+				',AVG(CASE WHEN q5 <> 0 THEN q5 ELSE NULL END) AS q5,'. //Score
+				'SUM(q1+q2)/COUNT(CASE WHEN q1 <> 0 THEN 1 ELSE NULL END) + SUM(q4+q5)/COUNT(CASE WHEN q4 <> 0 THEN 1 ELSE NULL END)'.
+				' AS sum,prefix,name,surname,nickname,registerType,'. //Ordinary Column
 				'(SELECT group_concat(username) FROM users '. //Query all username which not checked
 					'WHERE id NOT IN (SELECT userID FROM homework_score WHERE facebookID = register.facebookID) '. //select where id not in checked users_id
 					//grouping content,design,marketing
