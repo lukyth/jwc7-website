@@ -273,6 +273,12 @@ module.controller('CheckController', function($scope, $http, API_BASE, User){
 			}
 			return item.registerType == major;
 		});
+		$scope.checkLeft = $scope.register.filter(function(item) {
+			if( item.q1 == undefined ) {
+				return true;
+			}
+			return false;
+		});
 	});
 });
 
