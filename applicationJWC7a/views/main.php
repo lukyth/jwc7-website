@@ -174,7 +174,7 @@
 							<p class="text-center description">
 								เนรมิตหน้าเว็บ โชว์สเต็ปดีไซน์ ไฉไลสไตล์เว็บสเตอร์สู่การเป็นเว็บ Design อย่างแท้จริง
 							</p>
-							<div class="count-box" style="background:#732777;">249<?= /*$amount_d;*/ ?></div>
+							<div class="count-box" style="background:#732777;">249</div>
 						</div>
 						<div class="col-md-4 text-center">
 							<div class="category-image content">
@@ -187,7 +187,7 @@
 							<p class="text-center description">
 								สื่อสารถูกจริตผู้ชม ร่วมสร้างสรรค์การทำ Content ให้เชือดเฉือนประโยคเด็ด Content ชนะใจ
 							</p>
-							<div class="count-box" style="background:#07908C;">122<?= /*$amount_c;*/ ?></div>
+							<div class="count-box" style="background:#07908C;">122</div>
 							</div>
 						<div class="col-md-4 text-center">
 							<div class="category-image marketing">
@@ -205,7 +205,7 @@
 							<p class="text-center description">
 								เรียนรู้ศาสตร์การตลาดยุทธศาสตร์ การสร้างชื่อให้เว็บเลื่องลือระบือไกล
 							</p>
-							<div class="count-box" style="background:#E64C24;">149<?= /*$amount_m;*/ ?></div>
+							<div class="count-box" style="background:#E64C24;">149</div>
 						</div>
 					</div>
 				</div>
