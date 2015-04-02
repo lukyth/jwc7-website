@@ -21,13 +21,14 @@ class Result extends CI_Controller {
   {
     $this->load->model('Result_model', 'result');
 
-    $data['design']['candidate'] = $this->result->getList('Design', 'candidate');
-    $data['design']['spare'] = $this->result->getList('Design', 'spare');
-    $data['content']['candidate'] = $this->result->getList('Content', 'candidate');
-    $data['content']['spare'] = $this->result->getList('Content', 'spare');
-    $data['marketing']['candidate'] = $this->result->getList('Marketing', 'candidate');
-    $data['marketing']['spare'] = $this->result->getList('Marketing', 'spare');
+    // $data = array('' => , );
+    // $data['design']['candidate'] = $this->result->getList('Design', 'candidate');
+    // $data['design']['spare'] = $this->result->getList('Design', 'spare');
+    // $data['content']['candidate'] = $this->result->getList('Content', 'candidate');
+    // $data['content']['spare'] = $this->result->getList('Content', 'spare');
+    // $data['marketing']['candidate'] = $this->result->getList('Marketing', 'candidate');
+    // $data['marketing']['spare'] = $this->result->getList('Marketing', 'spare');
 
-    $this->load->view('result', $data);
+    $this->load->view('result');
   }
 }
