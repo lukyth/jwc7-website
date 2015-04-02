@@ -84,6 +84,7 @@
 								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/sponsor/vip/dekd.png"></div>
 								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/sponsor/vip/tny.png"></div>
 								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/sponsor/vip/lurkrich.png"></div>
+								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/sponsor/vip/cpall.png"></div>
 							</div>
 						</div>
 					</div>
@@ -223,23 +224,26 @@
 				<div class="row">
 					<div class="col-xs-10 col-xs-offset-1">
 						<div class="row">
-							<div class="col-md-2 col-xs-6 text-center" >
+							<div class="col-md-3 col-xs-6 text-center" >
 								<a href="http://visualizelab.com/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/visualize.png" /></a>
 							</div>
-							<div class="col-md-2 col-xs-6 text-center" >
+							<div class="col-md-3 col-xs-6 text-center" >
 								<a href="http://www.dek-d.com/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/vip/dekd.png" /></a>
 							</div>
-							<div class="col-md-2 col-xs-6 text-center" >
+							<div class="col-md-3 col-xs-6 text-center" >
 								<a href="http://www.tnyshipping.com/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/vip/tny.png" /></a>
 							</div>
-							<div class="col-md-2 col-xs-6 text-center" >
+							<div class="col-md-3 col-xs-6 text-center" >
 								<a href="https://www.facebook.com/lurkrich" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/vip/lurkrich.png"></a>
 							</div>
-							<div class="col-md-2 col-xs-6 text-center" >
+							<div class="col-md-3 col-xs-6 text-center" >
 								<a href="http://www.chandra.ac.th/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/sponsor_large_2.png" /></a>
 							</div>
-							<div class="col-md-2 col-xs-6 text-center" >
+							<div class="col-md-3 col-xs-6 text-center" >
 								<a href="http://www.webmaster.or.th/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/new/sponsor_large_1.png" /></a>
+							</div>
+							<div class="col-md-3 col-xs-6 text-center" >
+								<a href="http://www.cpall.co.th/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/vip/cpall.png" /></a>
 							</div>
 
 							<div class="col-md-12 col-xs-12 text-center"></div>
