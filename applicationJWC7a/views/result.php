@@ -61,7 +61,6 @@
             <div class="txt-center">
               <div class="btn btn-danger btn-lg nextbtn" href="">ยืนยันสิทธิ์ &raquo;</div>
               <p class="deadline"><b>ภายใน 5 มีนาคมนี้ เท่านั้น!</b></p>
-              <p><b>[f share] <[127]</b></p>
             </div>
             <br>
             <h2>รายชื่อผู้ผ่านการคัดเลือกเข้าค่าย JWC7</h2>
@@ -193,7 +192,6 @@
           <div class="txt-center">
             <div class="btn btn-danger btn-lg nextbtn" href="">ยืนยันสิทธิ์ &raquo;</div>
             <p class="deadline"><b>ภายใน 5 มีนาคมนี้ เท่านั้น!</b></p>
-            <p><b>[f share] <[127]</b></p>
           </div>
         </div>
       </div>

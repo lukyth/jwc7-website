@@ -19,7 +19,15 @@ class Result extends CI_Controller {
    */
   public function index()
   {
-    $this->load->helper(array('html'));
-    $this->load->view('result');
+    $this->load->model('Result_model', 'result');
+
+    $data['design']['candidate'] = $this->result->getList('Design', 'candidate');
+    $data['design']['spare'] = $this->result->getList('Design', 'spare');
+    $data['content']['candidate'] = $this->result->getList('Content', 'candidate');
+    $data['content']['spare'] = $this->result->getList('Content', 'spare');
+    $data['marketing']['candidate'] = $this->result->getList('Marketing', 'candidate');
+    $data['marketing']['spare'] = $this->result->getList('Marketing', 'spare');
+
+    $this->load->view('result', $data);
   }
 }
