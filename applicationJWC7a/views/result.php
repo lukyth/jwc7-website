@@ -59,7 +59,7 @@
             <p class="txt-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หากตัวจริงไม่ยืนยันสิทธิ์ ภายในเวลาที่กำหนด สิทธิ์จะตกเป็นของตัวสำรองตามลำดับรายชื่อ ไม่ว่ากรณีใดๆ ทั้งสิ้น โดยทางค่ายจะติดต่อตัวสำรองเมื่อมีการสละสิทธิ์เกิดขึ้น</p>
             </p>
             <div class="txt-center">
-              <div class="btn btn-danger btn-lg nextbtn" href="">ยืนยันสิทธิ์ &raquo;</div>
+              <a class="btn btn-danger btn-lg nextbtn" href="confirmation">ยืนยันสิทธิ์ &raquo;</a>
               <p class="deadline"><b>ภายใน 5 มีนาคมนี้ เท่านั้น!</b></p>
             </div>
             <br>
@@ -91,29 +91,25 @@
                   <tr><th class="txt-center design" colspan="2"><h2 class="listhead">สาขา Web Design</h2></th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>1. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>2. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>3. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>4. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>5. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>6. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>7. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>8. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>9. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>10. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>11. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>12. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>13. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>14. นายสมมติ ไม่ทราบนามสกุล</td></tr>
+                  <?php
+                    foreach ($data['design']['candidate'] as $key => $value) {
+                      if ($key % 2 == 0) { echo '<tr>'; }
+                      echo '<td>' . ($key + 1) . '. ' . $value['prefix'] . $value['name'] . ' ' . $value['surname'] . '</td>';
+                      if ($key % 2 == 1) { echo '</tr>'; }
+                    }
+                  ?>
                 </tbody>
                 <thead>
                   <tr><th class="txt-center design" colspan="2">สำรอง Web Design</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>1. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>2. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>3. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>4. นายสมมติ ไม่ทราบนามสกุล</td></tr>
+                  <?php
+                    foreach ($data['design']['spare'] as $key => $value) {
+                      if ($key % 2 == 0) { echo '<tr>'; }
+                      echo '<td>' . ($key + 1) . '. ' . $value['prefix'] . $value['name'] . ' ' . $value['surname'] . '</td>';
+                      if ($key % 2 == 1) { echo '</tr>'; }
+                    }
+                  ?>
                 </tbody>
               </table>
             </div>
@@ -126,29 +122,25 @@
                   <tr><th class="txt-center content" colspan="2"><h2 class="listhead">สาขา Web Content</h2></th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>1. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>2. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>3. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>4. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>5. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>6. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>7. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>8. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>9. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>10. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>11. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>12. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>13. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>14. นายสมมติ ไม่ทราบนามสกุล</td></tr>
+                  <?php
+                    foreach ($data['content']['candidate'] as $key => $value) {
+                      if ($key % 2 == 0) { echo '<tr>'; }
+                      echo '<td>' . ($key + 1) . '. ' . $value['prefix'] . $value['name'] . ' ' . $value['surname'] . '</td>';
+                      if ($key % 2 == 1) { echo '</tr>'; }
+                    }
+                  ?>
                 </tbody>
                 <thead>
                   <tr><th class="txt-center content" colspan="2">สำรอง Web Content</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>1. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>2. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>3. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>4. นายสมมติ ไม่ทราบนามสกุล</td></tr>
+                  <?php
+                    foreach ($data['content']['spare'] as $key => $value) {
+                      if ($key % 2 == 0) { echo '<tr>'; }
+                      echo '<td>' . ($key + 1) . '. ' . $value['prefix'] . $value['name'] . ' ' . $value['surname'] . '</td>';
+                      if ($key % 2 == 1) { echo '</tr>'; }
+                    }
+                  ?>
                 </tbody>
               </table>
             </div>
@@ -161,36 +153,32 @@
                   <tr><th class="txt-center marketing" colspan="2"><h2 class="listhead">สาขา Web Marketing</h2></th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>1. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>2. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>3. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>4. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>5. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>6. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>7. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>8. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>9. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>10. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>11. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>12. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>13. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>14. นายสมมติ ไม่ทราบนามสกุล</td></tr>
+                  <?php
+                    foreach ($data['marketing']['candidate'] as $key => $value) {
+                      if ($key % 2 == 0) { echo '<tr>'; }
+                      echo '<td>' . ($key + 1) . '. ' . $value['prefix'] . $value['name'] . ' ' . $value['surname'] . '</td>';
+                      if ($key % 2 == 1) { echo '</tr>'; }
+                    }
+                  ?>
                 </tbody>
                 <thead>
                   <tr><th class="txt-center marketing" colspan="2">สำรอง Web Marketing</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>1. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>2. นายสมมติ ไม่ทราบนามสกุล</td></tr>
-                  <tr><td>3. นายสมมติ ไม่ทราบนามสกุล</td>
-                    <td>4. นายสมมติ ไม่ทราบนามสกุล</td></tr>
+                  <?php
+                    foreach ($data['marketing']['spare'] as $key => $value) {
+                      if ($key % 2 == 0) { echo '<tr>'; }
+                      echo '<td>' . ($key + 1) . '. ' . $value['prefix'] . $value['name'] . ' ' . $value['surname'] . '</td>';
+                      if ($key % 2 == 1) { echo '</tr>'; }
+                    }
+                  ?>
                 </tbody>
               </table>
             </div>
           </div>
           <br>
           <div class="txt-center">
-            <div class="btn btn-danger btn-lg nextbtn" href="">ยืนยันสิทธิ์ &raquo;</div>
+            <a class="btn btn-danger btn-lg nextbtn" href="confirmation">ยืนยันสิทธิ์ &raquo;</a>
             <p class="deadline"><b>ภายใน 5 มีนาคมนี้ เท่านั้น!</b></p>
           </div>
         </div>
