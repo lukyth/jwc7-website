@@ -62,11 +62,11 @@ CREATE TABLE IF NOT EXISTS `register` (
 --
 -- Indexes for table `register`
 --
-ALTER TABLE `register`
- ADD PRIMARY KEY (`facebookID`);
+ALTER TABLE `register` ADD PRIMARY KEY (`facebookID`);
 
 ALTER TABLE `register` ADD `birthday` DATE NULL AFTER `sex`;
-ALTER TABLE  `register` CHANGE  `registerDate`  `registerDate` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP
+ALTER TABLE  `register` CHANGE  `registerDate`  `registerDate` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE  `register` CHANGE  `status`  `status` ENUM('InProgress','Registered','Homework_Submitted','Homework_Checked','Accepted','Denied','Paid','Spare1','Spare2','Spare3','Spare4') DEFAULT NULL;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
