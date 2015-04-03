@@ -36,4 +36,31 @@
     }
     return $data->get()->result_array();
   }
+
+  function updateFileName( $fbid, $name, $type ) {
+    $type = $type == "id" ? "img_id" : "img_slip";
+    $this->db->where( 'facebookID',$fbid );
+    $this->db->update( 'confirmation',array( $type => $name ) );
+  }
+
+  function getFileName( $fbid, $type ) {
+    $type = $type == "id" ? "img_id" : "img_slip";
+    $query = $this->db->get_where( 'confirmation', array( 'facebookID' => $fbid ) );
+    return $query->result()[0]->$type;
+  }
+
+  function getUserData( $fbid ) {
+    $query = $this->db->select('register.facebookID,prefix,name,surname,nickname,registerType,id,img_slip,img_id,confirmation.status')
+      ->from('register')
+      ->join('confirmation','register.facebookID = confirmation.facebookID')
+      ->where('register.facebookID', $fbid);
+    return $query->get()->result_array();
+  }
+
+  function checkIsPassed( $fbid ) {
+    $res = $this->db->from('confirmation')->where('facebookID',$fbid)->get()->result_array();
+    if( count($res) == 0 ) return 0;
+    if( $res[0]["status"] == "Revoke" ) return 2;
+    return 1;
+  }
 }
