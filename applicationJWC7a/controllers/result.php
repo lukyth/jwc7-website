@@ -26,16 +26,76 @@ class Result extends CI_Controller {
     $this->load->view('result/index', array('data' => $data));
   }
 
-  public function confirmation() {
+  public function upload() {
+
+    if( $this->input->server('REQUEST_METHOD') == "GET" ) {
+      redirect('result/confirmation', 'refresh');
+      return ;
+    }
+
+    $user_id =$this->facebook->getUser();
+    if( !$user_id ) {
+      redirect('result/confirmation', 'refresh');
+      return ;
+    }
+
+    $config['upload_path'] = 'assets/confirmation/';
+    $config['allowed_types'] = 'gif|jpg|png';
+    $config['max_size']	= '4096';
+    $config['encrypt_name']  = true;
+
+    $this->load->library('upload',$config);
+    $this->load->model('Result_Model','result');
+
+    $cur_file = $this->result->getFileName( $user_id, $this->input->post('type') );
+    if( strlen($cur_file) != 0 ) unlink('assets/confirmation/'.$cur_file);
+
+    if( $this->upload->do_upload() ) {
+      $this->result->updateFileName( $user_id, $this->upload->data()["file_name"],$this->input->post('type') );
+      redirect('result/confirmation', 'refresh');
+    } else {
+      $err = $this->upload->display_errors();
+      if( strcmp( $err,"<p>The filetype you are attempting to upload is not allowed.</p>" ) == 0 ) {
+        $err = "ประเภทของไฟล์ ไม่ถูกต้อง";
+      } else if( strcmp( $err,"<p>The uploaded file exceeds the maximum allowed size in your PHP configuration file.</p>" ) == 0 ) {
+        $err = "ขนาดของไฟล์นั้นใหญ่เกินไป";
+      } else if( strcmp( $err,"<p>You did not select a file to upload.</p>") == 0 ) {
+        $err = "คุณยังไม่ได้ทำการเลือกไฟล์ใดๆ";
+      } else {
+        $err = "อัพโหลดไม่สมบูรณ์ กรุณาลองใหม่อีกครั้ง";
+      }
+      $this->confirmation( $err );
+    }
+  }
+
+  public function confirmation( $err = "" ) {
     $user_id =$this->facebook->getUser();
     $data['login_url'] = $this->facebook->getLoginUrl();
+    $data['error'] = $err;
     $user_id =$this->facebook->getUser();
-    if( $user_id ) {
+
+    $this->load->helper(array('form', 'url'));
+
+     if( $user_id ) {
+
+      $this->load->model('Result_Model','result');
+      $isPass = $this->result->checkIsPassed( $user_id );
+      if( $isPass != 1 ) {
+       $this->load->view('result/sorry',array("type" => $isPass == 2 ? "revoke" : ""));
+       return ;
+      }
+
+      $data["user_data"] = $this->result->getUserData( $user_id )[0];
+
       $data["facebook_id"] = $user_id;
       $this->load->view('result/confirmation',$data);
     } else {
       $this->load->view('result/confirmlogin',$data);
     }
+  }
+
+  public function sorry() {
+    $this->load->view('result/sorry');
   }
 
   public function confirmation_2() {

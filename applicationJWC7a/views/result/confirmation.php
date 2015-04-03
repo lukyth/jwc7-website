@@ -106,55 +106,80 @@
               <img src="http://graph.facebook.com/<?= $facebook_id; ?>/picture?type=large" style="border-radius:50%;" class="img-responsive">
             </div>
             <div class="col-sm-4 col-xs-8 text-left">
-              <div style="font-size:1.5em; margin-top:20px;">โกเศส ลิ้มพงษา</div>
-              <div>สาขา โปรแกรมเมอร์</div>
-              <div class="comfirmStatus notConfirm">ยังไม่ยืนยันตัว</div>
+              <div style="font-size:1.5em; margin-top:20px;"><?= $user_data["name"]." ".$user_data["surname"] ?> (<?= $user_data["nickname"] ?>) </div>
+              <div>สาขา <?= $user_data["registerType"] ?></div>
+              <?php
+                if( $user_data["status"] != "Real" ) {
+                  ?><div class="comfirmStatus notConfirm">ยังไม่ยืนยันตัว</div><?php
+                } else {
+                  ?><div class="comfirmStatus">ยืนยันตัวแล้ว</div><?php
+                }
+              ?>
             </div>
             <div class="col-xs-12 col-sm-5" style="margin-top:20px;">
               <div class="moneyDisplay">
                 <div>จำนวนเงินในการโอน</div>
-                <div style="font-size:2.1em; display:inline-block;">500.01</div>
+                <div style="font-size:2.1em; display:inline-block;"><?= 300 + (float)$user_data["id"]/100.0 ?></div>
                 <div style="display:inline-block;">บาท</div>
               </div>
             </div>
+            <div class="col-xs-12" style="padding:10px; color:red;"><?= $error ? $error : "" ?></div>
           </section>
 
           <section class="row">
             <div class="col-xs-12" style="font-size:1.5em;">Upload หลักฐานการโอนเงิน</div>
             <div class="col-xs-12">เช่น ใบโอนเงิน, สลิปโอนเงิน ( จาก ATM หรือ Internet Banking)</div>
             <div class="col-xs-12">( ภาพถ่าย, scan, screenshot )</div>
-            <div id="upload-slip" class="col-xs-12 custom-upload">
-              <input class="uploadFile" placeholder="Choose File" disabled="disabled" />
-              <div class="fileUpload btn">
-                <span>เลือกไฟล์</span>
-                <input class="uploadBtn upload" type="file" />
+            <?php echo form_open_multipart('result/upload');?>
+              <div id="upload-slip" class="col-xs-12 custom-upload">
+                <input class="uploadFile" placeholder="Choose File" disabled="disabled" />
+                <div class="fileUpload btn">
+                  <span>เลือกไฟล์</span>
+                    <input class="uploadBtn upload" type="file" name="userfile" />
+                    <input type="hidden" name="type" value="slip" />
+                </div>
               </div>
-            </div>
-            <div class="col-xs-12">
-              <input class="btn btn-primary" type="button" value="Upload" style="margin-top:10px;"/>
-            </div>
+              <div class="col-xs-12">
+                <input class="btn btn-primary" type="submit" value="Upload" style="margin-top:10px;"/>
+              </div>
+            </form>
             <div class="col-xs-12" style="margin-top:10px; font-size:0.8em">รองรับเฉพาะไฟล์สกุลรูปภาพ .gif,.jpg,.png ขนาดไม่เกิน 4MB เท่านั้น</div>
             <div class="col-xs-12 recentlyFile" style="margin-top:5px;">
-              <i class="fa fa-check"></i> ส่งหลักฐานการโอนเงินเสร็จสมบูรณ์ คลิก ที่นี่ เพื่อดูรูป
+              <?php
+                if( strlen($user_data["img_slip"]) ) {
+              ?>
+              <a href="<?= base_url() ?>assets/confirmation/<?= $user_data['img_slip'] ?>" target="_blank"><i class="fa fa-check"></i> ส่งหลักฐานการโอนเงินเสร็จสมบูรณ์ คลิก ที่นี่ เพื่อดูรูป</a>
+              <?php
+                }
+              ?>
             </div>
           </section>
 
           <section class="row">
             <div class="col-xs-12" style="font-size:1.5em;">Upload หลักฐานการแสดงตัวตน</div>
             <div class="col-xs-12">รูปบัตรนักเรียน หรือบัตรประชาชน หากไม่มีสามารถใช้เป็น transcript ได้</div>
-            <div id="upload-id" class="col-xs-12 custom-upload">
-              <input class="uploadFile" placeholder="Choose File" disabled="disabled" />
-              <div class="fileUpload btn">
-                <span>เลือกไฟล์</span>
-                <input class="uploadBtn upload" type="file" />
+            <?php echo form_open_multipart('result/upload');?>
+              <div id="upload-id" class="col-xs-12 custom-upload">
+                <input class="uploadFile" placeholder="Choose File" disabled="disabled" />
+                <div class="fileUpload btn">
+                  <span>เลือกไฟล์</span>
+                  <input class="uploadBtn upload" type="file" name="userfile" />
+                  <input type="hidden" name="type" value="id" />
+                </div>
               </div>
-            </div>
-            <div class="col-xs-12">
-              <input class="btn btn-primary" type="button" value="Upload" style="margin-top:10px;"/>
-            </div>
+              <div class="col-xs-12">
+                <input class="btn btn-primary" type="submit" value="Upload" style="margin-top:10px;"/>
+              </div>
+            </form>
             <div class="col-xs-12" style="margin-top:10px; font-size:0.8em">รองรับเฉพาะไฟล์สกุลรูปภาพ .gif,.jpg,.png ขนาดไม่เกิน 4MB เท่านั้น</div>
             <div class="col-xs-12 recentlyFile" style="margin-top:5px;">
-              <i class="fa fa-check"></i> ส่งหลักฐานการโอนเงินเสร็จสมบูรณ์ คลิก ที่นี่ เพื่อดูรูป
+              <?php
+                if( strlen($user_data["img_id"]) ) {
+              ?>
+              <a href="<?= base_url() ?>assets/confirmation/<?= $user_data['img_id'] ?>" target="_blank"><i class="fa fa-check"></i> ส่งหลักฐานการแสดงตนเสร็จสมบูรณ์ คลิก ที่นี่ เพื่อดูรูป</a>
+              <?php
+                }
+              ?>
             </div>
           </section>
 
