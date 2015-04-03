@@ -1,4 +1,6 @@
 <!doctype html>
+
+<?php print json_encode($data) ?>
 <html>
 <head>
   <title>Junior Webmaster Camp #7 | สมัครสมาชิก</title>

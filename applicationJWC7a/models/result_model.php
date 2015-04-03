@@ -29,7 +29,7 @@
       ->order_by('sum desc')
       ->group_by('register.facebookID');
     if ($registerType != 'all') {
-      $data = $data->where('registerType', $registerType);
+      $data = $data->where('register.registerType', $registerType);
     }
     if ($type != 'all') {
       $data = $data->limit($num, $from);
