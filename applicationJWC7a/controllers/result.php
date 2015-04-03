@@ -39,6 +39,7 @@ class Result extends CI_Controller {
   }
 
   public function confirmation_2() {
+    $this->load->helper('form');
     $user_id =$this->facebook->getUser();
     $data['login_url'] = $this->facebook->getLoginUrl();
     $user_id =$this->facebook->getUser();

@@ -61,7 +61,7 @@
             <p class="txt-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หากตัวจริงไม่ยืนยันสิทธิ์ ภายในเวลาที่กำหนด สิทธิ์จะตกเป็นของตัวสำรองตามลำดับรายชื่อ ไม่ว่ากรณีใดๆ ทั้งสิ้น โดยทางค่ายจะติดต่อตัวสำรองเมื่อมีการสละสิทธิ์เกิดขึ้น</p>
             </p>
             <div class="txt-center">
-              <a class="btn btn-danger btn-lg nextbtn" href="confirmation">ยืนยันสิทธิ์ &raquo;</a>
+              <a class="btn btn-danger btn-lg nextbtn" href="<?= base_url()?>result/confirmation">ยืนยันสิทธิ์ &raquo;</a>
               <p class="deadline"><b>ภายใน 5 มีนาคมนี้ เท่านั้น!</b></p>
             </div>
             <br>
@@ -180,7 +180,7 @@
           </div>
           <br>
           <div class="txt-center">
-            <a class="btn btn-danger btn-lg nextbtn" href="confirmation">ยืนยันสิทธิ์ &raquo;</a>
+            <a class="btn btn-danger btn-lg nextbtn" href="<?= base_url()?>result/confirmation">ยืนยันสิทธิ์ &raquo;</a>
             <p class="deadline"><b>ภายใน 5 มีนาคมนี้ เท่านั้น!</b></p>
           </div>
         </div>
