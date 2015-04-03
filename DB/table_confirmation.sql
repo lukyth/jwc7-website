@@ -90,8 +90,7 @@ INSERT INTO `confirmation` (`id`, `facebookID`, `img_slip`, `img_id`, `status`) 
 --
 -- Indexes for table `confirmation`
 --
-ALTER TABLE `confirmation`
- ADD PRIMARY KEY (`id`);
+ALTER TABLE `confirmation` ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -102,6 +101,18 @@ ALTER TABLE `confirmation`
 --
 ALTER TABLE `confirmation`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=45;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+ALTER TABLE `confirmation` ADD (
+  `fullName` varchar(50) DEFAULT NULL,
+  `nickName` varchar(50) DEFAULT NULL,
+  `gender` varchar(50) DEFAULT NULL,
+  `tel` varchar(13) DEFAULT NULL,
+  `telEmergency` varchar(13) DEFAULT NULL,
+  `address` varchar(50) DEFAULT NULL,
+  `place` varchar(10) DEFAULT NULL,
+  `note` text
+);

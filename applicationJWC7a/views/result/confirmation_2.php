@@ -80,7 +80,7 @@
           *Required (กรุณากรอกข้อมูลให้ครบถ้วน)
         </div>
 
-        <?php echo form_open('result/confirmation_2/submit'); ?>
+        <?php echo form_open('result/submit'); ?>
 
         <div class="form-horizontal">
           <div class="form-group">
@@ -185,7 +185,7 @@
         </fieldset>
 
         <div class="form-group">
-          <label for="inputAddress">หมายเหตุอื่นๆ<div class="field-detail">( ข้อมูลเพิ่มเติมที่น้องๆต้องการจะแจ้งให้พี่ๆทราบ เช่น "หนูมาถึงตอนตีสามค่ะ ต้องทํายังไง")</div></label>
+          <label for="inputNote">หมายเหตุอื่นๆ<div class="field-detail">( ข้อมูลเพิ่มเติมที่น้องๆต้องการจะแจ้งให้พี่ๆทราบ เช่น "หนูมาถึงตอนตีสามค่ะ ต้องทํายังไง")</div></label>
           <textarea class="form-control" rows="6" name="inputNote"></textarea>
         </div>
 
