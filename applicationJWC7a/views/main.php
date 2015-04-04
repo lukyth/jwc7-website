@@ -75,9 +75,6 @@
 				<div class="row">
 					<div class="col-xs-8 col-xs-offset-2 text-center col-logo">
 						<img class="img-center img-responsive logo-img" src="<?= base_url() ?>assets/img/main/new/logo.svg" />
-						<div class="row counter">
-							<div class="col-xs-12 head">ปิดรับสมัครแล้วนะ !!!</div>
-						</div>
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/new/visualize.png"></div>
@@ -87,6 +84,9 @@
 								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/sponsor/vip/cpall.png"></div>
 							</div>
 						</div>
+						<a class="page-scroll register-button" href="<?= base_url() ?>result">
+							<div class="jumpto-register img-center img-responsive register">ประกาศผล</div>
+						</a>
 					</div>
 				</div>
 			</div>
