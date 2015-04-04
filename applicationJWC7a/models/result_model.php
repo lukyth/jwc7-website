@@ -50,15 +50,20 @@
   }
 
   function getUserData( $fbid ) {
-    $query = $this->db->select('register.facebookID,prefix,name,surname,confirmation.nickname,registerType,id,img_slip,img_id,confirmation.status')
+    $query = $this->db->select('register.facebookID,prefix,name,surname,confirmation.nickname,registerType,id,img_slip,img_id,confirmation.status,register.status')
       ->from('register')
       ->join('confirmation','register.facebookID = confirmation.facebookID')
-      ->where('register.facebookID', $fbid);
+      ->where('register.facebookID', $fbid)
+      ->where('register.status', 'Accepted');
     return $query->get()->result_array();
   }
 
   function checkIsPassed( $fbid ) {
-    $res = $this->db->from('confirmation')->where('facebookID',$fbid)->get()->result_array();
+    $res = $this->db->from('confirmation')
+    ->join('register','register.facebookID = confirmation.facebookID')
+    ->where('confirmation.facebookID', $fbid)
+    ->where('register.status', 'Accepted')
+    ->get()->result_array();
     if( count($res) == 0 ) return 0;
     if( $res[0]["status"] == "Revoke" ) return 2;
     return 1;
