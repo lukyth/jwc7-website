@@ -257,13 +257,13 @@
             <div class="radio">
               <label>
                 <input type="radio" name="inputPlace" id="inputPlaceMrt" value="mrt">
-                หน้าสถานีรถไฟฟ้าใต้ดิน (MRT) "จตุจักร" ( คลิกเพื่อดูแผนที่ <a href="https://goo.gl/maps/fx0Ea" target="_blank">1</a> | <a href="https://lh4.googleusercontent.com/JdEI8XZaS2tlvzfIiF90HjdY0oHA65yoQu3Kfr-i5B9tqM4gpHxkoTGU2KzVBuau56lU_h_X013Husc=w1896-h743" target="_blank">2</a> )
+                หน้าสถานีรถไฟฟ้าใต้ดิน (MRT) "จตุจักร" ( คลิกเพื่อดูแผนที่ <a href="https://goo.gl/maps/fx0Ea" target="_blank">1</a> | <a href="<? base_url() ?>../assets/img/main/map/16_CHA-01.png" target="_blank">2</a> )
               </label>
             </div>
             <div class="radio">
               <label>
                 <input type="radio" name="inputPlace" id="inputPlaceUniversity" value="university">
-                ใต้ตึกสํานักงานอธิการบดี มหาวิทยาลัยราชภัฏจันทรเกษม ( คลิกเพื่อดูแผนที่ <a href="https://goo.gl/maps/FxsTi" target="_blank">1</a> | <a href="https://lh6.googleusercontent.com/DbUD4gRIbpBfKMsPEs6zTBUsT8bMyq2AJRzVQ4jtN8Yvx7YabTcnUYXH-8SVhQcerMS3Ru2fhJ8nhJ8=w1896-h743" target="_blank">2</a> )
+                ใต้ตึกสํานักงานอธิการบดี มหาวิทยาลัยราชภัฏจันทรเกษม ( คลิกเพื่อดูแผนที่ <a href="https://goo.gl/maps/FxsTi" target="_blank">1</a> | <a href="<? base_url() ?>../assets/img/main/map/mapCRUWeb.png" target="_blank">2</a> )
               </label>
             </div>
           </fieldset>
