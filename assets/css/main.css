@@ -993,7 +993,7 @@ a.register-button {
 
 #timeline-page .timeline-fish {
   position: absolute;
-  top: 100px;
+  top: 210px;
   right: 99%;
   width: 160px;
   -webkit-transform: rotate(180deg);
@@ -1014,7 +1014,7 @@ a.register-button {
     font-size: 18px;
   }
   #timeline-page .timeline-fish {
-    top: 70px;
+    top: 148px;
     width: 130px;
   }
 }
