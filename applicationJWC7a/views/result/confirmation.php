@@ -127,6 +127,20 @@
           </section>
 
           <section class="row">
+            <div class="col-xs-12" style="font-size:1.4em">กรุณาโอนเงินตามจำนวนด้านบน ไปที่</div>
+            <div class="col-xs-12 text-center">
+            นาย พูนเพิ่ม  เย็นใจ และ นางสาว พิชญา  เจียรพงศ์ปกรณ์<br>
+            เลขที่บัญชี 234-214163-7<br>
+            ธนาคารไทยพาณิชย์ สาขาอโศกทาวเวอร์ส<br>
+            ตามยอดเงินที่บอกไว้เป็นจุดทศนิยม ( 300.XX บาท )
+            </div>
+            <div class="col-xs-12" style="color:red; margin-top:10px;">
+            และกรุณา Upload หลักฐานภายในวันที่ 11 เมษายน 2558 ก่อนเวลา 23.59 น.<br>
+            มิเช่นนั้นจะถือว่า "สละสิทธิ์"
+            </div>
+          </section>
+
+          <section class="row">
             <div class="col-xs-12" style="font-size:1.5em;">Upload หลักฐานการโอนเงิน</div>
             <div class="col-xs-12">เช่น ใบโอนเงิน, สลิปโอนเงิน ( จาก ATM หรือ Internet Banking)</div>
             <div class="col-xs-12">( ภาพถ่าย, scan, screenshot )</div>
