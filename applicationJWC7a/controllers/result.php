@@ -95,7 +95,11 @@ class Result extends CI_Controller {
   }
 
   public function sorry() {
-    $this->load->view('result/sorry');
+    $data = array(
+      "error" => "",
+      "type" => ""
+    );
+    $this->load->view('result/sorry',$data);
   }
 
   public function confirmation_2() {
@@ -105,6 +109,17 @@ class Result extends CI_Controller {
     if( $user_id ) {
       $data["facebook_id"] = $user_id;
       $this->load->view('result/confirmation_2',$data);
+    } else {
+      $this->load->view('result/confirmlogin',$data);
+    }
+  }
+
+  public function getUserID() {
+    $user_id =$this->facebook->getUser();
+    $data['login_url'] = $this->facebook->getLoginUrl();
+    $data['error'] = "";
+    if( $user_id ) {
+      print $user_id;
     } else {
       $this->load->view('result/confirmlogin',$data);
     }
