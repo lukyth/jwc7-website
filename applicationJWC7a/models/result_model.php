@@ -50,7 +50,7 @@
   }
 
   function getUserData( $fbid ) {
-    $query = $this->db->select('register.facebookID,prefix,name,surname,nickname,registerType,id,img_slip,img_id,confirmation.status')
+    $query = $this->db->select('register.facebookID,prefix,name,surname,confirmation.nickname,registerType,id,img_slip,img_id,confirmation.status')
       ->from('register')
       ->join('confirmation','register.facebookID = confirmation.facebookID')
       ->where('register.facebookID', $fbid);
