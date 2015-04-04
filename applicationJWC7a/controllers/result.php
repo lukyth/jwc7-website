@@ -41,7 +41,7 @@ class Result extends CI_Controller {
 
     $config['upload_path'] = 'assets/confirmation/';
     $config['allowed_types'] = 'gif|jpg|png';
-    $config['max_size']	= '4096';
+    $config['max_size'] = '4096';
     $config['encrypt_name']  = true;
 
     $this->load->library('upload',$config);
@@ -51,7 +51,8 @@ class Result extends CI_Controller {
     if( strlen($cur_file) != 0 ) unlink('assets/confirmation/'.$cur_file);
 
     if( $this->upload->do_upload() ) {
-      $this->result->updateFileName( $user_id, $this->upload->data()["file_name"],$this->input->post('type') );
+      $upload_data = $this->upload->data();
+      $this->result->updateFileName( $user_id, $upload_data["file_name"],$this->input->post('type') );
       redirect('result/confirmation', 'refresh');
     } else {
       $err = $this->upload->display_errors();
@@ -84,8 +85,8 @@ class Result extends CI_Controller {
        $this->load->view('result/sorry',array("type" => $isPass == 2 ? "revoke" : ""));
        return ;
       }
-
-      $data["user_data"] = $this->result->getUserData( $user_id )[0];
+      $data["user_data"] = $this->result->getUserData( $user_id );
+      $data["user_data"] = $data["user_data"][0];
 
       $data["facebook_id"] = $user_id;
       $this->load->view('result/confirmation',$data);
@@ -119,7 +120,8 @@ class Result extends CI_Controller {
        return ;
       }
 
-      $data["user_data"] = $this->result->getUserData( $user_id )[0];
+      $data["user_data"] = $this->result->getUserData( $user_id );
+      $data["user_data"] = $data["user_data"][0];
       $this->load->view('result/confirmation_2',$data);
     } else {
       $this->load->view('result/confirmlogin',$data);

@@ -46,7 +46,8 @@
   function getFileName( $fbid, $type ) {
     $type = $type == "id" ? "img_id" : "img_slip";
     $query = $this->db->get_where( 'confirmation', array( 'facebookID' => $fbid ) );
-    return $query->result()[0]->$type;
+    $query = $query->result();
+    return $query[0]->$type;
   }
 
   function getUserData( $fbid ) {
