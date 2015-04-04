@@ -84,7 +84,7 @@
 								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/sponsor/vip/cpall.png"></div>
 							</div>
 						</div>
-						<a class="page-scroll register-button" href="<?= base_url() ?>result">
+						<a class="register-button" href="<?= base_url() ?>result" target="_blank">
 							<div class="jumpto-register img-center img-responsive register">ประกาศผล</div>
 						</a>
 					</div>

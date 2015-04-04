@@ -191,8 +191,14 @@ class Admin extends CI_Controller {
 		}
 
 		$this->load->model('Register_Model', 'model');
-		
+
 		$post = $this->get_post_body();
+
+		if ($post->status == 'Accepted') {
+			$this->model->insertConfirmation(array(
+				'facebookID' => $id
+			));
+		}
 
 		$this->model->update(array(
 			'status' => $post->status
@@ -207,7 +213,7 @@ class Admin extends CI_Controller {
 		}
 
 		$data = $this->get_post_body();
-		
+
 		if(empty($data->subject) || empty($data->body)){
 			$this->output_error('Incomplete form!');
 			return;
@@ -292,7 +298,7 @@ class Admin extends CI_Controller {
 	}
 
 	private function get_post_body(){
-		return json_decode(file_get_contents('php://input')); 
+		return json_decode(file_get_contents('php://input'));
 	}
 
 	private function output_json($out){

@@ -200,4 +200,16 @@
         ->get();
       return $query->result();
     }
+
+    function insertConfirmation($data){
+      $query = $this->db->select('facebookID')
+        ->from('confirmation')
+        ->where('facebookID', $data['facebookID'])
+        ->get();
+
+      if ( $query->num_rows() == 0 ) {
+        $this->db->insert('confirmation',$data);
+      }
+    }
+
 }
