@@ -56,7 +56,7 @@ class Result extends CI_Controller {
       redirect('result/confirmation', 'refresh');
     } else {
       $err = $this->upload->display_errors();
-      if( strcmp( $err,"<p>The filetype you are attempting to upload is not allowed.</p>" ) == 0 ) {
+      /*if( strcmp( $err,"<p>The filetype you are attempting to upload is not allowed.</p>" ) == 0 ) {
         $err = "ประเภทของไฟล์ ไม่ถูกต้อง";
       } else if( strcmp( $err,"<p>The uploaded file exceeds the maximum allowed size in your PHP configuration file.</p>" ) == 0 ) {
         $err = "ขนาดของไฟล์นั้นใหญ่เกินไป";
@@ -64,7 +64,7 @@ class Result extends CI_Controller {
         $err = "คุณยังไม่ได้ทำการเลือกไฟล์ใดๆ";
       } else {
         $err = "อัพโหลดไม่สมบูรณ์ กรุณาลองใหม่อีกครั้ง";
-      }
+      }*/
       $this->confirmation( $err );
     }
   }
