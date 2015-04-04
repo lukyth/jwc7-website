@@ -102,11 +102,23 @@ class Result extends CI_Controller {
     $this->load->view('result/sorry',$data);
   }
 
-  public function confirmation_2() {
+  public function confirmation_2($err = "") {
     $user_id =$this->facebook->getUser();
     $data['login_url'] = $this->facebook->getLoginUrl();
+    $data['error'] = $err;
     $user_id =$this->facebook->getUser();
-    if( $user_id ) {
+
+    $this->load->helper(array('form', 'url'));
+
+     if( $user_id ) {
+
+      $this->load->model('Result_Model','result');
+      $isPass = $this->result->checkIsPassed( $user_id );
+      if( $isPass != 1 ) {
+       $this->load->view('result/sorry',array("type" => $isPass == 2 ? "revoke" : ""));
+       return ;
+      }
+
       $data["facebook_id"] = $user_id;
       $this->load->view('result/confirmation_2',$data);
     } else {
@@ -124,4 +136,48 @@ class Result extends CI_Controller {
       $this->load->view('result/confirmlogin',$data);
     }
   }
+
+  public function submit() {
+
+    if( $this->input->server('REQUEST_METHOD') == "GET" ) {
+      redirect('result/confirmation_2', 'refresh');
+      return ;
+    }
+
+    $user_id =$this->facebook->getUser();
+    if( !$user_id ) {
+      redirect('result/confirmation_2', 'refresh');
+      return ;
+    }
+
+    $this->load->model('Result_Model','result');
+
+    $form_data = $this->_cleanData( array(
+        'fullname'=>$this->_protectData( $this->input->post('inputFullName') ),
+        'nickname'=>$this->_protectData( $this->input->post('inputNickName') ),
+        'gender'=>$this->_protectData( $this->input->post('inputGender') ),
+        'tel'=>$this->_protectData( $this->input->post('inputTel') ),
+        'telEmergency'=>$this->_protectData( $this->input->post('inputTelEmergency') ),
+        'address'=>$this->_protectData( $this->input->post('inputAddress') ),
+        'place'=>$this->_protectData( $this->input->post('inputPlace') ),
+        'note'=>$this->_protectData( $this->input->post('inputNote') ),
+    ) );
+
+    $this->result->update($form_data, $user_id);
+
+    redirect('result/confirmation', 'refresh');
+
+  }
+
+  function _protectData( $txt ) {
+    return str_replace(array("\r\n","\r","\n"), "\\n", $txt);
+  }
+
+  public function _cleanData( $data ) {
+    if( $data["gender"] == "etc" ) {
+      $data["gender"] = $this->input->post('inputGenderEtc');
+    }
+    return $data;
+  }
+
 }
