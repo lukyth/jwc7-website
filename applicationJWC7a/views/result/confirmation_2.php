@@ -125,6 +125,10 @@
       }
     }
 
+    .form-control {
+      font-size: 18px;
+    }
+
   </style>
 </head>
 <body>
@@ -167,14 +171,14 @@
           <div class="form-group">
             <label for="inputFullName" class="control-label">ชื่อ-นามสกุล</label>
             <div class="col-sm-6 col-xs-12" style="float: none; display: inline-block;">
-              <input type="text" class="form-control" id="inputFullName" name="inputFullName" autofocus required>
+              <input type="text" class="form-control" id="inputFullName" name="inputFullName" value="<?= $user_data['name'] ?>" autofocus disabled>
             </div>
           </div>
 
           <div class="form-group">
             <label for="inputNickName" class="control-label">ชื่อเล่น</label>
             <div class="col-sm-6 col-xs-12" style="float: none; display: inline-block;">
-              <input type="text" class="form-control" id="inputNickName" name="inputNickName" required>
+              <input type="text" class="form-control" id="inputNickName" name="inputNickName"value="<?= $user_data['surname'] ?>" disabled required>
             </div>
           </div>
 
@@ -229,12 +233,12 @@
 
           <div class="form-group">
             <label for="inputTel">เบอร์ติดต่อ</label>
-            <input type="tel" class="form-control col-sm-6 col-xs-12" id="inputTel" name="inputTel" placeholder="0xxxxxxxxx" required>
+            <input type="tel" class="form-control col-sm-6 col-xs-12" id="inputTel" name="inputTel" value="<?= $user_data['phone'] ?>" placeholder="0xxxxxxxxx" disabled required>
           </div>
 
           <div class="form-group">
             <label for="inputTelEmergency">เบอร์โทรกรณีฉุกเฉิน<span class="field-detail">(พ่อ, แม่, เพื่อนสนิท)</span></label>
-            <input type="tel" class="form-control" id="inputTelEmergency" name="inputTelEmergency" placeholder="0xxxxxxxxx" required>
+            <input type="tel" class="form-control" id="inputTelEmergency" name="inputTelEmergency" value="<?= $user_data['parentPhone'] ?>" placeholder="0xxxxxxxxx" disabled required>
           </div>
 
           <div class="form-group">

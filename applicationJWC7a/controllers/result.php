@@ -119,7 +119,7 @@ class Result extends CI_Controller {
        return ;
       }
 
-      $data["facebook_id"] = $user_id;
+      $data["user_data"] = $this->result->getUserData( $user_id )[0];
       $this->load->view('result/confirmation_2',$data);
     } else {
       $this->load->view('result/confirmlogin',$data);
