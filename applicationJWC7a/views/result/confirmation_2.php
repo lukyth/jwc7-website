@@ -233,12 +233,12 @@
 
           <div class="form-group">
             <label for="inputTel">เบอร์ติดต่อ</label>
-            <input type="tel" class="form-control col-sm-6 col-xs-12" id="inputTel" name="inputTel" value="<?= $user_data['phone'] ?>" placeholder="0xxxxxxxxx" required>
+            <input type="tel" class="form-control col-sm-6 col-xs-12" id="inputTel" name="inputTel" value="<?= $user_data['tel'] ? $user_data['tel'] : $user_data['phone'] ?>" placeholder="0xxxxxxxxx" required>
           </div>
 
           <div class="form-group">
             <label for="inputTelEmergency">เบอร์โทรกรณีฉุกเฉิน<span class="field-detail">(พ่อ, แม่, เพื่อนสนิท)</span></label>
-            <input type="tel" class="form-control" id="inputTelEmergency" name="inputTelEmergency" value="<?= $user_data['parentPhone'] ?>" placeholder="0xxxxxxxxx" required>
+            <input type="tel" class="form-control" id="inputTelEmergency" name="inputTelEmergency" value="<?= $user_data['telEmergency'] ? $user_data['telEmergency'] : $user_data['parentPhone'] ?>" placeholder="0xxxxxxxxx" required>
           </div>
 
           <div class="form-group">
