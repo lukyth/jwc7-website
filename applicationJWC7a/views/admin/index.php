@@ -51,6 +51,7 @@
 				<li><a href="#" ui-sref="base.home()" ng-hide="true">Dashboard</a></li>
 				<li><a href="#" ui-sref="base.check()" ng-if="user.permission >= 1">ตรวจ</a></li>
 				<li><a href="#" ui-sref="base.register()" ng-if="user.permission >= 5">รายชื่อ</a></li>
+				<li><a href="#" ui-sref="base.documents()" ng-if="user.permission >= 5">ตรวจสอบหลักฐาน</a></li>
 				<li><a href="#" ui-sref="base.maillinglist()" ng-if="user.permission >= 7">ส่งเมล</a></li>
 				<li><a href="#" ui-sref="base.user()" ng-if="user.permission >= 10">Users</a></li>
 			</ul>
@@ -66,7 +67,7 @@
 	</div>
 </noscript>
 <ui-view></ui-view>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.6/angular.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>

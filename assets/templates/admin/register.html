@@ -40,6 +40,7 @@
 					แสดงการบ้านเฉพาะที่ยังไม่ตรวจ
 				</label>
 			</div>
+			<pagination total-items="(register|filter:filter).length" boundary-links="true" items-per-page="perPage" ng-model="currentPage" max-size="7" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
 		</div>
 	</div>
 
@@ -60,7 +61,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="item in register|filter:filter|orderBy:predicate:reverse">
+			<tr ng-repeat="item in register|filter:filter|limitTo:perPage:((currentPage-1)*perPage)|orderBy:predicate:reverse">
 				<td><a href="#" ui-sref="base.registerinfo({id: item.facebookID})">{{item.prefix}} {{item.name}} {{item.surname}}</a></td>
 				<td><a href="https://www.facebook.com/{{item.facebookID}}">FB</a></td>
 				<td ng-bind="item.nickname"></td>

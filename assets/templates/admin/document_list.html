@@ -1,0 +1,52 @@
+<div class="container">
+	<div class="col-sm-8">
+		<div><strong>{{(register|filter:filter).length}}</strong> registrations</div>
+	</div>
+	<div class="col-sm-4">
+		<div class="form-inline">
+			<select class="form-control" ng-model="filter.registerType">
+				<option value="">ทุกสาขา</option>
+				<option value="Content">Content ({{(register|filter:{registerType:'Content'}).length}})</option>
+				<option value="Design">Design ({{(register|filter:{registerType:'Design'}).length}})</option>
+				<option value="Marketing">Marketing ({{(register|filter:{registerType:'Marketing'}).length}})</option>
+			</select>
+			<select class="form-control" ng-model="filter.c_status">
+				<option value="">ทุกสาขา</option>
+				<option value="Waiting">รอส่ง/ตรวจ ({{(register|filter:{c_status:'Waiting'}).length}})</option>
+				<option value="Real">ตัวจริง ({{(register|filter:{c_status:'Real'}).length}})</option>
+				<option value="Revoke">สละสิทธิ์ ({{(register|filter:{c_status:'Revoke'}).length}})</option>
+				<option value="Test">ทดสอบระบบ ({{(register|filter:{c_status:'Test'}).length}})</option>
+				<option value="Denied">ไม่ผ่าน ({{(register|filter:{c_status:'Denied'}).length}})</option>
+			</select>
+		</div>
+	</div>
+
+	<br><br>
+
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th class="col-xs-3" ng-click="predicate='name';reverse=!reverse">ชื่อ</th>
+				<th>FB</th>
+				<th class="col-xs-2" ng-click="predicate='nickname';reverse=!reverse">ชื่อเล่น</th>
+				<th ng-click="predicate='sex';reverse=!reverse">เพศ</th>
+				<th ng-click="predicate='registerType';reverse=!reverse">สาขา</th>
+				<th ng-click="predicate='phone';reverse=!reverse">โทร</th>
+				<th ng-click="predicate='place';reverse=!reverse">สถานที่นัดพบ</th>
+				<th ng-click="predicate='c_status';reverse=!reverse">สถานะ</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in register|filter:filter|orderBy:predicate:reverse">
+				<td><a href="#" ui-sref="base.documentinfo({id: item.facebookID})">{{item.prefix}} {{item.name}} {{item.surname}}</a></td>
+				<td><a href="https://www.facebook.com/{{item.facebookID}}">FB</a></td>
+				<td ng-bind="item.nickName"></td>
+				<td ng-bind="item.sex"></td>
+				<td ng-bind="item.registerType"></td>
+				<td ng-bind="item.phone"></td>
+				<td ng-bind="item.place">สถานที่นัดพบ</td>
+				<td ng-bind="item.c_status"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -61,6 +61,16 @@ module.config(function($stateProvider, $urlRouterProvider, ASSET_BASE){
 			url: '/check/{id}?index',
 			templateUrl: ASSET_BASE + 'templates/admin/checkinfo.html',
 			controller: 'CheckInfoController',
+		})
+		.state('base.documents', {
+			url: '/documents',
+			templateUrl: ASSET_BASE + 'templates/admin/document_list.html',
+			controller: 'DocumentController'
+		})
+		.state('base.documentinfo', {
+			url: '/documents/{id}',
+			templateUrl: ASSET_BASE + 'templates/admin/documentinfo.html',
+			controller: 'DocumentInfoController'
 		});
 	$urlRouterProvider.otherwise('/');
 });
@@ -187,11 +197,18 @@ module.controller('RegisterController', function($scope, $state, $http, API_BASE
 		$scope.register = data;
 	});
 	$scope.filter = (localStorage.filter && JSON.parse(localStorage.filter)) || {};
+	$scope.currentPage = parseInt(localStorage.registerCurrentPage) || 1;
+	$scope.perPage = 15;
 	$scope.$watch('filter', function(val){
 		if(val){
 			localStorage.filter = JSON.stringify(val);
 		}
 	}, true);
+	$scope.$watch('currentPage', function(val){
+		if(val){
+			localStorage.registerCurrentPage = val;
+		}
+	});
 	$scope.showNeedCheck = localStorage.showNeedCheck == 'true';
 	$scope.$watch('showNeedCheck', function(val){
 		localStorage.showNeedCheck = val;
@@ -306,6 +323,32 @@ module.controller('CheckInfoController', function($scope, $http, $stateParams, A
 			$scope.saving = false;
 		}).finally(function(){
 			$scope.saving = false;
+		});
+	};
+});
+
+module.controller('DocumentController', function($scope, $http, API_BASE){
+	$http.get(API_BASE + 'crud/Confirmation').success(function(data){
+		$scope.register = data;
+	});
+});
+
+module.controller('DocumentInfoController', function($scope, $http, ASSET_BASE, API_BASE, $stateParams){
+	$http.get(API_BASE + 'crud/Confirmation/' + $stateParams.id).success(function(data){
+		$scope.register = data;
+	});
+	$scope.documentBase = ASSET_BASE + 'confirmation/';
+
+	$scope.saveStatus = function(){
+		$scope.success_status = null;
+		$scope.saving_status = true;
+		$http.post(API_BASE + 'save_c_status/' + $stateParams.id, {
+			status: $scope.register.c_status
+		}).success(function(){
+			$scope.success_status = 'Saved';
+			$scope.saving_status = false;
+		}).finally(function(){
+			$scope.saving_status = false;
 		});
 	};
 });

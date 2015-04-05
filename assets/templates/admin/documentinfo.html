@@ -1,0 +1,176 @@
+<div class="container">
+	<div class="btn btn-default" ui-sref="base.documents()">Back</div>
+	<a href="https://www.facebook.com/{{register.facebookID}}" class="pull-right text-center">
+		<img ng-src="http://graph.facebook.com/{{register.facebookID}}/picture?type=large" class="img-circle">
+		<br>
+		<span class="btn">Facebook</span>
+	</a>
+	<h2>{{register.prefix}} {{register.name}} {{register.surname}}</h2>
+	<div class="help-block">
+		ส่งใบสมัครเมื่อ {{register.registerDate}}
+	</div>
+	<div class="row valuelist">
+		<div class="col-md-4">
+			<strong>ชื่อ</strong>
+			<div class="value">{{register.prefix}} {{register.name}} {{register.surname}}</div>
+		</div>
+		<div class="col-md-2">
+			<strong>ชื่อเล่น</strong>
+			<div class="value">{{register.nickname}}</div>
+		</div>
+		<div class="col-md-1">
+			<strong>เพศ</strong>
+			<div class="value">{{register.sex}}</div>
+		</div>
+		<div class="col-md-2">
+			<strong>สาขา</strong>
+			<div class="value">{{register.registerType}}</div>
+		</div>
+		<div class="col-md-1">
+			<strong>ชั้น</strong>
+			<div class="value">{{register.grade}}</div>
+		</div>
+		<div class="col-md-5">
+			<strong>โรงเรียน</strong>
+			<div class="value">{{register.school}}</div>
+		</div>
+		<div class="col-md-2">
+			<strong>จังหวัด</strong>
+			<div class="value">{{register.province}}</div>
+		</div>
+	</div>
+	<accordion close-others="false">
+		<accordion-group heading="สถานะ" is-open="true">
+			<div class="col-md-4">
+				<select ng-model="register.c_status" class="form-control">
+					<option value="Waiting">รอส่ง/ตรวจ (Waiting)</option>
+					<option value="Real">ตัวจริง (Real)</option>
+					<option value="Revoke">สละสิทธิ์ (Revoke)</option>
+					<option value="Test">ทดสอบระบบ (Test)</option>
+					<option value="Denied">ไม่ผ่าน (Denied)</option>
+				</select>
+			</div>
+			<div class="btn" ng-class="{'btn-primary': !success_status, 'btn-success': success_status}" ng-click="saveStatus()">บันทึกสถานะ<span ng-if="saving_status">...</span></div>
+		</accordion-group>
+		<accordion-group heading="ข้อมูลส่วนตัว" is-open="false">
+			<div class="row valuelist">
+				<div class="col-md-2">
+					<strong>รหัสประจำตัวประชาชน</strong>
+					<div class="value">{{register.national_ID}}</div>
+				</div>
+				<div class="col-md-2">
+					<strong>เบอร์โทรศัพท์มือถือ</strong>
+					<div class="value">{{register.phone}}</div>
+				</div>
+				<div class="col-md-4">
+					<strong>E-mail</strong>
+					<div class="value">{{register.email}}</div>
+				</div>
+				<div class="col-md-2">
+					<strong>วันเกิด</strong>
+					<div class="value"  ng-if="register.birthday">{{register.birthday}} ({{register.birthday|age}} ปี)</div>
+				</div>
+			</div>
+			<div class="row valuelist">
+				<div class="col-md-2">
+					<strong>ที่อยู่</strong>
+					<div class="value small">
+						<div class="pre">
+							{{register.address|nbr}}
+							{{register.postalCode}}
+							{{register.province}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</accordion-group>
+		<accordion-group heading="ข้อมูลค่าย" is-open="false">
+			<div class="row valuelist">
+				<div class="col-md-4">
+					<strong>รู้จักค่ายจากที่ไหน</strong>
+					<div class="value">{{register.knowFrom}}</div>
+				</div>
+				<div class="col-md-1">
+					<strong>ไซส์เสื้อ</strong>
+					<div class="value">{{register.sizeshirt}}</div>
+				</div>
+				<div class="col-md-2">
+					<strong>ประเภทอาหาร</strong>
+					<div class="value">{{register.specialFood}}</div>
+				</div>
+				<div class="col-md-4">
+					<strong>อาหารที่แพ้</strong>
+					<div class="value">{{register.foodAllergy}}&nbsp;</div>
+				</div>
+			</div>
+			<div class="row valuelist">
+				<div class="col-md-4">
+					<strong>โรคประจำตัว</strong>
+					<div class="value">{{register.disease}}&nbsp;</div>
+				</div>
+				<div class="col-md-4">
+					<strong>ยาที่แพ้</strong>
+					<div class="value">{{register.drugAllergy}}&nbsp;</div>
+				</div>
+				<div class="col-md-4">
+					<strong>ผู้ปกครอง</strong>
+					<div class="value">{{register.parentPhone}} ({{register.relateParent}})</div>
+				</div>
+			</div>
+		</accordion-group>
+		<accordion-group heading="เอกสาร" is-open="true">
+			<div class="row valuelist">
+				<div class="col-md-6">
+					<strong>สลิปโอน (จำนวน {{300 + (register.id/100)}})</strong>
+					<div class="value" ng-if="!register.img_slip">ยังไม่โอน</div>
+					<div class="value" ng-if="register.img_slip"><a href="{{documentBase}}{{register.img_slip}}" target="_blank">{{register.img_slip}}</a></div>
+				</div>
+				<div class="col-md-6">
+					<strong>หลักฐานการแสดงตัวตน</strong>
+					<div class="value" ng-if="!register.img_id">ยังไม่ส่ง</div>
+					<div class="value" ng-if="register.img_id"><a href="{{documentBase}}{{register.img_id}}" target="_blank">{{register.img_id}}</a></div>
+				</div>
+			</div>
+			<div class="row valuelist">
+				<div class="col-md-8">
+					<strong>ชื่อจริง</strong>
+					<div class="value">{{register.fullName}}</div>
+				</div>
+				<div class="col-md-2">
+					<strong>ชื่อเล่น</strong>
+					<div class="value">{{register.nickName}}</div>
+				</div>
+				<div class="col-md-2">
+					<strong>เพศ</strong>
+					<div class="value">{{register.gender}}</div>
+				</div>
+			</div>
+			<div class="row valuelist">
+				<div class="col-md-3">
+					<strong>โทร</strong>
+					<div class="value">{{register.tel}}</div>
+				</div>
+				<div class="col-md-3">
+					<strong>เบอร์โทรกรณีฉุกเฉิน</strong>
+					<div class="value">{{register.telEmergency}}</div>
+				</div>
+				<div class="col-md-3">
+					<strong>บริเวณที่อยู่</strong>
+					<div class="value">{{register.address}}</div>
+				</div>
+				<div class="col-md-3">
+					<strong>สถานที่มา</strong>
+					<div class="value">{{register.place}}</div>
+				</div>
+			</div>
+			<div class="row valuelist">
+				<div class="col-md-12">
+					<strong>หมายเหตุ</strong>
+					<div class="value">{{register.note}}</div>
+				</div>
+			</div>
+		</accordion-group>
+	</accordion>
+	<div class="btn btn-default" ui-sref="base.documents()">Back</div>
+	<br><br>
+</div>

@@ -2,7 +2,7 @@
 
 class Admin extends CI_Controller {
 
-	public $crud_allowed = array('User', 'Subscribe', 'Register', 'Homework_Score');
+	public $crud_allowed = array('User', 'Subscribe', 'Register', 'Homework_Score', 'Confirmation');
 
 	private $encKey = '/yLGaB+oKKNLPWDNjtdSCo0RWGv6tnrA9EjrTaUcdv56KE/2fScNQIQebDdrrrby';
 
@@ -199,6 +199,22 @@ class Admin extends CI_Controller {
 				'facebookID' => $id
 			));
 		}
+
+		$this->model->update(array(
+			'status' => $post->status
+		), $id);
+
+		$this->output_json(array('succes' => true));
+	}
+
+	public function save_c_status($id){
+		if(!$this->checkAccessLevel(5)){
+			return;
+		}
+
+		$this->load->model('Confirmation_Model', 'model');
+
+		$post = $this->get_post_body();
 
 		$this->model->update(array(
 			'status' => $post->status
