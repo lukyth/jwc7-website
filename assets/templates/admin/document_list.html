@@ -33,6 +33,8 @@
 				<th ng-click="predicate='registerType';reverse=!reverse">สาขา</th>
 				<th ng-click="predicate='phone';reverse=!reverse">โทร</th>
 				<th ng-click="predicate='place';reverse=!reverse">สถานที่นัดพบ</th>
+				<th>บัตร</th>
+				<th>โอน</th>
 				<th ng-click="predicate='c_status';reverse=!reverse">สถานะ</th>
 			</tr>
 		</thead>
@@ -44,7 +46,11 @@
 				<td ng-bind="item.sex"></td>
 				<td ng-bind="item.registerType"></td>
 				<td ng-bind="item.phone"></td>
-				<td ng-bind="item.place">สถานที่นัดพบ</td>
+				<td ng-bind="item.place"></td>
+				<td ng-if="item.img_slip" class="success"><i class="glyphicon glyphicon-ok"></i></td>
+				<td ng-if="!item.img_slip" class="danger"><i class="glyphicon glyphicon-remove"></i></td>
+				<td ng-if="item.img_id" class="success"><i class="glyphicon glyphicon-ok"></i></td>
+				<td ng-if="!item.img_id" class="danger"><i class="glyphicon glyphicon-remove"></i></td>
 				<td ng-bind="item.c_status"></td>
 			</tr>
 		</tbody>

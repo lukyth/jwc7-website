@@ -208,7 +208,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function save_c_status($id){
-		if(!$this->checkAccessLevel(5)){
+		if(!$this->checkAccessLevel(6)){
 			return;
 		}
 
@@ -298,6 +298,7 @@ class Admin extends CI_Controller {
 	 * 3: check marketing only
 	 * 4: check all only
 	 * 5: access register list and dashboard
+	 * 6: access document list (but not registration list) and dashboard
 	 * 7: send email
 	 * 10: add user
 	 */

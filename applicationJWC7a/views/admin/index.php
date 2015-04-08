@@ -49,9 +49,9 @@
 		<div class="collapse navbar-collapse" id="mainnav">
 			<ul class="nav navbar-nav" ng-if="user">
 				<li><a href="#" ui-sref="base.home()" ng-hide="true">Dashboard</a></li>
-				<li><a href="#" ui-sref="base.check()" ng-if="user.permission >= 1">ตรวจ</a></li>
-				<li><a href="#" ui-sref="base.register()" ng-if="user.permission >= 5">รายชื่อ</a></li>
-				<li><a href="#" ui-sref="base.documents()" ng-if="user.permission >= 5">ตรวจสอบหลักฐาน</a></li>
+				<li><a href="#" ui-sref="base.check()" ng-if="user.permission >= 1 && user.permission != 6">ตรวจ</a></li>
+				<li><a href="#" ui-sref="base.register()" ng-if="user.permission >= 5 && user.permission != 6">รายชื่อ</a></li>
+				<li><a href="#" ui-sref="base.documents()" ng-if="user.permission >= 6">ตรวจสอบหลักฐาน</a></li>
 				<li><a href="#" ui-sref="base.maillinglist()" ng-if="user.permission >= 7">ส่งเมล</a></li>
 				<li><a href="#" ui-sref="base.user()" ng-if="user.permission >= 10">Users</a></li>
 			</ul>
