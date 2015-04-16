@@ -275,6 +275,9 @@
 							<div class="col-md-2 col-xs-3 text-center" style="width:12%;">
 								<a href="https://thumbinthai.wordpress.com/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/gold/thumb.png" /></a>
 							</div>
+							<div class="col-md-2 col-xs-3 text-center" style="width:12%;">
+								<a href="http://www.provision.co.th/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/gold/provision.png" /></a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -516,6 +519,8 @@
 							</div>
 							<div class="partner text-center">
 								<a href="http://www.camphub.in.th/" target="_blank"><img src="<?= base_url() ?>assets/img/main/sponsor/partner/camphub.png" alt="CampHub"></a>
+								<a href="https://www.facebook.com/ne8t.bkk" target="_blank"><img src="<?= base_url() ?>assets/img/main/sponsor/partner/ne8t.png" alt="CampHub"></a>
+								<a href="http://www.swu.ac.th/" target="_blank"><img src="<?= base_url() ?>assets/img/main/sponsor/partner/swu.png" alt="CampHub"></a>
 							</div>
 						</div>
 					</div>
