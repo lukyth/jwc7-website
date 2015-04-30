@@ -21,6 +21,15 @@ class Star extends CI_Controller {
       return;
     }
 
+    $this->load->model('Star_model','star');
+
+    $form_data = array(
+      'maleID'=> $this->input->post('inputMale'),
+      'femaleID'=> $this->input->post('inputFemale')
+    );
+
+    $this->star->updateScore($form_data);
+
     redirect('star', 'refresh');
 
   }
