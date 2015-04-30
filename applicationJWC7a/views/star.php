@@ -10,31 +10,34 @@
   <link rel="stylesheet" href="<?= base_url()."assets/" ?>css/star.css">
   <link rel="icon" href="<?= base_url()."assets/" ?>img/favicon.png">
 </head>
-<body>
+<body class="star">
   <div class="container text-center">
     <?php echo form_open('star/submit'); ?>
     <h1>Star</h1>
-    <div class="row">
+    <div class="row male active">
+      <h2>Male</h2>
       <?php
         foreach ($data['male'] as $key => $value) {
-          echo '<div class="col-md-3 col-sm-4 col-xs-6 radio '.$value['registerType'].'"><input type="radio" name="inputMale" class="hidden" id="inputMale-'.$value['facebookID'].'" value="'.$value['facebookID'].'" required><div class="wrapper"><label for="inputMale-'.$value['facebookID'].'"><img class="img-responsive center-block" src="http://graph.facebook.com/'.$value['facebookID'].'/picture?type=large" alt="'.$value['nickName'].'"><div class="nickname">'.$value['nickName'].'</div></label></div></div>';
+          echo '<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 radio '.$value['registerType'].'"><input type="radio" name="inputMale" class="hidden" id="inputMale-'.$value['facebookID'].'" value="'.$value['facebookID'].'" required><div class="wrapper"><label for="inputMale-'.$value['facebookID'].'"><img class="img-responsive center-block" src="http://graph.facebook.com/'.$value['facebookID'].'/picture?type=large" alt="'.$value['nickName'].'"><div class="nickname">'.$value['nickName'].'</div></label></div></div>';
         }
       ?>
       <div class="clearfix"></div>
-      <div class="btn btn-primary btn-lg">Next</div>
+      <div class="btn btn-primary btn-lg next">Next</div>
     </div>
-    <div class="row">
+    <div class="row female">
+      <h2>Female</h2>
       <?php
         foreach ($data['female'] as $key => $value) {
-          echo '<div class="col-md-3 col-sm-4 col-xs-6 radio '.$value['registerType'].'"><input type="radio" name="inputFemale" class="hidden" id="inputFemale-'.$value['facebookID'].'" value="'.$value['facebookID'].'" required><div class="wrapper"><label for="inputFemale-'.$value['facebookID'].'"><img class="img-responsive center-block" src="http://graph.facebook.com/'.$value['facebookID'].'/picture?type=large" alt="'.$value['nickName'].'"><div class="nickname">'.$value['nickName'].'</div></label></div></div>';
+          echo '<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 radio '.$value['registerType'].'"><input type="radio" name="inputFemale" class="hidden" id="inputFemale-'.$value['facebookID'].'" value="'.$value['facebookID'].'" required><div class="wrapper"><label for="inputFemale-'.$value['facebookID'].'"><img class="img-responsive center-block" src="http://graph.facebook.com/'.$value['facebookID'].'/picture?type=large" alt="'.$value['nickName'].'"><div class="nickname">'.$value['nickName'].'</div></label></div></div>';
         }
       ?>
       <div class="clearfix"></div>
-      <div class="btn btn-primary btn-lg">Back</div>
+      <div class="btn btn-primary btn-lg back">Back</div>
       <button type="submit" class="btn btn-success btn-lg">Send</button>
     </div>
   </div>
   <script src="<?= base_url()."assets/" ?>js/jquery-1.11.1.min.js"></script>
   <script src="<?= base_url()."assets/" ?>js/bootstrap.min.js"></script>
+  <script src="<?= base_url()."assets/" ?>js/star.js"></script>
 </body>
 </html>

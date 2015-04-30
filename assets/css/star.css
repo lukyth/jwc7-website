@@ -1,3 +1,19 @@
-.Content input:checked ~ .wrapper { background: green; }
-.Design input:checked ~ .wrapper { background: purple; }
-.Marketing input:checked ~ .wrapper { background: orange; }
+.star { font-family: 'cs_prajad'; overflow-x: hidden; }
+.Content input:checked ~ .wrapper { background: rgba(7, 144, 141, .5); }
+.Design input:checked ~ .wrapper { background: rgba(115, 40, 119, .5); }
+.Marketing input:checked ~ .wrapper { background: rgba(231, 76, 37, .5); }
+.male,
+.female { position: absolute; width: 100%; margin-left: auto; margin-right: auto; padding-bottom: 20px;
+  -webkit-transition: left .8s;
+     -moz-transition: left .8s;
+      -ms-transition: left .8s;
+       -o-transition: left .8s;
+          transition: left .8s; }
+.male { left: -100%; }
+.female { left: 100%; }
+.active { left: 0%; }
+.star img { height: 180px; }
+.radio+.radio { margin-top: 10px; }
+.wrapper { padding-top: 16px; border-radius: 6px; }
+.nickname { font-family: 'wdb_bangnaregular'; font-size: 18px; margin: 6px auto; }
+.btn { margin-left: 12px; margin-right: 12px; padding-left: 40px; padding-right: 40px; }
