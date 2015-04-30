@@ -1,0 +1,3 @@
+.Content input:checked ~ .wrapper { background: green; }
+.Design input:checked ~ .wrapper { background: purple; }
+.Marketing input:checked ~ .wrapper { background: orange; }
