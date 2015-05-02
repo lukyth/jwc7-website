@@ -3,4 +3,5 @@ $(document).ready(function(){
     $(".male, .female").toggleClass('active');
     $('html, body').animate({scrollTop : 0}, 800);
   });
+  $('body').height($(document).height());
 });
