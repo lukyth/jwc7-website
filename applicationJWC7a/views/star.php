@@ -37,7 +37,7 @@
         <h2>คำโปรยสำหรับเลือกดาว</h2>
         <?php
           foreach ($data['female'] as $key => $value) {
-            echo '<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 radio '.$value['registerType'].'"><input type="radio" name="inputMale" class="hidden" id="inputMale-'.$value['facebookID'].'" value="'.$value['facebookID'].'" required><div class="wrapper"><img class="hand" src="assets/img/star/hand.png"><div class="wrapper-inside"><label for="inputMale-'.$value['facebookID'].'"><img class="img-responsive center-block" src="http://graph.facebook.com/'.$value['facebookID'].'/picture?type=large" alt="'.$value['nickName'].'"></label></div></div><div class="nickname">'.$value['nickName'].'</div></div>';
+            echo '<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 radio '.$value['registerType'].'"><input type="radio" name="inputFemale" class="hidden" id="inputMale-'.$value['facebookID'].'" value="'.$value['facebookID'].'" required><div class="wrapper"><img class="hand" src="assets/img/star/hand.png"><div class="wrapper-inside"><label for="inputMale-'.$value['facebookID'].'"><img class="img-responsive center-block" src="http://graph.facebook.com/'.$value['facebookID'].'/picture?type=large" alt="'.$value['nickName'].'"></label></div></div><div class="nickname">'.$value['nickName'].'</div></div>';
           }
         ?>
         <div class="clearfix"></div>

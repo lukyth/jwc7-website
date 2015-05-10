@@ -3,7 +3,7 @@
 
 
 @font-face {
-    font-family: 'quark';
+    font-family: 'quarklight';
     src: url('Quark-Light-webfont.eot');
     src: url('Quark-Light-webfont.eot?#iefix') format('embedded-opentype'),
          url('Quark-Light-webfont.woff2') format('woff2'),
@@ -19,14 +19,14 @@
 
 
 @font-face {
-    font-family: 'quark';
+    font-family: 'quarkbold';
     src: url('Quark-Bold-webfont.eot');
     src: url('Quark-Bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('Quark-Bold-webfont.woff2') format('woff2'),
          url('Quark-Bold-webfont.woff') format('woff'),
          url('Quark-Bold-webfont.ttf') format('truetype'),
          url('Quark-Bold-webfont.svg#quarkbold') format('svg');
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
 
 }
