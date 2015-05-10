@@ -524,7 +524,7 @@ a.register-button {
 
 #header-page .jumpto-register {
   display: inline-block;
-  width: 224px;
+  width: 230px;
 }
 
 #header-page .boat-station {
@@ -545,14 +545,14 @@ a.register-button {
   }
 
   #header-page .jumpto-register {
-    width: 200px;
+    width: 230px;
     font-size: 1.4em;
   }
 }
 @media screen and (max-width:768px) {
   #header-page .jumpto-register {
     margin-top:70px;
-    width: 120px;
+    width: 230px;
   }
 }
 
@@ -1411,7 +1411,7 @@ a.register-button {
   }
 
   #header-page .jumpto-register {
-    width: 180px;
+    width: 230px;
     padding: 14px;
     font-size: 1.3em;
   }
@@ -1443,7 +1443,7 @@ a.register-button {
 
   #header-page .jumpto-register {
     margin-top: 14%;
-    width: 160px;
+    width: 230px;
   }
 
   #header-page .sponsor-top img {

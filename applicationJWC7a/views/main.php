@@ -84,8 +84,8 @@
 								<div class="sponsor-top"><img src="<?= base_url() ?>assets/img/main/sponsor/vip/cpall.png"></div>
 							</div>
 						</div>
-						<a class="register-button" href="<?= base_url() ?>result" target="_blank">
-							<div class="jumpto-register img-center img-responsive register">ประกาศผล</div>
+						<a class="register-button" href="https://www.youtube.com/watch?v=zQezMPWZ-uo" target="_blank">
+							<div class="jumpto-register img-center img-responsive register">ติดตามการถ่ายทอดสด</div>
 						</a>
 					</div>
 				</div>
@@ -277,6 +277,9 @@
 							</div>
 							<div class="col-md-2 col-xs-3 text-center" style="width:12%;">
 								<a href="http://www.provision.co.th/" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/gold/provision.png" /></a>
+							</div>
+							<div class="col-md-2 col-xs-3 text-center" style="width:12%;">
+								<a href="http://www.witty.co.th/home/index.php" target="_blank"><img class="img-center img-responsive" src="<?= base_url() ?>assets/img/main/sponsor/gold/witty.png" /></a>
 							</div>
 						</div>
 					</div>
@@ -519,8 +522,12 @@
 							</div>
 							<div class="partner text-center">
 								<a href="http://www.camphub.in.th/" target="_blank"><img src="<?= base_url() ?>assets/img/main/sponsor/partner/camphub.png" alt="CampHub"></a>
-								<a href="https://www.facebook.com/ne8t.bkk" target="_blank"><img src="<?= base_url() ?>assets/img/main/sponsor/partner/ne8t.png" alt="CampHub"></a>
-								<a href="http://www.swu.ac.th/" target="_blank"><img src="<?= base_url() ?>assets/img/main/sponsor/partner/swu.png" alt="CampHub"></a>
+								<a href="https://www.facebook.com/ne8t.bkk" target="_blank"><img src="<?= base_url() ?>assets/img/main/sponsor/partner/ne8t.png" alt="ne8t"></a>
+								<a href="http://www.swu.ac.th/" target="_blank"><img src="<?= base_url() ?>assets/img/main/sponsor/partner/swu.png" alt="swu"></a>
+								<a href="http://www.dotarai.co.th/" target="_blank"><img src="<?= base_url() ?>assets/img/main/sponsor/partner/dotarai.png" alt="DotArai"></a>
+								<a href="http://www.gdg.in.th/" target="_blank"><img src="<?= base_url() ?>assets/img/main/sponsor/partner/gdg2.png" alt="GDGThailand"></a>
+								<a href="http://eatyoryuk.com/" target="_blank"><img src="<?= base_url() ?>assets/img/main/sponsor/partner/yoryuk.png" alt="YorYuk"></a>
+								<a href="https://www.facebook.com/stickbyevo" target="_blank"><img src="<?= base_url() ?>assets/img/main/sponsor/partner/evolution.png" alt="Evolution Art"></a>
 							</div>
 						</div>
 					</div>
